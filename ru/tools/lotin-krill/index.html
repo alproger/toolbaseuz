@@ -1,489 +1,769 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#1a6fb5" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a6fb5" />
 
-  <title>Узбекский конвертер латиница-кириллица | toolbase.uz</title>
-  <meta name="description" content="Быстро и точно конвертируйте узбекский текст между латиницей и кириллицей. Поддерживаются oʻ, gʻ, sh, ch, ng и апостроф." />
-  <meta name="keywords" content="узбекский конвертер латиница кириллица, latin cyrillic uzbek, transliteration" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://toolbase.uz/ru/tools/lotin-krill/" />
-  <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/lotin-krill/" />
-  <link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/lotin-krill/" />
-  <link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/lotin-krill/" />
-  <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/lotin-krill/" />
+    <title>Узбекский конвертер латиница-кириллица | toolbase.uz</title>
+    <meta name="description" content="Быстро и точно конвертируйте узбекский текст между латиницей и кириллицей. Поддерживаются oʻ, gʻ, sh, ch, ng и апостроф." />
+    <meta name="keywords" content="узбекский конвертер латиница кириллица, latin cyrillic uzbek, transliteration" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://toolbase.uz/ru/tools/lotin-krill/" />
+    <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/lotin-krill/" />
+    <link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/lotin-krill/" />
+    <link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/lotin-krill/" />
+    <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/lotin-krill/" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://toolbase.uz/ru/tools/lotin-krill/" />
-  <meta property="og:title" content="Узбекский конвертер Латиница ⇄ Кириллица | toolbase.uz" />
-  <meta property="og:description" content="Быстро и точно конвертируйте узбекский текст между латиницей и кириллицей." />
-  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
-  <meta property="og:locale" content="ru_RU" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://toolbase.uz/ru/tools/lotin-krill/" />
+    <meta property="og:title" content="Узбекский конвертер Латиница ⇄ Кириллица | toolbase.uz" />
+    <meta property="og:description" content="Быстро и точно конвертируйте узбекский текст между латиницей и кириллицей." />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" type="image/svg+xml" href="../../../assets/img/favicon.svg" />
-  <link rel="alternate icon" href="../../../favicon.ico" />
-  <link rel="apple-touch-icon" href="../../../assets/img/apple-touch-icon.png" />
-  <link rel="manifest" href="../../../manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="../../../assets/img/favicon.svg" />
+    <link rel="alternate icon" href="../../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../../assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="../../../manifest.json" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../../../assets/css/styles.css" />
-  <link rel="stylesheet" href="../../../tools/lotin-krill/css/tool.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../../tools/lotin-krill/css/tool.css" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Конвертер латиница-кириллица",
-    "url": "https://toolbase.uz/ru/tools/lotin-krill/",
-    "description": "Бесплатный онлайн-инструмент для конвертации узбекского текста между латиницей и кириллицей.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "inLanguage": "ru",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "publisher": { "@type": "Organization", "name": "toolbase.uz", "url": "https://toolbase.uz" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://toolbase.uz/" },
-      { "@type": "ListItem", "position": 2, "name": "Конвертер латиница-кириллица", "item": "https://toolbase.uz/tools/lotin-krill/" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Какой стандарт алфавита используется?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Используется официальный стандарт узбекской латиницы 1995 года: sh, ch, ng, oʻ и gʻ корректно преобразуются." } },
-      { "@type": "Question", "name": "Апостроф обрабатывается правильно?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Да. В словах sanʼat и maʼno апостроф корректно преобразуется в твердый знак." } },
-      { "@type": "Question", "name": "Сколько слов можно конвертировать?",
-        "acceptedAnswer": { "@type": "Answer", "text": "До 5 000 слов за один раз." } },
-      { "@type": "Question", "name": "Мои тексты сохраняются?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Конвертация выполняется в браузере, текст не отправляется на сервер." } }
-    ]
-  }
-  </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Конвертер латиница-кириллица",
+            "url": "https://toolbase.uz/ru/tools/lotin-krill/",
+            "description": "Бесплатный онлайн-инструмент для конвертации узбекского текста между латиницей и кириллицей.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "inLanguage": "ru",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "toolbase.uz",
+                "url": "https://toolbase.uz"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://toolbase.uz/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Конвертер латиница-кириллица",
+                "item": "https://toolbase.uz/tools/lotin-krill/"
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "Какой стандарт алфавита используется?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Используется официальный стандарт узбекской латиницы 1995 года: sh, ch, ng, oʻ и gʻ корректно преобразуются."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Апостроф обрабатывается правильно?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Да. В словах sanʼat и maʼno апостроф корректно преобразуется в твердый знак."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Сколько слов можно конвертировать?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "До 5 000 слов за один раз."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Мои тексты сохраняются?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Нет. Конвертация выполняется в браузере, текст не отправляется на сервер."
+                }
+            }]
+        }
+    </script>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container nav">
-    <a href="/ru/" class="logo">Toolbase<span class="tld">.uz</span></a>
-    <nav class="nav-links">
-      <a href="../../../about.html">О нас</a>
-      <a href="/ru/contact.html">Контакты</a>
-      <a href="/ru/privacy.html">Конфиденциальность</a>
-      <a href="/ru/terms.html">Условия</a>
-    </nav>
-    <div class="language-switcher" aria-label="Выбор языка">
-      <a href="../../../tools/lotin-krill/" lang="uz">UZ</a>
-      <a href="../../../en/tools/lotin-krill/" lang="en">EN</a>
-      <a class="active" href="../../../ru/tools/lotin-krill/" lang="ru">RU</a>
-    </div>
-  </div>
-</header>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="/ru/" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links">
+                <a href="../../../about.html">О нас</a>
+                <a href="/ru/contact.html">Контакты</a>
+                <a href="/ru/privacy.html">Конфиденциальность</a>
+                <a href="/ru/terms.html">Условия</a>
+            </nav>
+            <div class="language-switcher" aria-label="Выбор языка">
+                <a href="../../../tools/lotin-krill/" lang="uz">UZ</a>
+                <a href="../../../en/tools/lotin-krill/" lang="en">EN</a>
+                <a class="active" href="../../../ru/tools/lotin-krill/" lang="ru">RU</a>
+            </div>
+        </div>
+    </header>
 
-<!-- MAIN -->
-<main>
+    <!-- MAIN -->
+    <main>
 
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Навигационная цепочка">
-      <a href="../../">Главная</a>
-      <span class="bc-sep">›</span>
-      <span>Латиница ⇄ Кириллица</span>
-    </nav>
-  </div>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Навигационная цепочка">
+                <a href="../../">Главная</a>
+                <span class="bc-sep">›</span>
+                <span>Латиница ⇄ Кириллица</span>
+            </nav>
+        </div>
 
-  <section class="tool-hero container">
-    <div class="tool-hero-icon icon-text">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h6"/><path d="M8 5v6"/><line x1="3" y1="15" x2="21" y2="15"/><path d="M14 13l4 6"/><path d="M22 13l-4 6"/></svg>
-    </div>
-    <div class="tool-hero-text">
-      <h1>Конвертер латиница ⇄ кириллица</h1>
-      <p>Точно конвертируйте узбекский текст между латиницей и кириллицей. Поддерживаются oʻ, gʻ, sh, ch, ng и апостроф.</p>
-    </div>
-  </section>
+        <section class="tool-hero container">
+            <div class="tool-hero-icon icon-text">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h6"/><path d="M8 5v6"/><line x1="3" y1="15" x2="21" y2="15"/><path d="M14 13l4 6"/><path d="M22 13l-4 6"/></svg>
+            </div>
+            <div class="tool-hero-text">
+                <h1>Конвертер латиница ⇄ кириллица</h1>
+                <p>Точно конвертируйте узбекский текст между латиницей и кириллицей. Поддерживаются oʻ, gʻ, sh, ch, ng и апостроф.</p>
+            </div>
+        </section>
 
-  <section class="tool-workspace container" id="workspace">
-    <div class="dir-bar">
-      <button class="dir-btn active" id="btnLatCyr" aria-pressed="true">Латиница → Кириллица</button>
-      <button class="dir-swap" id="btnSwap" title="Сменить направление" aria-label="Поменять">
+        <section class="tool-workspace container" id="workspace">
+            <div class="dir-bar">
+                <button class="dir-btn active" id="btnLatCyr" aria-pressed="true">Латиница → Кириллица</button>
+                <button class="dir-swap" id="btnSwap" title="Сменить направление" aria-label="Поменять">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4"/><path d="M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
       </button>
-      <button class="dir-btn" id="btnCyrLat" aria-pressed="false">Кириллица → Латиница</button>
-    </div>
+                <button class="dir-btn" id="btnCyrLat" aria-pressed="false">Кириллица → Латиница</button>
+            </div>
 
-    <div class="areas">
-      <div class="area-block">
-        <div class="area-head">
-          <span class="area-label" id="labelIn">Текст латиницей</span>
-          <div class="area-actions">
-            <button class="act-btn" id="btnPaste">
+            <div class="areas">
+                <div class="area-block">
+                    <div class="area-head">
+                        <span class="area-label" id="labelIn">Текст латиницей</span>
+                        <div class="area-actions">
+                            <button class="act-btn" id="btnPaste">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
               Вставить
             </button>
-            <button class="act-btn act-ghost" id="btnClear">
+                            <button class="act-btn act-ghost" id="btnClear">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
               Очистить
             </button>
-          </div>
-        </div>
-        <textarea id="inputText" class="text-area" placeholder="Текст латиницейni shu yerga yozing yoki joylang…" spellcheck="false" autocorrect="off" autocomplete="off" aria-label="Исходный текст"></textarea>
-        <div class="area-footer">
-          <span class="counter" id="wordCount">0 слов</span>
-          <span class="counter limit-warn" id="limitWarn" hidden>⚠ Chegara: 5 000 слов</span>
-        </div>
-      </div>
+                        </div>
+                    </div>
+                    <textarea id="inputText" class="text-area" placeholder="Текст латиницейni shu yerga yozing yoki joylang…" spellcheck="false" autocorrect="off" autocomplete="off" aria-label="Исходный текст"></textarea>
+                    <div class="area-footer">
+                        <span class="counter" id="wordCount">0 слов</span>
+                        <span class="counter limit-warn" id="limitWarn" hidden>⚠ Chegara: 5 000 слов</span>
+                    </div>
+                </div>
 
-      <div class="area-block">
-        <div class="area-head">
-          <span class="area-label" id="labelOut">Результат кириллицей</span>
-          <div class="area-actions">
-            <button class="act-btn" id="btnCopy">
+                <div class="area-block">
+                    <div class="area-head">
+                        <span class="area-label" id="labelOut">Результат кириллицей</span>
+                        <div class="area-actions">
+                            <button class="act-btn" id="btnCopy">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               Копировать
             </button>
-            <button class="act-btn act-ghost" id="btnDownload">
+                            <button class="act-btn act-ghost" id="btnDownload">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Скачать
             </button>
-          </div>
+                        </div>
+                    </div>
+                    <textarea id="outputText" class="text-area text-area-out" placeholder="Результат появится здесь..." spellcheck="false" readonly aria-label="Результат" aria-live="polite"></textarea>
+                    <div class="area-footer">
+                        <span class="counter" id="outWordCount">0 слов</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tool-info container">
+            <article class="info-article">
+                <h2>О конвертере</h2>
+                <p>Инструмент основан на <strong>официальном стандарте узбекской латиницы 1995 года</strong>. Он распознает сочетания <em>sh → ш</em>, <em>ch → ч</em>, <em>ng → нг</em>, <em>oʻ → ў</em> и <em>gʻ → ғ</em>. При переводе с кириллицы буква <em>е</em>                    передается как <em>ye</em> в начале слова и после гласных, а в остальных случаях как <em>e</em>.</p>
+                <p>Текст конвертируется <strong>полностью в браузере</strong>. Ничего не отправляется на сервер.</p>
+
+                <h2>Таблица алфавита</h2>
+                <div class="alpha-table-wrap">
+                    <table class="alpha-table">
+                        <thead>
+                            <tr>
+                                <th>Латиница</th>
+                                <th>Кириллица</th>
+                                <th>Латиница</th>
+                                <th>Кириллица</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A a</td>
+                                <td>А а</td>
+                                <td>P p</td>
+                                <td>П п</td>
+                            </tr>
+                            <tr>
+                                <td>B b</td>
+                                <td>Б б</td>
+                                <td>Q q</td>
+                                <td>Қ қ</td>
+                            </tr>
+                            <tr>
+                                <td>D d</td>
+                                <td>Д д</td>
+                                <td>R r</td>
+                                <td>Р р</td>
+                            </tr>
+                            <tr>
+                                <td>E e</td>
+                                <td>Е е</td>
+                                <td>S s</td>
+                                <td>С с</td>
+                            </tr>
+                            <tr>
+                                <td>F f</td>
+                                <td>Ф ф</td>
+                                <td>T t</td>
+                                <td>Т т</td>
+                            </tr>
+                            <tr>
+                                <td>G g</td>
+                                <td>Г г</td>
+                                <td>U u</td>
+                                <td>У у</td>
+                            </tr>
+                            <tr>
+                                <td>Gʻ gʻ</td>
+                                <td>Ғ ғ</td>
+                                <td>V v</td>
+                                <td>В в</td>
+                            </tr>
+                            <tr>
+                                <td>H h</td>
+                                <td>Ҳ ҳ</td>
+                                <td>X x</td>
+                                <td>Х х</td>
+                            </tr>
+                            <tr>
+                                <td>I i</td>
+                                <td>И и</td>
+                                <td>Y y</td>
+                                <td>Й й</td>
+                            </tr>
+                            <tr>
+                                <td>J j</td>
+                                <td>Ж ж</td>
+                                <td>Z z</td>
+                                <td>З з</td>
+                            </tr>
+                            <tr>
+                                <td>K k</td>
+                                <td>К к</td>
+                                <td>Ch ch</td>
+                                <td>Ч ч</td>
+                            </tr>
+                            <tr>
+                                <td>L l</td>
+                                <td>Л л</td>
+                                <td>Sh sh</td>
+                                <td>Ш ш</td>
+                            </tr>
+                            <tr>
+                                <td>M m</td>
+                                <td>М м</td>
+                                <td>Ng ng</td>
+                                <td>Нг нг</td>
+                            </tr>
+                            <tr>
+                                <td>N n</td>
+                                <td>Н н</td>
+                                <td>Ts ts</td>
+                                <td>Ц ц</td>
+                            </tr>
+                            <tr>
+                                <td>O o</td>
+                                <td>О о</td>
+                                <td>Sch sch</td>
+                                <td>Щ щ</td>
+                            </tr>
+                            <tr>
+                                <td>Oʻ oʻ</td>
+                                <td>Ў ў</td>
+                                <td>ʼ (tutuq)</td>
+                                <td>Ъ ъ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Частые вопросы</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Какой стандарт алфавита используется?</summary>
+                        <p>Используется официальный стандарт узбекской латиницы 1995 года, который применяется в школах и официальных документах.</p>
+                    </details>
+                    <details>
+                        <summary>Апостроф обрабатывается правильно?</summary>
+                        <p><em>Sanʼat → санъат</em>, <em>maʼno → маъно</em>, <em>taʼlim → таълим</em>. Апостроф в кириллице корректно передается как <strong>ъ</strong>. Поддерживаются разные варианты апострофа.</p>
+                    </details>
+                    <details>
+                        <summary>Сколько слов можно конвертировать?</summary>
+                        <p>За один раз можно конвертировать до <strong>5 000</strong> слов, примерно документ на 10-15 страниц.</p>
+                    </details>
+                    <details>
+                        <summary>Мои тексты сохраняются?</summary>
+                        <p>Нет. Конвертация полностью выполняется в браузере. На сервер ничего не отправляется.</p>
+                    </details>
+                    <details>
+                        <summary>Как преобразуется буква Е?</summary>
+                        <p>Кириллица → Латиница: в начале слова и после гласных она становится <strong>ye</strong>, в остальных случаях <strong>e</strong>. Например: <em>ечмоқ → yechmoq</em>, но <em>бекор → bekor</em>.</p>
+                    </details>
+                    <details>
+                        <summary>Работают ли заглавные буквы?</summary>
+                        <p>Да. <em>TOSHKENT → ТОШКЕНТ</em>, <em>Toshkent → Тошкент</em>, <em>toshkent → тошкент</em> обрабатываются корректно.</p>
+                    </details>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="tool-info">
+            <article class="info-article">
+                <h2>О конвертации латиница &#8596; кириллица</h2>
+                <p>Узбекский язык перешел на латиницу в 1990-х, но кириллица все еще широко используется в старых документах, книгах и учреждениях. Этот инструмент мгновенно конвертирует текст между двумя письменностями.</p>
+
+                <div class="use-grid">
+                    <div class="use-card">
+                        <div class="uc-icon">&#128196;</div>
+                        <h3>Документы</h3>
+                        <p>Преобразование старых кириллических документов в современную латиницу.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128218;</div>
+                        <h3>Образование</h3>
+                        <p>Перевод учебных материалов с кириллицы на латиницу.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128187;</div>
+                        <h3>Разработка</h3>
+                        <p>Конвертация кириллицы в латиницу для URL, slug и баз данных.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128241;</div>
+                        <h3>SMS / Messenger</h3>
+                        <p>Отправка сообщений без переключения клавиатуры.</p>
+                    </div>
+                </div>
+
+                <h2>Правила конвертации</h2>
+                <p>В узбекской латинице <strong>29 букв</strong>. Специальные буквы <strong>o&#699;</strong> и <strong>g&#699;</strong>, а также их кириллические эквиваленты, преобразуются корректно.</p>
+
+                <h2>Как пользоваться?</h2>
+                <ol>
+                    <li>Введите или вставьте узбекский текст на латинице или кириллице.</li>
+                    <li>Выберите <strong>Латиница → Кириллица</strong> или <strong>Кириллица → Латиница</strong>.</li>
+                    <li>Нажмите <strong>Копировать</strong>, чтобы скопировать результат в буфер обмена.</li>
+                </ol>
+
+                <div class="faq-list">
+                    <details>
+                        <summary>Поддерживаются ли все узбекские буквы?</summary>
+                        <p>Да. Поддерживаются o&#699;, g&#699;, sh, ch, ng, yo, yu, ya и их кириллические эквиваленты.</p>
+                    </details>
+                    <details>
+                        <summary>Сколько текста можно ввести?</summary>
+                        <p>Интерфейс рассчитан на конвертацию до 5 000 слов за один раз, этого достаточно для большинства документов.</p>
+                    </details>
+                    <details>
+                        <summary>Текст отправляется на сервер?</summary>
+                        <p>Нет. Конвертация выполняется локально в браузере с помощью JavaScript.</p>
+                    </details>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>20+ бесплатных онлайн-инструментов для текста, документов, изображений, файлов и разработчиков. Файлы остаются в браузере.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
+                        </a>
+                        <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Инструменты column -->
+                <div class="footer-col">
+                    <h4>Инструменты</h4>
+                    <a href="/tools/lotin-krill/">Латиница &#8644; Кириллица</a>
+                    <a href="/tools/son-soz/">Число прописью</a>
+                    <a href="/tools/word-counter/">Word Counter</a>
+                    <a href="/tools/case-converter/">Case Converter</a>
+                    <a href="/tools/color-converter/">Конвертер цветов</a>
+                    <a href="/tools/unit-converter/" class="ftr-hide-mob">Конвертер единиц</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">Форматирование JSON</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Генератор паролей</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Часовые пояса</a>
+                    <a href="/tools/zip-creator/" class="ftr-hide-mob">Создать ZIP</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Проверка орфографии</a>
+                </div>
+
+                <!-- PDF & Rasm column -->
+                <div class="footer-col">
+                    <h4>PDF и изображения</h4>
+                    <a href="/tools/pdf-merge/">Объединить PDF</a>
+                    <a href="/tools/pdf-delete/">Удалить страницы PDF</a>
+                    <a href="/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/tools/word-to-pdf/">Word в PDF</a>
+                    <a href="/tools/image-converter/">Конвертер изображений</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Сжатие изображений</a>
+                    <a href="/tools/image-resize/" class="ftr-hide-mob">Изменить размер изображения</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Обрезать изображение</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Повернуть изображение</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">Повернуть PDF</a>
+                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">Защита PDF</a>
+                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Удаление фона</a>
+                    <a href="/tools/qr-generator/">QR-код</a>
+                </div>
+
+                <!-- Проект + Юридическое column -->
+                <div class="footer-col">
+                    <h4>Проект</h4>
+                    <a href="/about.html">О нас</a>
+                    <a href="/ru/contact.html">Контакты</a>
+                    <a href="/blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Юридическое</h4>
+                    <a href="/ru/terms.html">Условия использования</a>
+                    <a href="/ru/privacy.html">Политика конфиденциальности</a>
+                </div>
+
+            </div>
+            <!-- /.footer-grid -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Все права защищены</span>
+                    <span class="footer-made">Создано для Узбекистана</span>
+                </div>
+            </div>
         </div>
-        <textarea id="outputText" class="text-area text-area-out" placeholder="Результат появится здесь..." spellcheck="false" readonly aria-label="Результат" aria-live="polite"></textarea>
-        <div class="area-footer">
-          <span class="counter" id="outWordCount">0 слов</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
+    <script>
+        document.querySelectorAll('.footer-year').forEach(function(e) {
+            e.textContent = String(new Date().getFullYear());
+        });
+    </script>
 
-  <section class="tool-info container">
-    <article class="info-article">
-      <h2>О конвертере</h2>
-      <p>Инструмент основан на <strong>официальном стандарте узбекской латиницы 1995 года</strong>. Он распознает сочетания <em>sh → ш</em>, <em>ch → ч</em>, <em>ng → нг</em>, <em>oʻ → ў</em> и <em>gʻ → ғ</em>. При переводе с кириллицы буква <em>е</em> передается как <em>ye</em> в начале слова и после гласных, а в остальных случаях как <em>e</em>.</p>
-      <p>Текст конвертируется <strong>полностью в браузере</strong>. Ничего не отправляется на сервер.</p>
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="../../../tools/lotin-krill/js/translit.js"></script>
+    <script>
+        (function() {
+            'use strict';
 
-      <h2>Таблица алфавита</h2>
-      <div class="alpha-table-wrap">
-        <table class="alpha-table">
-          <thead><tr><th>Латиница</th><th>Кириллица</th><th>Латиница</th><th>Кириллица</th></tr></thead>
-          <tbody>
-            <tr><td>A a</td><td>А а</td><td>P p</td><td>П п</td></tr>
-            <tr><td>B b</td><td>Б б</td><td>Q q</td><td>Қ қ</td></tr>
-            <tr><td>D d</td><td>Д д</td><td>R r</td><td>Р р</td></tr>
-            <tr><td>E e</td><td>Е е</td><td>S s</td><td>С с</td></tr>
-            <tr><td>F f</td><td>Ф ф</td><td>T t</td><td>Т т</td></tr>
-            <tr><td>G g</td><td>Г г</td><td>U u</td><td>У у</td></tr>
-            <tr><td>Gʻ gʻ</td><td>Ғ ғ</td><td>V v</td><td>В в</td></tr>
-            <tr><td>H h</td><td>Ҳ ҳ</td><td>X x</td><td>Х х</td></tr>
-            <tr><td>I i</td><td>И и</td><td>Y y</td><td>Й й</td></tr>
-            <tr><td>J j</td><td>Ж ж</td><td>Z z</td><td>З з</td></tr>
-            <tr><td>K k</td><td>К к</td><td>Ch ch</td><td>Ч ч</td></tr>
-            <tr><td>L l</td><td>Л л</td><td>Sh sh</td><td>Ш ш</td></tr>
-            <tr><td>M m</td><td>М м</td><td>Ng ng</td><td>Нг нг</td></tr>
-            <tr><td>N n</td><td>Н н</td><td>Ts ts</td><td>Ц ц</td></tr>
-            <tr><td>O o</td><td>О о</td><td>Sch sch</td><td>Щ щ</td></tr>
-            <tr><td>Oʻ oʻ</td><td>Ў ў</td><td>ʼ (tutuq)</td><td>Ъ ъ</td></tr>
-          </tbody>
-        </table>
-      </div>
+            /* ── Exceptions inline ── */
+            UzTranslit.loadExceptions({
+                "_comment": "Uzbek transliteration exceptions — words where rule-based conversion gives wrong result.",
+                "_version": "1.0.0",
+                "_rules": "lat_to_cyr and cyr_to_lat are lowercase. Engine applies case from source.",
+                "lat_to_cyr": {
+                    "fakultet": "факультет",
+                    "kalsiy": "калсий",
+                    "oktyabr": "октябрь",
+                    "noyabr": "ноябрь",
+                    "dekabr": "декабрь",
+                    "sentyabr": "сентябрь",
+                    "yanvar": "январь",
+                    "fevral": "февраль",
+                    "iyun": "июнь",
+                    "iyul": "июль",
+                    "aprel": "апрель",
+                    "avval": "аввал",
+                    "ammо": "аммо",
+                    "balki": "балки",
+                    "darrov": "дарров",
+                    "taʼlim": "таълим",
+                    "taʼrif": "таъриф",
+                    "saʼy": "саъй",
+                    "maʼno": "маъно",
+                    "sanʼat": "санъат",
+                    "masʼul": "масъул",
+                    "juʼmla": "жуъмла",
+                    "millat": "миллат",
+                    "muallif": "муаллиф",
+                    "mualliflik": "муаллифлик",
+                    "muammo": "муаммо",
+                    "muassasa": "муассаса",
+                    "muayyan": "муайян",
+                    "muazzam": "муаззам",
+                    "iqtisod": "иқтисод",
+                    "iqtisodiy": "иқтисодий",
+                    "hujjat": "ҳужжат",
+                    "hujjatlar": "ҳужжатлар",
+                    "ommaviy": "оммавий",
+                    "ommalashtirish": "оммалаштириш",
+                    "mustaqqil": "мустаққил",
+                    "mustaqil": "мустақил",
+                    "yoʻl": "йўл",
+                    "yoʻllar": "йўллар",
+                    "boʻlim": "бўлим",
+                    "boʻlimlar": "бўлимлар",
+                    "oʻqituvchi": "ўқитувчи",
+                    "oʻquvchi": "ўқувчи",
+                    "oʻqish": "ўқиш",
+                    "oʻyin": "ўйин",
+                    "oʻzbekiston": "ўзбекистон",
+                    "oʻzbek": "ўзбек",
+                    "gʻalla": "ғалла",
+                    "gʻoya": "ғоя",
+                    "qoʻshimcha": "қўшимча",
+                    "qoʻshimchalar": "қўшимчалар"
+                },
+                "cyr_to_lat": {
+                    "факультет": "fakultet",
+                    "кальций": "kalsiy",
+                    "январь": "yanvar",
+                    "февраль": "fevral",
+                    "октябрь": "oktyabr",
+                    "ноябрь": "noyabr",
+                    "декабрь": "dekabr",
+                    "сентябрь": "sentyabr",
+                    "июнь": "iyun",
+                    "июль": "iyul",
+                    "апрель": "aprel",
+                    "таълим": "taʼlim",
+                    "таъриф": "taʼrif",
+                    "маъно": "maʼno",
+                    "санъат": "sanʼat",
+                    "масъул": "masʼul",
+                    "аввал": "avval",
+                    "аммо": "ammo",
+                    "миллат": "millat",
+                    "муаллиф": "muallif",
+                    "муаллифлик": "mualliflik",
+                    "муаммо": "muammo",
+                    "муассаса": "muassasa",
+                    "муайян": "muayyan",
+                    "муаззам": "muazzam",
+                    "иқтисод": "iqtisod",
+                    "иқтисодий": "iqtisodiy",
+                    "ҳужжат": "hujjat",
+                    "ҳужжатлар": "hujjatlar",
+                    "оммавий": "ommaviy",
+                    "оммалаштириш": "ommalashtirish",
+                    "мустақил": "mustaqil",
+                    "мустаққил": "mustaqqil"
+                },
+                "cyr_ye_positions": {
+                    "_comment": "Cyrillic Е gives 'ye' at word start and after vowels, 'e' elsewhere",
+                    "vowels_cyr": ["а", "е", "ё", "и", "о", "у", "ў", "э", "ю", "я", "э"]
+                },
+                "apostrophe_variants": {
+                    "_comment": "All accepted apostrophe chars for oʻ/gʻ in input",
+                    "chars": ["ʻ", "'", "’", "`", "ʼ", "`"]
+                }
+            });
 
-      <h2>Частые вопросы</h2>
-      <div class="faq-list">
-        <details>
-          <summary>Какой стандарт алфавита используется?</summary>
-          <p>Используется официальный стандарт узбекской латиницы 1995 года, который применяется в школах и официальных документах.</p>
-        </details>
-        <details>
-          <summary>Апостроф обрабатывается правильно?</summary>
-          <p><em>Sanʼat → санъат</em>, <em>maʼno → маъно</em>, <em>taʼlim → таълим</em>. Апостроф в кириллице корректно передается как <strong>ъ</strong>. Поддерживаются разные варианты апострофа.</p>
-        </details>
-        <details>
-          <summary>Сколько слов можно конвертировать?</summary>
-          <p>За один раз можно конвертировать до <strong>5 000</strong> слов, примерно документ на 10-15 страниц.</p>
-        </details>
-        <details>
-          <summary>Мои тексты сохраняются?</summary>
-          <p>Нет. Конвертация полностью выполняется в браузере. На сервер ничего не отправляется.</p>
-        </details>
-        <details>
-          <summary>Как преобразуется буква Е?</summary>
-          <p>Кириллица → Латиница: в начале слова и после гласных она становится <strong>ye</strong>, в остальных случаях <strong>e</strong>. Например: <em>ечмоқ → yechmoq</em>, но <em>бекор → bekor</em>.</p>
-        </details>
-        <details>
-          <summary>Работают ли заглавные буквы?</summary>
-          <p>Да. <em>TOSHKENT → ТОШКЕНТ</em>, <em>Toshkent → Тошкент</em>, <em>toshkent → тошкент</em> обрабатываются корректно.</p>
-        </details>
-      </div>
-    </article>
-  </section>
+            /* ── State ── */
+            var direction = 'lat';
 
+            /* ── Elements ── */
+            var inputEl = document.getElementById('inputText');
+            var outputEl = document.getElementById('outputText');
+            var btnLatCyr = document.getElementById('btnLatCyr');
+            var btnCyrLat = document.getElementById('btnCyrLat');
+            var btnSwap = document.getElementById('btnSwap');
+            var btnPaste = document.getElementById('btnPaste');
+            var btnClear = document.getElementById('btnClear');
+            var btnCopy = document.getElementById('btnCopy');
+            var btnDownload = document.getElementById('btnDownload');
+            var labelIn = document.getElementById('labelIn');
+            var labelOut = document.getElementById('labelOut');
+            var wordCount = document.getElementById('wordCount');
+            var outWordCount = document.getElementById('outWordCount');
+            var limitWarn = document.getElementById('limitWarn');
+            var toastEl = document.getElementById('toast');
+            var yearEl = document.getElementById('year');
 
-  <section class="tool-info">
-    <article class="info-article">
-      <h2>О конвертации латиница &#8596; кириллица</h2>
-      <p>Узбекский язык перешел на латиницу в 1990-х, но кириллица все еще широко используется в старых документах, книгах и учреждениях. Этот инструмент мгновенно конвертирует текст между двумя письменностями.</p>
+            /* ── Toast ── */
+            var toastTimer;
 
-      <div class="use-grid">
-        <div class="use-card"><div class="uc-icon">&#128196;</div><h3>Документы</h3><p>Преобразование старых кириллических документов в современную латиницу.</p></div>
-        <div class="use-card"><div class="uc-icon">&#128218;</div><h3>Образование</h3><p>Перевод учебных материалов с кириллицы на латиницу.</p></div>
-        <div class="use-card"><div class="uc-icon">&#128187;</div><h3>Разработка</h3><p>Конвертация кириллицы в латиницу для URL, slug и баз данных.</p></div>
-        <div class="use-card"><div class="uc-icon">&#128241;</div><h3>SMS / Messenger</h3><p>Отправка сообщений без переключения клавиатуры.</p></div>
-      </div>
+            function showToast(msg) {
+                toastEl.textContent = msg;
+                toastEl.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function() {
+                    toastEl.classList.remove('show');
+                }, 2200);
+            }
 
-      <h2>Правила конвертации</h2>
-      <p>В узбекской латинице <strong>29 букв</strong>. Специальные буквы <strong>o&#699;</strong> и <strong>g&#699;</strong>, а также их кириллические эквиваленты, преобразуются корректно.</p>
+            /* ── Labels ── */
+            function updateLabels() {
+                var isLat = direction === 'lat';
+                labelIn.textContent = isLat ? 'Текст латиницей' : 'Текст кириллицей';
+                labelOut.textContent = isLat ? 'Результат кириллицей' : 'Результат латиницей';
+                inputEl.placeholder = isLat ?
+                    'Текст латиницейni shu yerga yozing yoki joylang…' :
+                    'Текст кириллицейni shu yerga yozing yoki joylang…';
+                outputEl.placeholder = isLat ?
+                    'Результат кириллицей bu yerda paydo boʻladi…' :
+                    'Результат латиницей bu yerda paydo boʻladi…';
+                btnLatCyr.classList.toggle('active', isLat);
+                btnCyrLat.classList.toggle('active', !isLat);
+                btnLatCyr.setAttribute('aria-pressed', String(isLat));
+                btnCyrLat.setAttribute('aria-pressed', String(!isLat));
+            }
 
-      <h2>Как пользоваться?</h2>
-      <ol>
-        <li>Введите или вставьте узбекский текст на латинице или кириллице.</li>
-        <li>Выберите <strong>Латиница → Кириллица</strong> или <strong>Кириллица → Латиница</strong>.</li>
-        <li>Нажмите <strong>Копировать</strong>, чтобы скопировать результат в буфер обмена.</li>
-      </ol>
+            /* ── Convert ── */
+            function convert() {
+                var raw = inputEl.value;
+                var wc = UzTranslit.countWords(raw);
+                var over = wc > UzTranslit.WORD_LIMIT;
+                wordCount.textContent = wc + ' слов';
+                limitWarn.hidden = !over;
+                var text = over ? raw.split(/\s+/).slice(0, UzTranslit.WORD_LIMIT).join(' ') : raw;
+                var result = direction === 'lat' ? UzTranslit.latToCyr(text) : UzTranslit.cyrToLat(text);
+                outputEl.value = result;
+                outWordCount.textContent = UzTranslit.countWords(result) + ' слов';
+            }
 
-      <div class="faq-list">
-        <details><summary>Поддерживаются ли все узбекские буквы?</summary><p>Да. Поддерживаются o&#699;, g&#699;, sh, ch, ng, yo, yu, ya и их кириллические эквиваленты.</p></details>
-        <details><summary>Сколько текста можно ввести?</summary><p>Интерфейс рассчитан на конвертацию до 5 000 слов за один раз, этого достаточно для большинства документов.</p></details>
-        <details><summary>Текст отправляется на сервер?</summary><p>Нет. Конвертация выполняется локально в браузере с помощью JavaScript.</p></details>
-      </div>
-    </article>
-  </section>
-</main>
+            /* ── Direction ── */
+            function setDirection(dir) {
+                direction = dir;
+                updateLabels();
+                convert();
+            }
+            btnLatCyr.addEventListener('click', function() {
+                setDirection('lat');
+            });
+            btnCyrLat.addEventListener('click', function() {
+                setDirection('cyr');
+            });
 
+            btnSwap.addEventListener('click', function() {
+                var tmp = inputEl.value;
+                inputEl.value = outputEl.value;
+                direction = direction === 'lat' ? 'cyr' : 'lat';
+                updateLabels();
+                convert();
+                if (!inputEl.value) inputEl.value = tmp;
+            });
 
+            /* ── Input ── */
+            inputEl.addEventListener('input', convert);
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
+            /* ── Paste ── */
+            btnPaste.addEventListener('click', function() {
+                if (navigator.clipboard && navigator.clipboard.readText) {
+                    navigator.clipboard.readText()
+                        .then(function(t) {
+                            inputEl.value = t;
+                            convert();
+                            inputEl.focus();
+                        })
+                        .catch(function() {
+                            inputEl.focus();
+                            showToast('Нажмите Ctrl+V');
+                        });
+                } else {
+                    inputEl.focus();
+                    showToast('Нажмите Ctrl+V');
+                }
+            });
 
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-        <p>20+ бесплатных онлайн-инструментов для текста, документов, изображений, файлов и разработчиков. Файлы остаются в браузере.</p>
-        <div class="footer-social">
-          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            Telegram
-          </a>
-          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
+            /* ── Clear ── */
+            btnClear.addEventListener('click', function() {
+                inputEl.value = '';
+                outputEl.value = '';
+                wordCount.textContent = outWordCount.textContent = '0 слов';
+                limitWarn.hidden = true;
+                inputEl.focus();
+            });
 
-      <!-- Инструменты column -->
-      <div class="footer-col">
-        <h4>Инструменты</h4>
-        <a href="/tools/lotin-krill/">Латиница &#8644; Кириллица</a>
-        <a href="/tools/son-soz/">Число прописью</a>
-        <a href="/tools/word-counter/">Word Counter</a>
-        <a href="/tools/case-converter/">Case Converter</a>
-        <a href="/tools/color-converter/">Конвертер цветов</a>
-        <a href="/tools/unit-converter/" class="ftr-hide-mob">Конвертер единиц</a>
-        <a href="/tools/json-formatter/" class="ftr-hide-mob">Форматирование JSON</a>
-        <a href="/tools/password-generator/" class="ftr-hide-mob">Генератор паролей</a>
-        <a href="/tools/time-zones/" class="ftr-hide-mob">Часовые пояса</a>
-        <a href="/tools/zip-creator/" class="ftr-hide-mob">Создать ZIP</a>
-        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Проверка орфографии</a>
-      </div>
+            /* ── Copy ── */
+            btnCopy.addEventListener('click', function() {
+                if (!outputEl.value) {
+                    showToast('Результат boʻsh');
+                    return;
+                }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(outputEl.value)
+                        .then(function() {
+                            showToast('Скопировано ✓');
+                        });
+                } else {
+                    outputEl.select();
+                    document.execCommand('copy');
+                    showToast('Скопировано ✓');
+                }
+            });
 
-      <!-- PDF & Rasm column -->
-      <div class="footer-col">
-        <h4>PDF и изображения</h4>
-        <a href="/tools/pdf-merge/">Объединить PDF</a>
-        <a href="/tools/pdf-delete/">Удалить страницы PDF</a>
-        <a href="/tools/pdf-editor/">PDF Editor</a>
-        <a href="/tools/word-to-pdf/">Word в PDF</a>
-        <a href="/tools/image-converter/">Конвертер изображений</a>
-        <a href="/tools/image-compress/" class="ftr-hide-mob">Сжатие изображений</a>
-        <a href="/tools/image-resize/" class="ftr-hide-mob">Изменить размер изображения</a>
-        <a href="/tools/image-crop/" class="ftr-hide-mob">Обрезать изображение</a>
-        <a href="/tools/image-rotate/" class="ftr-hide-mob">Повернуть изображение</a>
-        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">Повернуть PDF</a>
-        <a href="/tools/pdf-protect/" class="ftr-hide-mob">Защита PDF</a>
-        <a href="/tools/bg-remove/" class="ftr-hide-mob">Удаление фона</a>
-        <a href="/tools/qr-generator/">QR-код</a>
-      </div>
+            /* ── Download ── */
+            btnDownload.addEventListener('click', function() {
+                if (!outputEl.value) {
+                    showToast('Результат boʻsh');
+                    return;
+                }
+                var blob = new Blob([outputEl.value], {
+                    type: 'text/plain;charset=utf-8'
+                });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = direction === 'lat' ? 'kirillitsa-result.txt' : 'latinitsa-result.txt';
+                a.click();
+                URL.revokeObjectURL(url);
+                showToast('Скачано ✓');
+            });
 
-      <!-- Проект + Юридическое column -->
-      <div class="footer-col">
-        <h4>Проект</h4>
-        <a href="/about.html">О нас</a>
-        <a href="/ru/contact.html">Контакты</a>
-        <a href="/blog.html">Blog</a>
-        <div class="footer-divider"></div>
-        <h4 class="ftr-h4-mt">Юридическое</h4>
-        <a href="/ru/terms.html">Условия использования</a>
-        <a href="/ru/privacy.html">Политика конфиденциальности</a>
-      </div>
+            /* ── Footer year ── */
+            if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-    </div><!-- /.footer-grid -->
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-row">
-        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Все права защищены</span>
-        <span class="footer-made">Создано для Узбекистана</span>
-      </div>
-    </div>
-  </div>
-</footer>
-<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
-
-<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-<script src="../../../tools/lotin-krill/js/translit.js"></script>
-<script>
-(function () {
-  'use strict';
-
-  /* ── Exceptions inline ── */
-  UzTranslit.loadExceptions({"_comment": "Uzbek transliteration exceptions — words where rule-based conversion gives wrong result.", "_version": "1.0.0", "_rules": "lat_to_cyr and cyr_to_lat are lowercase. Engine applies case from source.", "lat_to_cyr": {"fakultet": "факультет", "kalsiy": "калсий", "oktyabr": "октябрь", "noyabr": "ноябрь", "dekabr": "декабрь", "sentyabr": "сентябрь", "yanvar": "январь", "fevral": "февраль", "iyun": "июнь", "iyul": "июль", "aprel": "апрель", "avval": "аввал", "ammо": "аммо", "balki": "балки", "darrov": "дарров", "taʼlim": "таълим", "taʼrif": "таъриф", "saʼy": "саъй", "maʼno": "маъно", "sanʼat": "санъат", "masʼul": "масъул", "juʼmla": "жуъмла", "millat": "миллат", "muallif": "муаллиф", "mualliflik": "муаллифлик", "muammo": "муаммо", "muassasa": "муассаса", "muayyan": "муайян", "muazzam": "муаззам", "iqtisod": "иқтисод", "iqtisodiy": "иқтисодий", "hujjat": "ҳужжат", "hujjatlar": "ҳужжатлар", "ommaviy": "оммавий", "ommalashtirish": "оммалаштириш", "mustaqqil": "мустаққил", "mustaqil": "мустақил", "yoʻl": "йўл", "yoʻllar": "йўллар", "boʻlim": "бўлим", "boʻlimlar": "бўлимлар", "oʻqituvchi": "ўқитувчи", "oʻquvchi": "ўқувчи", "oʻqish": "ўқиш", "oʻyin": "ўйин", "oʻzbekiston": "ўзбекистон", "oʻzbek": "ўзбек", "gʻalla": "ғалла", "gʻoya": "ғоя", "qoʻshimcha": "қўшимча", "qoʻshimchalar": "қўшимчалар"}, "cyr_to_lat": {"факультет": "fakultet", "кальций": "kalsiy", "январь": "yanvar", "февраль": "fevral", "октябрь": "oktyabr", "ноябрь": "noyabr", "декабрь": "dekabr", "сентябрь": "sentyabr", "июнь": "iyun", "июль": "iyul", "апрель": "aprel", "таълим": "taʼlim", "таъриф": "taʼrif", "маъно": "maʼno", "санъат": "sanʼat", "масъул": "masʼul", "аввал": "avval", "аммо": "ammo", "миллат": "millat", "муаллиф": "muallif", "муаллифлик": "mualliflik", "муаммо": "muammo", "муассаса": "muassasa", "муайян": "muayyan", "муаззам": "muazzam", "иқтисод": "iqtisod", "иқтисодий": "iqtisodiy", "ҳужжат": "hujjat", "ҳужжатлар": "hujjatlar", "оммавий": "ommaviy", "оммалаштириш": "ommalashtirish", "мустақил": "mustaqil", "мустаққил": "mustaqqil"}, "cyr_ye_positions": {"_comment": "Cyrillic Е gives 'ye' at word start and after vowels, 'e' elsewhere", "vowels_cyr": ["а", "е", "ё", "и", "о", "у", "ў", "э", "ю", "я", "э"]}, "apostrophe_variants": {"_comment": "All accepted apostrophe chars for oʻ/gʻ in input", "chars": ["ʻ", "'", "’", "`", "ʼ", "`"]}});
-
-  /* ── State ── */
-  var direction = 'lat';
-
-  /* ── Elements ── */
-  var inputEl      = document.getElementById('inputText');
-  var outputEl     = document.getElementById('outputText');
-  var btnLatCyr    = document.getElementById('btnLatCyr');
-  var btnCyrLat    = document.getElementById('btnCyrLat');
-  var btnSwap      = document.getElementById('btnSwap');
-  var btnPaste     = document.getElementById('btnPaste');
-  var btnClear     = document.getElementById('btnClear');
-  var btnCopy      = document.getElementById('btnCopy');
-  var btnDownload  = document.getElementById('btnDownload');
-  var labelIn      = document.getElementById('labelIn');
-  var labelOut     = document.getElementById('labelOut');
-  var wordCount    = document.getElementById('wordCount');
-  var outWordCount = document.getElementById('outWordCount');
-  var limitWarn    = document.getElementById('limitWarn');
-  var toastEl      = document.getElementById('toast');
-  var yearEl       = document.getElementById('year');
-
-  /* ── Toast ── */
-  var toastTimer;
-  function showToast(msg) {
-    toastEl.textContent = msg;
-    toastEl.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2200);
-  }
-
-  /* ── Labels ── */
-  function updateLabels() {
-    var isLat = direction === 'lat';
-    labelIn.textContent  = isLat ? 'Текст латиницей'  : 'Текст кириллицей';
-    labelOut.textContent = isLat ? 'Результат кириллицей' : 'Результат латиницей';
-    inputEl.placeholder  = isLat
-      ? 'Текст латиницейni shu yerga yozing yoki joylang…'
-      : 'Текст кириллицейni shu yerga yozing yoki joylang…';
-    outputEl.placeholder = isLat
-      ? 'Результат кириллицей bu yerda paydo boʻladi…'
-      : 'Результат латиницей bu yerda paydo boʻladi…';
-    btnLatCyr.classList.toggle('active', isLat);
-    btnCyrLat.classList.toggle('active', !isLat);
-    btnLatCyr.setAttribute('aria-pressed', String(isLat));
-    btnCyrLat.setAttribute('aria-pressed', String(!isLat));
-  }
-
-  /* ── Convert ── */
-  function convert() {
-    var raw  = inputEl.value;
-    var wc   = UzTranslit.countWords(raw);
-    var over = wc > UzTranslit.WORD_LIMIT;
-    wordCount.textContent = wc + ' слов';
-    limitWarn.hidden = !over;
-    var text   = over ? raw.split(/\s+/).slice(0, UzTranslit.WORD_LIMIT).join(' ') : raw;
-    var result = direction === 'lat' ? UzTranslit.latToCyr(text) : UzTranslit.cyrToLat(text);
-    outputEl.value = result;
-    outWordCount.textContent = UzTranslit.countWords(result) + ' слов';
-  }
-
-  /* ── Direction ── */
-  function setDirection(dir) { direction = dir; updateLabels(); convert(); }
-  btnLatCyr.addEventListener('click', function () { setDirection('lat'); });
-  btnCyrLat.addEventListener('click', function () { setDirection('cyr'); });
-
-  btnSwap.addEventListener('click', function () {
-    var tmp = inputEl.value;
-    inputEl.value = outputEl.value;
-    direction = direction === 'lat' ? 'cyr' : 'lat';
-    updateLabels();
-    convert();
-    if (!inputEl.value) inputEl.value = tmp;
-  });
-
-  /* ── Input ── */
-  inputEl.addEventListener('input', convert);
-
-  /* ── Paste ── */
-  btnPaste.addEventListener('click', function () {
-    if (navigator.clipboard && navigator.clipboard.readText) {
-      navigator.clipboard.readText()
-        .then(function (t) { inputEl.value = t; convert(); inputEl.focus(); })
-        .catch(function () { inputEl.focus(); showToast('Нажмите Ctrl+V'); });
-    } else {
-      inputEl.focus();
-      showToast('Нажмите Ctrl+V');
-    }
-  });
-
-  /* ── Clear ── */
-  btnClear.addEventListener('click', function () {
-    inputEl.value = '';
-    outputEl.value = '';
-    wordCount.textContent = outWordCount.textContent = '0 слов';
-    limitWarn.hidden = true;
-    inputEl.focus();
-  });
-
-  /* ── Copy ── */
-  btnCopy.addEventListener('click', function () {
-    if (!outputEl.value) { showToast('Результат boʻsh'); return; }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(outputEl.value)
-        .then(function () { showToast('Скопировано ✓'); });
-    } else {
-      outputEl.select();
-      document.execCommand('copy');
-      showToast('Скопировано ✓');
-    }
-  });
-
-  /* ── Download ── */
-  btnDownload.addEventListener('click', function () {
-    if (!outputEl.value) { showToast('Результат boʻsh'); return; }
-    var blob = new Blob([outputEl.value], { type: 'text/plain;charset=utf-8' });
-    var url  = URL.createObjectURL(blob);
-    var a    = document.createElement('a');
-    a.href = url;
-    a.download = direction === 'lat' ? 'kirillitsa-result.txt' : 'latinitsa-result.txt';
-    a.click();
-    URL.revokeObjectURL(url);
-    showToast('Скачано ✓');
-  });
-
-  /* ── Footer year ── */
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-  /* ── Init ── */
-  updateLabels();
-  inputEl.focus();
-})();
-</script>
+            /* ── Init ── */
+            updateLabels();
+            inputEl.focus();
+        })();
+    </script>
 
 </body>
+
 </html>

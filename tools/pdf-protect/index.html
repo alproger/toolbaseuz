@@ -1,354 +1,410 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#dc2626" />
-  <title>PDF ga Parol Qo'yish va Ochirish — Bepul Onlayn | toolbase.uz</title>
-  <meta name="description" content="PDF faylga parol qo'ying yoki mavjud parolni olib tashlang. AES-128 shifrlash. Ruxsatlar: chop etish, nusxalash, tahrirlash. Bepul, brauzerda ishlaydi." />
-  <meta name="keywords" content="pdf parol, pdf himoya, pdf encrypt, pdf parol ochirish, pdf password protect, pdf unlock, pdf qulflash, pdf xavfsizlik" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://toolbase.uz/tools/pdf-protect/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://toolbase.uz/tools/pdf-protect/" />
-  <meta property="og:title" content="PDF ga Parol Qo'yish va Ochirish | toolbase.uz" />
-  <meta property="og:description" content="PDF faylga parol qo'ying yoki parolni olib tashlang. AES shifrlash. Bepul, brauzerda." />
-  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
-  <meta property="og:locale" content="uz_UZ" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
-  <link rel="alternate icon" href="../../favicon.ico" />
-  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
-  <link rel="manifest" href="../../manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
-  <link rel="stylesheet" href="css/tool.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF ga Parol Qo'yish","url":"https://toolbase.uz/tools/pdf-protect/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"UZS"},"inLanguage":"uz"}</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#dc2626" />
+    <title>PDF ga Parol Qo'yish va Ochirish — Bepul Onlayn | toolbase.uz</title>
+    <meta name="description" content="PDF faylga parol qo'ying yoki mavjud parolni olib tashlang. AES-128 shifrlash. Ruxsatlar: chop etish, nusxalash, tahrirlash. Bepul, brauzerda ishlaydi." />
+    <meta name="keywords" content="pdf parol, pdf himoya, pdf encrypt, pdf parol ochirish, pdf password protect, pdf unlock, pdf qulflash, pdf xavfsizlik" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://toolbase.uz/tools/pdf-protect/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://toolbase.uz/tools/pdf-protect/" />
+    <meta property="og:title" content="PDF ga Parol Qo'yish va Ochirish | toolbase.uz" />
+    <meta property="og:description" content="PDF faylga parol qo'ying yoki parolni olib tashlang. AES shifrlash. Bepul, brauzerda." />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="alternate icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="css/tool.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PDF ga Parol Qo'yish",
+            "url": "https://toolbase.uz/tools/pdf-protect/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Web",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "UZS"
+            },
+            "inLanguage": "uz"
+        }
+    </script>
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
-    <nav class="nav-links">
-      <a href="../../about.html">About</a>
-      <a href="../../contact.html">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
-      <a href="../../terms.html">Terms</a>
-    </nav>
-  </div>
-</header>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links">
+                <a href="../../about.html">About</a>
+                <a href="../../contact.html">Contact</a>
+                <a href="../../privacy.html">Privacy Policy</a>
+                <a href="../../terms.html">Terms</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="../../">Bosh sahifa</a>
-      <span class="bc-sep">&#8250;</span>
-      <span>PDF Himoya</span>
-    </nav>
-  </div>
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../">Bosh sahifa</a>
+                <span class="bc-sep">&#8250;</span>
+                <span>PDF Himoya</span>
+            </nav>
+        </div>
 
-  <section class="tool-hero container">
-    <div class="tool-hero-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <section class="tool-hero container">
+            <div class="tool-hero-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="3" y="11" width="18" height="11" rx="2"/>
         <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
       </svg>
-    </div>
-    <div class="tool-hero-text">
-      <h1>PDF ga Parol Qo'yish va Ochirish</h1>
-      <p>PDF faylni <strong>AES shifrlash</strong> bilan himoyalang &#8212; o&#8216;qish, tahrirlash, nusxalash ruxsatlarini boshqaring. Yoki mavjud parolni <strong>olib tashlang</strong>. Brauzerda, serverga yuborilmaydi.</p>
-    </div>
-  </section>
+            </div>
+            <div class="tool-hero-text">
+                <h1>PDF ga Parol Qo'yish va Ochirish</h1>
+                <p>PDF faylni <strong>AES shifrlash</strong> bilan himoyalang &#8212; o&#8216;qish, tahrirlash, nusxalash ruxsatlarini boshqaring. Yoki mavjud parolni <strong>olib tashlang</strong>. Brauzerda, serverga yuborilmaydi.</p>
+            </div>
+        </section>
 
-  <section class="tool-workspace container">
-    <div class="limit-strip">
-      <span class="limit-pill">
+        <section class="tool-workspace container">
+            <div class="limit-strip">
+                <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         Serverga yuborilmaydi
       </span>
-      <span class="limit-pill">
+                <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         AES shifrlash
       </span>
-      <span class="limit-pill">
+                <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
         100 MB gacha
       </span>
-      <span class="limit-pill">
+                <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         Bepul
       </span>
-    </div>
+            </div>
 
-    <!-- Mode tabs -->
-    <div class="mode-tabs">
-      <button class="mode-tab active" data-mode="lock">
+            <!-- Mode tabs -->
+            <div class="mode-tabs">
+                <button class="mode-tab active" data-mode="lock">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         Parol Qo'yish
       </button>
-      <button class="mode-tab" data-mode="unlock">
+                <button class="mode-tab" data-mode="unlock">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
         Parolni Olib Tashlash
       </button>
-    </div>
+            </div>
 
-    <!-- ── LOCK PANEL ── -->
-    <div class="mode-panel active" id="panel-lock">
-      <div class="main-card">
+            <!-- ── LOCK PANEL ── -->
+            <div class="mode-panel active" id="panel-lock">
+                <div class="main-card">
 
-        <!-- Drop zone -->
-        <div class="drop-zone" id="lockDrop">
-          <input type="file" id="lockFileInput" accept=".pdf,application/pdf" />
-          <div class="drop-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Drop zone -->
+                    <div class="drop-zone" id="lockDrop">
+                        <input type="file" id="lockFileInput" accept=".pdf,application/pdf" />
+                        <div class="drop-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="12" y1="18" x2="12" y2="12"/>
               <line x1="9" y1="15" x2="15" y2="15"/>
             </svg>
-          </div>
-          <div class="drop-title">PDF faylni bu yerga tashlang</div>
-          <div class="drop-sub">yoki <strong>tanlash</strong> uchun bosing &nbsp;&#183;&nbsp; 100 MB gacha</div>
-        </div>
+                        </div>
+                        <div class="drop-title">PDF faylni bu yerga tashlang</div>
+                        <div class="drop-sub">yoki <strong>tanlash</strong> uchun bosing &nbsp;&#183;&nbsp; 100 MB gacha</div>
+                    </div>
 
-        <!-- File loaded -->
-        <div class="file-loaded" id="lockLoaded">
-          <div class="fl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          </div>
-          <div class="fl-info">
-            <div class="fl-name" id="lockFileName"></div>
-            <div class="fl-meta"><span id="lockFileMeta"></span> &nbsp;<span id="lockEncBadge" class="fl-badge"></span></div>
-          </div>
-          <button class="btn-change" id="btnChangeLock">Boshqa fayl</button>
-        </div>
+                    <!-- File loaded -->
+                    <div class="file-loaded" id="lockLoaded">
+                        <div class="fl-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div class="fl-info">
+                            <div class="fl-name" id="lockFileName"></div>
+                            <div class="fl-meta"><span id="lockFileMeta"></span> &nbsp;<span id="lockEncBadge" class="fl-badge"></span></div>
+                        </div>
+                        <button class="btn-change" id="btnChangeLock">Boshqa fayl</button>
+                    </div>
 
-        <div class="divider"></div>
+                    <div class="divider"></div>
 
-        <!-- Password - simple, single -->
-        <div class="field-group">
-          <label class="field-label" for="userPw">Parol <span class="req">*</span></label>
-          <div class="pw-wrap">
-            <input type="password" class="pw-input" id="userPw" placeholder="PDF uchun parol kiriting" autocomplete="new-password" />
-            <button type="button" class="pw-toggle" id="userPwToggle" title="Ko'rsatish/Yashirish">
+                    <!-- Password - simple, single -->
+                    <div class="field-group">
+                        <label class="field-label" for="userPw">Parol <span class="req">*</span></label>
+                        <div class="pw-wrap">
+                            <input type="password" class="pw-input" id="userPw" placeholder="PDF uchun parol kiriting" autocomplete="new-password" />
+                            <button type="button" class="pw-toggle" id="userPwToggle" title="Ko'rsatish/Yashirish">
               <svg class="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               <svg class="ico-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
             </button>
-          </div>
-          <div class="pw-strength"><div class="pw-strength-bar" id="pwStrBar"></div></div>
-          <div class="field-hint">Shu parolni bilmagan kishi PDF ni ocholmaydi. Parolni yodlab qoling &#8212; tiklash imkoni yo&#8217;q.</div>
-        </div>
-        <!-- Hidden owner pw (same value passed as ownerPassword for full encryption) -->
-        <input type="hidden" id="ownerPw" />
-        <input type="hidden" id="permPrint" value="1" />
-        <input type="hidden" id="permCopy" value="1" />
-        <input type="hidden" id="permModify" value="0" />
-        <input type="hidden" id="permAnnot" value="1" />
+                        </div>
+                        <div class="pw-strength">
+                            <div class="pw-strength-bar" id="pwStrBar"></div>
+                        </div>
+                        <div class="field-hint">Shu parolni bilmagan kishi PDF ni ocholmaydi. Parolni yodlab qoling &#8212; tiklash imkoni yo&#8217;q.</div>
+                    </div>
+                    <!-- Hidden owner pw (same value passed as ownerPassword for full encryption) -->
+                    <input type="hidden" id="ownerPw" />
+                    <input type="hidden" id="permPrint" value="1" />
+                    <input type="hidden" id="permCopy" value="1" />
+                    <input type="hidden" id="permModify" value="0" />
+                    <input type="hidden" id="permAnnot" value="1" />
 
-        <div class="err-box" id="lockErr"></div>
+                    <div class="err-box" id="lockErr"></div>
 
-        <button class="btn-action" id="btnLock">
+                    <button class="btn-action" id="btnLock">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           PDF ga Parol Qo'yish
         </button>
 
-        <!-- Result -->
-        <div class="result-card" id="lockResult">
-          <div class="rc-head">
-            <svg class="rc-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg>
-            <span class="rc-title">PDF muvaffaqiyatli himoyalandi!</span>
-          </div>
-          <button class="btn-dl" id="btnDlLock">
+                    <!-- Result -->
+                    <div class="result-card" id="lockResult">
+                        <div class="rc-head">
+                            <svg class="rc-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="rc-title">PDF muvaffaqiyatli himoyalandi!</span>
+                        </div>
+                        <button class="btn-dl" id="btnDlLock">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Himoyalangan PDF yuklab olish
           </button>
-          <div class="rc-info" id="lockResultInfo"></div>
-        </div>
+                        <div class="rc-info" id="lockResultInfo"></div>
+                    </div>
 
-      </div>
-    </div><!-- /panel-lock -->
+                </div>
+            </div>
+            <!-- /panel-lock -->
 
-    <!-- ── UNLOCK PANEL ── -->
-    <div class="mode-panel" id="panel-unlock">
-      <div class="main-card">
+            <!-- ── UNLOCK PANEL ── -->
+            <div class="mode-panel" id="panel-unlock">
+                <div class="main-card">
 
-        <div class="drop-zone" id="unlockDrop">
-          <input type="file" id="unlockFileInput" accept=".pdf,application/pdf" />
-          <div class="drop-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="drop-zone" id="unlockDrop">
+                        <input type="file" id="unlockFileInput" accept=".pdf,application/pdf" />
+                        <div class="drop-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <rect x="3" y="11" width="18" height="11" rx="2" style="stroke:#dc2626;fill:none;"/>
               <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
             </svg>
-          </div>
-          <div class="drop-title">Himoyalangan PDF faylni tashlang</div>
-          <div class="drop-sub">yoki <strong>tanlash</strong> uchun bosing &nbsp;&#183;&nbsp; 100 MB gacha</div>
-        </div>
+                        </div>
+                        <div class="drop-title">Himoyalangan PDF faylni tashlang</div>
+                        <div class="drop-sub">yoki <strong>tanlash</strong> uchun bosing &nbsp;&#183;&nbsp; 100 MB gacha</div>
+                    </div>
 
-        <div class="file-loaded" id="unlockLoaded">
-          <div class="fl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          </div>
-          <div class="fl-info">
-            <div class="fl-name" id="unlockFileName"></div>
-            <div class="fl-meta"><span id="unlockFileMeta"></span> &nbsp;<span id="unlockEncBadge" class="fl-badge"></span></div>
-          </div>
-          <button class="btn-change" id="btnChangeUnlock">Boshqa fayl</button>
-        </div>
+                    <div class="file-loaded" id="unlockLoaded">
+                        <div class="fl-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div class="fl-info">
+                            <div class="fl-name" id="unlockFileName"></div>
+                            <div class="fl-meta"><span id="unlockFileMeta"></span> &nbsp;<span id="unlockEncBadge" class="fl-badge"></span></div>
+                        </div>
+                        <button class="btn-change" id="btnChangeUnlock">Boshqa fayl</button>
+                    </div>
 
-        <div class="divider"></div>
+                    <div class="divider"></div>
 
-        <!-- Auto-detect status -->
-        <div class="unlock-status" id="unlockStatus" style="display:none;"></div>
+                    <!-- Auto-detect status -->
+                    <div class="unlock-status" id="unlockStatus" style="display:none;"></div>
 
-        <div class="field-group" id="unlockPwWrap">
-          <label class="field-label" for="unlockPw">Parol</label>
-          <div class="pw-wrap">
-            <input type="password" class="pw-input" id="unlockPw" placeholder="PDF paroli (agar bo'lsa)" autocomplete="current-password" />
-            <button type="button" class="pw-toggle" id="unlockPwToggle" title="Ko'rsatish/Yashirish">
+                    <div class="field-group" id="unlockPwWrap">
+                        <label class="field-label" for="unlockPw">Parol</label>
+                        <div class="pw-wrap">
+                            <input type="password" class="pw-input" id="unlockPw" placeholder="PDF paroli (agar bo'lsa)" autocomplete="current-password" />
+                            <button type="button" class="pw-toggle" id="unlockPwToggle" title="Ko'rsatish/Yashirish">
               <svg class="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               <svg class="ico-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
             </button>
-          </div>
-          <div class="field-hint" id="unlockHint">Himoyasiz PDF uchun parol bo'sh qoldirilishi mumkin.</div>
-        </div>
+                        </div>
+                        <div class="field-hint" id="unlockHint">Himoyasiz PDF uchun parol bo'sh qoldirilishi mumkin.</div>
+                    </div>
 
-        <div class="err-box" id="unlockErr"></div>
+                    <div class="err-box" id="unlockErr"></div>
 
-        <button class="btn-action" id="btnUnlock" style="background:#1565c0;box-shadow:0 2px 12px rgba(21,101,192,.25);">
+                    <button class="btn-action" id="btnUnlock" style="background:#1565c0;box-shadow:0 2px 12px rgba(21,101,192,.25);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
           Parolni Olib Tashlash
         </button>
 
-        <div class="result-card" id="unlockResult">
-          <div class="rc-head">
-            <svg class="rc-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg>
-            <span class="rc-title">Parol muvaffaqiyatli olib tashlandi!</span>
-          </div>
-          <button class="btn-dl" id="btnDlUnlock">
+                    <div class="result-card" id="unlockResult">
+                        <div class="rc-head">
+                            <svg class="rc-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="rc-title">Parol muvaffaqiyatli olib tashlandi!</span>
+                        </div>
+                        <button class="btn-dl" id="btnDlUnlock">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Ochilgan PDF yuklab olish
           </button>
-          <div class="rc-info" id="unlockResultInfo"></div>
+                        <div class="rc-info" id="unlockResultInfo"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /panel-unlock -->
+        </section>
+
+        <!-- INFO -->
+        <section class="tool-info">
+            <article class="info-article">
+                <h2>PDF Himoya haqida</h2>
+                <p>PDF fayllarni parol bilan himoyalash muhim hujjatlarni ruxsatsiz kirishdan saqlaydi. Bu vosita <strong>AES shifrlash</strong> orqali brauzeringizda ishlaydi &#8212; fayl serverga yuborilmaydi.</p>
+                <div class="use-grid">
+                    <div class="use-card">
+                        <div class="uc-icon">&#128274;</div>
+                        <h3>Hujjatni himoyalash</h3>
+                        <p>Shartnoma, diplom, moliyaviy hisobot &#8212; faqat parolni bilgan odam ochishi mumkin.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#9999;</div>
+                        <h3>Ruxsatlarni boshqarish</h3>
+                        <p>Chop etish, nusxalash, tahrirlash &#8212; har birini alohida yoqing yoki o&#8217;chiring.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128275;</div>
+                        <h3>Parolni olib tashlash</h3>
+                        <p>Parolini bilgan hujjat parolini olib tashlab, oddiy PDF ko&#8217;rinishiga keltiring.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128170;</div>
+                        <h3>Xavfsizlik</h3>
+                        <p>Fayl brauzeringizdan chiqmaydi. Internet kerak emas (sahifa yuklangandan keyin).</p>
+                    </div>
+                </div>
+                <h2>Parol turlari</h2>
+                <p><strong>Foydalanuvchi paroli</strong> &#8212; hujjatni ochish uchun talab qilinadi. Bu parolni bilmagan kishi PDF ni ko&#8217;ra olmaydi.</p>
+                <p><strong>Egasi paroli</strong> &#8212; to&#8217;liq huquqlar uchun. Foydalanuvchi paroli bilan ochilgan hujjatda chop etish, tahrirlash cheklangan bo&#8217;lishi mumkin. Egasi paroli bilan barcha cheklovlar olib tashlanadi.</p>
+                <div class="faq-list">
+                    <details>
+                        <summary>Parolni unutsam nima bo'ladi?</summary>
+                        <p>Parolni qayta tiklash imkoniyati yo'q. Iltimos, parolingizni xavfsiz joyda saqlang. toolbase.uz fayl yoki parolni saqlamaydi.</p>
+                    </details>
+                    <details>
+                        <summary>Qaysi shifrlash ishlatiladi?</summary>
+                        <p>@cantoo/pdf-lib kutubxonasi PDF standartiga mos AES-128 shifrlashni qo'llaydi. Zamonaviy PDF ko'ruvchilar (Adobe Acrobat, Chrome, Firefox) bu formatni qo'llab-quvvatlaydi.</p>
+                    </details>
+                    <details>
+                        <summary>Himoyasiz PDFdan parolni olib tashlash mumkinmi?</summary>
+                        <p>Ha. Agar fayl himoyasiz bo'lsa, parol bo'sh qoldiriladi va fayl aynan shu holida saqlanadi.</p>
+                    </details>
+                    <details>
+                        <summary>Ruxsatlar qanday ishlaydi?</summary>
+                        <p>Foydalanuvchi parolida ochilganda belgilangan ruxsatlar qo'llaniladi. Egasi paroli bilan ochilganda barcha ruxsatlar avtomatik beriladi. Ba'zi eski PDF ko'ruvchilar ruxsatlarni to'liq qo'llamasligi mumkin.</p>
+                    </details>
+                    <details>
+                        <summary>Fayl brauzerdan tashqariga chiqadi?</summary>
+                        <p>Yo'q. Hamma jarayon JavaScript va Web Crypto API orqali foydalanuvchi qurilmasida bajariladi. Fayl hech qachon serverga yuborilmaydi.</p>
+                    </details>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
+                        </a>
+                        <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vositalar column -->
+                <div class="footer-col">
+                    <h4>Vositalar</h4>
+                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/tools/word-counter/">Word Counter</a>
+                    <a href="/tools/case-converter/">Case Converter</a>
+                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                </div>
+
+                <!-- PDF & Rasm column -->
+                <div class="footer-col">
+                    <h4>PDF &amp; Rasm</h4>
+                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+                    <a href="/tools/image-converter/">Rasm Konvertor</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+                    <a href="/tools/qr-generator/">QR Kod</a>
+                </div>
+
+                <!-- Loyiha + Huquqiy column -->
+                <div class="footer-col">
+                    <h4>Loyiha</h4>
+                    <a href="/about.html">Biz haqimizda</a>
+                    <a href="/contact.html">Aloqa</a>
+                    <a href="/blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Huquqiy</h4>
+                    <a href="/terms.html">Foydalanish shartlari</a>
+                    <a href="/privacy.html">Maxfiylik siyosati</a>
+                </div>
+
+            </div>
+            <!-- /.footer-grid -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                </div>
+            </div>
         </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.footer-year').forEach(function(e) {
+            e.textContent = String(new Date().getFullYear());
+        });
+    </script>
 
-      </div>
-    </div><!-- /panel-unlock -->
-  </section>
-
-  <!-- INFO -->
-  <section class="tool-info">
-    <article class="info-article">
-      <h2>PDF Himoya haqida</h2>
-      <p>PDF fayllarni parol bilan himoyalash muhim hujjatlarni ruxsatsiz kirishdan saqlaydi. Bu vosita <strong>AES shifrlash</strong> orqali brauzeringizda ishlaydi &#8212; fayl serverga yuborilmaydi.</p>
-      <div class="use-grid">
-        <div class="use-card"><div class="uc-icon">&#128274;</div><h3>Hujjatni himoyalash</h3><p>Shartnoma, diplom, moliyaviy hisobot &#8212; faqat parolni bilgan odam ochishi mumkin.</p></div>
-        <div class="use-card"><div class="uc-icon">&#9999;</div><h3>Ruxsatlarni boshqarish</h3><p>Chop etish, nusxalash, tahrirlash &#8212; har birini alohida yoqing yoki o&#8217;chiring.</p></div>
-        <div class="use-card"><div class="uc-icon">&#128275;</div><h3>Parolni olib tashlash</h3><p>Parolini bilgan hujjat parolini olib tashlab, oddiy PDF ko&#8217;rinishiga keltiring.</p></div>
-        <div class="use-card"><div class="uc-icon">&#128170;</div><h3>Xavfsizlik</h3><p>Fayl brauzeringizdan chiqmaydi. Internet kerak emas (sahifa yuklangandan keyin).</p></div>
-      </div>
-      <h2>Parol turlari</h2>
-      <p><strong>Foydalanuvchi paroli</strong> &#8212; hujjatni ochish uchun talab qilinadi. Bu parolni bilmagan kishi PDF ni ko&#8217;ra olmaydi.</p>
-      <p><strong>Egasi paroli</strong> &#8212; to&#8217;liq huquqlar uchun. Foydalanuvchi paroli bilan ochilgan hujjatda chop etish, tahrirlash cheklangan bo&#8217;lishi mumkin. Egasi paroli bilan barcha cheklovlar olib tashlanadi.</p>
-      <div class="faq-list">
-        <details><summary>Parolni unutsam nima bo'ladi?</summary><p>Parolni qayta tiklash imkoniyati yo'q. Iltimos, parolingizni xavfsiz joyda saqlang. toolbase.uz fayl yoki parolni saqlamaydi.</p></details>
-        <details><summary>Qaysi shifrlash ishlatiladi?</summary><p>@cantoo/pdf-lib kutubxonasi PDF standartiga mos AES-128 shifrlashni qo'llaydi. Zamonaviy PDF ko'ruvchilar (Adobe Acrobat, Chrome, Firefox) bu formatni qo'llab-quvvatlaydi.</p></details>
-        <details><summary>Himoyasiz PDFdan parolni olib tashlash mumkinmi?</summary><p>Ha. Agar fayl himoyasiz bo'lsa, parol bo'sh qoldiriladi va fayl aynan shu holida saqlanadi.</p></details>
-        <details><summary>Ruxsatlar qanday ishlaydi?</summary><p>Foydalanuvchi parolida ochilganda belgilangan ruxsatlar qo'llaniladi. Egasi paroli bilan ochilganda barcha ruxsatlar avtomatik beriladi. Ba'zi eski PDF ko'ruvchilar ruxsatlarni to'liq qo'llamasligi mumkin.</p></details>
-        <details><summary>Fayl brauzerdan tashqariga chiqadi?</summary><p>Yo'q. Hamma jarayon JavaScript va Web Crypto API orqali foydalanuvchi qurilmasida bajariladi. Fayl hech qachon serverga yuborilmaydi.</p></details>
-      </div>
-    </article>
-  </section>
-</main>
-
-
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
-        <div class="footer-social">
-          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            Telegram
-          </a>
-          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- Vositalar column -->
-      <div class="footer-col">
-        <h4>Vositalar</h4>
-        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
-        <a href="/tools/word-counter/">Word Counter</a>
-        <a href="/tools/case-converter/">Case Converter</a>
-        <a href="/tools/color-converter/">Rang Konvertori</a>
-        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
-        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
-      </div>
-
-      <!-- PDF & Rasm column -->
-      <div class="footer-col">
-        <h4>PDF &amp; Rasm</h4>
-        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
-        <a href="/tools/pdf-editor/">PDF Editor</a>
-        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
-        <a href="/tools/image-converter/">Rasm Konvertor</a>
-        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
-        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-        <a href="/tools/qr-generator/">QR Kod</a>
-      </div>
-
-      <!-- Loyiha + Huquqiy column -->
-      <div class="footer-col">
-        <h4>Loyiha</h4>
-        <a href="/about.html">Biz haqimizda</a>
-        <a href="/contact.html">Aloqa</a>
-        <a href="/blog.html">Blog</a>
-        <div class="footer-divider"></div>
-        <h4 class="ftr-h4-mt">Huquqiy</h4>
-        <a href="/terms.html">Foydalanish shartlari</a>
-        <a href="/privacy.html">Maxfiylik siyosati</a>
-      </div>
-
-    </div><!-- /.footer-grid -->
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-row">
-        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
-      </div>
-    </div>
-  </div>
-</footer>
-<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
-
-<div class="toast" id="toast"></div>
-<!-- @cantoo/pdf-lib — encryption support -->
-<script src="https://cdn.jsdelivr.net/npm/@cantoo/pdf-lib@2.6.5/dist/pdf-lib.min.js"></script>
-<script src="js/pdf-protect.js"></script>
+    <div class="toast" id="toast"></div>
+    <!-- @cantoo/pdf-lib — encryption support -->
+    <script src="https://cdn.jsdelivr.net/npm/@cantoo/pdf-lib@2.6.5/dist/pdf-lib.min.js"></script>
+    <script src="js/pdf-protect.js"></script>
 </body>
+
 </html>

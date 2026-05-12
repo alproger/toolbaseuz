@@ -1,325 +1,713 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash, Ruxsatlar — To'liq Qo'llanma | toolbase.uz</title>
-  <meta name="description" content="PDF faylni qanday himoyalash kerak: parol qo'yish, ruxsatlarni boshqarish, parolni olib tashlash. AES shifrlash, foydalanuvchi va egasi paroli." />
-  <meta name="keywords" content="pdf parol, pdf himoya, pdf encrypt, pdf xavfsizlik, pdf parol ochirish, pdf permission, owner password, user password" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html" />
-  <meta property="og:title" content="PDF ga Parol Qo'yish: Xavfsizlik va Shifrlash — To'liq Qo'llanma" />
-  <meta property="og:description" content="PDF faylni qanday himoyalash: parol, ruxsatlar, AES shifrlash. Bepul onlayn vosita." />
-  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
-  <meta property="og:locale" content="uz_UZ" />
-  <meta property="article:published_time" content="2026-05-10T00:00:00+05:00" />
-  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
-  <link rel="alternate icon" href="../favicon.ico" />
-  <link rel="manifest" href="../manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash, Ruxsatlar","url":"https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html","datePublished":"2026-05-10","author":{"@type":"Organization","name":"toolbase.uz"},"publisher":{"@type":"Organization","name":"toolbase.uz"},"inLanguage":"uz"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"PDF ga parol qo'yish nima uchun kerak?","acceptedAnswer":{"@type":"Answer","text":"Muhim hujjatlarni (shartnoma, diplom, moliyaviy ma'lumot) ruxsatsiz kirishdan himoyalash uchun. Faqat parolni bilgan kishi hujjatni ochishi mumkin."}},{"@type":"Question","name":"Foydalanuvchi paroli va egasi paroli farqi nima?","acceptedAnswer":{"@type":"Answer","text":"Foydalanuvchi paroli hujjatni ochadi, lekin chop etish yoki tahrirlash cheklangan bo'lishi mumkin. Egasi paroli barcha cheklovlarni olib tashlab, to'liq huquq beradi."}},{"@type":"Question","name":"AES shifrlash nima?","acceptedAnswer":{"@type":"Answer","text":"AES (Advanced Encryption Standard) — hozirgi kunda eng xavfsiz shifrlash algoritmi. PDF uchun AES-128 va AES-256 variantlari qo'llaniladi."}}]}</script>
-  <style>
-    .page-hero{background:var(--bg-soft);padding:clamp(36px,6vw,64px) 0 clamp(28px,4vw,44px);border-bottom:1px solid var(--line);}
-    .page-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;letter-spacing:-.03em;max-width:760px;}
-    .page-hero p{color:var(--muted);line-height:1.6;}
-    .article-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
-    .meta-cat{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 10px;border-radius:999px;background:var(--c-pdf-bg);color:var(--c-pdf);}
-    .meta-info{font-size:.82rem;color:var(--muted);}
-    .breadcrumb{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted);margin-bottom:18px;}
-    .breadcrumb a{color:var(--muted);}.breadcrumb a:hover{color:var(--primary);}.bc-sep{color:#d1d5db;}
-    .page-content{max-width:760px;margin:0 auto;padding:clamp(32px,5vw,56px) 20px clamp(48px,7vw,80px);line-height:1.78;}
-    .page-content h2{font-size:clamp(1.15rem,2.5vw,1.4rem);font-weight:700;margin:2.4em 0 .7em;color:var(--ink);letter-spacing:-.02em;}
-    .page-content h2:first-child{margin-top:0;}
-    .page-content h3{font-size:1rem;font-weight:700;margin:1.8em 0 .5em;color:var(--ink);}
-    .page-content p{margin-bottom:1.1em;font-size:.97rem;color:var(--ink-2);}
-    .page-content ul,.page-content ol{padding-left:1.5em;margin-bottom:1.1em;}
-    .page-content li{margin-bottom:.5em;font-size:.97rem;color:var(--ink-2);}
-    .page-content a{color:var(--primary);}.page-content a:hover{text-decoration:underline;}
-    .page-content strong{color:var(--ink);font-weight:700;}
-    .tip-box{background:var(--primary-soft);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;}
-    .tip-box p{margin:0;font-size:.93rem;color:var(--ink);}
-    .warn-box{background:#fffbeb;border-left:3px solid #d97706;border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;}
-    .warn-box p{margin:0;font-size:.93rem;color:#92400e;}
-    .danger-box{background:var(--c-pdf-bg);border-left:3px solid var(--c-pdf);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;}
-    .danger-box p{margin:0;font-size:.93rem;color:#7f1d1d;}
-    .tool-cta{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:28px 24px;margin:40px 0;text-align:center;}
-    .tool-cta h3{font-size:1.1rem;margin-bottom:8px;}
-    .tool-cta p{font-size:.9rem;color:var(--muted);margin-bottom:18px;}
-    .tool-cta a{display:inline-flex;align-items:center;gap:6px;padding:11px 24px;background:var(--c-pdf);color:#fff;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none;transition:opacity .15s;}
-    .tool-cta a:hover{opacity:.88;}
-    .compare-table{width:100%;border-collapse:collapse;margin:14px 0 24px;font-size:.9rem;}
-    .compare-table th{background:var(--bg-soft);padding:10px 14px;text-align:left;font-weight:700;color:var(--ink);border-bottom:2px solid var(--line);font-size:.82rem;}
-    .compare-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top;}
-    .compare-table tr:last-child td{border-bottom:none;}
-    .compare-table td:first-child{font-weight:600;color:var(--ink);}
-    .yes{color:#16a34a;font-weight:700;}.no{color:#dc2626;font-weight:700;}
-    .step-list{counter-reset:step;list-style:none;padding:0;margin:14px 0 24px;}
-    .step-list li{counter-increment:step;display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;}
-    .step-list li::before{content:counter(step);min-width:28px;height:28px;border-radius:50%;background:var(--c-pdf);color:#fff;font-size:.8rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-    .step-list li div{font-size:.97rem;color:var(--ink-2);line-height:1.65;}
-    .step-list li strong{color:var(--ink);}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px;}
-    .related-card{display:block;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:border-color .15s;}
-    .related-card:hover{border-color:var(--c-pdf);}
-    .related-card .rc-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--c-pdf);margin-bottom:6px;}
-    .related-card .rc-title{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.4;}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash, Ruxsatlar — To'liq Qo'llanma | toolbase.uz</title>
+    <meta name="description" content="PDF faylni qanday himoyalash kerak: parol qo'yish, ruxsatlarni boshqarish, parolni olib tashlash. AES shifrlash, foydalanuvchi va egasi paroli." />
+    <meta name="keywords" content="pdf parol, pdf himoya, pdf encrypt, pdf xavfsizlik, pdf parol ochirish, pdf permission, owner password, user password" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html" />
+    <meta property="og:title" content="PDF ga Parol Qo'yish: Xavfsizlik va Shifrlash — To'liq Qo'llanma" />
+    <meta property="og:description" content="PDF faylni qanday himoyalash: parol, ruxsatlar, AES shifrlash. Bepul onlayn vosita." />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="article:published_time" content="2026-05-10T00:00:00+05:00" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+    <link rel="alternate icon" href="../favicon.ico" />
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash, Ruxsatlar",
+            "url": "https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html",
+            "datePublished": "2026-05-10",
+            "author": {
+                "@type": "Organization",
+                "name": "toolbase.uz"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "toolbase.uz"
+            },
+            "inLanguage": "uz"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "PDF ga parol qo'yish nima uchun kerak?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Muhim hujjatlarni (shartnoma, diplom, moliyaviy ma'lumot) ruxsatsiz kirishdan himoyalash uchun. Faqat parolni bilgan kishi hujjatni ochishi mumkin."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Foydalanuvchi paroli va egasi paroli farqi nima?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Foydalanuvchi paroli hujjatni ochadi, lekin chop etish yoki tahrirlash cheklangan bo'lishi mumkin. Egasi paroli barcha cheklovlarni olib tashlab, to'liq huquq beradi."
+                }
+            }, {
+                "@type": "Question",
+                "name": "AES shifrlash nima?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AES (Advanced Encryption Standard) — hozirgi kunda eng xavfsiz shifrlash algoritmi. PDF uchun AES-128 va AES-256 variantlari qo'llaniladi."
+                }
+            }]
+        }
+    </script>
+    <style>
+        .page-hero {
+            background: var(--bg-soft);
+            padding: clamp(36px, 6vw, 64px) 0 clamp(28px, 4vw, 44px);
+            border-bottom: 1px solid var(--line);
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-bottom: 10px;
+            letter-spacing: -.03em;
+            max-width: 760px;
+        }
+        
+        .page-hero p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        
+        .meta-cat {
+            display: inline-block;
+            font-size: .72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            padding: 2px 10px;
+            border-radius: 999px;
+            background: var(--c-pdf-bg);
+            color: var(--c-pdf);
+        }
+        
+        .meta-info {
+            font-size: .82rem;
+            color: var(--muted);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .85rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+        
+        .breadcrumb a {
+            color: var(--muted);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+        
+        .bc-sep {
+            color: #d1d5db;
+        }
+        
+        .page-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: clamp(32px, 5vw, 56px) 20px clamp(48px, 7vw, 80px);
+            line-height: 1.78;
+        }
+        
+        .page-content h2 {
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            font-weight: 700;
+            margin: 2.4em 0 .7em;
+            color: var(--ink);
+            letter-spacing: -.02em;
+        }
+        
+        .page-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .page-content h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 1.8em 0 .5em;
+            color: var(--ink);
+        }
+        
+        .page-content p {
+            margin-bottom: 1.1em;
+            font-size: .97rem;
+            color: var(--ink-2);
+        }
+        
+        .page-content ul,
+        .page-content ol {
+            padding-left: 1.5em;
+            margin-bottom: 1.1em;
+        }
+        
+        .page-content li {
+            margin-bottom: .5em;
+            font-size: .97rem;
+            color: var(--ink-2);
+        }
+        
+        .page-content a {
+            color: var(--primary);
+        }
+        
+        .page-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .page-content strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+        
+        .tip-box {
+            background: var(--primary-soft);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 20px 0;
+        }
+        
+        .tip-box p {
+            margin: 0;
+            font-size: .93rem;
+            color: var(--ink);
+        }
+        
+        .warn-box {
+            background: #fffbeb;
+            border-left: 3px solid #d97706;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 20px 0;
+        }
+        
+        .warn-box p {
+            margin: 0;
+            font-size: .93rem;
+            color: #92400e;
+        }
+        
+        .danger-box {
+            background: var(--c-pdf-bg);
+            border-left: 3px solid var(--c-pdf);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 20px 0;
+        }
+        
+        .danger-box p {
+            margin: 0;
+            font-size: .93rem;
+            color: #7f1d1d;
+        }
+        
+        .tool-cta {
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-cta h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .tool-cta p {
+            font-size: .9rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+        
+        .tool-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 11px 24px;
+            background: var(--c-pdf);
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: .92rem;
+            text-decoration: none;
+            transition: opacity .15s;
+        }
+        
+        .tool-cta a:hover {
+            opacity: .88;
+        }
+        
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 24px;
+            font-size: .9rem;
+        }
+        
+        .compare-table th {
+            background: var(--bg-soft);
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--ink);
+            border-bottom: 2px solid var(--line);
+            font-size: .82rem;
+        }
+        
+        .compare-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--line);
+            color: var(--ink-2);
+            vertical-align: top;
+        }
+        
+        .compare-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .compare-table td:first-child {
+            font-weight: 600;
+            color: var(--ink);
+        }
+        
+        .yes {
+            color: #16a34a;
+            font-weight: 700;
+        }
+        
+        .no {
+            color: #dc2626;
+            font-weight: 700;
+        }
+        
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 14px 0 24px;
+        }
+        
+        .step-list li {
+            counter-increment: step;
+            display: flex;
+            gap: 14px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+        
+        .step-list li::before {
+            content: counter(step);
+            min-width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--c-pdf);
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        
+        .step-list li div {
+            font-size: .97rem;
+            color: var(--ink-2);
+            line-height: 1.65;
+        }
+        
+        .step-list li strong {
+            color: var(--ink);
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .related-card {
+            display: block;
+            padding: 16px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: border-color .15s;
+        }
+        
+        .related-card:hover {
+            border-color: var(--c-pdf);
+        }
+        
+        .related-card .rc-cat {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            color: var(--c-pdf);
+            margin-bottom: 6px;
+        }
+        
+        .related-card .rc-title {
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
-    <nav class="nav-links">
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../privacy.html">Privacy Policy</a>
-      <a href="../terms.html">Terms</a>
-    </nav>
-  </div>
-</header>
-
-<section class="page-hero">
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
-      <a href="../blog.html">Blog</a><span class="bc-sep">&#8250;</span>
-      <span>PDF ga Parol Qo&#8217;yish</span>
-    </nav>
-    <div class="article-meta">
-      <span class="meta-cat">Xavfsizlik</span>
-      <span class="meta-info">10 may 2026 &#183; 7 daqiqa o&#8217;qish</span>
-    </div>
-    <h1>PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash va Ruxsatlar</h1>
-    <p>Muhim hujjatlarni ruxsatsiz kirishdan saqlash &#8212; parol turlari, shifrlash algoritmlari va amaliy maslahatlar.</p>
-  </div>
-</section>
-
-<div class="page-content">
-
-  <p>Har yili millionlab muhim hujjatlar &#8212; shartnomalar, tibbiy ma&#8217;lumotnomalar, moliyaviy hisobotlar &#8212; himoyasiz holda yuborilib, noto&#8217;g&#8217;ri qo&#8217;llarga tushadi. PDF parol himoyasi bu xavfni sezilarli kamaytiradi. Ushbu qo&#8217;llanmada PDF xavfsizligi haqida zarur bilimlarni topasiz.</p>
-
-  <div class="tool-cta">
-    <h3>PDF faylni hoziroq himoyalang</h3>
-    <p>Parol qo&#8217;yish va olib tashlash. AES shifrlash. Bepul, brauzerda &#8212; fayl chiqmaydi.</p>
-    <a href="../tools/pdf-protect/">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      PDF ga Parol Qo&#8217;yish &#8594;
-    </a>
-  </div>
-
-  <h2>PDF parol himoyasi qanday ishlaydi?</h2>
-
-  <p>PDF standarti (ISO 32000) parol himoyasining ikki darajasini belgilaydi. Shifrlash faylning barcha kontentini &#8212; matn, rasm, jadvallarni &#8212; o&#8217;qib bo&#8217;lmaydigan ko&#8217;rinishga keltiradi. To&#8217;g&#8217;ri parol kiritilganda PDF ko&#8217;ruvchi ma&#8217;lumotlarni deshifrlaydi va ko&#8217;rsatadi.</p>
-
-  <h3>Foydalanuvchi paroli (User Password / Open Password)</h3>
-  <p>Hujjatni ochish uchun talab qilinadi. Bu parolni bilmagan kishi PDF ni ochishga urinsa, bo&#8217;sh ekran yoki xato xabar ko&#8217;radi. Korporativ hujjatlar, tibbiy ma&#8217;lumotnomalar, shaxsiy skanlar uchun zarur.</p>
-
-  <h3>Egasi paroli (Owner Password / Permission Password)</h3>
-  <p>Hujjatni ochish uchun kerak emas &#8212; lekin chop etish, tahrirlash, nusxalash kabi ruxsatlarni boshqaradi. Siz hujjatni foydalanuvchiga bersangiz, u o&#8217;qiy oladi, lekin chop etolmaydi yoki tahrir qilolmaydi.</p>
-
-  <div class="tip-box">
-    <p><strong>Muhim farq:</strong> Foydalanuvchi paroli bo&#8217;lmasa ham hujjat ochiladi &#8212; faqat ruxsatlar cheklangan. Ikkalasini birga ishlatish eng kuchli himoya beradi.</p>
-  </div>
-
-  <h2>Shifrlash algoritmlari</h2>
-
-  <table class="compare-table">
-    <thead><tr><th>Algoritm</th><th>Kalit uzunligi</th><th>PDF versiyasi</th><th>Xavfsizlik</th></tr></thead>
-    <tbody>
-      <tr><td>RC4-40</td><td>40-bit</td><td>PDF 1.1&#8211;1.3</td><td><span class="no">&#10060; Eskirgan, zaif</span></td></tr>
-      <tr><td>RC4-128</td><td>128-bit</td><td>PDF 1.4&#8211;1.6</td><td><span class="no">&#10006; Zaif</span></td></tr>
-      <tr><td>AES-128</td><td>128-bit</td><td>PDF 1.6+</td><td><span class="yes">&#10003; Yaxshi</span></td></tr>
-      <tr><td>AES-256</td><td>256-bit</td><td>PDF 1.7 ext3+</td><td><span class="yes">&#10003;&#10003; Juda yaxshi</span></td></tr>
-    </tbody>
-  </table>
-
-  <p>toolbase.uz <strong>AES-128</strong> shifrlashni qo&#8217;llaydi &#8212; zamonaviy PDF ko&#8217;ruvchilar bilan to&#8217;liq mos, ishonchli himoya darajasi. Barcha asosiy dasturlar (Adobe Acrobat, Foxit, macOS Preview, Chrome, Firefox) bu formatni qo&#8217;llab-quvvatlaydi.</p>
-
-  <h2>Ruxsatlar tizimi</h2>
-
-  <p>Egasi parolida foydalanuvchi uchun quyidagi ruxsatlarni sozlash mumkin:</p>
-
-  <table class="compare-table">
-    <thead><tr><th>Ruxsat</th><th>Tavsif</th><th>Tavsiya</th></tr></thead>
-    <tbody>
-      <tr><td>Chop etish</td><td>Hujjatni printer orqali chop etish</td><td>Ko&#8217;pchilik hollarda yoqish</td></tr>
-      <tr><td>Nusxalash</td><td>Matn va rasmlarni nusxalash</td><td>Maxfiy hujjatlarda o&#8217;chirish</td></tr>
-      <tr><td>Tahrirlash</td><td>PDF kontentini o&#8217;zgartirish</td><td>Odatda o&#8217;chirish</td></tr>
-      <tr><td>Izoh qo&#8217;shish</td><td>Komentariyalar va belgilashlar</td><td>Sharh uchun yoqish mumkin</td></tr>
-    </tbody>
-  </table>
-
-  <div class="warn-box">
-    <p><strong>Diqqat:</strong> Ruxsatlar faqat mos keluvchi dasturlarda ishlaydi. Ba&#8217;zi PDF muharrirlari ruxsatlarni e&#8217;tiborsiz qoldirishi mumkin. Ruxsatlar haqiqiy shifrlash o&#8217;rnini bosa olmaydi.</p>
-  </div>
-
-  <h2>Qachon qaysi himoyani ishlatish kerak?</h2>
-
-  <h3>Faqat foydalanuvchi paroli</h3>
-  <p>Hujjatni faqat ma&#8217;lum odamlar ko&#8217;rishi kerak bo&#8217;lganda. Masalan: shaxsiy bank ko&#8217;chmasi, tibbiy natija, shaxsiy skanlar. Parolni bilgan kishi hamma narsani qila oladi.</p>
-
-  <h3>Faqat egasi paroli (ruxsatlar)</h3>
-  <p>Hujjat hamma uchun ochiq, lekin chop etish yoki tahrirlash taqiqlanganda. Masalan: ommaviy shartnoma shabloni, sertifikat, imzolangan hujjat. Har kim o&#8217;qiy oladi, lekin o&#8217;zgartira olmaydi.</p>
-
-  <h3>Ikkalasi birga</h3>
-  <p>Maksimal himoya: faqat parolni bilgan kishi ochadi, va ochganda ham ruxsatlar cheklangan. Korporativ, yuridik, tibbiy muhim hujjatlar uchun.</p>
-
-  <h2>Kuchli parol yaratish</h2>
-
-  <p>PDF parolining xavfsizligi uning kuchiga bog&#8217;liq. Kuchli parol:</p>
-  <ul>
-    <li>Kamida <strong>12 belgi</strong> (ideal: 20+)</li>
-    <li>Katta va kichik harflar (<strong>A-Z, a-z</strong>)</li>
-    <li>Raqamlar (<strong>0-9</strong>)</li>
-    <li>Maxsus belgilar (<strong>!@#$%^&amp;*</strong>)</li>
-    <li>Lug&#8217;atda bo&#8217;lmagan so&#8217;z yoki iborani <strong>o&#8217;z ichiga olmaydi</strong></li>
-  </ul>
-
-  <div class="danger-box">
-    <p><strong>Parolni unutmang:</strong> toolbase.uz va hech qanday bepul onlayn vosita parolingizni qayta tiklay olmaydi. Parolni xavfsiz menejerda (1Password, Bitwarden, KeePass) saqlang.</p>
-  </div>
-
-  <h2>PDF parolini olib tashlash</h2>
-
-  <p>Agar parolni bilsangiz, uni olib tashlash oson:</p>
-  <ol class="step-list">
-    <li><div><strong>Himoyalangan PDFni yuklang</strong> &#8212; toolbase.uz Parolni Olib Tashlash bo&#8217;limiga.</div></li>
-    <li><div><strong>Parolni kiriting</strong> &#8212; foydalanuvchi yoki egasi parolini.</div></li>
-    <li><div><strong>"Parolni Olib Tashlash"</strong> tugmasini bosing.</div></li>
-    <li><div><strong>Yangi PDF ni yuklab oling</strong> &#8212; parolsiz, oddiy fayl sifatida.</div></li>
-  </ol>
-
-  <p>Parolsiz himoyani olib tashlash &#8212; texnik jihatdan murakkab va ko&#8217;pchilik holatda qonunga zid. toolbase.uz faqat parolni bilgan foydalanuvchilar uchun bu imkoniyatni taqdim etadi.</p>
-
-  <div class="tool-cta">
-    <h3>Hoziroq sinab ko&#8217;ring</h3>
-    <p>Ikki qadam: fayl yuklash, parol kiriting. Serverga yuborilmaydi.</p>
-    <a href="../tools/pdf-protect/">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      PDF Himoya Vositasini Ochish &#8594;
-    </a>
-  </div>
-
-  <h2>Ko&#8217;p so&#8217;raladigan savollar</h2>
-
-  <p><strong>PDF parolini bilmasam olib tashlashning iloji bormi?</strong> Texnik jihatdan ba&#8217;zi eskirgan (RC4-40) shifrlashlar zaif va bruteforce bilan ocilishi mumkin. Zamonaviy AES-128/256 shifrlash amalda qaytarib bo&#8217;lmaydi. toolbase.uz faqat parolni bilganlar uchun ishlaydigan vosita taqdim etadi.</p>
-
-  <p><strong>Skanerlangan PDF (rasm shaklida) himoyalanadi?</strong> Ha &#8212; shifrlash fayl formatini o&#8217;z ichiga oladi, kontent turiga qaramasdan. Rasm yoki matnli PDF ning farqi yo&#8217;q.</p>
-
-  <p><strong>Qanday PDF ko&#8217;ruvchilar himoyani qo&#8217;llab-quvvatlaydi?</strong> Adobe Acrobat, Foxit Reader, macOS Preview, iOS/iPadOS Files, Google Chrome (PDF viewer), Firefox, Edge. Deyarli barcha zamonaviy PDF o&#8217;quvchilar AES-128 ni qo&#8217;llab-quvvatlaydi.</p>
-
-  <p><strong>Ruxsatlar qancha ishonchli?</strong> Ruxsatlar &#8220;soft&#8221; himoya hisoblanadi &#8212; mos keluvchi dasturlarda ishlaydi. Maxsus PDF muharrirlari ba&#8217;zan ruxsatlarni chetlab o&#8217;tishi mumkin. Haqiqiy himoya uchun foydalanuvchi parolini ham qo&#8217;shing.</p>
-
-  <hr style="border:none;border-top:1px solid var(--line);margin:40px 0;" />
-
-  <h2>Tegishli maqolalar va vositalar</h2>
-  <div class="related-grid">
-    <a class="related-card" href="../tools/pdf-protect/">
-      <div class="rc-cat">Vosita</div>
-      <div class="rc-title">PDF ga Parol Qo&#8217;yish va Ochirish</div>
-    </a>
-    <a class="related-card" href="../tools/pdf-merge/">
-      <div class="rc-cat">Vosita</div>
-      <div class="rc-title">PDF Birlashtirish &#8212; 20 ta fayl</div>
-    </a>
-    <a class="related-card" href="../tools/pdf-delete/">
-      <div class="rc-cat">Vosita</div>
-      <div class="rc-title">PDF Sahifa O&#8217;chirish</div>
-    </a>
-    <a class="related-card" href="kuchli-parol-yaratish.html">
-      <div class="rc-cat">Qo&#8217;llanma</div>
-      <div class="rc-title">Kuchli Parol Yaratish &#8212; Xavfsizlik</div>
-    </a>
-  </div>
-
-</div>
-
-
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
-        <div class="footer-social">
-          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            Telegram
-          </a>
-          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links">
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms</a>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <!-- Vositalar column -->
-      <div class="footer-col">
-        <h4>Vositalar</h4>
-        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
-        <a href="/tools/word-counter/">Word Counter</a>
-        <a href="/tools/case-converter/">Case Converter</a>
-        <a href="/tools/color-converter/">Rang Konvertori</a>
-        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
-        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
-      </div>
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
+                <a href="../blog.html">Blog</a><span class="bc-sep">&#8250;</span>
+                <span>PDF ga Parol Qo&#8217;yish</span>
+            </nav>
+            <div class="article-meta">
+                <span class="meta-cat">Xavfsizlik</span>
+                <span class="meta-info">10 may 2026 &#183; 7 daqiqa o&#8217;qish</span>
+            </div>
+            <h1>PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash va Ruxsatlar</h1>
+            <p>Muhim hujjatlarni ruxsatsiz kirishdan saqlash &#8212; parol turlari, shifrlash algoritmlari va amaliy maslahatlar.</p>
+        </div>
+    </section>
 
-      <!-- PDF & Rasm column -->
-      <div class="footer-col">
-        <h4>PDF &amp; Rasm</h4>
-        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
-        <a href="/tools/pdf-editor/">PDF Editor</a>
-        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
-        <a href="/tools/image-converter/">Rasm Konvertor</a>
-        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
-        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-        <a href="/tools/qr-generator/">QR Kod</a>
-      </div>
+    <div class="page-content">
 
-      <!-- Loyiha + Huquqiy column -->
-      <div class="footer-col">
-        <h4>Loyiha</h4>
-        <a href="/about.html">Biz haqimizda</a>
-        <a href="/contact.html">Aloqa</a>
-        <a href="/blog.html">Blog</a>
-        <div class="footer-divider"></div>
-        <h4 class="ftr-h4-mt">Huquqiy</h4>
-        <a href="/terms.html">Foydalanish shartlari</a>
-        <a href="/privacy.html">Maxfiylik siyosati</a>
-      </div>
+        <p>Har yili millionlab muhim hujjatlar &#8212; shartnomalar, tibbiy ma&#8217;lumotnomalar, moliyaviy hisobotlar &#8212; himoyasiz holda yuborilib, noto&#8217;g&#8217;ri qo&#8217;llarga tushadi. PDF parol himoyasi bu xavfni sezilarli kamaytiradi.
+            Ushbu qo&#8217;llanmada PDF xavfsizligi haqida zarur bilimlarni topasiz.</p>
 
-    </div><!-- /.footer-grid -->
+        <div class="tool-cta">
+            <h3>PDF faylni hoziroq himoyalang</h3>
+            <p>Parol qo&#8217;yish va olib tashlash. AES shifrlash. Bepul, brauzerda &#8212; fayl chiqmaydi.</p>
+            <a href="../tools/pdf-protect/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>                PDF ga Parol Qo&#8217;yish &#8594;
+            </a>
+        </div>
 
-    <div class="footer-bottom">
-      <div class="footer-bottom-row">
-        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
-      </div>
+        <h2>PDF parol himoyasi qanday ishlaydi?</h2>
+
+        <p>PDF standarti (ISO 32000) parol himoyasining ikki darajasini belgilaydi. Shifrlash faylning barcha kontentini &#8212; matn, rasm, jadvallarni &#8212; o&#8217;qib bo&#8217;lmaydigan ko&#8217;rinishga keltiradi. To&#8217;g&#8217;ri parol kiritilganda
+            PDF ko&#8217;ruvchi ma&#8217;lumotlarni deshifrlaydi va ko&#8217;rsatadi.</p>
+
+        <h3>Foydalanuvchi paroli (User Password / Open Password)</h3>
+        <p>Hujjatni ochish uchun talab qilinadi. Bu parolni bilmagan kishi PDF ni ochishga urinsa, bo&#8217;sh ekran yoki xato xabar ko&#8217;radi. Korporativ hujjatlar, tibbiy ma&#8217;lumotnomalar, shaxsiy skanlar uchun zarur.</p>
+
+        <h3>Egasi paroli (Owner Password / Permission Password)</h3>
+        <p>Hujjatni ochish uchun kerak emas &#8212; lekin chop etish, tahrirlash, nusxalash kabi ruxsatlarni boshqaradi. Siz hujjatni foydalanuvchiga bersangiz, u o&#8217;qiy oladi, lekin chop etolmaydi yoki tahrir qilolmaydi.</p>
+
+        <div class="tip-box">
+            <p><strong>Muhim farq:</strong> Foydalanuvchi paroli bo&#8217;lmasa ham hujjat ochiladi &#8212; faqat ruxsatlar cheklangan. Ikkalasini birga ishlatish eng kuchli himoya beradi.</p>
+        </div>
+
+        <h2>Shifrlash algoritmlari</h2>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Algoritm</th>
+                    <th>Kalit uzunligi</th>
+                    <th>PDF versiyasi</th>
+                    <th>Xavfsizlik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RC4-40</td>
+                    <td>40-bit</td>
+                    <td>PDF 1.1&#8211;1.3</td>
+                    <td><span class="no">&#10060; Eskirgan, zaif</span></td>
+                </tr>
+                <tr>
+                    <td>RC4-128</td>
+                    <td>128-bit</td>
+                    <td>PDF 1.4&#8211;1.6</td>
+                    <td><span class="no">&#10006; Zaif</span></td>
+                </tr>
+                <tr>
+                    <td>AES-128</td>
+                    <td>128-bit</td>
+                    <td>PDF 1.6+</td>
+                    <td><span class="yes">&#10003; Yaxshi</span></td>
+                </tr>
+                <tr>
+                    <td>AES-256</td>
+                    <td>256-bit</td>
+                    <td>PDF 1.7 ext3+</td>
+                    <td><span class="yes">&#10003;&#10003; Juda yaxshi</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>toolbase.uz <strong>AES-128</strong> shifrlashni qo&#8217;llaydi &#8212; zamonaviy PDF ko&#8217;ruvchilar bilan to&#8217;liq mos, ishonchli himoya darajasi. Barcha asosiy dasturlar (Adobe Acrobat, Foxit, macOS Preview, Chrome, Firefox) bu formatni
+            qo&#8217;llab-quvvatlaydi.</p>
+
+        <h2>Ruxsatlar tizimi</h2>
+
+        <p>Egasi parolida foydalanuvchi uchun quyidagi ruxsatlarni sozlash mumkin:</p>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Ruxsat</th>
+                    <th>Tavsif</th>
+                    <th>Tavsiya</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chop etish</td>
+                    <td>Hujjatni printer orqali chop etish</td>
+                    <td>Ko&#8217;pchilik hollarda yoqish</td>
+                </tr>
+                <tr>
+                    <td>Nusxalash</td>
+                    <td>Matn va rasmlarni nusxalash</td>
+                    <td>Maxfiy hujjatlarda o&#8217;chirish</td>
+                </tr>
+                <tr>
+                    <td>Tahrirlash</td>
+                    <td>PDF kontentini o&#8217;zgartirish</td>
+                    <td>Odatda o&#8217;chirish</td>
+                </tr>
+                <tr>
+                    <td>Izoh qo&#8217;shish</td>
+                    <td>Komentariyalar va belgilashlar</td>
+                    <td>Sharh uchun yoqish mumkin</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warn-box">
+            <p><strong>Diqqat:</strong> Ruxsatlar faqat mos keluvchi dasturlarda ishlaydi. Ba&#8217;zi PDF muharrirlari ruxsatlarni e&#8217;tiborsiz qoldirishi mumkin. Ruxsatlar haqiqiy shifrlash o&#8217;rnini bosa olmaydi.</p>
+        </div>
+
+        <h2>Qachon qaysi himoyani ishlatish kerak?</h2>
+
+        <h3>Faqat foydalanuvchi paroli</h3>
+        <p>Hujjatni faqat ma&#8217;lum odamlar ko&#8217;rishi kerak bo&#8217;lganda. Masalan: shaxsiy bank ko&#8217;chmasi, tibbiy natija, shaxsiy skanlar. Parolni bilgan kishi hamma narsani qila oladi.</p>
+
+        <h3>Faqat egasi paroli (ruxsatlar)</h3>
+        <p>Hujjat hamma uchun ochiq, lekin chop etish yoki tahrirlash taqiqlanganda. Masalan: ommaviy shartnoma shabloni, sertifikat, imzolangan hujjat. Har kim o&#8217;qiy oladi, lekin o&#8217;zgartira olmaydi.</p>
+
+        <h3>Ikkalasi birga</h3>
+        <p>Maksimal himoya: faqat parolni bilgan kishi ochadi, va ochganda ham ruxsatlar cheklangan. Korporativ, yuridik, tibbiy muhim hujjatlar uchun.</p>
+
+        <h2>Kuchli parol yaratish</h2>
+
+        <p>PDF parolining xavfsizligi uning kuchiga bog&#8217;liq. Kuchli parol:</p>
+        <ul>
+            <li>Kamida <strong>12 belgi</strong> (ideal: 20+)</li>
+            <li>Katta va kichik harflar (<strong>A-Z, a-z</strong>)</li>
+            <li>Raqamlar (<strong>0-9</strong>)</li>
+            <li>Maxsus belgilar (<strong>!@#$%^&amp;*</strong>)</li>
+            <li>Lug&#8217;atda bo&#8217;lmagan so&#8217;z yoki iborani <strong>o&#8217;z ichiga olmaydi</strong></li>
+        </ul>
+
+        <div class="danger-box">
+            <p><strong>Parolni unutmang:</strong> toolbase.uz va hech qanday bepul onlayn vosita parolingizni qayta tiklay olmaydi. Parolni xavfsiz menejerda (1Password, Bitwarden, KeePass) saqlang.</p>
+        </div>
+
+        <h2>PDF parolini olib tashlash</h2>
+
+        <p>Agar parolni bilsangiz, uni olib tashlash oson:</p>
+        <ol class="step-list">
+            <li>
+                <div><strong>Himoyalangan PDFni yuklang</strong> &#8212; toolbase.uz Parolni Olib Tashlash bo&#8217;limiga.</div>
+            </li>
+            <li>
+                <div><strong>Parolni kiriting</strong> &#8212; foydalanuvchi yoki egasi parolini.</div>
+            </li>
+            <li>
+                <div><strong>"Parolni Olib Tashlash"</strong> tugmasini bosing.</div>
+            </li>
+            <li>
+                <div><strong>Yangi PDF ni yuklab oling</strong> &#8212; parolsiz, oddiy fayl sifatida.</div>
+            </li>
+        </ol>
+
+        <p>Parolsiz himoyani olib tashlash &#8212; texnik jihatdan murakkab va ko&#8217;pchilik holatda qonunga zid. toolbase.uz faqat parolni bilgan foydalanuvchilar uchun bu imkoniyatni taqdim etadi.</p>
+
+        <div class="tool-cta">
+            <h3>Hoziroq sinab ko&#8217;ring</h3>
+            <p>Ikki qadam: fayl yuklash, parol kiriting. Serverga yuborilmaydi.</p>
+            <a href="../tools/pdf-protect/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>                PDF Himoya Vositasini Ochish &#8594;
+            </a>
+        </div>
+
+        <h2>Ko&#8217;p so&#8217;raladigan savollar</h2>
+
+        <p><strong>PDF parolini bilmasam olib tashlashning iloji bormi?</strong> Texnik jihatdan ba&#8217;zi eskirgan (RC4-40) shifrlashlar zaif va bruteforce bilan ocilishi mumkin. Zamonaviy AES-128/256 shifrlash amalda qaytarib bo&#8217;lmaydi. toolbase.uz
+            faqat parolni bilganlar uchun ishlaydigan vosita taqdim etadi.</p>
+
+        <p><strong>Skanerlangan PDF (rasm shaklida) himoyalanadi?</strong> Ha &#8212; shifrlash fayl formatini o&#8217;z ichiga oladi, kontent turiga qaramasdan. Rasm yoki matnli PDF ning farqi yo&#8217;q.</p>
+
+        <p><strong>Qanday PDF ko&#8217;ruvchilar himoyani qo&#8217;llab-quvvatlaydi?</strong> Adobe Acrobat, Foxit Reader, macOS Preview, iOS/iPadOS Files, Google Chrome (PDF viewer), Firefox, Edge. Deyarli barcha zamonaviy PDF o&#8217;quvchilar AES-128
+            ni qo&#8217;llab-quvvatlaydi.</p>
+
+        <p><strong>Ruxsatlar qancha ishonchli?</strong> Ruxsatlar &#8220;soft&#8221; himoya hisoblanadi &#8212; mos keluvchi dasturlarda ishlaydi. Maxsus PDF muharrirlari ba&#8217;zan ruxsatlarni chetlab o&#8217;tishi mumkin. Haqiqiy himoya uchun foydalanuvchi
+            parolini ham qo&#8217;shing.</p>
+
+        <hr style="border:none;border-top:1px solid var(--line);margin:40px 0;" />
+
+        <h2>Tegishli maqolalar va vositalar</h2>
+        <div class="related-grid">
+            <a class="related-card" href="../tools/pdf-protect/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">PDF ga Parol Qo&#8217;yish va Ochirish</div>
+            </a>
+            <a class="related-card" href="../tools/pdf-merge/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">PDF Birlashtirish &#8212; 20 ta fayl</div>
+            </a>
+            <a class="related-card" href="../tools/pdf-delete/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">PDF Sahifa O&#8217;chirish</div>
+            </a>
+            <a class="related-card" href="kuchli-parol-yaratish.html">
+                <div class="rc-cat">Qo&#8217;llanma</div>
+                <div class="rc-title">Kuchli Parol Yaratish &#8212; Xavfsizlik</div>
+            </a>
+        </div>
+
     </div>
-  </div>
-</footer>
-<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
+                        </a>
+                        <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vositalar column -->
+                <div class="footer-col">
+                    <h4>Vositalar</h4>
+                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/tools/word-counter/">Word Counter</a>
+                    <a href="/tools/case-converter/">Case Converter</a>
+                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                </div>
+
+                <!-- PDF & Rasm column -->
+                <div class="footer-col">
+                    <h4>PDF &amp; Rasm</h4>
+                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+                    <a href="/tools/image-converter/">Rasm Konvertor</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+                    <a href="/tools/qr-generator/">QR Kod</a>
+                </div>
+
+                <!-- Loyiha + Huquqiy column -->
+                <div class="footer-col">
+                    <h4>Loyiha</h4>
+                    <a href="/about.html">Biz haqimizda</a>
+                    <a href="/contact.html">Aloqa</a>
+                    <a href="/blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Huquqiy</h4>
+                    <a href="/terms.html">Foydalanish shartlari</a>
+                    <a href="/privacy.html">Maxfiylik siyosati</a>
+                </div>
+
+            </div>
+            <!-- /.footer-grid -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.footer-year').forEach(function(e) {
+            e.textContent = String(new Date().getFullYear());
+        });
+    </script>
 
 </body>
+
 </html>
