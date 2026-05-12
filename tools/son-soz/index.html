@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6fb5" />
+
+  <title>Son → So'z — Raqamni o'zbekcha so'zga aylantirish | toolbase.uz</title>
+  <meta name="description" content="Istalgan sonni o'zbekcha so'zga aylantiring — oddiy va pul rejimi (so'm, tiyin). Manfiy sonlar, kasrlar qo'llab-quvvatlanadi." />
+  <meta name="keywords" content="son sozga, raqam yozuvda, o'zbek son, pul yozuv, number to words uzbek" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolbase.uz/tools/son-soz/" />
+  <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/son-soz/" />
+  <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/son-soz/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolbase.uz/tools/son-soz/" />
+  <meta property="og:title" content="Son → So'z | toolbase.uz" />
+  <meta property="og:description" content="Raqamni o'zbekcha so'zga aylantiring. Oddiy va pul rejimi." />
+  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+  <link rel="alternate icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../../manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="css/tool.css" />
+  <style>
+    /* Son-soz specific */
+    .ns-form {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--pad) 12px;
+    }
+    .ns-input-wrap {
+      position: relative;
+      margin-bottom: 14px;
+    }
+    .ns-input {
+      width: 100%;
+      padding: 16px 52px 16px 20px;
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 400;
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .ns-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
+    .ns-input.error  { border-color: #dc2626; box-shadow: 0 0 0 4px #fef2f2; }
+    .ns-input.valid  { border-color: var(--c-file); }
+    .ns-clear {
+      position: absolute;
+      right: 14px; top: 50%;
+      transform: translateY(-50%);
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      display: grid; place-items: center;
+      color: var(--muted);
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .ns-clear.visible { opacity: 1; }
+    .ns-clear:hover { background: var(--line); color: var(--ink); }
+    .ns-clear svg { width: 14px; height: 14px; }
+
+    .ns-mode {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .ns-mode-btn {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: var(--surface);
+      color: var(--ink-2);
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+      min-height: 38px;
+    }
+    .ns-mode-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .ns-mode-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+    .ns-result-wrap {
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .ns-result-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .ns-result-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .ns-result-body {
+      padding: 20px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .ns-result-text {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+      line-height: 1.5;
+      color: var(--ink);
+      word-break: break-word;
+    }
+    .ns-result-placeholder {
+      font-family: var(--font-body);
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .ns-error-text {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #dc2626;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ns-hint {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 0 4px;
+    }
+    .ns-examples {
+      margin-top: 28px;
+    }
+    .ns-examples h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .ns-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .ns-chip {
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      font-size: 0.88rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all 0.13s;
+    }
+    .ns-chip:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Son → So'z",
+    "url": "https://toolbase.uz/tools/son-soz/",
+    "description": "Raqamni o'zbekcha so'zga aylantiruvchi bepul onlayn vosita.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "uz",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "toolbase.uz", "url": "https://toolbase.uz" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Bosh sahifa", "item": "https://toolbase.uz/" },
+      { "@type": "ListItem", "position": 2, "name": "Son → So'z", "item": "https://toolbase.uz/tools/son-soz/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+    <nav class="nav-links">
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Yo'l">
+      <a href="../../">Bosh sahifa</a>
+      <span class="bc-sep">›</span>
+      <span>Son → So'z</span>
+    </nav>
+  </div>
+
+  <section class="tool-hero container">
+    <div class="tool-hero-icon icon-number">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3l-2 18"/><path d="M16 3l-2 18"/></svg>
+    </div>
+    <div class="tool-hero-text">
+      <h1>Son → So'z</h1>
+      <p>Istalgan sonni o'zbekcha so'zga aylantiring — oddiy yoki pul (so'm, tiyin) rejimida. Manfiy sonlar va kasrlar ham ishlaydi.</p>
+    </div>
+  </section>
+
+  <!-- Tool workspace -->
+  <section id="workspace">
+    <div class="ns-form">
+
+      <!-- Mode buttons -->
+      <div class="ns-mode">
+        <button class="ns-mode-btn active" data-mode="oddiy">Oddiy</button>
+        <button class="ns-mode-btn" data-mode="pul">Pul (so'm)</button>
+      </div>
+
+      <!-- Input -->
+      <div class="ns-input-wrap">
+        <input
+          type="text"
+          id="nsInput"
+          class="ns-input"
+          placeholder="Son kiriting..."
+          inputmode="decimal"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          maxlength="16"
+          aria-label="Son kiriting"
+        />
+        <button class="ns-clear" id="nsClear" aria-label="Tozalash" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Result -->
+      <div class="ns-result-wrap">
+        <div class="ns-result-head">
+          <span class="ns-result-label">Natija</span>
+          <button class="act-btn" id="nsCopy" style="display:none">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Nusxalash
+          </button>
+        </div>
+        <div class="ns-result-body">
+          <span class="ns-result-placeholder" id="nsPlaceholder">Natija bu yerda paydo bo'ladi…</span>
+          <span class="ns-result-text" id="nsResult" style="display:none"></span>
+          <span class="ns-error-text" id="nsError" style="display:none">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="nsErrorMsg"></span>
+          </span>
+        </div>
+      </div>
+
+      <p class="ns-hint">Max: 999 999 999 999 · Kasrlar: vergul yoki nuqta bilan (3.14 yoki 3,14)</p>
+
+      <!-- Quick examples -->
+      <div class="ns-examples">
+        <h3>Tez sinab ko'ring</h3>
+        <div class="ns-chips">
+          <button class="ns-chip" data-val="1000">1 000</button>
+          <button class="ns-chip" data-val="1000000">1 000 000</button>
+          <button class="ns-chip" data-val="25000000">25 000 000</button>
+          <button class="ns-chip" data-val="999999999999">999 999 999 999</button>
+          <button class="ns-chip" data-val="-42">-42</button>
+          <button class="ns-chip" data-val="3.14">3.14</button>
+          <button class="ns-chip" data-val="1500.50">1 500.50</button>
+          <button class="ns-chip" data-val="0">0</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Info -->
+  
+
+
+  <section class="tool-info">
+    <article class="info-article">
+      <h2>Son &#8594; So&#8216;z konvertori haqida</h2>
+      <p>Raqamni so&#8216;z bilan ifodalash &#8212; bank hujjatlari, moliyaviy shartnomalar, chek va to&#8216;lov topshiriqlarida majburiy talab. O&#8216;zbekiston Respublikasining rasmiy hujjatlarida summalar so&#8216;m va tiyin bilan yozilishi shart.</p>
+
+      <div class="use-grid">
+        <div class="use-card"><div class="uc-icon">&#127981;</div><h3>Bank hujjatlari</h3><p>To&#8217;lov topshiriqlari va cheklarda summa so&#8216;z bilan yoziladi.</p></div>
+        <div class="use-card"><div class="uc-icon">&#128203;</div><h3>Shartnomalar</h3><p>Shartnoma summasini huquqiy to&#8216;g&#700;ri shaklda yozish.</p></div>
+        <div class="use-card"><div class="uc-icon">&#128176;</div><h3>Hisobotlar</h3><p>Moliyaviy hisob-kitob hujjatlarida raqamni tasdiqlash.</p></div>
+        <div class="use-card"><div class="uc-icon">&#128221;</div><h3>Arizalar</h3><p>Davlat ariza va talabnomalarida miqdorni yozish.</p></div>
+      </div>
+
+      <h2>Qo&#8216;llab-quvvatlanadigan formatlar</h2>
+      <p><strong>Oddiy son:</strong> butun va kasrli sonlar &#8212; <code>1500</code> &#8594; <em>Bir ming besh yuz</em>. <strong>Pul rejimi:</strong> <code>1500.50</code> &#8594; <em>Bir ming besh yuz so&#8216;m ellik tiyin</em>. Manfiy sonlar ham qo&#8216;llab-quvvatlanadi.</p>
+
+      <div class="faq-list">
+        <details><summary>Maksimal qanday son kiritish mumkin?</summary><p>999 999 999 999 (to&#8216;qqiz yuz to&#8216;qson to&#8216;qqiz milliard). Bank hujjatlarida uchraydigan barcha summalar uchun yetarli.</p></details>
+        <details><summary>Kasrli sonlar qanday yoziladi?</summary><p>Vergul (<code>,</code>) yoki nuqta (<code>.</code>) bilan: <code>3.14</code> yoki <code>3,14</code>. Kasrdan keyin ko&#8216;pi bilan 2 ta raqam (tiyin uchun).</p></details>
+        <details><summary>Natija hujjatga tayyor shaklda chiqadimi?</summary><p>Ha. Nusxalash tugmasi bosilganda natija clipboard ga tushadi &#8212; to&#8216;g&#700;ridan Word yoki boshqa dasturga joylashtirish mumkin.</p></details>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+        <div class="footer-social">
+          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Vositalar column -->
+      <div class="footer-col">
+        <h4>Vositalar</h4>
+        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+        <a href="/tools/word-counter/">Word Counter</a>
+        <a href="/tools/case-converter/">Case Converter</a>
+        <a href="/tools/color-converter/">Rang Konvertori</a>
+        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+      </div>
+
+      <!-- PDF & Rasm column -->
+      <div class="footer-col">
+        <h4>PDF &amp; Rasm</h4>
+        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+        <a href="/tools/pdf-editor/">PDF Editor</a>
+        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+        <a href="/tools/image-converter/">Rasm Konvertor</a>
+        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+        <a href="/tools/qr-generator/">QR Kod</a>
+      </div>
+
+      <!-- Loyiha + Huquqiy column -->
+      <div class="footer-col">
+        <h4>Loyiha</h4>
+        <a href="/about.html">Biz haqimizda</a>
+        <a href="/contact.html">Aloqa</a>
+        <a href="/blog.html">Blog</a>
+        <div class="footer-divider"></div>
+        <h4 class="ftr-h4-mt">Huquqiy</h4>
+        <a href="/terms.html">Foydalanish shartlari</a>
+        <a href="/privacy.html">Maxfiylik siyosati</a>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-row">
+        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/numword.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var input      = document.getElementById('nsInput');
+  var clearBtn   = document.getElementById('nsClear');
+  var copyBtn    = document.getElementById('nsCopy');
+  var placeholder= document.getElementById('nsPlaceholder');
+  var resultEl   = document.getElementById('nsResult');
+  var errorEl    = document.getElementById('nsError');
+  var errorMsg   = document.getElementById('nsErrorMsg');
+  var toastEl    = document.getElementById('toast');
+  var yearEl     = document.getElementById('year');
+  var mode       = 'oddiy';
+
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* Toast */
+  var toastTimer;
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* Show / hide result states */
+  function showPlaceholder() {
+    placeholder.style.display = '';
+    resultEl.style.display    = 'none';
+    errorEl.style.display     = 'none';
+    copyBtn.style.display     = 'none';
+    input.classList.remove('error', 'valid');
+  }
+  function showResult(text) {
+    placeholder.style.display = 'none';
+    resultEl.style.display    = '';
+    errorEl.style.display     = 'none';
+    resultEl.textContent      = text;
+    copyBtn.style.display     = '';
+    input.classList.remove('error');
+    input.classList.add('valid');
+  }
+  function showError(msg) {
+    placeholder.style.display = 'none';
+    resultEl.style.display    = 'none';
+    errorEl.style.display     = '';
+    errorMsg.textContent      = msg;
+    copyBtn.style.display     = 'none';
+    input.classList.add('error');
+    input.classList.remove('valid');
+  }
+
+  /* Convert and render */
+  function run() {
+    var raw = input.value.trim();
+    // Show/hide clear button
+    clearBtn.classList.toggle('visible', raw.length > 0);
+
+    if (!raw) { showPlaceholder(); return; }
+
+    var res = UzNumWord.convert(raw, mode);
+    if (!res.ok) {
+      if (res.msg) showError(res.msg);
+      else showPlaceholder();
+    } else {
+      showResult(res.text);
+    }
+  }
+
+  /* Input — filter characters in real time */
+  input.addEventListener('input', function () {
+    var filtered = UzNumWord.filterInput(input.value);
+    if (filtered !== input.value) {
+      var pos = input.selectionStart - (input.value.length - filtered.length);
+      input.value = filtered;
+      try { input.setSelectionRange(pos, pos); } catch(e) {}
+    }
+    run();
+  });
+
+  /* Paste — normalise comma */
+  input.addEventListener('paste', function (e) {
+    e.preventDefault();
+    var pasted = (e.clipboardData || window.clipboardData).getData('text');
+    // Replace spaces, keep only valid chars
+    pasted = pasted.replace(/\s/g, '');
+    var filtered = UzNumWord.filterInput(pasted);
+    input.value = filtered;
+    run();
+  });
+
+  /* Clear */
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    run();
+    input.focus();
+  });
+
+  /* Copy */
+  copyBtn.addEventListener('click', function () {
+    var text = resultEl.textContent;
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { showToast('Nusxalandi ✓'); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Nusxalandi ✓');
+    }
+  });
+
+  /* Mode buttons */
+  document.querySelectorAll('.ns-mode-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.ns-mode-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      mode = btn.getAttribute('data-mode');
+      run();
+    });
+  });
+
+  /* Example chips */
+  document.querySelectorAll('.ns-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      input.value = chip.getAttribute('data-val');
+      run();
+      input.focus();
+    });
+  });
+
+  /* Init */
+  input.focus();
+})();
+</script>
+
+</body>
+</html>

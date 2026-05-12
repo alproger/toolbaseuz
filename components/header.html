@@ -1,0 +1,52 @@
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="{{localePrefix}}/">
+      <span class="brand-name">ToolBase</span><span class="brand-suffix">.uz</span>
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="{{localePrefix}}/">{{home}}</a>
+      <a class="nav-link" href="{{localePrefix}}/tools/">{{tools}}</a>
+      <a class="nav-link" href="{{localePrefix}}/blog/">{{blog}}</a>
+      <a class="nav-link" href="{{localePrefix}}/about/">{{about}}</a>
+      <a class="nav-link" href="{{localePrefix}}/contact/">{{contact}}</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-block">
+        <input id="siteSearch" type="search" placeholder="{{searchPlaceholder}}" aria-label="Search" />
+      </div>
+      <div class="lang-switcher">
+        <button id="langButton" class="lang-button" aria-haspopup="listbox" aria-expanded="false">EN</button>
+        <ul id="langMenu" class="lang-menu" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="ru">Русский</li>
+          <li role="option" data-lang="uz">O‘zbek</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mega-menu" id="megaMenu">
+    <div class="container mega-grid">
+      <div>
+        <strong>Tools categories</strong>
+        <a href="{{localePrefix}}/tools/?category=text">Text tools</a>
+        <a href="{{localePrefix}}/tools/?category=pdf">PDF tools</a>
+        <a href="{{localePrefix}}/tools/?category=image">Image tools</a>
+      </div>
+      <div>
+        <strong>Fast access</strong>
+        <a href="{{localePrefix}}/tools/lotin-krill/">Latin ⇄ Cyrillic</a>
+        <a href="{{localePrefix}}/tools/image-compress/">Image Compress</a>
+        <a href="{{localePrefix}}/tools/pdf-merge/">PDF Merge</a>
+      </div>
+      <div>
+        <strong>Browse resources</strong>
+        <a href="{{localePrefix}}/blog/">Blog</a>
+        <a href="{{localePrefix}}/about/">About</a>
+        <a href="{{localePrefix}}/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>

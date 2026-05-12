@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6fb5" />
+  <title>PDF Birlashtirish — Bir Nechta PDF ni Birlashtirib Yuklash | toolbase.uz</title>
+  <meta name="description" content="Bir nechta PDF faylni bitta PDF ga birlashtiring. Tartibni o'zgartiring. Serverga yuborilmaydi. Bepul." />
+  <meta name="keywords" content="pdf birlashtirish, pdf merge, pdf qoshish"/>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolbase.uz/tools/pdf-merge/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolbase.uz/tools/pdf-merge/" />
+  <meta property="og:title" content="PDF Birlashtirish | toolbase.uz" />
+  <meta property="og:description" content="PDF fayllarini birlashtiring. Bepul, brauzerda ishlaydi." />
+  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+  <link rel="alternate icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../../manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="css/tool.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF Birlashtirish","url":"https://toolbase.uz/tools/pdf-merge/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"UZS"},"inLanguage":"uz"}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+    <nav class="nav-links">
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Yo'l">
+      <a href="../../">Bosh sahifa</a>
+      <span class="bc-sep">›</span>
+      <span>PDF Birlashtirish</span>
+    </nav>
+  </div>
+
+  <section class="tool-hero container">
+    <div class="tool-hero-icon icon-pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/>
+        <path d="M16 6h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3"/>
+        <line x1="12" y1="2" x2="12" y2="22"/>
+      </svg>
+    </div>
+    <div class="tool-hero-text">
+      <h1>PDF Birlashtirish</h1>
+      <p>Bir nechta PDF faylni bitta hujjatga birlashtiring. 20 tagacha fayl, har biri 100 MB gacha. Fayllaringiz serverga yuborilmaydi — to'liq brauzerda ishlaydi.</p>
+    </div>
+  </section>
+
+  <section class="tool-workspace container">
+
+    <div class="limit-strip">
+      <span class="limit-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Fayllar: <strong id="fileCount">0/20</strong>
+      </span>
+      <span class="limit-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Har bir fayl: <strong>maks 100 MB</strong>
+      </span>
+      <span class="limit-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Fayllar serverga <strong>yuborilmaydi</strong>
+      </span>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <a href="../pdf-delete/" style="display:inline-flex;align-items:center;gap:6px;font-size:.88rem;color:var(--primary);font-weight:600;padding:7px 14px;border:1.5px solid var(--primary);border-radius:8px;text-decoration:none;transition:background .15s;" onmouseover="this.style.background='var(--primary-soft)'" onmouseout="this.style.background='transparent'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="12" y1="12" x2="12" y2="18"/></svg>
+        PDF Sahifa O'chirish →
+      </a>
+    </div>
+
+    <div class="error-box" id="errorBox" role="alert" aria-live="polite"></div>
+
+    <div class="drop-zone" id="dropZone">
+      <input type="file" id="fileInput" accept=".pdf,application/pdf" multiple />
+      <div class="drop-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </div>
+      <div class="drop-title">PDF fayllarni shu yerga tashlang</div>
+      <div class="drop-sub">yoki <strong>fayllarni tanlang</strong> &nbsp;·&nbsp; 20 tagacha PDF &nbsp;·&nbsp; Har biri maks 100 MB</div>
+    </div>
+
+    <div class="file-list" id="fileList"></div>
+
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+      <div class="progress-label" id="progressLabel"></div>
+    </div>
+
+    <div class="result-box" id="resultBox" role="status" aria-live="polite">
+      <div class="result-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="result-info">
+        <div class="result-title" id="resultTitle"></div>
+        <div class="result-sub" id="resultSub"></div>
+      </div>
+      <button class="btn-download-pdf" id="btnDownload">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Yuklab olish
+      </button>
+    </div>
+
+    <div class="action-panel" id="actionPanel" style="display:none">
+      <button class="btn-primary-pdf" id="btnMerge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M8 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/><path d="M16 6h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+        PDF Birlashtirish
+      </button>
+      <button class="btn-ghost-pdf" id="btnClearAll">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg>
+        Barchasini tozalash
+      </button>
+    </div>
+
+  </section>
+
+  <section class="tool-info">
+    <article class="info-article">
+      <h2>PDF Birlashtirish haqida</h2>
+      <p>Bir nechta PDF faylni bitta hujjatga birlashtirish — eng ko'p ishlatiladigan PDF amaliyotlaridan biri.</p>
+      <div class="use-grid">
+        <div class="use-card"><div class="use-card-icon">📎</div><h3>20 tagacha PDF</h3><p>Bir vaqtda 20 ta PDF faylni birlashtirib, bitta hujjat hosil qiling. Fayllarni sudrab tartibga soling.</p></div>
+        <div class="use-card"><div class="use-card-icon">⚡</div><h3>Tez ishlov</h3><p>pdf-lib kutubxonasi yordamida brauzerda tez ishlaydi. Serverga yuborish kerak emas.</p></div>
+        <div class="use-card"><div class="use-card-icon">🔒</div><h3>To'liq Maxfiy</h3><p>Barcha amallar brauzeringizda. PDF fayllaringiz serverga hech qachon yuborilmaydi.</p></div>
+        <div class="use-card"><div class="use-card-icon">💯</div><h3>Bepul, limitsiz</h3><p>Ro'yxatdan o'tish shart emas. To'liq bepul — kunlik limit yo'q.</p></div>
+      </div>
+      <h2>Qanday foydalanish?</h2>
+      <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
+        <li>Yuqoridagi maydonga PDF fayllarni tashlang yoki "fayllarni tanlang" tugmasini bosing.</li>
+        <li>Fayllar ro'yxatda ko'rinadi. Sudrab istalgan tartibga soling.</li>
+        <li><strong>"PDF Birlashtirish"</strong> tugmasini bosing.</li>
+        <li>Natija tayyor bo'lgach <strong>"Yuklab olish"</strong> tugmasi paydo bo'ladi.</li>
+      </ol>
+      <h2>Ko'p so'raladigan savollar</h2>
+      <div class="faq-list">
+        <details><summary>PDF fayllarim xavfsizmi?</summary><p>Ha, to'liq xavfsiz. Barcha qayta ishlash faqat brauzeringizda <strong>pdf-lib</strong> kutubxonasi orqali amalga oshiriladi.</p></details>
+        <details><summary>Nechta PDF birlashtirish mumkin?</summary><p>Bir vaqtda <strong>20 tagacha</strong> PDF fayl birlashtiriladi. Har bir fayl <strong>100 MB</strong> dan oshmasligi kerak.</p></details>
+        <details><summary>Parolli PDF bilan ishlaydi?</summary><p>Yo'q. Parol bilan himoyalangan PDF fayllar ochilmaydi. Avval parolni olib tashlang, keyin birlashtiring.</p></details>
+        <details><summary>Sahifa tartibini o'zgartirish mumkinmi?</summary><p>Ha! Fayl kartalarini sudrab (drag & drop) istalgan tartibga qo'yishingiz mumkin.</p></details>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+        <div class="footer-social">
+          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Vositalar column -->
+      <div class="footer-col">
+        <h4>Vositalar</h4>
+        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+        <a href="/tools/word-counter/">Word Counter</a>
+        <a href="/tools/case-converter/">Case Converter</a>
+        <a href="/tools/color-converter/">Rang Konvertori</a>
+        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+      </div>
+
+      <!-- PDF & Rasm column -->
+      <div class="footer-col">
+        <h4>PDF &amp; Rasm</h4>
+        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+        <a href="/tools/pdf-editor/">PDF Editor</a>
+        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+        <a href="/tools/image-converter/">Rasm Konvertor</a>
+        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+        <a href="/tools/qr-generator/">QR Kod</a>
+      </div>
+
+      <!-- Loyiha + Huquqiy column -->
+      <div class="footer-col">
+        <h4>Loyiha</h4>
+        <a href="/about.html">Biz haqimizda</a>
+        <a href="/contact.html">Aloqa</a>
+        <a href="/blog.html">Blog</a>
+        <div class="footer-divider"></div>
+        <h4 class="ftr-h4-mt">Huquqiy</h4>
+        <a href="/terms.html">Foydalanish shartlari</a>
+        <a href="/privacy.html">Maxfiylik siyosati</a>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-row">
+        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var MAX_FILES = 20, MAX_MB = 100, MAX_BYTES = MAX_MB * 1024 * 1024;
+  var files = [], dragSrcIdx = null, isProcessing = false;
+  var $ = function (id) { return document.getElementById(id); };
+  var elDropZone = $('dropZone'), elFileInput = $('fileInput'), elFileList = $('fileList');
+  var elBtnMerge = $('btnMerge'), elBtnClearAll = $('btnClearAll'), elActionPanel = $('actionPanel');
+  var elProgressWrap = $('progressWrap'), elProgressBar = $('progressBar'), elProgressLbl = $('progressLabel');
+  var elErrorBox = $('errorBox'), elResultBox = $('resultBox'), elResultTitle = $('resultTitle');
+  var elResultSub = $('resultSub'), elBtnDownload = $('btnDownload'), elFileCount = $('fileCount');
+  var elToast = $('toast'), toastTimer = null;
+
+  function showToast(msg, type) { elToast.textContent = msg; elToast.className = 'toast show' + (type ? ' toast-' + type : ''); clearTimeout(toastTimer); toastTimer = setTimeout(function () { elToast.className = 'toast'; }, 2500); }
+  function showError(msg) { elErrorBox.textContent = msg; elErrorBox.style.display = 'block'; setTimeout(function () { elErrorBox.style.display = 'none'; }, 6000); }
+  function clearError() { elErrorBox.style.display = 'none'; }
+  function fmtSize(b) { if (b < 1024) return b + ' B'; if (b < 1048576) return (b / 1024).toFixed(1) + ' KB'; return (b / 1048576).toFixed(1) + ' MB'; }
+  function uniqueId() { return Math.random().toString(36).slice(2); }
+  function setProgress(pct, label) { elProgressWrap.classList.toggle('show', pct >= 0 && pct < 100); elProgressBar.style.width = Math.min(100, pct) + '%'; elProgressLbl.textContent = label || ''; }
+  function hideProgress() { elProgressWrap.classList.remove('show'); }
+  function updateBadge() { elFileCount.textContent = files.length + '/' + MAX_FILES; }
+  function hideResult() { elResultBox.classList.remove('show'); }
+  function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  function handleFiles(rawFiles) {
+    clearError();
+    var arr = Array.from(rawFiles).filter(function (f) { return f.type === 'application/pdf' || f.name.toLowerCase().endsWith('.pdf'); });
+    if (!arr.length) { showError('Faqat PDF fayllar qabul qilinadi.'); return; }
+    var remaining = MAX_FILES - files.length;
+    if (remaining <= 0) { showError('Maksimal ' + MAX_FILES + ' ta fayl birlashtiriladi.'); return; }
+    var toAdd = arr.slice(0, remaining);
+    if (arr.length > remaining) showToast('Faqat ' + remaining + " ta fayl qo'shildi", 'error');
+    toAdd = toAdd.filter(function (f) { if (f.size > MAX_BYTES) { showError('"' + f.name + '" — ' + fmtSize(f.size) + ' (limit: ' + MAX_MB + ' MB)'); return false; } return true; });
+    toAdd.forEach(loadFile);
+  }
+
+  function loadFile(file) {
+    var id = uniqueId();
+    var entry = { id: id, file: file, name: file.name, size: file.size, pageCount: null, arrayBuffer: null };
+    files.push(entry);
+    renderFileList(); updateBadge(); updatePanel();
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      entry.arrayBuffer = e.target.result;
+      if (window.PDFLib) {
+        PDFLib.PDFDocument.load(entry.arrayBuffer).then(function (doc) { entry.pageCount = doc.getPageCount(); renderFileList(); }).catch(function () { entry.pageCount = '?'; renderFileList(); });
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function renderFileList() {
+    elFileList.innerHTML = '';
+    if (!files.length) { updatePanel(); return; }
+    files.forEach(function (entry, idx) {
+      var card = document.createElement('div');
+      card.className = 'file-card'; card.dataset.id = entry.id; card.dataset.idx = idx; card.draggable = true;
+      var pagesText = entry.pageCount !== null ? '<span class="page-count">' + entry.pageCount + ' sahifa</span>' : '<span>yuklanmoqda…</span>';
+      card.innerHTML = '<div class="drag-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="19" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="19" r="1" fill="currentColor" stroke="none"/></svg></div><div class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div class="file-info"><div class="file-name">' + escHtml(entry.name) + '</div><div class="file-meta">' + fmtSize(entry.size) + ' &nbsp;·&nbsp; ' + pagesText + '</div></div><span class="file-badge">' + (idx + 1) + '</span><div class="file-actions"><button class="file-act-btn danger" data-id="' + entry.id + '" aria-label="O\'chirish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg></button></div>';
+      card.addEventListener('dragstart', onDragStart); card.addEventListener('dragover', onDragOver); card.addEventListener('dragleave', onDragLeave); card.addEventListener('drop', onDrop); card.addEventListener('dragend', onDragEnd);
+      card.querySelector('.file-act-btn').addEventListener('click', function (e) { e.stopPropagation(); files = files.filter(function (f) { return f.id !== entry.id; }); renderFileList(); updateBadge(); updatePanel(); hideResult(); clearError(); });
+      elFileList.appendChild(card);
+    });
+    updatePanel();
+  }
+
+  function onDragStart(e) { dragSrcIdx = parseInt(this.dataset.idx); this.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; }
+  function onDragOver(e) { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; this.classList.add('drag-target'); }
+  function onDragLeave() { this.classList.remove('drag-target'); }
+  function onDrop(e) { e.preventDefault(); this.classList.remove('drag-target'); var ti = parseInt(this.dataset.idx); if (dragSrcIdx === null || dragSrcIdx === ti) return; var m = files.splice(dragSrcIdx, 1)[0]; files.splice(ti, 0, m); renderFileList(); }
+  function onDragEnd() { document.querySelectorAll('.file-card').forEach(function (c) { c.classList.remove('dragging', 'drag-target'); }); dragSrcIdx = null; }
+
+  function updatePanel() {
+    var hasFiles = files.length > 0;
+    elActionPanel.style.display = hasFiles ? 'flex' : 'none';
+    elBtnMerge.disabled = files.length < 2 || !files.every(function (f) { return f.arrayBuffer; }) || isProcessing;
+  }
+
+  async function doMerge() {
+    if (isProcessing) return;
+    if (files.length < 2) { showError('Birlashtirish uchun kamida 2 ta PDF kerak.'); return; }
+    if (files.some(function (f) { return !f.arrayBuffer; })) { showError("Ba'zi fayllar hali yuklanmagan, kuting."); return; }
+    isProcessing = true; hideResult(); clearError(); elBtnMerge.disabled = true; setProgress(5, 'Tayyorlanmoqda…');
+    try {
+      var merged = await PDFLib.PDFDocument.create();
+      var totalPages = 0;
+      for (var i = 0; i < files.length; i++) {
+        setProgress(10 + (i / files.length) * 80, (i + 1) + '/' + files.length + ' — ' + files[i].name);
+        var srcDoc = await PDFLib.PDFDocument.load(files[i].arrayBuffer);
+        var copied = await merged.copyPages(srcDoc, srcDoc.getPageIndices());
+        copied.forEach(function (p) { merged.addPage(p); totalPages++; });
+      }
+      setProgress(95, 'Fayl saqlanmoqda…');
+      var bytes = await merged.save();
+      hideProgress();
+      showResult(files.length + ' ta PDF birlashtirildi', totalPages + ' sahifa &nbsp;·&nbsp; ' + fmtSize(bytes.byteLength), bytes, 'birlashtrilgan.pdf');
+      showToast('Muvaffaqiyatli birlashtrildi ✓', 'ok');
+    } catch (err) { hideProgress(); showError('Xatolik: ' + (err.message || err)); }
+    finally { isProcessing = false; updatePanel(); }
+  }
+
+  function showResult(title, sub, bytes, filename) {
+    elResultTitle.textContent = title; elResultSub.innerHTML = sub; elResultBox.classList.add('show');
+    var newBtn = elBtnDownload.cloneNode(true); elBtnDownload.parentNode.replaceChild(newBtn, elBtnDownload); elBtnDownload = newBtn;
+    elBtnDownload.addEventListener('click', function () { var blob = new Blob([bytes], { type: 'application/pdf' }); var url = URL.createObjectURL(blob); var a = document.createElement('a'); a.href = url; a.download = filename; a.click(); setTimeout(function () { URL.revokeObjectURL(url); }, 5000); showToast('Yuklab olindi ✓', 'ok'); });
+  }
+
+  elDropZone.addEventListener('dragover', function (e) { e.preventDefault(); this.classList.add('drag-over'); });
+  elDropZone.addEventListener('dragleave', function () { this.classList.remove('drag-over'); });
+  elDropZone.addEventListener('drop', function (e) { e.preventDefault(); this.classList.remove('drag-over'); handleFiles(e.dataTransfer.files); });
+  elDropZone.addEventListener('click', function (e) { if (e.target === elFileInput) return; elFileInput.click(); });
+  elFileInput.addEventListener('change', function () { if (this.files.length) { handleFiles(this.files); this.value = ''; } });
+  elBtnMerge.addEventListener('click', doMerge);
+  elBtnClearAll.addEventListener('click', function () { files = []; elFileList.innerHTML = ''; elActionPanel.style.display = 'none'; hideResult(); clearError(); hideProgress(); updateBadge(); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  updateBadge();
+})();
+</script>
+</body>
+</html>

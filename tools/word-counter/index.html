@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6fb5" />
+
+  <title>Word Counter — So'z va Belgi Hisoblagich | toolbase.uz</title>
+  <meta name="description" content="Matnni yozing yoki joylashtiring — so'z, belgi, gap, paragraf soni va o'qish vaqti darhol hisoblanadi. Yozuvchilar va talabalar uchun qulay vosita." />
+  <meta name="keywords" content="word counter, soz hisoblagich, belgi sanash, matn statistika, o'qish vaqti, writing tool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolbase.uz/tools/word-counter/" />
+  <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-counter/" />
+  <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-counter/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolbase.uz/tools/word-counter/" />
+  <meta property="og:title" content="Word Counter — So'z Hisoblagich | toolbase.uz" />
+  <meta property="og:description" content="So'z, belgi, gap, paragraf, o'qish vaqti — real vaqtda. Yozuvchilar uchun." />
+  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+  <link rel="alternate icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../../manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="css/tool.css" />
+
+  <style>
+    /* ── Word Counter specific styles ───────────────────────── */
+    .wc-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--pad) 24px;
+    }
+    @media (min-width: 960px) {
+      .wc-layout { grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+    }
+
+    /* ── Editor panel ───────────────────────────────────────── */
+    .wc-editor {
+      display: flex;
+      flex-direction: column;
+    }
+    .wc-editor-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1.5px solid var(--line);
+      border-bottom: none;
+      border-radius: 14px 14px 0 0;
+      background: var(--bg-soft);
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .wc-editor-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .wc-editor-actions { display: flex; gap: 6px; }
+
+    .wc-textarea {
+      width: 100%;
+      min-height: clamp(300px, 45vh, 520px);
+      padding: 18px;
+      border: 1.5px solid var(--line);
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      background: var(--surface);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--ink);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .wc-textarea:focus {
+      border-color: var(--primary);
+    }
+    .wc-textarea::placeholder {
+      color: var(--muted);
+      font-style: italic;
+      font-family: var(--font-body);
+    }
+
+    /* Target progress */
+    .wc-target-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 2px 0;
+      flex-wrap: wrap;
+    }
+    .wc-target-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .wc-target-input {
+      width: 90px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-family: var(--font-body);
+      background: var(--surface);
+      color: var(--ink);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .wc-target-input:focus { border-color: var(--primary); }
+    .wc-progress-wrap {
+      flex: 1;
+      min-width: 120px;
+      height: 6px;
+      background: var(--bg-soft-2, #e9eaec);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .wc-progress-bar {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--primary);
+      transition: width 0.3s ease, background 0.3s;
+      width: 0%;
+    }
+    .wc-progress-bar.done { background: var(--c-file, #16a34a); }
+    .wc-progress-pct {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 38px;
+      text-align: right;
+    }
+    .wc-progress-pct.done { color: var(--c-file, #16a34a); }
+
+    /* ── Stats sidebar ──────────────────────────────────────── */
+    .wc-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Stats grid (2 cols mobile, 3 cols mid, sidebar on desktop) */
+    .wc-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    @media (min-width: 560px) and (max-width: 959px) {
+      .wc-stats-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .wc-stat {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .wc-stat-value {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .wc-stat-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Time stats — smaller */
+    .wc-time-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .wc-time-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .wc-time-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: grid; place-items: center;
+      flex-shrink: 0;
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .wc-time-icon svg { width: 16px; height: 16px; }
+    .wc-time-val {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+      font-family: var(--font-display);
+    }
+    .wc-time-lbl {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Top words */
+    .wc-top-words {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .wc-top-head {
+      padding: 10px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .wc-top-list {
+      padding: 8px 0;
+    }
+    .wc-top-empty {
+      padding: 16px 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .wc-top-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px;
+      gap: 10px;
+    }
+    .wc-top-item:hover { background: var(--bg-soft); }
+    .wc-top-word {
+      font-size: 0.92rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: var(--ink);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .wc-top-bar-wrap {
+      flex: 1;
+      height: 4px;
+      background: var(--bg-soft-2, #e9eaec);
+      border-radius: 4px;
+      overflow: hidden;
+      min-width: 40px;
+    }
+    .wc-top-bar { height: 100%; background: var(--primary); border-radius: 4px; }
+    .wc-top-count {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      min-width: 20px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* Toast override */
+    .toast {
+      position: fixed;
+      bottom: max(20px, env(safe-area-inset-bottom));
+      left: 50%;
+      transform: translate(-50%, 80px);
+      background: var(--ink);
+      color: white;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 110;
+      opacity: 0;
+      transition: transform 0.28s cubic-bezier(.2,.8,.2,1), opacity 0.28s;
+      pointer-events: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Word Counter",
+    "url": "https://toolbase.uz/tools/word-counter/",
+    "description": "Matn yozing — so'z, belgi, gap, paragraf va o'qish vaqti real vaqtda hisoblanadi.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "uz",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "toolbase.uz", "url": "https://toolbase.uz" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Bosh sahifa", "item": "https://toolbase.uz/" },
+      { "@type": "ListItem", "position": 2, "name": "Word Counter", "item": "https://toolbase.uz/tools/word-counter/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "So'zlar qanday hisoblanadi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Har bir bo'sh joy bilan ajratilgan ketma-ket belgilar guruhi bitta so'z sifatida hisoblanadi." } },
+      { "@type": "Question", "name": "O'qish vaqti qanday hisoblanadi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kattalar uchun o'rtacha o'qish tezligi — 200 so'z/daqiqa. Yozish vaqti — 40 so'z/daqiqa." } },
+      { "@type": "Question", "name": "Matn saqlanib qoladimi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yo'q. Hammasi brauzeringizda ishlaydi, serverga hech narsa yuborilmaydi." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+    <nav class="nav-links">
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Yo'l">
+      <a href="../../">Bosh sahifa</a>
+      <span class="bc-sep">›</span>
+      <span>Word Counter</span>
+    </nav>
+  </div>
+
+  <section class="tool-hero container">
+    <div class="tool-hero-icon icon-amber">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg>
+    </div>
+    <div class="tool-hero-text">
+      <h1>Word Counter — So'z hisoblagich</h1>
+      <p>Matn yozing yoki joylashtiring — so'z, belgi, gap, paragraf va o'qish vaqti darhol ko'rinadi. Maqsad so'z sonini belgilang va maqsadingizga qancha yetganingizni kuzating.</p>
+    </div>
+  </section>
+
+  <!-- Tool -->
+  <section id="workspace">
+    <div class="wc-layout">
+
+      <!-- Editor -->
+      <div class="wc-editor">
+        <div class="wc-editor-head">
+          <span class="wc-editor-title">Matn</span>
+          <div class="wc-editor-actions">
+            <button class="act-btn" id="wcPaste">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+              Joylashtirish
+            </button>
+            <button class="act-btn" id="wcCopy">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Nusxalash
+            </button>
+            <button class="act-btn" id="wcDownload">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Yuklab olish
+            </button>
+            <button class="act-btn act-ghost" id="wcClear">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
+              Tozalash
+            </button>
+          </div>
+        </div>
+        <textarea
+          id="wcText"
+          class="wc-textarea"
+          placeholder="Matnni shu yerga yozing yoki joylang…"
+          spellcheck="true"
+          autocorrect="on"
+          aria-label="Matn kiritish maydoni"
+        ></textarea>
+
+        <!-- Target word count -->
+        <div class="wc-target-row">
+          <span class="wc-target-label">Maqsad so'z soni:</span>
+          <input type="number" id="wcTarget" class="wc-target-input" placeholder="500" min="1" max="100000" />
+          <div class="wc-progress-wrap" id="wcProgressWrap" style="display:none">
+            <div class="wc-progress-bar" id="wcProgressBar"></div>
+          </div>
+          <span class="wc-progress-pct" id="wcProgressPct" style="display:none">0%</span>
+        </div>
+      </div>
+
+      <!-- Stats sidebar -->
+      <div class="wc-stats">
+
+        <!-- Main stats grid -->
+        <div class="wc-stats-grid">
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statWords">0</div>
+            <div class="wc-stat-label">So'z</div>
+          </div>
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statChars">0</div>
+            <div class="wc-stat-label">Belgi</div>
+          </div>
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statCharsNoSp">0</div>
+            <div class="wc-stat-label">Belgi (bo'sh.)</div>
+          </div>
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statSentences">0</div>
+            <div class="wc-stat-label">Gap</div>
+          </div>
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statParas">0</div>
+            <div class="wc-stat-label">Paragraf</div>
+          </div>
+          <div class="wc-stat">
+            <div class="wc-stat-value" id="statUnique">0</div>
+            <div class="wc-stat-label">Unikal so'z</div>
+          </div>
+        </div>
+
+        <!-- Time row -->
+        <div class="wc-time-row">
+          <div class="wc-time-card">
+            <div class="wc-time-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="wc-time-val" id="statReadTime">0 daq</div>
+              <div class="wc-time-lbl">O'qish</div>
+            </div>
+          </div>
+          <div class="wc-time-card">
+            <div class="wc-time-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div>
+              <div class="wc-time-val" id="statWriteTime">0 daq</div>
+              <div class="wc-time-lbl">Yozish</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top words -->
+        <div class="wc-top-words">
+          <div class="wc-top-head">Tez-tez ishlatiladigan so'zlar</div>
+          <div id="wcTopList">
+            <div class="wc-top-empty">Matn kiriting…</div>
+          </div>
+        </div>
+
+      </div><!-- /wc-stats -->
+
+    </div><!-- /wc-layout -->
+  </section>
+
+  <!-- Info -->
+  
+
+
+  <section class="tool-info">
+    <article class="info-article">
+      <h2>Word Counter &#8212; Matn Statistikasi</h2>
+      <p>Matn yozishda so&#8216;z soni, belgilar soni, o&#8216;qish vaqti &#8212; muhim ko&#8216;rsatkichlar. SEO maqolalar uchun minimal so&#8216;z soni, ijtimoiy tarmoqlar uchun belgi limiti, akademik ishlar uchun so&#8216;z chegarasi &#8212; barchasi real vaqtda ko&#8216;rsatiladi.</p>
+
+      <div class="use-grid">
+        <div class="use-card"><div class="uc-icon">&#9997;&#65039;</div><h3>Blog va SEO</h3><p>Google uchun optimal maqola uzunligi 1500&#8211;2500 so&#8216;z. Real vaqtda kuzating.</p></div>
+        <div class="use-card"><div class="uc-icon">&#127979;</div><h3>Akademik ish</h3><p>Kurs ishi, dissertatsiya uchun so&#8216;z limitini kuzatish.</p></div>
+        <div class="use-card"><div class="uc-icon">&#128241;</div><h3>Ijtimoiy tarmoq</h3><p>Twitter 280, LinkedIn 3000 belgi limiti. Oshib ketmasdan yozing.</p></div>
+        <div class="use-card"><div class="uc-icon">&#128218;</div><h3>Tarjima</h3><p>So&#8216;z soni asosida tarjima narxini hisoblash.</p></div>
+      </div>
+
+      <h2>Ko&#8216;rsatkichlar</h2>
+      <p><strong>So&#8216;z</strong> &#8212; bo&#8216;sh joy bilan ajratilgan har bir element. <strong>Belgi</strong> &#8212; barcha belgilar, bo&#8216;shliqlar bilan. <strong>Belgi (bo&#8216;shliqlarsiz)</strong> &#8212; faqat ko&#8216;rinadigan belgilar. <strong>Gap</strong> &#8212; tinish belgisi bilan tugagan qism. <strong>O&#8216;qish vaqti</strong> &#8212; 200 so&#8216;z/daqiqa standart tezlikda.</p>
+
+      <div class="faq-list">
+        <details><summary>Qanday tillar uchun ishlaydi?</summary><p>O&#8216;zbek (lotin va krill), rus, ingliz va boshqa barcha tillar. Unicode to&#8216;liq qo&#8216;llab-quvvatlanadi.</p></details>
+        <details><summary>Matn saqlanadimi?</summary><p>Yo&#8216;q. Barcha hisob brauzeringizda bajariladi, hech narsa serverga ketmaydi. Sahifani yopganda matn o&#8216;chadi.</p></details>
+        <details><summary>Tez-tez ishlatiladigan so&#8216;zlar nima uchun kerak?</summary><p>SEO maqolalarda kalit so&#8216;z zichligi muhim. Bu bo&#8216;lim qaysi so&#8216;z necha marta ishlatilganini ko&#8216;rsatadi.</p></details>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+        <div class="footer-social">
+          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Vositalar column -->
+      <div class="footer-col">
+        <h4>Vositalar</h4>
+        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+        <a href="/tools/word-counter/">Word Counter</a>
+        <a href="/tools/case-converter/">Case Converter</a>
+        <a href="/tools/color-converter/">Rang Konvertori</a>
+        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+      </div>
+
+      <!-- PDF & Rasm column -->
+      <div class="footer-col">
+        <h4>PDF &amp; Rasm</h4>
+        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+        <a href="/tools/pdf-editor/">PDF Editor</a>
+        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+        <a href="/tools/image-converter/">Rasm Konvertor</a>
+        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+        <a href="/tools/qr-generator/">QR Kod</a>
+      </div>
+
+      <!-- Loyiha + Huquqiy column -->
+      <div class="footer-col">
+        <h4>Loyiha</h4>
+        <a href="/about.html">Biz haqimizda</a>
+        <a href="/contact.html">Aloqa</a>
+        <a href="/blog.html">Blog</a>
+        <div class="footer-divider"></div>
+        <h4 class="ftr-h4-mt">Huquqiy</h4>
+        <a href="/terms.html">Foydalanish shartlari</a>
+        <a href="/privacy.html">Maxfiylik siyosati</a>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-row">
+        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/wc.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var textarea    = document.getElementById('wcText');
+  var btnPaste    = document.getElementById('wcPaste');
+  var btnCopy     = document.getElementById('wcCopy');
+  var btnDownload = document.getElementById('wcDownload');
+  var btnClear    = document.getElementById('wcClear');
+  var targetInput = document.getElementById('wcTarget');
+  var progressWrap= document.getElementById('wcProgressWrap');
+  var progressBar = document.getElementById('wcProgressBar');
+  var progressPct = document.getElementById('wcProgressPct');
+  var toastEl     = document.getElementById('toast');
+  var yearEl      = document.getElementById('year');
+
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ── Toast ─────────────────────────────────────────────── */
+  var toastTimer;
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* ── Format number with spaces ─────────────────────────── */
+  function fmt(n) {
+    return n.toLocaleString('uz-UZ');
+  }
+
+  /* ── Update stats ───────────────────────────────────────── */
+  function update() {
+    var text = textarea.value;
+    var r    = WCounter.analyze(text);
+
+    document.getElementById('statWords').textContent      = fmt(r.words);
+    document.getElementById('statChars').textContent      = fmt(r.chars);
+    document.getElementById('statCharsNoSp').textContent  = fmt(r.charsNoSpace);
+    document.getElementById('statSentences').textContent  = fmt(r.sentences);
+    document.getElementById('statParas').textContent      = fmt(r.paragraphs);
+    document.getElementById('statUnique').textContent     = fmt(r.uniqueWords);
+    document.getElementById('statReadTime').textContent   = WCounter.fmtTime(r.readMin, r.readSec);
+    document.getElementById('statWriteTime').textContent  = WCounter.fmtTime(r.writeMin, r.writeSec);
+
+    /* Progress */
+    var target = parseInt(targetInput.value, 10);
+    if (target > 0) {
+      var pct = Math.min(100, Math.round((r.words / target) * 100));
+      progressWrap.style.display = '';
+      progressPct.style.display  = '';
+      progressBar.style.width    = pct + '%';
+      progressPct.textContent    = pct + '%';
+      var done = pct >= 100;
+      progressBar.classList.toggle('done', done);
+      progressPct.classList.toggle('done', done);
+    } else {
+      progressWrap.style.display = 'none';
+      progressPct.style.display  = 'none';
+    }
+
+    /* Top words */
+    var listEl = document.getElementById('wcTopList');
+    if (r.topWords.length === 0) {
+      listEl.innerHTML = '<div class="wc-top-empty">Matn kiriting…</div>';
+    } else {
+      var maxCount = r.topWords[0].count;
+      var html = '<div class="wc-top-list">';
+      r.topWords.forEach(function (tw) {
+        var pctBar = Math.round((tw.count / maxCount) * 100);
+        html += '<div class="wc-top-item">' +
+          '<span class="wc-top-word">' + esc(tw.word) + '</span>' +
+          '<div class="wc-top-bar-wrap"><div class="wc-top-bar" style="width:' + pctBar + '%"></div></div>' +
+          '<span class="wc-top-count">' + tw.count + '</span>' +
+          '</div>';
+      });
+      html += '</div>';
+      listEl.innerHTML = html;
+    }
+  }
+
+  function esc(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  /* ── Events ─────────────────────────────────────────────── */
+  textarea.addEventListener('input', update);
+  targetInput.addEventListener('input', update);
+
+  btnPaste.addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.readText) {
+      navigator.clipboard.readText().then(function (t) {
+        textarea.value = t; update(); textarea.focus();
+      }).catch(function () { textarea.focus(); showToast('Ctrl+V bosing'); });
+    } else { textarea.focus(); showToast('Ctrl+V bosing'); }
+  });
+
+  btnCopy.addEventListener('click', function () {
+    if (!textarea.value) { showToast('Matn bo\'sh'); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textarea.value).then(function () { showToast('Nusxalandi ✓'); });
+    } else {
+      textarea.select(); document.execCommand('copy'); showToast('Nusxalandi ✓');
+    }
+  });
+
+  btnDownload.addEventListener('click', function () {
+    if (!textarea.value) { showToast('Matn bo\'sh'); return; }
+    var blob = new Blob([textarea.value], { type: 'text/plain;charset=utf-8' });
+    var url  = URL.createObjectURL(blob);
+    var a    = document.createElement('a');
+    a.href = url; a.download = 'matn.txt'; a.click();
+    URL.revokeObjectURL(url);
+    showToast('Yuklab olindi ✓');
+  });
+
+  btnClear.addEventListener('click', function () {
+    textarea.value = ''; update(); textarea.focus();
+  });
+
+  /* ── Init ───────────────────────────────────────────────── */
+  textarea.focus();
+  update();
+})();
+</script>
+
+</body>
+</html>

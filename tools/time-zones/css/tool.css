@@ -1,0 +1,103 @@
+/* ================================================================
+   toolbase.uz — Vaqt Zonalari (World Clock) — tool.css
+   --c-violet: #7c3aed  --c-violet-bg: #f5f3ff
+   ================================================================ */
+.breadcrumb{display:flex;align-items:center;gap:6px;padding:14px var(--pad) 0;font-size:.85rem;color:var(--muted);flex-wrap:wrap}
+.breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--primary)}.bc-sep{color:#d1d5db}
+.tool-hero{display:flex;align-items:flex-start;gap:18px;padding:24px var(--pad) 20px;max-width:1300px;margin:0 auto}
+@media(max-width:559px){.tool-hero{flex-direction:column;gap:12px}}
+.tool-hero-icon{flex-shrink:0;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--c-violet-bg);color:var(--c-violet)}
+.tool-hero-icon svg{width:26px;height:26px;stroke-width:2}
+.tool-hero-text h1{font-size:clamp(1.4rem,4vw,1.9rem);margin-bottom:6px;letter-spacing:-.02em}
+.tool-hero-text p{color:var(--muted);font-size:clamp(.9rem,2vw,1rem);line-height:1.55;max-width:700px}
+.tool-workspace{padding:0 var(--pad) 48px;max-width:1300px;margin:0 auto}
+
+/* ── Controls bar ── */
+.controls-bar{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:180px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--muted);pointer-events:none}
+.tz-search{width:100%;padding:9px 12px 9px 36px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);font-size:.9rem;font-family:inherit;color:var(--ink);box-sizing:border-box;transition:border-color .15s}
+.tz-search:focus{outline:none;border-color:var(--c-violet)}
+
+/* My zone */
+.my-zone-row{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--c-violet-bg);border:1.5px solid var(--c-violet);border-radius:11px;flex-wrap:wrap}
+.mz-label{font-size:.8rem;font-weight:700;color:var(--c-violet);white-space:nowrap}
+.mz-clock{font-size:1.5rem;font-weight:800;color:var(--c-violet);font-variant-numeric:tabular-nums;letter-spacing:.02em;min-width:90px}
+.mz-info{font-size:.78rem;color:var(--ink-2);line-height:1.4}
+.mz-date{font-size:.78rem;color:var(--muted)}
+
+/* Filter tabs */
+.filter-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ft-btn{padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-size:.8rem;font-weight:700;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .14s;white-space:nowrap}
+.ft-btn:hover{border-color:var(--c-violet);color:var(--c-violet)}
+.ft-btn.active{background:var(--c-violet);border-color:var(--c-violet);color:#fff}
+.ft-count{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;background:rgba(255,255,255,.25);border-radius:99px;font-size:.67rem;font-weight:800;margin-left:4px;padding:0 4px}
+.ft-btn:not(.active) .ft-count{background:var(--line);color:var(--muted)}
+
+/* ── Clock grid ── */
+.clock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+@media(max-width:479px){.clock-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+@media(min-width:1100px){.clock-grid{grid-template-columns:repeat(5,1fr)}}
+
+/* Clock card */
+.tz-card{
+  background:var(--surface);border:1.5px solid var(--line);border-radius:14px;
+  padding:14px;cursor:pointer;transition:all .15s;position:relative;
+  display:flex;flex-direction:column;gap:4px;
+}
+.tz-card:hover{border-color:var(--c-violet);transform:translateY(-2px);box-shadow:0 4px 16px rgba(124,58,237,.1)}
+.tz-card.pinned{border-color:var(--c-violet);background:var(--c-violet-bg)}
+.tz-card.night-theme{background:#1e1b4b;border-color:#3730a3}
+.tz-card.dawn-theme{background:#fff7ed;border-color:#fed7aa}
+.tz-card.night-theme .tz-city{color:#e0e7ff}
+.tz-card.night-theme .tz-country{color:#a5b4fc}
+.tz-card.night-theme .tz-time{color:#c7d2fe}
+.tz-card.night-theme .tz-date{color:#818cf8}
+.tz-card.night-theme .tz-utc{color:#6366f1}
+.tz-card.night-theme .tz-diff{color:#a78bfa}
+.tz-card.dawn-theme .tz-city{color:#9a3412}
+.tz-card.dawn-theme .tz-time{color:#c2410c}
+
+.tz-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:6px}
+.tz-flag{font-size:1.3rem;flex-shrink:0;line-height:1}
+.tz-pin-btn{width:26px;height:26px;border-radius:6px;border:none;background:transparent;cursor:pointer;display:grid;place-items:center;color:var(--muted);flex-shrink:0;transition:all .13s;padding:0}
+.tz-pin-btn:hover{background:var(--c-violet-bg);color:var(--c-violet)}
+.tz-card.pinned .tz-pin-btn{color:var(--c-violet)}
+.tz-pin-btn svg{width:13px;height:13px}
+
+.tz-city{font-size:.9rem;font-weight:800;color:var(--ink);line-height:1.2;margin-top:4px}
+.tz-country{font-size:.72rem;color:var(--muted);margin-bottom:2px}
+.tz-time{font-size:1.6rem;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:.01em;line-height:1.1}
+@media(max-width:479px){.tz-time{font-size:1.25rem}}
+.tz-date{font-size:.72rem;color:var(--muted);margin-top:1px}
+.tz-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:4px}
+.tz-utc{font-size:.7rem;font-weight:700;color:var(--muted);background:var(--bg-soft);padding:2px 7px;border-radius:99px}
+.tz-card.night-theme .tz-utc{background:rgba(255,255,255,.1)}
+.tz-diff{font-size:.7rem;font-weight:700;color:var(--c-violet)}
+.tz-card.night-theme .tz-diff,.tz-card.dawn-theme .tz-diff{color:inherit;opacity:.8}
+
+/* Day indicator dot */
+.tz-day-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-night{background:#3730a3}
+.dot-dawn{background:#f97316}
+.dot-day{background:#16a34a}
+.dot-eve{background:#7c3aed}
+
+/* No results */
+.no-results{padding:40px 20px;text-align:center;color:var(--muted);font-size:.9rem;grid-column:1/-1}
+.no-results svg{opacity:.2;margin:0 auto 10px;display:block}
+
+/* Info section */
+.tool-info{padding:clamp(36px,5vw,56px) var(--pad) clamp(44px,6vw,68px)}
+.info-article{max-width:1100px;margin:0 auto}
+.info-article h2{font-size:clamp(1.1rem,2.5vw,1.35rem);margin:32px 0 10px;letter-spacing:-.02em}
+.info-article h2:first-child{margin-top:0}
+.info-article p{color:var(--ink-2);line-height:1.72;font-size:.96rem;margin-bottom:10px}
+.faq-list{margin-top:12px}
+.faq-list details{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:var(--surface);overflow:hidden}
+.faq-list details[open]{border-color:var(--c-violet)}
+.faq-list summary{padding:13px 18px;font-weight:600;font-size:.92rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--muted);flex-shrink:0;margin-left:12px}
+.faq-list details[open] summary::after{content:'−';color:var(--c-violet)}
+.faq-list details p{padding:0 18px 14px;color:var(--ink-2);font-size:.9rem;line-height:1.65;margin:0}

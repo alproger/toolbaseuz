@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6fb5" />
+
+  <title>Parol Yaratish — Xavfsiz Password Generator | toolbase.uz</title>
+  <meta name="description" content="Kriptografik xavfsiz parollar yarating. Uzunlik, harf, raqam, belgilar sozlanadigan. Bir nechta parol bir vaqtda. Brauzeringizda ishlaydi." />
+  <meta name="keywords" content="parol yaratish, password generator, xavfsiz parol, kuchli parol, random password uzbek" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolbase.uz/tools/password-generator/" />
+  <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/password-generator/" />
+  <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/password-generator/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolbase.uz/tools/password-generator/" />
+  <meta property="og:title" content="Parol Yaratish | toolbase.uz" />
+  <meta property="og:description" content="Xavfsiz va kuchli parollar yarating — uzunlik, belgilar seti sozlanadigan." />
+  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+  <link rel="alternate icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../../manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="css/tool.css" />
+
+  <style>
+    .pg-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 var(--pad) 32px;
+    }
+
+    /* ── Result area ─────────────────────────────────── */
+    .pg-result {
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .pg-result-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pg-result-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .pg-result-actions { display: flex; gap: 6px; }
+
+    .pg-passwords {
+      padding: 0;
+      list-style: none;
+    }
+    .pg-pw-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .pg-pw-item:last-child { border-bottom: none; }
+    .pg-pw-text {
+      flex: 1;
+      font-family: var(--font-mono);
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      color: var(--ink);
+      word-break: break-all;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+    .pg-pw-copy {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      display: grid; place-items: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background 0.13s, color 0.13s, border-color 0.13s;
+    }
+    .pg-pw-copy:hover { background: var(--primary-soft); color: var(--primary); border-color: var(--primary); }
+    .pg-pw-copy svg { width: 14px; height: 14px; }
+
+    /* ── Strength bar ─────────────────────────────────── */
+    .pg-strength {
+      padding: 10px 16px 14px;
+      border-top: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .pg-strength-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pg-strength-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .pg-strength-bar {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.3s ease, background 0.3s;
+      width: 0%;
+    }
+    .pg-strength-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      min-width: 90px;
+      text-align: right;
+    }
+
+    /* ── Controls ─────────────────────────────────────── */
+    .pg-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* Length slider */
+    .pg-length-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .pg-length-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      white-space: nowrap;
+    }
+    .pg-length-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-display);
+      min-width: 34px;
+      text-align: center;
+    }
+    .pg-slider {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--line);
+      outline: none;
+      cursor: pointer;
+    }
+    .pg-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(12,74,62,0.25);
+      transition: transform 0.13s;
+    }
+    .pg-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+    .pg-slider::-moz-range-thumb {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      border: none;
+    }
+
+    /* Checkboxes */
+    .pg-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 560px) {
+      .pg-options { grid-template-columns: repeat(3, 1fr); }
+    }
+    .pg-check-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      transition: border-color 0.13s, background 0.13s;
+      user-select: none;
+    }
+    .pg-check-label:hover { border-color: var(--primary); color: var(--ink); }
+    .pg-check-label input { display: none; }
+    .pg-check-label.checked {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .pg-check-box {
+      width: 18px; height: 18px;
+      border-radius: 5px;
+      border: 1.5px solid var(--line);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+      transition: background 0.13s, border-color 0.13s;
+    }
+    .pg-check-label.checked .pg-check-box {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+    .pg-check-box-tick {
+      display: none;
+      color: white;
+    }
+    .pg-check-label.checked .pg-check-box-tick { display: block; }
+
+    /* Count row */
+    .pg-count-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pg-count-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .pg-count-btns {
+      display: flex;
+      gap: 6px;
+    }
+    .pg-count-btn {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: var(--surface);
+      color: var(--ink-2);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.13s;
+      min-height: 34px;
+    }
+    .pg-count-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .pg-count-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+    /* Generate button */
+    .pg-generate {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      min-height: 52px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .pg-generate:hover { background: var(--primary-600); }
+    .pg-generate:active { transform: scale(0.99); }
+    .pg-generate svg { width: 18px; height: 18px; }
+
+    /* Error */
+    .pg-error {
+      padding: 12px 16px;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 10px;
+      color: #dc2626;
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: none;
+    }
+    .pg-error.show { display: block; }
+
+    /* Tips */
+    .pg-tips {
+      margin-top: 24px;
+      padding: 16px;
+      background: var(--primary-soft);
+      border-radius: 14px;
+      border: 1px solid rgba(12,74,62,0.12);
+    }
+    .pg-tips h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .pg-tips ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .pg-tips li {
+      font-size: 0.85rem;
+      color: var(--ink-2);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .pg-tips li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Parol Yaratish",
+    "url": "https://toolbase.uz/tools/password-generator/",
+    "description": "Kriptografik xavfsiz parollar yaratish vositasi.",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "uz",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "toolbase.uz", "url": "https://toolbase.uz" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Bosh sahifa", "item": "https://toolbase.uz/" },
+      { "@type": "ListItem", "position": 2, "name": "Parol Yaratish", "item": "https://toolbase.uz/tools/password-generator/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+    <nav class="nav-links">
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="../../">Bosh sahifa</a>
+      <span class="bc-sep">›</span>
+      <span>Parol Yaratish</span>
+    </nav>
+  </div>
+
+  <section class="tool-hero container">
+    <div class="tool-hero-icon" style="background:var(--c-file-bg);color:var(--c-file)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+    <div class="tool-hero-text">
+      <h1>Parol Yaratish</h1>
+      <p>Kriptografik xavfsiz, kuchli parollar yarating. Uzunlik, belgilar turi va miqdorini o'zingiz belgilang.</p>
+    </div>
+  </section>
+
+  <section id="workspace">
+    <div class="pg-wrap">
+
+      <!-- Result -->
+      <div class="pg-result" id="pgResult">
+        <div class="pg-result-head">
+          <span class="pg-result-label">Yaratilgan parol</span>
+          <div class="pg-result-actions">
+            <button class="act-btn" id="pgCopyAll">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Hammasini nusxalash
+            </button>
+          </div>
+        </div>
+        <ul class="pg-passwords" id="pgPasswords">
+          <li class="pg-pw-item">
+            <span class="pg-pw-text" style="color:var(--muted);font-style:italic;font-family:var(--font-body);font-size:0.95rem">
+              Parol yaratish uchun pastdagi tugmani bosing
+            </span>
+          </li>
+        </ul>
+        <div class="pg-strength" id="pgStrengthWrap" style="display:none">
+          <div class="pg-strength-row">
+            <span style="font-size:0.78rem;font-weight:600;color:var(--muted)">Kuch:</span>
+            <div class="pg-strength-bar-wrap">
+              <div class="pg-strength-bar" id="pgStrengthBar"></div>
+            </div>
+            <span class="pg-strength-label" id="pgStrengthLabel"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div class="pg-error" id="pgError"></div>
+
+      <!-- Controls -->
+      <div class="pg-controls">
+
+        <!-- Length -->
+        <div>
+          <div class="pg-length-row">
+            <span class="pg-length-label">Uzunlik:</span>
+            <span class="pg-length-val" id="pgLenVal">16</span>
+            <input type="range" class="pg-slider" id="pgSlider" min="4" max="64" value="16" step="1" aria-label="Parol uzunligi" />
+            <span style="font-size:0.78rem;color:var(--muted);white-space:nowrap">4–64</span>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px">Belgilar</div>
+          <div class="pg-options">
+            <label class="pg-check-label checked" data-key="upper">
+              <input type="checkbox" checked />
+              <span class="pg-check-box">
+                <svg class="pg-check-box-tick" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              A–Z
+            </label>
+            <label class="pg-check-label checked" data-key="lower">
+              <input type="checkbox" checked />
+              <span class="pg-check-box">
+                <svg class="pg-check-box-tick" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              a–z
+            </label>
+            <label class="pg-check-label checked" data-key="digits">
+              <input type="checkbox" checked />
+              <span class="pg-check-box">
+                <svg class="pg-check-box-tick" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              0–9
+            </label>
+            <label class="pg-check-label" data-key="symbols">
+              <input type="checkbox" />
+              <span class="pg-check-box">
+                <svg class="pg-check-box-tick" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              !@#$…
+            </label>
+            <label class="pg-check-label" data-key="noAmbig" style="grid-column: span 2">
+              <input type="checkbox" />
+              <span class="pg-check-box">
+                <svg class="pg-check-box-tick" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Chalkash belgilarsiz (0/O, 1/I/l)
+            </label>
+          </div>
+        </div>
+
+        <!-- Count -->
+        <div class="pg-count-row">
+          <span class="pg-count-label">Miqdor:</span>
+          <div class="pg-count-btns">
+            <button class="pg-count-btn active" data-count="1">1</button>
+            <button class="pg-count-btn" data-count="3">3</button>
+            <button class="pg-count-btn" data-count="5">5</button>
+            <button class="pg-count-btn" data-count="10">10</button>
+          </div>
+        </div>
+
+        <!-- Generate -->
+        <button class="pg-generate" id="pgGenerate">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Yangi parol yaratish
+        </button>
+
+      </div>
+
+      <!-- Tips -->
+      <div class="pg-tips">
+        <h4>Xavfsiz parol maslahatlar</h4>
+        <ul>
+          <li>Kamida 12 ta belgi ishlatish tavsiya etiladi</li>
+          <li>Har bir sayt uchun alohida parol yarating</li>
+          <li>Parolni hech kimga aytmang yoki SMS/email orqali yubormang</li>
+          <li>Parol menejeridan foydalaning (Bitwarden, 1Password)</li>
+          <li>Yaratilgan parollar serverga saqlanmaydi — faqat brauzeringizda</li>
+        </ul>
+      </div>
+
+      <!-- Info -->
+      <div class="tool-info" style="padding: clamp(24px,4vw,40px) 0 0;max-width:100%">
+        <article class="info-article" style="max-width:100%">
+          <h2>Ko'p so'raladigan savollar</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Parollar xavfsizmi? Saqlanib qoladimi?</summary>
+              <p>Ha, to'liq xavfsiz. Barcha parollar faqat sizning brauzeringizda yaratiladi — serverga hech narsa yuborilmaydi va saqlanmaydi. Sahifani yopganingizdan keyin parollar yo'qoladi.</p>
+            </details>
+            <details>
+              <summary>Qanday algoritmdan foydalaniladi?</summary>
+              <p>Brauzerning <code>window.crypto.getRandomValues()</code> — bu kriptografik jihatdan xavfsiz tasodifiy raqam generatori (CSPRNG). Oddiy <code>Math.random()</code> dan farqli, uni bashorat qilib bo'lmaydi.</p>
+            </details>
+            <details>
+              <summary>"Chalkash belgilarsiz" nima?</summary>
+              <p><code>0</code> (nol) va <code>O</code> (katta o), <code>1</code> (bir) va <code>l</code> (kichik L) va <code>I</code> (katta i) — ko'plab shriftlarda bir xil ko'rinadi. Bu opsiya o'shalarni olib tashlaydi va parolni qo'lda yozish osonroq bo'ladi.</p>
+            </details>
+            <details>
+              <summary>Qanday uzunlikdagi parol tavsiya etiladi?</summary>
+              <p>Kamida <strong>12 belgi</strong>. Muhim hisoblar (bank, email) uchun <strong>16–24 belgi</strong> ideal. Parol menejerida saqlasangiz — <strong>32+</strong> ham muammo emas.</p>
+            </details>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+        <div class="footer-social">
+          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Vositalar column -->
+      <div class="footer-col">
+        <h4>Vositalar</h4>
+        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+        <a href="/tools/word-counter/">Word Counter</a>
+        <a href="/tools/case-converter/">Case Converter</a>
+        <a href="/tools/color-converter/">Rang Konvertori</a>
+        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+      </div>
+
+      <!-- PDF & Rasm column -->
+      <div class="footer-col">
+        <h4>PDF &amp; Rasm</h4>
+        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+        <a href="/tools/pdf-editor/">PDF Editor</a>
+        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+        <a href="/tools/image-converter/">Rasm Konvertor</a>
+        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+        <a href="/tools/qr-generator/">QR Kod</a>
+      </div>
+
+      <!-- Loyiha + Huquqiy column -->
+      <div class="footer-col">
+        <h4>Loyiha</h4>
+        <a href="/about.html">Biz haqimizda</a>
+        <a href="/contact.html">Aloqa</a>
+        <a href="/blog.html">Blog</a>
+        <div class="footer-divider"></div>
+        <h4 class="ftr-h4-mt">Huquqiy</h4>
+        <a href="/terms.html">Foydalanish shartlari</a>
+        <a href="/privacy.html">Maxfiylik siyosati</a>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-row">
+        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/passgen.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var yearEl      = document.getElementById('year');
+  var slider      = document.getElementById('pgSlider');
+  var lenVal      = document.getElementById('pgLenVal');
+  var pgGenerate  = document.getElementById('pgGenerate');
+  var pgPasswords = document.getElementById('pgPasswords');
+  var pgCopyAll   = document.getElementById('pgCopyAll');
+  var pgError     = document.getElementById('pgError');
+  var pgStrengthWrap = document.getElementById('pgStrengthWrap');
+  var pgStrengthBar  = document.getElementById('pgStrengthBar');
+  var pgStrengthLabel= document.getElementById('pgStrengthLabel');
+  var toastEl     = document.getElementById('toast');
+
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  var currentCount = 1;
+  var lastPasswords = [];
+
+  /* ── Toast ───────────────────────────────────────────── */
+  var toastTimer;
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2000);
+  }
+
+  function copyText(text) {
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { showToast('Nusxalandi ✓'); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      showToast('Nusxalandi ✓');
+    }
+  }
+
+  /* ── Slider ──────────────────────────────────────────── */
+  slider.addEventListener('input', function () {
+    lenVal.textContent = slider.value;
+  });
+
+  /* ── Checkboxes ──────────────────────────────────────── */
+  document.querySelectorAll('.pg-check-label').forEach(function (label) {
+    label.addEventListener('click', function () {
+      var input = label.querySelector('input');
+      input.checked = !input.checked;
+      label.classList.toggle('checked', input.checked);
+    });
+  });
+
+  /* ── Count buttons ───────────────────────────────────── */
+  document.querySelectorAll('.pg-count-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.pg-count-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentCount = parseInt(btn.getAttribute('data-count'), 10);
+    });
+  });
+
+  /* ── Get options ─────────────────────────────────────── */
+  function getOpts() {
+    return {
+      length:  parseInt(slider.value, 10),
+      upper:   document.querySelector('[data-key="upper"] input').checked,
+      lower:   document.querySelector('[data-key="lower"] input').checked,
+      digits:  document.querySelector('[data-key="digits"] input').checked,
+      symbols: document.querySelector('[data-key="symbols"] input').checked,
+      noAmbig: document.querySelector('[data-key="noAmbig"] input').checked,
+      count:   currentCount,
+    };
+  }
+
+  /* ── Render passwords ────────────────────────────────── */
+  function renderPasswords(passwords) {
+    lastPasswords = passwords;
+    pgPasswords.innerHTML = '';
+    passwords.forEach(function (pw) {
+      var li = document.createElement('li');
+      li.className = 'pg-pw-item';
+      var span = document.createElement('span');
+      span.className = 'pg-pw-text';
+      span.textContent = pw;
+      var copyBtn = document.createElement('button');
+      copyBtn.className = 'pg-pw-copy';
+      copyBtn.setAttribute('aria-label', 'Nusxalash');
+      copyBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+      copyBtn.addEventListener('click', function () { copyText(pw); });
+      li.appendChild(span);
+      li.appendChild(copyBtn);
+      pgPasswords.appendChild(li);
+    });
+
+    /* Strength of first password */
+    if (passwords.length > 0) {
+      var s = PassGen.strength(passwords[0]);
+      pgStrengthBar.style.width    = s.score + '%';
+      pgStrengthBar.style.background = s.color;
+      pgStrengthLabel.textContent  = s.label;
+      pgStrengthLabel.style.color  = s.color;
+      pgStrengthWrap.style.display = '';
+    }
+  }
+
+  /* ── Generate ────────────────────────────────────────── */
+  function generate() {
+    pgError.classList.remove('show');
+    var opts = getOpts();
+    var res  = PassGen.generate(opts);
+    if (!res.ok) {
+      pgError.textContent = res.msg;
+      pgError.classList.add('show');
+      pgStrengthWrap.style.display = 'none';
+      return;
+    }
+    renderPasswords(res.passwords);
+  }
+
+  pgGenerate.addEventListener('click', generate);
+
+  /* ── Copy all ────────────────────────────────────────── */
+  pgCopyAll.addEventListener('click', function () {
+    if (!lastPasswords.length) { showToast('Avval parol yarating'); return; }
+    copyText(lastPasswords.join('\n'));
+  });
+
+  /* ── Keyboard shortcut: Space/Enter to regenerate ────── */
+  document.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'r' || e.key === 'R') generate();
+  });
+
+  /* ── Auto-generate on load ───────────────────────────── */
+  generate();
+})();
+</script>
+
+</body>
+</html>

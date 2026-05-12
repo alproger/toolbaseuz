@@ -1,0 +1,251 @@
+[
+  {
+    "id": 26,
+    "slug": "hash-generator-md5-sha256",
+    "title": "Hash Generator: MD5, SHA-256, SHA-512 — Nima va Qanday Ishlaydi?",
+    "category": "Developer",
+    "date": "2026-05-11",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/hash-generator-md5-sha256.html"
+  },
+  {
+    "id": 24,
+    "slug": "rasmni-siqish-optimize",
+    "title": "Rasmni Siqish: JPG, PNG, WebP Hajmini Kamaytirish",
+    "category": "Rasm",
+    "date": "2026-05-10",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/rasmni-siqish-optimize.html"
+  },
+  {
+    "id": 25,
+    "slug": "word-pdf-aylantirish",
+    "title": "Word dan PDF ga Aylantirish: DOCX, DOC ni PDF qilish",
+    "category": "Hujjat",
+    "date": "2026-05-10",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/word-pdf-aylantirish.html"
+  },
+  {
+    "id": 23,
+    "slug": "olchov-birliklari-konvertatsiya",
+    "title": "O'lchov Birliklari: km, mil, kg, lb, °C, °F — Formulalar va Misollar",
+    "category": "Qo'llanma",
+    "date": "2026-05-10",
+    "readTime": "7 daqiqa",
+    "url": "https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"
+  },
+  {
+    "id": 22,
+    "slug": "rang-formatlari-hex-rgb-hsl",
+    "title": "Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient",
+    "category": "Dizayn",
+    "date": "2026-05-10",
+    "readTime": "8 daqiqa",
+    "url": "https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"
+  },
+  {
+    "id": 19,
+    "slug": "pdf-aylantirish-qollanma",
+    "title": "PDF Sahifalarni Aylantirish: Qiyshiq Hujjatni To'g'irlash",
+    "category": "PDF",
+    "date": "2026-05-10",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"
+  },
+  {
+    "id": 20,
+    "slug": "rasmni-aylantirish-qollanma",
+    "title": "Rasmni Aylantirish: Flip, Burchak va Ko'zgu Effekt",
+    "category": "Rasm",
+    "date": "2026-05-10",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"
+  },
+  {
+    "id": 21,
+    "slug": "zip-arxiv-yaratish",
+    "title": "ZIP Arxiv Yaratish: Fayllar va Papkalarni Ziplash",
+    "category": "Qo'llanma",
+    "date": "2026-05-10",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/zip-arxiv-yaratish.html"
+  },
+  {
+    "id": 18,
+    "slug": "pdf-parol-himoya-qollanma",
+    "title": "PDF ga Parol Qo'yish: Xavfsizlik, AES Shifrlash va Ruxsatlar",
+    "category": "Xavfsizlik",
+    "date": "2026-05-10",
+    "readTime": "7 daqiqa",
+    "url": "https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"
+  },
+  {
+    "id": 17,
+    "slug": "rasmni-qirqish-qollanma",
+    "title": "Rasmni Qirqish (Crop): Kadrlaash, Nisbat, Instagram, Pasport",
+    "category": "Qo'llanma",
+    "date": "2026-05-10",
+    "readTime": "7 daqiqa",
+    "url": "https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"
+  },
+  {
+    "id": 16,
+    "slug": "rasm-razmer-ozgartirish",
+    "title": "Rasm Razmerini O'zgartirish: Pasport 3×4, Viza, Instagram va boshqalar",
+    "category": "Qo'llanma",
+    "date": "2026-05-09",
+    "readTime": "8 daqiqa",
+    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"
+  },
+  {
+    "id": 15,
+    "slug": "rasm-razmer-ozgartirish-qollanma",
+    "title": "Rasm O'lchamini O'zgartirish: Pasport 3×4, Viza, A4 — To'liq Qo'llanma",
+    "excerpt": "Pasport 3×4 sm necha piksel? DPI nima? Instagram, YouTube, A4 uchun to'g'ri o'lcham. Viza, hujjat rasmlari uchun standart o'lchamlar jadvali va amaliy ko'rsatmalar.",
+    "category": "Rasm",
+    "date": "2026-05-09",
+    "readTime": "8 daqiqa",
+    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"
+  },
+  {
+    "id": 14,
+    "slug": "uzbek-imlo-tekshirish",
+    "title": "O'zbek Imlo Tekshirish: Apostrof, Grammatika va Tinish Belgilari",
+    "excerpt": "O'zbek tilida eng ko'p uchraydigan imlo xatolari: apostrofli so'zlar, katta harf, tinish belgilari qoidalari va ulardan qanday qochish mumkin.",
+    "category": "O'zbek tili",
+    "date": "2026-05-08",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"
+  },
+  {
+    "id": 13,
+    "slug": "rasm-format-ozgartirish-qollanma",
+    "title": "Rasm Formatini O'zgartirish: JPG, PNG, WebP, PDF — To'liq Qo'llanma",
+    "excerpt": "Har bir rasm formati nima uchun yaratilgan? JPG va PNG farqi, WebP afzalliklari, ICO va PDF ga aylantirish. Bepul onlayn konvertor bilan amaliy misollar.",
+    "category": "Rasm",
+    "date": "2026-05-08",
+    "readTime": "7 daqiqa",
+    "url": "https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"
+  },
+  {
+    "id": 12,
+    "slug": "qr-kod-yaratish-qollanma",
+    "title": "QR Kod Yaratish: URL, Wi-Fi, vCard — To'liq Qo'llanma",
+    "excerpt": "QR kod nima, qanday yaratiladi va qayerda ishlatiladi? URL, Wi-Fi, vCard QR kodlari. Rang, gradient, logo va yozuv qo'shish. Bepul onlayn generator.",
+    "category": "Texnologiya",
+    "date": "2026-05-08",
+    "readTime": "8 daqiqa",
+    "url": "https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"
+  },
+  {
+    "id": 9,
+    "slug": "pdf-birlashtirish-qollanma",
+    "title": "PDF Birlashtirish: To'liq Qo'llanma",
+    "excerpt": "Bir nechta PDF faylni bitta hujjatga qo'shishning eng qulay yo'li. Onlayn vositalar, usullar va bosqichma-bosqich ko'rsatmalar.",
+    "category": "PDF",
+    "date": "2026-05-06",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"
+  },
+  {
+    "id": 10,
+    "slug": "pdf-sahifa-ochirish-qollanma",
+    "title": "PDF Sahifa O'chirish: Batafsil Qo'llanma",
+    "excerpt": "PDF hujjatlaridan kerakmas sahifalarni olib tashlash. Vizual tanlash va raqam diapazon metodi bilan bosqichma-bosqich yo'riqnoma.",
+    "category": "PDF",
+    "date": "2026-05-07",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"
+  },
+  {
+    "id": 11,
+    "slug": "pdf-editor-qollanma",
+    "title": "PDF Editor: Hujjatni Brauzerda Tahrirlash",
+    "excerpt": "PDF faylga matn, chiziq va belgilar qo'shish. OCR texnologiyasi nima, brauzer asosida ishlash prinsiplari va amaliy qo'llanma.",
+    "category": "PDF",
+    "date": "2026-05-08",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/pdf-editor-qollanma.html"
+  },
+  {
+    "id": 1,
+    "slug": "json-nima",
+    "title": "JSON nima va u nima uchun ishlatiladi?",
+    "excerpt": "JSON — internetdagi ma'lumot almashishning asosi. Saytlar, ilovalar va API'lar bir-biri bilan JSON orqali gaplashadi. Tuzilishi, turlari va amaliy misollar.",
+    "category": "Asoslar",
+    "date": "2026-05-01",
+    "readTime": "4 daqiqa",
+    "url": "https://toolbase.uz/blog/json-nima.html"
+  },
+  {
+    "id": 2,
+    "slug": "json-formatlash-amaliyot",
+    "title": "JSON formatlash (Beautify & Minify): amaliy qo'llanma",
+    "excerpt": "API'dan kelgan tartibsiz JSON ni o'qish qiyin. Formatlash, minify va xato aniqlash — eng ko'p uchraydigan JSON xatolarini tuzatish usullari bilan.",
+    "category": "Amaliyot",
+    "date": "2026-05-03",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/json-formatlash-amaliyot.html"
+  },
+  {
+    "id": 3,
+    "slug": "uzbek-lotin-krill",
+    "title": "O'zbek yozuvi: Lotin va Krill tarixi, farqlari va konversiya qoidalari",
+    "excerpt": "O'zbek tili 1993-yildan lotin yozuviga o'tdi, lekin krill hali ham keng ishlatiladi. Ikki yozuv tarixi, farqlari, oʻ, gʻ, sh, ch qoidalari va to'liq alfavit jadvali.",
+    "category": "Til",
+    "date": "2026-04-28",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/uzbek-lotin-krill.html"
+  },
+  {
+    "id": 4,
+    "slug": "kuchli-parol-yaratish",
+    "title": "Kuchli parol yaratish: 7 ta muhim qoida va xavfsizlik asoslari",
+    "excerpt": "Zaif parol — eng katta kiberhujum sabablaridan biri. Kriptografik jihatdan kuchli parol nima, brute force hujumlar qanday ishlaydi va o'zingizni qanday himoya qilasiz.",
+    "category": "Xavfsizlik",
+    "date": "2026-04-25",
+    "readTime": "6 daqiqa",
+    "url": "https://toolbase.uz/blog/kuchli-parol-yaratish.html"
+  },
+  {
+    "id": 5,
+    "slug": "word-counter-yozuvchilar",
+    "title": "So'z hisoblagich: Yozuvchilar, talabalar va jurnalistlar uchun to'liq qo'llanma",
+    "excerpt": "Maqola, insho yoki hisobot yozayotganda so'z chegarasini kuzatish muhim. So'z, belgi, gap, abzas va o'qish vaqti — hammasi bir joyda.",
+    "category": "Yozish",
+    "date": "2026-04-20",
+    "readTime": "4 daqiqa",
+    "url": "https://toolbase.uz/blog/word-counter-yozuvchilar.html"
+  },
+  {
+    "id": 6,
+    "slug": "case-converter-qollanma",
+    "title": "Case Converter: camelCase, snake_case, kebab-case — To'liq Qo'llanma",
+    "excerpt": "Dasturlashda nomlash konvensiyasi juda muhim. camelCase, snake_case, PascalCase, kebab-case — qayerda qaysi format ishlatiladi va ularni bir zumda aylantirish mumkinmi?",
+    "category": "Dasturlash",
+    "date": "2026-04-18",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/case-converter-qollanma.html"
+  },
+  {
+    "id": 7,
+    "slug": "son-soz-konvertor",
+    "title": "Son → So'z konvertor: Raqamni o'zbekcha so'zga aylantirish qoidalari",
+    "excerpt": "Moliyaviy hujjatlarda raqamni so'z bilan yozish talab etiladi. O'zbek tilida to'g'ri yozish qoidalari, misollar va amaliy maslahatlar.",
+    "category": "Amaliyot",
+    "date": "2026-04-22",
+    "readTime": "5 daqiqa",
+    "url": "https://toolbase.uz/blog/son-soz-konvertor.html"
+  },
+  {
+    "id": 8,
+    "slug": "onlayn-vositalar-foydalanish",
+    "title": "Brauzerda ishlaydigan onlayn vositalar: afzallik va xavfsizlik",
+    "excerpt": "Server tomonida ishlamaydigan, to'liq brauzerda ishlovchi vositalar sizning ma'lumotlaringizni himoya qiladi. Qanday ishlaydi, nima uchun xavfsizroq va qanday tanlash kerak?",
+    "category": "Texnologiya",
+    "date": "2026-04-15",
+    "readTime": "4 daqiqa",
+    "url": "https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"
+  }
+]

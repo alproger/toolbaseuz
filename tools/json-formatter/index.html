@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6fb5" />
+
+  <title>JSON Formatlash — Beautify, Minify va Tekshirish | toolbase.uz</title>
+  <meta name="description" content="JSON matnini chiroyli formatlang, minify qiling yoki xatolarni aniqlang. Onlayn, bepul, brauzeringizda ishlaydi — ma'lumotlaringiz serverga yuborilmaydi." />
+  <meta name="keywords" content="json formatter, json beautify, json minify, json validator, json tekshirish, json formatlash, json pretty print, uzbek json tool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolbase.uz/tools/json-formatter/" />
+  <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/json-formatter/" />
+  <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/json-formatter/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolbase.uz/tools/json-formatter/" />
+  <meta property="og:title" content="JSON Formatlash — Beautify & Minify | toolbase.uz" />
+  <meta property="og:description" content="JSON matnini formatlang, minify qiling yoki xatolarni aniqlang. Bepul va tez." />
+  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+  <link rel="alternate icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../../manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="css/tool.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JSON Formatlash (Beautify & Minify)",
+    "url": "https://toolbase.uz/tools/json-formatter/",
+    "description": "JSON matnini chiroyli formatlang, minify qiling yoki xatolarni aniqlang. Brauzeringizda ishlaydi — ma'lumotlaringiz serverga yuborilmaydi.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "uz",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "toolbase.uz", "url": "https://toolbase.uz" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Bosh sahifa", "item": "https://toolbase.uz/" },
+      { "@type": "ListItem", "position": 2, "name": "JSON Formatlash", "item": "https://toolbase.uz/tools/json-formatter/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "JSON formatlash nima?",
+        "acceptedAnswer": { "@type": "Answer", "text": "JSON formatlash (beautify) tartibsiz JSON matnini odam o'qiy oladigan, chiroyli ko'rinishga keltiradi. Har bir kalit va qiymat yangi qatorda, to'g'ri indent bilan ko'rsatiladi." } },
+      { "@type": "Question", "name": "JSON minify nima?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Minify JSON matnidan barcha ortiqcha bo'sh joylar va yangi qatorlarni olib, fayl hajmini kamaytiradi. API va server aloqalarida tezlikni oshirish uchun ishlatiladi." } },
+      { "@type": "Question", "name": "Ma'lumotlarim serverga yuboriladi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yo'q. Barcha JSON qayta ishlash to'liq brauzeringizda amalga oshiriladi. Hech qanday ma'lumot serverga yuborilmaydi." } },
+      { "@type": "Question", "name": "Qanday xatolarni aniqlay oladi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vosita JSON sintaksis xatolarini aniqlaydi va xato qaysi qator va ustunda joylashganini ko'rsatadi — vergul, qavs yoki tirnoq xatolarini tezda topishga yordam beradi." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="../../" class="logo">Toolbase<span class="tld">.uz</span></a>
+    <nav class="nav-links">
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="../../terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Yo'l">
+      <a href="../../">Bosh sahifa</a>
+      <span class="bc-sep">›</span>
+      <span>JSON Formatlash</span>
+    </nav>
+  </div>
+
+  <!-- Tool Hero -->
+  <section class="tool-hero container">
+    <div class="tool-hero-icon icon-code">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
+    <div class="tool-hero-text">
+      <h1>JSON Formatlash</h1>
+      <p>JSON matnini chiroyli formatlang (beautify), hajmini kamaytiring (minify) yoki sintaksis xatolarini aniqlang — brauzeringizda, hech narsa serverga yuborilmaydi.</p>
+    </div>
+  </section>
+
+  <!-- Workspace -->
+  <section class="tool-workspace container" id="workspace">
+
+    <!-- Options bar -->
+    <div class="options-bar">
+      <button class="mode-btn active" id="btnFormat">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:5px;vertical-align:-2px"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Formatlash
+      </button>
+      <button class="mode-btn" id="btnMinify">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:5px;vertical-align:-2px"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+        Minify
+      </button>
+      <button class="mode-btn" id="btnSample" style="border-style:dashed;font-weight:500;color:var(--muted)">Namuna</button>
+      <div class="indent-picker">
+        <label for="indentSel">Indent:</label>
+        <select id="indentSel">
+          <option value="2" selected>2 bo'sh joy</option>
+          <option value="4">4 bo'sh joy</option>
+          <option value="tab">Tab (↹)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Stats pills -->
+    <div class="stats-row" id="statsRow">
+      <span class="stat-pill valid">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        To'g'ri JSON
+      </span>
+      <span class="stat-pill">Hajm: <strong id="statSize">—</strong></span>
+      <span class="stat-pill">Kalitlar: <strong id="statKeys">—</strong></span>
+      <span class="stat-pill">Chuqurlik: <strong id="statDepth">—</strong></span>
+      <span class="stat-pill">Tur: <strong id="statType">—</strong></span>
+    </div>
+
+    <!-- Areas -->
+    <div class="areas">
+
+      <!-- INPUT -->
+      <div class="area-block" id="inputBlock">
+        <div class="area-head">
+          <span class="area-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Kirish (JSON)
+          </span>
+          <div class="area-actions">
+            <button class="act-btn" id="btnPaste">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+              Joylashtirish
+            </button>
+            <button class="act-btn act-ghost" id="btnClear">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
+              Tozalash
+            </button>
+          </div>
+        </div>
+        <textarea
+          id="inputText"
+          class="text-area"
+          placeholder='{"kalit": "qiymat", "son": 42, "massiv": [1, 2, 3]}'
+          spellcheck="false"
+          autocorrect="off"
+          autocapitalize="off"
+          aria-label="JSON kirish maydoni"
+        ></textarea>
+        <div class="error-box" id="errorBox" role="alert" aria-live="polite"></div>
+        <div class="area-footer">
+          <span class="counter" id="inCounter">0 qator · 0 belgi</span>
+          <span class="shortcut-hint">
+            <kbd>Ctrl</kbd>+<kbd>Enter</kbd> formatlash &nbsp;·&nbsp;
+            <kbd>Ctrl</kbd>+<kbd>⇧</kbd>+<kbd>M</kbd> minify
+          </span>
+        </div>
+      </div>
+
+      <!-- OUTPUT -->
+      <div class="area-block" id="outputBlock">
+        <div class="area-head">
+          <span class="area-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Natija
+          </span>
+          <div class="area-actions">
+            <button class="act-btn" id="btnCopy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Nusxalash
+            </button>
+            <button class="act-btn act-ghost" id="btnDownload">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Yuklab olish
+            </button>
+          </div>
+        </div>
+        <textarea
+          id="outputText"
+          class="text-area text-area-out"
+          placeholder="Formatlangan JSON bu yerda ko'rinadi…"
+          readonly
+          spellcheck="false"
+          aria-label="JSON natija maydoni"
+          aria-live="polite"
+        ></textarea>
+        <div class="area-footer">
+          <span class="counter" id="outCounter">0 qator · 0 belgi</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Info / SEO section -->
+  <section class="tool-info">
+    <article class="info-article">
+
+      <h2>JSON Formatlash haqida</h2>
+      <p>
+        <strong>JSON (JavaScript Object Notation)</strong> — ma'lumotlarni saqlash va uzatish uchun eng keng tarqalgan format. API javoblari, konfiguratsiya fayllari, ma'lumotlar bazasi eksporti — barchasi JSON formatida keladi. Lekin bu ma'lumotlar ko'pincha bir qatorda, siqilgan holda bo'ladi. Bu vosita JSON matnini bir zumda o'qilishi qulay ko'rinishga keltiradi.
+      </p>
+
+      <div class="use-grid">
+        <div class="use-card">
+          <div class="use-card-icon">✨</div>
+          <h3>Formatlash (Beautify)</h3>
+          <p>Siqilgan JSON matnini to'g'ri indent va bo'sh joylar bilan chiroyli, o'qilishi oson ko'rinishga keltiradi.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-card-icon">⚡</div>
+          <h3>Minify (Siqish)</h3>
+          <p>JSON matnidan ortiqcha bo'sh joy va yangi qatorlarni olib, fayl hajmini kamaytiradi. API va produksiya muhiti uchun foydali.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-card-icon">🔍</div>
+          <h3>Xato aniqlash</h3>
+          <p>Sintaksis xatolarini aniqlaydi va xato qaysi qator, ustunda ekanini aniq ko'rsatadi.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-card-icon">🔒</div>
+          <h3>To'liq maxfiy</h3>
+          <p>Barcha ishlov berish brauzeringizda amalga oshadi. Ma'lumotlaringiz hech qachon serverga yuborilmaydi.</p>
+        </div>
+      </div>
+
+      <h2>JSON formatiga misol</h2>
+      <div class="json-example"><span class="punct">{</span>
+  <span class="key">"ism"</span><span class="punct">:</span> <span class="str">"Alisher"</span><span class="punct">,</span>
+  <span class="key">"yosh"</span><span class="punct">:</span> <span class="num">25</span><span class="punct">,</span>
+  <span class="key">"faol"</span><span class="punct">:</span> <span class="bool">true</span><span class="punct">,</span>
+  <span class="key">"manzil"</span><span class="punct">:</span> <span class="punct">{</span>
+    <span class="key">"shahar"</span><span class="punct">:</span> <span class="str">"Toshkent"</span><span class="punct">,</span>
+    <span class="key">"mamlakat"</span><span class="punct">:</span> <span class="str">"O'zbekiston"</span>
+  <span class="punct">},</span>
+  <span class="key">"til"</span><span class="punct">:</span> <span class="punct">[</span><span class="str">"o'zbek"</span><span class="punct">,</span> <span class="str">"rus"</span><span class="punct">,</span> <span class="str">"ingliz"</span><span class="punct">]</span><span class="punct">,</span>
+  <span class="key">"rasm"</span><span class="punct">:</span> <span class="null">null</span>
+<span class="punct">}</span></div>
+
+      <h2>Ko'p so'raladigan savollar</h2>
+      <div class="faq-list">
+        <details>
+          <summary>JSON formatlash nima uchun kerak?</summary>
+          <p>API'dan kelgan yoki log fayllardan olingan JSON ko'pincha siqilgan, bir qatorda bo'ladi. Formatlash uni chiroyli, o'qilishi qulay ko'rinishga keltiradi — xatolarni topish, tuzilmani tushunish va hamkorlar bilan ishlashni osonlashtiradi.</p>
+        </details>
+        <details>
+          <summary>Minify nima uchun ishlatiladi?</summary>
+          <p>Produksiya muhitida (API, veb-ilovalar) JSON hajmini kamaytirish tezlikni oshiradi va tarmoq xarajatlarini kamaytiradi. Masalan, <code>{ "a": 1 }</code> o'rniga <code>{"a":1}</code> — natija bir xil, lekin kamroq bayt.</p>
+        </details>
+        <details>
+          <summary>Qanday xatolarni aniqlay oladi?</summary>
+          <p>Vosita barcha JSON sintaksis xatolarini aniqlaydi: yetishmayotgan vergul, noto'g'ri qo'shtirnoq, yopilmagan qavs, noto'g'ri qiymat turi va boshqalar. Xato xabari qaysi qator va ustunda ekanini ham ko'rsatadi.</p>
+        </details>
+        <details>
+          <summary>Ma'lumotlarim serverga yuboriladi?</summary>
+          <p>Yo'q. Barcha JSON qayta ishlash to'liq brauzeringizda JavaScript orqali amalga oshiriladi. Hech qanday ma'lumot serverga yuborilmaydi — kodni GitHub'da ko'rishingiz mumkin.</p>
+        </details>
+        <details>
+          <summary>Indent (bo'sh joy) sonini o'zgartirsa bo'ladimi?</summary>
+          <p>Ha. "Indent" menyusidan 2 bo'sh joy (standart), 4 bo'sh joy yoki Tab belgisi tanlashingiz mumkin. Ko'pgina dasturlash standartlari 2 yoki 4 bo'sh joy ishlatadi.</p>
+        </details>
+        <details>
+          <summary>JSON faylni to'g'ridan-to'g'ri yuklasa bo'ladimi?</summary>
+          <p>Ha — <code>.json</code> faylni kirish maydoniga tashlang (drag & drop), u avtomatik o'qiladi va formatlanadi.</p>
+        </details>
+      </div>
+
+    </article>
+  </section>
+
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+        <div class="footer-social">
+          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Vositalar column -->
+      <div class="footer-col">
+        <h4>Vositalar</h4>
+        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+        <a href="/tools/word-counter/">Word Counter</a>
+        <a href="/tools/case-converter/">Case Converter</a>
+        <a href="/tools/color-converter/">Rang Konvertori</a>
+        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+      </div>
+
+      <!-- PDF & Rasm column -->
+      <div class="footer-col">
+        <h4>PDF &amp; Rasm</h4>
+        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+        <a href="/tools/pdf-editor/">PDF Editor</a>
+        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+        <a href="/tools/image-converter/">Rasm Konvertor</a>
+        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+        <a href="/tools/qr-generator/">QR Kod</a>
+      </div>
+
+      <!-- Loyiha + Huquqiy column -->
+      <div class="footer-col">
+        <h4>Loyiha</h4>
+        <a href="/about.html">Biz haqimizda</a>
+        <a href="/contact.html">Aloqa</a>
+        <a href="/blog.html">Blog</a>
+        <div class="footer-divider"></div>
+        <h4 class="ftr-h4-mt">Huquqiy</h4>
+        <a href="/terms.html">Foydalanish shartlari</a>
+        <a href="/privacy.html">Maxfiylik siyosati</a>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-row">
+        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="js/json.js"></script>
+
+</body>
+</html>
