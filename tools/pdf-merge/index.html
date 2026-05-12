@@ -137,6 +137,7 @@
     <article class="info-article">
       <h2>PDF Birlashtirish haqida</h2>
       <p>Bir nechta PDF faylni bitta hujjatga birlashtirish — eng ko'p ishlatiladigan PDF amaliyotlaridan biri.</p>
+      <p class="info-note">Agar PDF fayl sahifa soni 'himoyalangan' ko'rsatilsa, u parol bilan himoyalangan yoki OCR bilan ishlangan bo'lishi mumkin. Bunday fayllarni birlashtirish uchun parolni olib tashlang yoki OCR vositasidan foydalaning.</p>
       <div class="use-grid">
         <div class="use-card"><div class="use-card-icon">📎</div><h3>20 tagacha PDF</h3><p>Bir vaqtda 20 ta PDF faylni birlashtirib, bitta hujjat hosil qiling. Fayllarni sudrab tartibga soling.</p></div>
         <div class="use-card"><div class="use-card-icon">⚡</div><h3>Tez ishlov</h3><p>pdf-lib kutubxonasi yordamida brauzerda tez ishlaydi. Serverga yuborish kerak emas.</p></div>
@@ -154,7 +155,7 @@
       <div class="faq-list">
         <details><summary>PDF fayllarim xavfsizmi?</summary><p>Ha, to'liq xavfsiz. Barcha qayta ishlash faqat brauzeringizda <strong>pdf-lib</strong> kutubxonasi orqali amalga oshiriladi.</p></details>
         <details><summary>Nechta PDF birlashtirish mumkin?</summary><p>Bir vaqtda <strong>20 tagacha</strong> PDF fayl birlashtiriladi. Har bir fayl <strong>100 MB</strong> dan oshmasligi kerak.</p></details>
-        <details><summary>Parolli PDF bilan ishlaydi?</summary><p>Yo'q. Parol bilan himoyalangan PDF fayllar ochilmaydi. Avval parolni olib tashlang, keyin birlashtiring.</p></details>
+        <details><summary>Parolli PDF bilan ishlaydi?</summary><p>Parol bilan himoyalangan PDF fayllar sahifa sonini ko'rsatadi, lekin birlashtirish uchun parolni olib tashlang yoki parolni kiriting.</p></details>
         <details><summary>Sahifa tartibini o'zgartirish mumkinmi?</summary><p>Ha! Fayl kartalarini sudrab (drag & drop) istalgan tartibga qo'yishingiz mumkin.</p></details>
       </div>
     </article>
@@ -286,11 +287,16 @@
     var entry = { id: id, file: file, name: file.name, size: file.size, pageCount: null, arrayBuffer: null };
     files.push(entry);
     renderFileList(); updateBadge(); updatePanel();
+    if (file.size > 50 * 1024 * 1024) {
+      entry.pageCount = 'katta fayl';
+      renderFileList();
+      return;
+    }
     var reader = new FileReader();
     reader.onload = function (e) {
       entry.arrayBuffer = e.target.result;
       if (window.PDFLib) {
-        PDFLib.PDFDocument.load(entry.arrayBuffer).then(function (doc) { entry.pageCount = doc.getPageCount(); renderFileList(); }).catch(function () { entry.pageCount = '?'; renderFileList(); });
+        PDFLib.PDFDocument.load(entry.arrayBuffer, { ignoreEncryption: true }).then(function (doc) { entry.pageCount = doc.getPageCount(); renderFileList(); }).catch(function () { entry.pageCount = '?'; renderFileList(); });
       }
     };
     reader.readAsArrayBuffer(file);
@@ -302,7 +308,7 @@
     files.forEach(function (entry, idx) {
       var card = document.createElement('div');
       card.className = 'file-card'; card.dataset.id = entry.id; card.dataset.idx = idx; card.draggable = true;
-      var pagesText = entry.pageCount !== null ? '<span class="page-count">' + entry.pageCount + ' sahifa</span>' : '<span>yuklanmoqda…</span>';
+      var pagesText = entry.pageCount === null ? '<span>yuklanmoqda…</span>' : entry.pageCount === 'katta fayl' ? '<span class="page-count">katta fayl</span>' : entry.pageCount === '?' ? '<span class="page-count">himoyalangan</span>' : '<span class="page-count">' + entry.pageCount + ' sahifa</span>';
       card.innerHTML = '<div class="drag-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="19" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="19" r="1" fill="currentColor" stroke="none"/></svg></div><div class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div class="file-info"><div class="file-name">' + escHtml(entry.name) + '</div><div class="file-meta">' + fmtSize(entry.size) + ' &nbsp;·&nbsp; ' + pagesText + '</div></div><span class="file-badge">' + (idx + 1) + '</span><div class="file-actions"><button class="file-act-btn danger" data-id="' + entry.id + '" aria-label="O\'chirish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg></button></div>';
       card.addEventListener('dragstart', onDragStart); card.addEventListener('dragover', onDragOver); card.addEventListener('dragleave', onDragLeave); card.addEventListener('drop', onDrop); card.addEventListener('dragend', onDragEnd);
       card.querySelector('.file-act-btn').addEventListener('click', function (e) { e.stopPropagation(); files = files.filter(function (f) { return f.id !== entry.id; }); renderFileList(); updateBadge(); updatePanel(); hideResult(); clearError(); });
@@ -320,22 +326,39 @@
   function updatePanel() {
     var hasFiles = files.length > 0;
     elActionPanel.style.display = hasFiles ? 'flex' : 'none';
-    elBtnMerge.disabled = files.length < 2 || !files.every(function (f) { return f.arrayBuffer; }) || isProcessing;
+    var hasProtected = files.some(function (f) { return f.pageCount === '?' || f.pageCount === 'himoyalangan'; });
+    elBtnMerge.disabled = files.length < 2 || !files.every(function (f) { return f.arrayBuffer; }) || isProcessing || hasProtected;
   }
 
   async function doMerge() {
     if (isProcessing) return;
     if (files.length < 2) { showError('Birlashtirish uchun kamida 2 ta PDF kerak.'); return; }
     if (files.some(function (f) { return !f.arrayBuffer; })) { showError("Ba'zi fayllar hali yuklanmagan, kuting."); return; }
+    if (files.some(function (f) { return f.pageCount === '?' || f.pageCount === 'himoyalangan'; })) { showError('Himoyalangan yoki buzilgan PDF fayllar mavjud. Bunday fayllarni olib tashlang yoki boshqa fayllarni yuklang.'); return; }
     isProcessing = true; hideResult(); clearError(); elBtnMerge.disabled = true; setProgress(5, 'Tayyorlanmoqda…');
     try {
       var merged = await PDFLib.PDFDocument.create();
       var totalPages = 0;
       for (var i = 0; i < files.length; i++) {
         setProgress(10 + (i / files.length) * 80, (i + 1) + '/' + files.length + ' — ' + files[i].name);
-        var srcDoc = await PDFLib.PDFDocument.load(files[i].arrayBuffer);
-        var copied = await merged.copyPages(srcDoc, srcDoc.getPageIndices());
-        copied.forEach(function (p) { merged.addPage(p); totalPages++; });
+        try {
+          var srcDoc = await PDFLib.PDFDocument.load(files[i].arrayBuffer);
+        } catch (err) {
+          if (err.message && err.message.includes('encrypted')) {
+            showError('"' + files[i].name + '" fayl parol bilan himoyalangan. Parolni olib tashlang yoki boshqa fayl tanlang.');
+            continue;
+          } else {
+            showError('"' + files[i].name + '" faylni yuklashda xatolik: ' + (err.message || err));
+            continue;
+          }
+        }
+        try {
+          var copied = await merged.copyPages(srcDoc, srcDoc.getPageIndices());
+          copied.forEach(function (p) { merged.addPage(p); totalPages++; });
+        } catch (err) {
+          showError('"' + files[i].name + '" faylni birlashtirishda xatolik: ' + (err.message || err));
+          continue;
+        }
       }
       setProgress(95, 'Fayl saqlanmoqda…');
       var bytes = await merged.save();

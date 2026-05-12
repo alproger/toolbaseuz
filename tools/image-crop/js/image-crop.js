@@ -14,6 +14,7 @@
   const canvasWrap   = document.getElementById('canvasWrap');
   const canvasEmpty  = document.getElementById('canvasEmpty');
   const fileInput    = document.getElementById('fileInput');
+  const fileInput2   = document.getElementById('fileInput2');
   const errBox       = document.getElementById('errBox');
   const previewMini  = document.getElementById('previewMini');
   const previewDims  = document.getElementById('previewDims');
@@ -25,6 +26,7 @@
   const btnFlipH     = document.getElementById('btnFlipH');
   const btnFlipV     = document.getElementById('btnFlipV');
   const btnClearSel  = document.getElementById('btnClearSel');
+  const btnFullSel   = document.getElementById('btnFullSel');
   const selFmt       = document.getElementById('selFmt');
   const qualSlider   = document.getElementById('qualSlider');
   const qualVal      = document.getElementById('qualVal');
@@ -55,6 +57,7 @@
   let selStart  = null;
 
   let aspectRatio = null;  // null = free, number = w/h
+  let originalName = 'rasm';
 
   /* ── Aspect ratio presets ── */
   document.querySelectorAll('.ratio-btn').forEach(btn => {
@@ -86,6 +89,10 @@
     if (fileInput.files[0]) loadFile(fileInput.files[0]);
     fileInput.value = '';
   });
+  fileInput2.addEventListener('change', () => {
+    if (fileInput2.files[0]) loadFile(fileInput2.files[0]);
+    fileInput2.value = '';
+  });
 
   // Drag & drop onto canvas wrapper
   canvasWrap.addEventListener('dragover', e => { e.preventDefault(); });
@@ -98,6 +105,7 @@
   function loadFile(file) {
     if (file.size > 80 * 1024 * 1024) { showErr('Rasm 80 MB dan katta.'); return; }
     clearErr();
+    originalName = (file.name || 'rasm').replace(/\.[^.]+$/, '') || 'rasm';
     const url = URL.createObjectURL(file);
     const image = new Image();
     image.onload = () => {
@@ -107,10 +115,16 @@
       rotation = 0; flipH = false; flipV = false; sel = null;
       fitCanvas();
       canvasEmpty.classList.add('hide');
+      makeDefaultSelection();
       updateInputs();
-      clearPreview();
+      updatePreview();
+      redraw();
+      URL.revokeObjectURL(url);
     };
-    image.onerror = () => showErr("Rasmni ochib bo'lmadi.");
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      showErr("Rasmni ochib bo'lmadi.");
+    };
     image.src = url;
   }
 
@@ -138,28 +152,7 @@
     const cw = mainCanvas.width, ch = mainCanvas.height;
     ctx.clearRect(0, 0, cw, ch);
 
-    // Draw image with transform
-    ctx.save();
-    ctx.translate(cw/2, ch/2);
-    ctx.rotate(rotation * Math.PI / 180);
-    if (flipH) ctx.scale(-1,  1);
-    if (flipV) ctx.scale( 1, -1);
-    ctx.drawImage(img, -origW*scale/2 * (rotation===90||rotation===270?origH/origW:1),
-                       -origH*scale/2 * (rotation===90||rotation===270?origW/origH:1),
-                       origW*scale, origH*scale);
-    ctx.restore();
-
-    // Better: straightforward approach
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.save();
-    ctx.translate(cw/2, ch/2);
-    ctx.rotate(rotation * Math.PI / 180);
-    if (flipH) ctx.scale(-1, 1);
-    if (flipV) ctx.scale(1, -1);
-    const sw = (rotation===90||rotation===270) ? origH : origW;
-    const sh = (rotation===90||rotation===270) ? origW : origH;
-    ctx.drawImage(img, -sw*scale/2, -sh*scale/2, sw*scale, sh*scale);
-    ctx.restore();
+    drawTransformedImage(ctx, cw, ch, scale);
 
     // Dark overlay + selection hole
     if (sel) {
@@ -304,8 +297,7 @@
     const dx = x - dragStart.x, dy = y - dragStart.y;
 
     if (dragMode === 'draw') {
-      sel = normalize({x:dragStart.x, y:dragStart.y, w:x-dragStart.x, h:y-dragStart.y});
-      if (aspectRatio) enforceAspect(x,y,'draw',dragStart);
+      sel = makeSelectionFromDrag(dragStart, {x,y}, dw, dh);
     } else if (dragMode === 'move') {
       sel = {
         x: clamp(selStart.x + dx, 0, dw - selStart.w),
@@ -316,8 +308,7 @@
       sel = resizeHandle(selStart, dragHandle, dx, dy, dw, dh);
       if (aspectRatio) enforceAspectResize(dragHandle);
     }
-    if (sel && sel.w < 1) sel.w = 1;
-    if (sel && sel.h < 1) sel.h = 1;
+    if (sel) sel = clampSelection(sel, dw, dh);
     updateInputs();
     redraw();
     updatePreview();
@@ -348,6 +339,55 @@
     };
   }
 
+  function makeSelectionFromDrag(start, end, maxW, maxH) {
+    const sx = clamp(start.x, 0, maxW);
+    const sy = clamp(start.y, 0, maxH);
+    let dx = clamp(end.x, 0, maxW) - sx;
+    let dy = clamp(end.y, 0, maxH) - sy;
+
+    if (aspectRatio) {
+      const signX = dx < 0 ? -1 : 1;
+      const signY = dy < 0 ? -1 : 1;
+      let w = Math.abs(dx);
+      let h = Math.abs(dy);
+      if (w / Math.max(h, 1) > aspectRatio) w = h * aspectRatio;
+      else h = w / aspectRatio;
+      dx = w * signX;
+      dy = h * signY;
+    }
+
+    return clampSelection(normalize({x:sx, y:sy, w:dx, h:dy}), maxW, maxH);
+  }
+
+  function makeDefaultSelection() {
+    if (!img) return;
+    const [dw, dh] = displayDims();
+    const pad = 0.1;
+    let w = dw * (1 - pad * 2);
+    let h = dh * (1 - pad * 2);
+    if (aspectRatio) {
+      if (w / h > aspectRatio) w = h * aspectRatio;
+      else h = w / aspectRatio;
+    }
+    sel = {
+      x: Math.round((dw - w) / 2),
+      y: Math.round((dh - h) / 2),
+      w: Math.round(w),
+      h: Math.round(h),
+    };
+  }
+
+  function clampSelection(s, maxW, maxH) {
+    const w = clamp(s.w, 1, maxW);
+    const h = clamp(s.h, 1, maxH);
+    return {
+      x: clamp(s.x, 0, maxW - w),
+      y: clamp(s.y, 0, maxH - h),
+      w,
+      h,
+    };
+  }
+
   function resizeHandle(s, handle, dx, dy, maxW, maxH) {
     let {x,y,w,h} = s;
     if (handle.includes('e')) w = clamp(s.w + dx, 1, maxW - s.x);
@@ -373,7 +413,7 @@
 
   /* ── Inputs sync ── */
   function updateInputs() {
-    if (!sel) { inX.value=''; inY.value=''; inW.value=''; inH.value=''; return; }
+    if (!sel) { inX.value=''; inY.value=''; inW.value=''; inH.value=''; btnCropDl.disabled = true; return; }
     inX.value = Math.round(sel.x);
     inY.value = Math.round(sel.y);
     inW.value = Math.round(sel.w);
@@ -390,6 +430,7 @@
       w: clamp(parseInt(inW.value)||0, 1, dw),
       h: clamp(parseInt(inH.value)||0, 1, dh),
     };
+    sel = clampSelection(sel, dw, dh);
     redraw(); updatePreview();
   }));
 
@@ -403,11 +444,22 @@
   selFmt.addEventListener('change', () => { updatePreview(); });
 
   /* ── Transform buttons ── */
-  btnRotL.addEventListener('click', () => { rotation = (rotation - 90 + 360) % 360; fitCanvas(); sel=null; clearPreview(); updateInputs(); });
-  btnRotR.addEventListener('click', () => { rotation = (rotation + 90) % 360;       fitCanvas(); sel=null; clearPreview(); updateInputs(); });
+  btnRotL.addEventListener('click', () => { rotation = (rotation - 90 + 360) % 360; fitCanvas(); makeDefaultSelection(); updateInputs(); updatePreview(); redraw(); });
+  btnRotR.addEventListener('click', () => { rotation = (rotation + 90) % 360;       fitCanvas(); makeDefaultSelection(); updateInputs(); updatePreview(); redraw(); });
   btnFlipH.addEventListener('click',() => { flipH = !flipH; redraw(); updatePreview(); });
   btnFlipV.addEventListener('click',() => { flipV = !flipV; redraw(); updatePreview(); });
   btnClearSel.addEventListener('click', () => { sel=null; redraw(); clearPreview(); updateInputs(); });
+  btnFullSel.addEventListener('click', () => {
+    if (!img) return;
+    const [dw, dh] = displayDims();
+    sel = {x:0, y:0, w:dw, h:dh};
+    if (aspectRatio) {
+      makeDefaultSelection();
+    }
+    updateInputs();
+    updatePreview();
+    redraw();
+  });
 
   /* ── Preview ── */
   function updatePreview() {
@@ -442,16 +494,7 @@
     const full = document.createElement('canvas');
     full.width = dw; full.height = dh;
     const fctx = full.getContext('2d');
-
-    fctx.save();
-    fctx.translate(dw/2, dh/2);
-    fctx.rotate(rotation * Math.PI / 180);
-    if (flipH) fctx.scale(-1,1);
-    if (flipV) fctx.scale(1,-1);
-    const sw = (rotation===90||rotation===270) ? origH : origW;
-    const sh = (rotation===90||rotation===270) ? origW : origH;
-    fctx.drawImage(img, -sw/2, -sh/2, sw, sh);
-    fctx.restore();
+    drawTransformedImage(fctx, dw, dh, 1);
 
     // Crop from selection
     const out = document.createElement('canvas');
@@ -471,10 +514,13 @@
     const mime = getMime();
     const qual = mime === 'image/png' ? undefined : parseInt(qualSlider.value)/100;
     cropped.toBlob(blob => {
+      if (!blob) { showErr('Bu formatda rasmni yaratib bo\'lmadi. PNG yoki JPG tanlab ko\'ring.'); return; }
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'cropped.' + (selFmt.value === 'auto' ? 'jpg' : selFmt.value);
+      a.download = originalName + '-crop.' + getExt();
+      document.body.appendChild(a);
       a.click();
+      a.remove();
       setTimeout(() => URL.revokeObjectURL(a.href), 5000);
       toast('Yuklab olindi', 'ok');
     }, mime, qual);
@@ -494,6 +540,27 @@
     if (v==='png') return 'image/png';
     if (v==='webp') return 'image/webp';
     return 'image/jpeg';
+  }
+
+  function getExt() {
+    const v = selFmt.value;
+    return v === 'png' || v === 'webp' ? v : 'jpg';
+  }
+
+  function drawTransformedImage(targetCtx, canvasW, canvasH, drawScale) {
+    targetCtx.save();
+    targetCtx.translate(canvasW / 2, canvasH / 2);
+    targetCtx.rotate(rotation * Math.PI / 180);
+    if (flipH) targetCtx.scale(-1, 1);
+    if (flipV) targetCtx.scale(1, -1);
+    targetCtx.drawImage(
+      img,
+      -origW * drawScale / 2,
+      -origH * drawScale / 2,
+      origW * drawScale,
+      origH * drawScale
+    );
+    targetCtx.restore();
   }
 
   /* ── Resize observer ── */

@@ -114,6 +114,42 @@ h3 { font-size: clamp(1rem, 2.2vw, 1.1rem); font-weight: 600; }
 .nav-links a:hover { color: var(--ink); background: var(--bg-soft); }
 .nav-links a.active { color: var(--primary); background: var(--primary-soft); font-weight: 600; }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 32px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+.language-switcher a:hover { color: var(--ink); background: var(--bg-soft); }
+.language-switcher a.active {
+  background: var(--primary);
+  color: #fff;
+}
+@media (max-width: 419px) {
+  .language-switcher a {
+    min-width: 32px;
+    padding: 0 7px;
+    font-size: .72rem;
+  }
+}
+
 .nav-actions {
   display: flex;
   align-items: center;

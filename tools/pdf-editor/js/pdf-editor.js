@@ -19,12 +19,13 @@
   var annotations = {};
 
   /* Drawing state */
-  var activeTool  = 'text';  // text | draw | rect | line
+  var activeTool  = 'text';  // text | draw | rect | whiteout | line | image
   var activeColor = '#dc2626';
   var fontSize    = 16;
   var isDrawing   = false;
   var drawStart   = null;
   var drawPath    = [];
+  var pendingImage = null;
 
   /* Canvas references */
   var pdfCanvas     = null;
@@ -46,6 +47,7 @@
   var elBtnNewFile   = $('btnNewFile');
   var elBtnUndo      = $('btnUndo');
   var elBtnClear     = $('btnClearPage');
+  var elImageInput   = $('imageInput');
   var elResultBox    = $('resultBox');
   var elResultTitle  = $('resultTitle');
   var elResultSub    = $('resultSub');
@@ -70,6 +72,14 @@
   function clearError() { elErrorBox.style.display = 'none'; }
   function fmtSize(b) { return b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(1) + ' MB'; }
   function getPageAnnotations() { return annotations[currentPage] || (annotations[currentPage] = []); }
+  function normalizeRect(x, y, w, h) {
+    return {
+      x: w < 0 ? x + w : x,
+      y: h < 0 ? y + h : y,
+      w: Math.abs(w),
+      h: Math.abs(h)
+    };
+  }
 
   /* ── File load ── */
   function handleFile(file) {
@@ -141,6 +151,13 @@
     if (ann.type === 'text') {
       ctx.font = ann.fontSize + 'px Arial, sans-serif';
       ctx.fillText(ann.text, ann.x, ann.y);
+    } else if (ann.type === 'image') {
+      if (!ann.imgEl) {
+        ann.imgEl = new Image();
+        ann.imgEl.onload = redrawAnnotations;
+        ann.imgEl.src = ann.dataUrl;
+      }
+      if (ann.imgEl.complete) ctx.drawImage(ann.imgEl, ann.x, ann.y, ann.w, ann.h);
     } else if (ann.type === 'draw') {
       if (ann.path.length < 2) { ctx.restore(); return; }
       ctx.beginPath();
@@ -149,6 +166,10 @@
       ctx.stroke();
     } else if (ann.type === 'rect') {
       ctx.strokeRect(ann.x, ann.y, ann.w, ann.h);
+    } else if (ann.type === 'whiteout') {
+      ctx.fillStyle = '#ffffff';
+      ctx.strokeStyle = '#ffffff';
+      ctx.fillRect(ann.x, ann.y, ann.w, ann.h);
     } else if (ann.type === 'line') {
       ctx.beginPath();
       ctx.moveTo(ann.x1, ann.y1);
@@ -183,6 +204,10 @@
       showTextInput(pos.x, pos.y);
       return;
     }
+    if (activeTool === 'image' && !pendingImage) {
+      showToast('Avval PNG yoki JPG rasm tanlang', 'error');
+      return;
+    }
     isDrawing = true;
     drawStart = pos;
     drawPath  = [pos];
@@ -215,6 +240,13 @@
       overlayCtx.lineWidth = parseInt(elFontSize.value) / 8 + 1;
       if (activeTool === 'rect') {
         overlayCtx.strokeRect(drawStart.x, drawStart.y, pos.x - drawStart.x, pos.y - drawStart.y);
+      } else if (activeTool === 'whiteout') {
+        var wr = normalizeRect(drawStart.x, drawStart.y, pos.x - drawStart.x, pos.y - drawStart.y);
+        overlayCtx.fillStyle = '#ffffff';
+        overlayCtx.fillRect(wr.x, wr.y, wr.w, wr.h);
+      } else if (activeTool === 'image' && pendingImage && pendingImage.imgEl) {
+        var ir = normalizeImageRect(drawStart, pos, pendingImage);
+        overlayCtx.drawImage(pendingImage.imgEl, ir.x, ir.y, ir.w, ir.h);
       } else if (activeTool === 'line') {
         overlayCtx.beginPath();
         overlayCtx.moveTo(drawStart.x, drawStart.y);
@@ -235,7 +267,25 @@
     if (activeTool === 'draw') {
       getPageAnnotations().push({ type: 'draw', path: drawPath.slice(), color: activeColor, lineWidth: lw });
     } else if (activeTool === 'rect') {
-      getPageAnnotations().push({ type: 'rect', x: drawStart.x, y: drawStart.y, w: pos.x - drawStart.x, h: pos.y - drawStart.y, color: activeColor, lineWidth: lw });
+      var rr = normalizeRect(drawStart.x, drawStart.y, pos.x - drawStart.x, pos.y - drawStart.y);
+      getPageAnnotations().push({ type: 'rect', x: rr.x, y: rr.y, w: rr.w, h: rr.h, color: activeColor, lineWidth: lw });
+    } else if (activeTool === 'whiteout') {
+      var wr2 = normalizeRect(drawStart.x, drawStart.y, pos.x - drawStart.x, pos.y - drawStart.y);
+      if (wr2.w < 6 || wr2.h < 6) { wr2 = { x: drawStart.x, y: drawStart.y, w: 180, h: parseInt(elFontSize.value) + 12 }; }
+      getPageAnnotations().push({ type: 'whiteout', x: wr2.x, y: wr2.y, w: wr2.w, h: wr2.h });
+    } else if (activeTool === 'image' && pendingImage) {
+      var imgRect = normalizeImageRect(drawStart, pos, pendingImage);
+      getPageAnnotations().push({
+        type: 'image',
+        x: imgRect.x,
+        y: imgRect.y,
+        w: imgRect.w,
+        h: imgRect.h,
+        dataUrl: pendingImage.dataUrl,
+        bytes: pendingImage.bytes,
+        mime: pendingImage.mime,
+        imgEl: pendingImage.imgEl
+      });
     } else if (activeTool === 'line') {
       getPageAnnotations().push({ type: 'line', x1: drawStart.x, y1: drawStart.y, x2: pos.x, y2: pos.y, color: activeColor, lineWidth: lw });
     }
@@ -293,14 +343,48 @@
   }
 
   /* ── Tool buttons ── */
-  var toolBtns = { text: $('toolText'), draw: $('toolDraw'), rect: $('toolRect'), line: $('toolLine') };
+  var toolBtns = { text: $('toolText'), draw: $('toolDraw'), rect: $('toolRect'), whiteout: $('toolWhiteout'), line: $('toolLine'), image: $('toolImage') };
   Object.keys(toolBtns).forEach(function (key) {
     toolBtns[key].addEventListener('click', function () {
       activeTool = key;
       Object.values(toolBtns).forEach(function (b) { b.classList.remove('active'); });
       this.classList.add('active');
-      elCanvasCont.className = 'canvas-container mode-' + (key === 'text' ? 'text' : 'draw');
+      elCanvasCont.className = 'canvas-container mode-' + (key === 'text' ? 'text' : key === 'image' ? 'image' : 'draw');
     });
+  });
+
+  elImageInput.addEventListener('change', function () {
+    var file = this.files && this.files[0];
+    this.value = '';
+    if (!file) return;
+    if (!/^image\/(png|jpeg)$/.test(file.type)) {
+      showError('Rasm uchun faqat PNG yoki JPG fayl tanlang.');
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var bytes = e.target.result;
+      var dataUrl = arrayBufferToDataUrl(bytes, file.type);
+      var image = new Image();
+      image.onload = function () {
+        pendingImage = {
+          bytes: bytes,
+          dataUrl: dataUrl,
+          mime: file.type,
+          imgEl: image,
+          width: image.naturalWidth || image.width,
+          height: image.naturalHeight || image.height
+        };
+        activeTool = 'image';
+        Object.values(toolBtns).forEach(function (b) { b.classList.remove('active'); });
+        toolBtns.image.classList.add('active');
+        elCanvasCont.className = 'canvas-container mode-image';
+        showToast('Rasm tanlandi. PDF ustida joyini belgilang', 'ok');
+      };
+      image.onerror = function () { showError('Rasmni ochib bo\'lmadi.'); };
+      image.src = dataUrl;
+    };
+    reader.readAsArrayBuffer(file);
   });
 
   /* ── Color dots ── */
@@ -369,8 +453,9 @@
         var scaleX = pW / vp.width;
         var scaleY = pH / vp.height;
 
-        list.forEach(function (ann) {
-          var c = hexToRGB(ann.color);
+        for (var ai = 0; ai < list.length; ai++) {
+          var ann = list[ai];
+          var c = hexToRGB(ann.color || '#000000');
           var color = rgb(c.r, c.g, c.b);
           var lw = (ann.lineWidth || 2) * Math.min(scaleX, scaleY);
 
@@ -383,10 +468,30 @@
               font: font,
               color: color
             });
+          } else if (ann.type === 'image') {
+            var embeddedImage = ann.mime === 'image/png'
+              ? await outputDoc.embedPng(ann.bytes)
+              : await outputDoc.embedJpg(ann.bytes);
+            pdfPage.drawImage(embeddedImage, {
+              x: ann.x * scaleX,
+              y: pH - (ann.y + ann.h) * scaleY,
+              width: ann.w * scaleX,
+              height: ann.h * scaleY
+            });
+          } else if (ann.type === 'whiteout') {
+            pdfPage.drawRectangle({
+              x: ann.x * scaleX,
+              y: pH - (ann.y + ann.h) * scaleY,
+              width: ann.w * scaleX,
+              height: ann.h * scaleY,
+              color: rgb(1, 1, 1),
+              borderColor: rgb(1, 1, 1),
+              borderWidth: 0
+            });
           } else if (ann.type === 'rect') {
             var x = ann.x * scaleX, y = pH - (ann.y + ann.h) * scaleY;
             var w = ann.w * scaleX, h = ann.h * scaleY;
-            pdfPage.drawRectangle({ x: x, y: y, width: w, height: Math.abs(h), borderColor: color, borderWidth: lw, opacity: 0, borderOpacity: 1 });
+            pdfPage.drawRectangle({ x: x, y: y, width: w, height: h, borderColor: color, borderWidth: lw, opacity: 0, borderOpacity: 1 });
           } else if (ann.type === 'line') {
             pdfPage.drawLine({ start: { x: ann.x1 * scaleX, y: pH - ann.y1 * scaleY }, end: { x: ann.x2 * scaleX, y: pH - ann.y2 * scaleY }, thickness: lw, color: color });
           } else if (ann.type === 'draw' && ann.path.length > 1) {
@@ -394,7 +499,7 @@
               pdfPage.drawLine({ start: { x: ann.path[i].x * scaleX, y: pH - ann.path[i].y * scaleY }, end: { x: ann.path[i+1].x * scaleX, y: pH - ann.path[i+1].y * scaleY }, thickness: lw, color: color });
             }
           }
-        });
+        }
       }
 
       var bytes = await outputDoc.save();
@@ -452,6 +557,36 @@
     var g = parseInt(hex.slice(3,5),16)/255;
     var b = parseInt(hex.slice(5,7),16)/255;
     return { r: r, g: g, b: b };
+  }
+
+  function normalizeImageRect(start, end, imageInfo) {
+    var dx = end.x - start.x;
+    var dy = end.y - start.y;
+    var minSize = 8;
+    if (Math.abs(dx) < minSize && Math.abs(dy) < minSize) {
+      var maxW = Math.min(220, elOverlay.width * 0.45);
+      var ratio = imageInfo.height / Math.max(imageInfo.width, 1);
+      return { x: start.x, y: start.y, w: maxW, h: maxW * ratio };
+    }
+
+    var ratio2 = imageInfo.height / Math.max(imageInfo.width, 1);
+    var w = Math.abs(dx);
+    var h = Math.abs(dy);
+    if (w / Math.max(h, 1) > 1 / ratio2) w = h / ratio2;
+    else h = w * ratio2;
+    return {
+      x: dx < 0 ? start.x - w : start.x,
+      y: dy < 0 ? start.y - h : start.y,
+      w: w,
+      h: h
+    };
+  }
+
+  function arrayBufferToDataUrl(buffer, mime) {
+    var bytes = new Uint8Array(buffer);
+    var binary = '';
+    for (var i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+    return 'data:' + mime + ';base64,' + btoa(binary);
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();

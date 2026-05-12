@@ -73,6 +73,15 @@
     .toolbar-btn.active { background: var(--c-pdf-bg); border-color: var(--c-pdf); color: var(--c-pdf); }
     .toolbar-btn:disabled { opacity: .4; cursor: not-allowed; }
     .toolbar-btn svg { width: 14px; height: 14px; }
+    .toolbar-file { position: relative; overflow: hidden; }
+    .toolbar-file input {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
     .toolbar-label { font-size: .75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
 
     /* Color picker row */
@@ -112,6 +121,7 @@
     }
     .canvas-container.mode-text canvas { cursor: text; }
     .canvas-container.mode-draw canvas { cursor: crosshair; }
+    .canvas-container.mode-image canvas { cursor: copy; }
     .canvas-container.mode-move canvas { cursor: move; }
 
     /* Text input overlay */
@@ -253,7 +263,7 @@
       </svg>
       <div class="ocr-banner-text">
         <strong>OCR (Matnni aniqlash) hozirda ishlamaydi.</strong>
-        Skanerlangan yoki rasm ko'rinishidagi PDF fayllardan matnni avtomatik ajratib olish funksiyasi hozirda ishlab chiqilmoqda va tez kunda qo'shiladi. Hozirda siz PDF ustiga yangi matn, chiziq va belgilar <strong>qo'sha olasiz</strong>, lekin mavjud matnni tahrirlay olmaysiz.
+        OCRsiz mavjud PDF ichidagi matn obyektini bevosita tahrirlash imkoni yo'q. Amaliy tahrir uchun <strong>Matn yopish</strong> bilan eski matnni oq qoplang, keyin ustiga yangi matn yozing yoki PNG/JPG rasm qo'shing.
       </div>
     </div>
 
@@ -305,10 +315,21 @@
           Quti
         </button>
 
+        <button class="toolbar-btn" id="toolWhiteout" title="Eski matnni oq fon bilan yopish">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6 4 12-12-6-4L3 17z"/><path d="M14 6l4 4"/><path d="M3 17h6"/></svg>
+          Matn yopish
+        </button>
+
         <button class="toolbar-btn" id="toolLine" title="Chiziq">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/></svg>
           Chiziq
         </button>
+
+        <label class="toolbar-btn toolbar-file" id="toolImage" title="PNG yoki JPG rasm qo'shish">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          Rasm
+          <input type="file" id="imageInput" accept="image/png,image/jpeg" />
+        </label>
 
         <div class="toolbar-sep"></div>
         <span class="toolbar-label">Rang:</span>
@@ -385,7 +406,7 @@
   <section class="tool-info">
     <article class="info-article">
       <h2>PDF Editor haqida</h2>
-      <p>PDF hujjatlariga yangi kontent qo'shish uchun qulay brauzer vositasi. Matn, chiziq, to'rtburchak va erkin chizishni qo'llab-quvvatlaydi.</p>
+      <p>PDF hujjatlariga yangi kontent qo'shish uchun qulay brauzer vositasi. Matn almashtirish uchun oq qoplama, yangi matn, PNG/JPG rasm, chiziq, to'rtburchak va erkin chizishni qo'llab-quvvatlaydi.</p>
       <div class="use-grid">
         <div class="use-card"><div class="use-card-icon">✏️</div><h3>Matn qo'shish</h3><p>PDF ning istalgan joyiga yangi matn qo'shing. Rang va shrift hajmini tanlang.</p></div>
         <div class="use-card"><div class="use-card-icon">🖊️</div><h3>Erkin chizish</h3><p>Imzo, belgi yoki izoh uchun erkin chizish vositasidan foydalaning.</p></div>
@@ -395,9 +416,10 @@
       <h2>Qanday foydalanish?</h2>
       <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
         <li>PDF faylni yuklang.</li>
-        <li>Yuqoridagi toolbardan vosita tanlang: Matn, Chizish, Quti yoki Chiziq.</li>
+        <li>Yuqoridagi toolbardan vosita tanlang: Matn, Matn yopish, Rasm, Chizish, Quti yoki Chiziq.</li>
         <li>Rang va hajmni belgilang.</li>
-        <li>Canvas ustida bosib yoki sudrab o'zgartiring.</li>
+        <li>Mavjud matnni o'zgartirish uchun avval <strong>Matn yopish</strong> bilan eski joyni oq qoplang, keyin ustiga yangi <strong>Matn</strong> yozing.</li>
+        <li>Rasm qo'shish uchun <strong>Rasm</strong> tugmasidan PNG/JPG tanlang va PDF ustida joyini sudrab belgilang.</li>
         <li><strong>"PDF sifatida saqlash"</strong> tugmasini bosib yuklab oling.</li>
       </ol>
       <div class="faq-list">
