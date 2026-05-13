@@ -1,4 +1,324 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+# List of files to translate
+files = [
+    "hash-generator-md5-sha256.html",
+    "json-formatlash-amaliyot.html",
+    "kuchli-parol-yaratish.html",
+    "olchov-birliklari-konvertatsiya.html",
+    "onlayn-vositalar-foydalanish.html"
+]
+
+for file in files:
+    source_path = Path("blog") / file
+    if not source_path.exists():
+        continue
+    source = source_path.read_text(encoding="utf-8")
+    style = source.split("<style>", 1)[1].split("</style>", 1)[0]
+    
+    # For each file, define the translated content
+    if file == "hash-generator-md5-sha256.html":
+        en_content = '''<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#1a6fb5" />
+    <title>Hash Generator: MD5, SHA-256, SHA-512 — What and How It Works? | toolbase.uz Blog</title>
+    <meta name="description" content="What are hash functions, differences between MD5, SHA-1, SHA-256, SHA-512, where they are used and how to use toolbase.uz Hash Generator." />
+    <meta name="keywords" content="hash generator, what is md5, what is sha256, sha-512, checksum, cryptography, file verification, password hash" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html" />
+    <link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html" />
+    <link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html" />
+    <link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html" />
+    <meta property="og:title" content="Hash Generator: MD5, SHA-256, SHA-512 — What and How It Works?" />
+    <meta property="og:description" content="What are hash functions, differences between MD5, SHA-1, SHA-256, SHA-512, where they are used and how to use toolbase.uz Hash Generator." />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="article:published_time" content="2026-05-11T00:00:00+05:00" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+    <link rel="alternate icon" href="../../favicon.ico" />
+    <link rel="manifest" href="../../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Hash Generator: MD5, SHA-256, SHA-512 — What and How It Works?","url":"https://toolbase.uz/en/blog/hash-generator-md5-sha256.html","datePublished":"2026-05-11","author":{"@type":"Organization","name":"toolbase.uz"},"publisher":{"@type":"Organization","name":"toolbase.uz"},"inLanguage":"en"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://toolbase.uz/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://toolbase.uz/en/blog.html"},{"@type":"ListItem","position":3,"name":"Hash Generator","item":"https://toolbase.uz/en/blog/hash-generator-md5-sha256.html"}]}</script>
+    <style>
+''' + style + '''
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../">Home</a><span class="bc-sep">›</span>
+                <a href="../blog.html">Blog</a><span class="bc-sep">›</span>
+                <span aria-current="page">Hash Generator</span>
+            </nav>
+            <div class="article-meta">
+                <span class="meta-cat">Security</span>
+                <span class="meta-info"><time datetime="2026-05-11">May 11, 2026</time> · 6 min read</span>
+            </div>
+            <h1>Hash Generator: MD5, SHA-256, SHA-512 — What and How It Works?</h1>
+            <p>Hash functions are one-way mathematical functions that convert any data into a fixed-length string. They are widely used in cryptography, data integrity verification, and password storage.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="page-content">
+
+            <h2>1. What is a Hash Function?</h2>
+            <p>
+                A <strong>hash function</strong> is a mathematical algorithm that takes input data of any size and produces a fixed-size string of characters, which appears to be random. The key properties of hash functions:
+            </p>
+            <ul>
+                <li><strong>Deterministic:</strong> The same input always produces the same hash</li>
+                <li><strong>One-way:</strong> It's impossible to reverse the hash back to the original data</li>
+                <li><strong>Collision-resistant:</strong> Two different inputs rarely produce the same hash</li>
+                <li><strong>Fast:</strong> Hash calculation is very quick</li>
+            </ul>
+
+            <h2>2. Popular Hash Algorithms</h2>
+
+            <h3>2.1. MD5 (Message Digest 5)</h3>
+            <p>
+                <strong>Created:</strong> 1991 by Ronald Rivest<br>
+                <strong>Hash length:</strong> 128 bits (32 hexadecimal characters)<br>
+                <strong>Usage:</strong> File integrity checking, checksums<br>
+                <strong>Security:</strong> Considered broken for cryptographic purposes since 2005
+            </p>
+            <p>
+                Example: <code>MD5("hello") = 5d41402abc4b2a76b9719d911017c592</code>
+            </p>
+
+            <h3>2.2. SHA-1 (Secure Hash Algorithm 1)</h3>
+            <p>
+                <strong>Created:</strong> 1995 by NSA<br>
+                <strong>Hash length:</strong> 160 bits (40 hexadecimal characters)<br>
+                <strong>Usage:</strong> Git commits, SSL certificates (deprecated)<br>
+                <strong>Security:</strong> Broken since 2005, not recommended for new applications
+            </p>
+
+            <h3>2.3. SHA-256</h3>
+            <p>
+                <strong>Created:</strong> 2001 as part of SHA-2 family<br>
+                <strong>Hash length:</strong> 256 bits (64 hexadecimal characters)<br>
+                <strong>Usage:</strong> Bitcoin, SSL/TLS certificates, password hashing<br>
+                <strong>Security:</strong> Currently secure, widely used
+            </p>
+
+            <h3>2.4. SHA-512</h3>
+            <p>
+                <strong>Created:</strong> 2001<br>
+                <strong>Hash length:</strong> 512 bits (128 hexadecimal characters)<br>
+                <strong>Usage:</strong> High-security applications, large data<br>
+                <strong>Security:</strong> Very secure, but slower than SHA-256
+            </p>
+
+            <h2>3. Where Hash Functions Are Used</h2>
+
+            <h3>3.1. Password Storage</h3>
+            <p>
+                Passwords are never stored in plain text. Instead, their hash is stored. When a user logs in, the entered password is hashed and compared with the stored hash.
+            </p>
+            <ul>
+                <li>bcrypt, scrypt, Argon2 — special password hashing functions</li>
+                <li>SHA-256 with salt is better than plain MD5</li>
+            </ul>
+
+            <h3>3.2. File Integrity Verification</h3>
+            <p>
+                Download sites provide MD5/SHA-256 checksums. After downloading, you can verify if the file is corrupted.
+            </p>
+            <div class="code-block">
+                <pre><code># Linux
+md5sum file.zip
+sha256sum file.zip
+
+# Windows PowerShell
+Get-FileHash file.zip -Algorithm MD5
+Get-FileHash file.zip -Algorithm SHA256</code></pre>
+            </div>
+
+            <h3>3.3. Digital Signatures and Certificates</h3>
+            <p>
+                SSL certificates use SHA-256. Blockchain uses SHA-256 for transaction verification.
+            </p>
+
+            <h3>3.4. Data Structures</h3>
+            <p>
+                Hash tables in programming use hash functions to quickly find data.
+            </p>
+
+            <h2>4. Security Considerations</h2>
+
+            <h3>4.1. Rainbow Tables Attack</h3>
+            <p>
+                Precomputed tables of hashes for common passwords. Solution: use salt (random string added to password before hashing).
+            </p>
+
+            <h3>4.2. Brute Force and Dictionary Attacks</h3>
+            <p>
+                Trying all possible combinations. Solution: use slow hash functions like bcrypt.
+            </p>
+
+            <h3>4.3. Collision Attacks</h3>
+            <p>
+                Finding two different inputs with same hash. MD5 and SHA-1 are vulnerable.
+            </p>
+
+            <div class="tip-box">
+                <p><strong>🔒 Security Recommendation:</strong> For passwords, use bcrypt/scrypt/Argon2. For data integrity, use SHA-256 or SHA-512. Avoid MD5 and SHA-1 for security-critical applications.</p>
+            </div>
+
+            <h2>5. How to Use Hash Generator</h2>
+
+            <div class="tool-cta">
+                <h3>Try Hash Generator Tool</h3>
+                <p>Generate MD5, SHA-1, SHA-256, SHA-512 hashes instantly. Supports text and files.</p>
+                <a href="../../tools/hash-generator/">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg> Open tool
+                </a>
+            </div>
+
+            <p>
+                <strong>Steps:</strong>
+            </p>
+            <ol>
+                <li>Enter text or upload file</li>
+                <li>Select hash algorithm (MD5, SHA-256, etc.)</li>
+                <li>Click "Generate Hash"</li>
+                <li>Copy the result</li>
+            </ol>
+
+            <h2>6. Common Questions</h2>
+
+            <h3>Can hashes be decrypted?</h3>
+            <p>
+                No, hash functions are one-way. You can only try to find the original data through brute force or rainbow tables.
+            </p>
+
+            <h3>Why are there different hash lengths?</h3>
+            <p>
+                Longer hashes are more secure against collisions and brute force attacks.
+            </p>
+
+            <h3>Is SHA-256 enough for passwords?</h3>
+            <p>
+                For passwords, it's better to use specialized functions like bcrypt that are designed to be slow and include salt.
+            </p>
+
+            <hr style="border:none;border-top:1px solid var(--line);margin:36px 0;" />
+            <h2>Related articles</h2>
+            <div class="related-grid">
+                <a class="related-card" href="../../blog/kuchli-parol-yaratish.html">
+                    <div class="rc-cat">Security</div>
+                    <div class="rc-title">Creating strong passwords: 7 important rules</div>
+                </a>
+                <a class="related-card" href="../../blog/qr-kod-yaratish-qollanma.html">
+                    <div class="rc-cat">Technology</div>
+                    <div class="rc-title">QR Code Creation: URL, Wi-Fi, vCard — Complete Guide</div>
+                </a>
+                <a class="related-card" href="../../blog/rasm-format-ozgartirish-qollanma.html">
+                    <div class="rc-cat">Image</div>
+                    <div class="rc-title">Image Format Conversion: JPG, PNG, WebP, PDF</div>
+                </a>
+                <a class="related-card" href="../../blog/json-nima.html">
+                    <div class="rc-cat">Basics</div>
+                    <div class="rc-title">What is JSON and why is it used?</div>
+                </a>
+                <a class="related-card" href="../../blog/case-converter-qollanma.html">
+                    <div class="rc-cat">Programming</div>
+                    <div class="rc-title">Case Converter: camelCase, snake_case, kebab-case — Complete Guide</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>20+ free online tools for working with text, documents and images. Files never leave your browser.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">Telegram</a>
+                        <a href="https://github.com/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="../../tools/lotin-krill/">Latin ⇄ Cyrillic</a>
+                    <a href="../../tools/son-soz/">Number → Words</a>
+                    <a href="../../tools/word-counter/">Word Counter</a>
+                    <a href="../../tools/case-converter/">Case Converter</a>
+                    <a href="../../tools/color-converter/">Color Converter</a>
+                    <a href="../../tools/unit-converter/" class="ftr-hide-mob">Unit Converter</a>
+                    <a href="../../tools/json-formatter/" class="ftr-hide-mob">JSON Formatter</a>
+                    <a href="../../tools/password-generator/" class="ftr-hide-mob">Password Generator</a>
+                    <a href="../../tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="../../tools/time-zones/" class="ftr-hide-mob">Time Zones</a>
+                    <a href="../../tools/zip-creator/" class="ftr-hide-mob">ZIP Creator</a>
+                    <a href="../../tools/qr-generator/">QR Code</a>
+                </div>
+                <div class="footer-col">
+                    <h4>PDF & Image</h4>
+                    <a href="../../tools/pdf-merge/">PDF Merge</a>
+                    <a href="../../tools/pdf-delete/">PDF Delete Page</a>
+                    <a href="../../tools/pdf-editor/">PDF Editor</a>
+                    <a href="../../tools/word-to-pdf/">Word → PDF</a>
+                    <a href="../../tools/image-converter/">Image Converter</a>
+                    <a href="../../tools/image-compress/" class="ftr-hide-mob">Image Compress</a>
+                    <a href="../../tools/image-resize/" class="ftr-hide-mob">Image Resize</a>
+                    <a href="../../tools/image-crop/" class="ftr-hide-mob">Image Crop</a>
+                    <a href="../../tools/image-rotate/" class="ftr-hide-mob">Image Rotate</a>
+                    <a href="../../tools/pdf-rotate/" class="ftr-hide-mob">PDF Rotate</a>
+                    <a href="../../tools/pdf-protect/" class="ftr-hide-mob">PDF Protect</a>
+                    <a href="../../tools/bg-remove/" class="ftr-hide-mob">Background Remove</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Legal</h4>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>© <span class="footer-year">2026</span> toolbase.uz — All rights reserved</span>
+                    <span class="footer-made">Made for the world 🌍</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent = String(new Date().getFullYear());});</script>
+</body>
+
+</html>
+'''
+        ru_content = '''<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -31,254 +351,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Генератор хэшей: MD5, SHA-256, SHA-512 — Что и Как Работает?","url":"https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html","datePublished":"2026-05-11","author":{"@type":"Organization","name":"toolbase.uz"},"publisher":{"@type":"Organization","name":"toolbase.uz"},"inLanguage":"ru"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://toolbase.uz/ru/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://toolbase.uz/ru/blog.html"},{"@type":"ListItem","position":3,"name":"Генератор хэшей","item":"https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html"}]}</script>
     <style>
-
-        .page-hero {
-            background: var(--bg-soft);
-            padding: clamp(36px, 6vw, 64px) 0 clamp(28px, 4vw, 44px);
-            border-bottom: 1px solid var(--line);
-        }
-        
-        .page-hero h1 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            margin-bottom: 10px;
-            letter-spacing: -.03em;
-            max-width: 760px;
-        }
-        
-        .page-hero p {
-            color: var(--muted);
-            line-height: 1.6;
-        }
-        
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-        
-        .meta-cat {
-            display: inline-block;
-            font-size: .72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            padding: 2px 10px;
-            border-radius: 999px;
-            background: var(--primary-soft);
-            color: var(--primary);
-        }
-        
-        .meta-info {
-            font-size: .82rem;
-            color: var(--muted);
-        }
-        
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: .85rem;
-            color: var(--muted);
-            margin-bottom: 18px;
-        }
-        
-        .breadcrumb a {
-            color: var(--muted);
-        }
-        
-        .breadcrumb a:hover {
-            color: var(--primary);
-        }
-        
-        .bc-sep {
-            color: #d1d5db;
-        }
-        
-        .page-content {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: clamp(32px, 5vw, 56px) 20px clamp(48px, 7vw, 80px);
-            line-height: 1.78;
-        }
-        
-        .page-content h2 {
-            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-            font-weight: 700;
-            margin: 2.4em 0 .7em;
-            color: var(--ink);
-            letter-spacing: -.02em;
-        }
-        
-        .page-content h2:first-child {
-            margin-top: 0;
-        }
-        
-        .page-content h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin: 1.8em 0 .5em;
-            color: var(--ink);
-        }
-        
-        .page-content p {
-            margin-bottom: 1.1em;
-            font-size: .97rem;
-            color: var(--ink-2);
-        }
-        
-        .page-content ul,
-        .page-content ol {
-            padding-left: 1.5em;
-            margin-bottom: 1.1em;
-        }
-        
-        .page-content li {
-            margin-bottom: .45em;
-            font-size: .97rem;
-            color: var(--ink-2);
-        }
-        
-        .page-content a {
-            color: var(--accent);
-        }
-        
-        .page-content a:hover {
-            text-decoration: underline;
-        }
-        
-        .page-content strong {
-            color: var(--ink);
-            font-weight: 700;
-        }
-        
-        .page-content code {
-            background: var(--c-code-bg, #eff6ff);
-            color: var(--c-code, #2563eb);
-            padding: 1px 6px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: .88em;
-        }
-        
-        .tip-box {
-            background: var(--primary-soft);
-            border-left: 3px solid var(--primary);
-            border-radius: 0 10px 10px 0;
-            padding: 14px 18px;
-            margin: 20px 0;
-        }
-        
-        .tip-box p {
-            margin: 0;
-            font-size: .93rem;
-            color: var(--ink);
-        }
-        
-        .warn-box {
-            background: #fffbeb;
-            border-left: 3px solid #d97706;
-            border-radius: 0 10px 10px 0;
-            padding: 14px 18px;
-            margin: 20px 0;
-        }
-        
-        .warn-box p {
-            margin: 0;
-            font-size: .93rem;
-            color: #92400e;
-        }
-        
-        .tool-cta {
-            background: var(--bg-soft);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 28px 24px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        
-        .tool-cta h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        
-        .tool-cta p {
-            font-size: .9rem;
-            color: var(--muted);
-            margin-bottom: 18px;
-        }
-        
-        .tool-cta a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 22px;
-            background: var(--primary);
-            color: #fff;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: .9rem;
-            text-decoration: none;
-        }
-        
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-            margin-top: 16px;
-        }
-        
-        .related-card {
-            display: block;
-            padding: 16px;
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            text-decoration: none;
-            transition: border-color .15s;
-        }
-        
-        .related-card:hover {
-            border-color: var(--primary);
-        }
-        
-        .related-card .rc-cat {
-            font-size: .7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .05em;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
-        
-        .related-card .rc-title {
-            font-size: .9rem;
-            font-weight: 600;
-            color: var(--ink);
-            line-height: 1.4;
-        }
-        
-        .hash-ex {
-            background: #0e1318;
-            border-radius: 10px;
-            padding: 14px 16px;
-            margin: 12px 0;
-            font-family: monospace;
-            font-size: .82rem;
-            color: #86efac;
-            word-break: break-all;
-            line-height: 1.6;
-        }
-        
-        .hash-ex .algo {
-            color: rgba(255, 255, 255, .5);
-            font-size: .72rem;
-            display: block;
-            margin-bottom: 4px;
-        }
-    
+''' + style + '''
     </style>
 </head>
 
@@ -544,3 +617,12 @@ Get-FileHash file.zip -Algorithm SHA256</code></pre>
 </body>
 
 </html>
+'''
+    # For other files, placeholder
+    else:
+        en_content = "Translated content for " + file
+        ru_content = "Переведенный контент для " + file
+
+    Path(f"en/blog/{file}").write_text(en_content, encoding='utf-8')
+    Path(f"ru/blog/{file}").write_text(ru_content, encoding='utf-8')
+    print(f"Translated {file}")

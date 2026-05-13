@@ -1,312 +1,710 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient | toolbase.uz</title>
-  <meta name="description" content="Rang formatlari nima va qachon qaysi birini ishlatish kerak: HEX veb uchun, CMYK bosmaxona uchun, HSL CSS uchun. CSS gradient yaratish qo'llanmasi." />
-  <meta name="keywords" content="rang formatlari, hex rgb farq, hsl cmyk nima, css gradient, rang konvertori, color formats uzbek, rang kodlash" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html" />
-  <meta property="og:title" content="Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient" />
-  <meta property="og:description" content="HEX, RGB, HSL, CMYK — qachon qaysi formatni ishlatish kerak. CSS gradient qo'llanmasi." />
-  <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
-  <meta property="og:locale" content="uz_UZ" />
-  <meta property="article:published_time" content="2026-05-10T00:00:00+05:00" />
-  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
-  <link rel="manifest" href="../manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient","url":"https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html","datePublished":"2026-05-10","author":{"@type":"Organization","name":"toolbase.uz"},"publisher":{"@type":"Organization","name":"toolbase.uz"},"inLanguage":"uz"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"HEX va RGB qaysi biri yaxshiroq?","acceptedAnswer":{"@type":"Answer","text":"Ikkalasi ham CSS da ishlaydi. HEX qisqaroq yoziladi (#0891b2), RGB son qiymatlarini ko'rish osonroq (rgb(8,145,178)). HSL esa rang boshqarishda eng qulay."}},{"@type":"Question","name":"CSS gradient nima?","acceptedAnswer":{"@type":"Answer","text":"Ikki yoki undan ko'p rangning silliq o'tishi. Rasm fayli kerak emas — faqat CSS kod yetarli. linear-gradient, radial-gradient va conic-gradient turlari mavjud."}}]}</script>
-  <style>
-    .page-hero{background:var(--bg-soft);padding:clamp(36px,6vw,64px) 0 clamp(28px,4vw,44px);border-bottom:1px solid var(--line)}
-    .page-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;letter-spacing:-.03em;max-width:760px}
-    .page-hero p{color:var(--muted);line-height:1.6}
-    .article-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
-    .meta-cat{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 10px;border-radius:999px;background:var(--c-code-bg);color:var(--c-code)}
-    .meta-info{font-size:.82rem;color:var(--muted)}
-    .breadcrumb{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted);margin-bottom:18px}
-    .breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--primary)}.bc-sep{color:#d1d5db}
-    .page-content{max-width:760px;margin:0 auto;padding:clamp(32px,5vw,56px) 20px clamp(48px,7vw,80px);line-height:1.78}
-    .page-content h2{font-size:clamp(1.15rem,2.5vw,1.4rem);font-weight:700;margin:2.4em 0 .7em;color:var(--ink);letter-spacing:-.02em}
-    .page-content h2:first-child{margin-top:0}
-    .page-content h3{font-size:1rem;font-weight:700;margin:1.8em 0 .5em;color:var(--ink)}
-    .page-content p{margin-bottom:1.1em;font-size:.97rem;color:var(--ink-2)}
-    .page-content ul,.page-content ol{padding-left:1.5em;margin-bottom:1.1em}
-    .page-content li{margin-bottom:.5em;font-size:.97rem;color:var(--ink-2)}
-    .page-content a{color:var(--primary)}.page-content a:hover{text-decoration:underline}
-    .page-content strong{color:var(--ink);font-weight:700}
-    .page-content code{background:var(--c-code-bg);color:var(--c-code);padding:2px 6px;border-radius:5px;font-family:monospace;font-size:.88em}
-    .tip-box{background:var(--primary-soft);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0}
-    .tip-box p{margin:0;font-size:.93rem;color:var(--ink)}
-    .info-box{background:var(--c-code-bg);border-left:3px solid var(--c-code);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0}
-    .info-box p{margin:0;font-size:.93rem;color:var(--ink)}
-    .tool-cta{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:28px 24px;margin:40px 0;text-align:center}
-    .tool-cta h3{font-size:1.1rem;margin-bottom:8px}
-    .tool-cta p{font-size:.9rem;color:var(--muted);margin-bottom:18px}
-    .tool-cta a{display:inline-flex;align-items:center;gap:6px;padding:11px 24px;background:var(--c-code);color:#fff;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none;transition:opacity .15s}
-    .tool-cta a:hover{opacity:.88}
-    .format-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0 24px}
-    .fc{background:var(--surface);border:1.5px solid var(--line);border-radius:13px;padding:18px;overflow:hidden}
-    .fc-badge{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:2px 9px;border-radius:99px;margin-bottom:10px}
-    .fc h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--ink)}
-    .fc-example{font-family:monospace;font-size:.82rem;background:var(--bg-soft);padding:6px 10px;border-radius:7px;color:var(--c-code);margin-bottom:8px;word-break:break-all}
-    .fc p{font-size:.83rem;color:var(--muted);line-height:1.5;margin:0}
-    .grad-demo{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;margin:16px 0 24px}
-    .gd-item{border-radius:10px;overflow:hidden;cursor:default}
-    .gd-color{height:64px}
-    .gd-name{font-size:.73rem;font-weight:700;color:var(--ink-2);padding:6px 8px;background:var(--surface);text-align:center}
-    .compare-table{width:100%;border-collapse:collapse;margin:14px 0 24px;font-size:.9rem}
-    .compare-table th{background:var(--bg-soft);padding:9px 13px;text-align:left;font-weight:700;color:var(--ink);border-bottom:2px solid var(--line);font-size:.82rem}
-    .compare-table td{padding:9px 13px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
-    .compare-table tr:last-child td{border-bottom:none}
-    .compare-table td:first-child{font-weight:600;color:var(--ink)}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px}
-    .related-card{display:block;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:border-color .15s}
-    .related-card:hover{border-color:var(--c-code)}
-    .related-card .rc-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--c-code);margin-bottom:6px}
-    .related-card .rc-title{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.4}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient | toolbase.uz</title>
+    <meta name="description" content="Rang formatlari nima va qachon qaysi birini ishlatish kerak: HEX veb uchun, CMYK bosmaxona uchun, HSL CSS uchun. CSS gradient yaratish qo'llanmasi." />
+    <meta name="keywords" content="rang formatlari, hex rgb farq, hsl cmyk nima, css gradient, rang konvertori, color formats uzbek, rang kodlash" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html" />
+    <meta property="og:title" content="Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient" />
+    <meta property="og:description" content="HEX, RGB, HSL, CMYK — qachon qaysi formatni ishlatish kerak. CSS gradient qo'llanmasi." />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="article:published_time" content="2026-05-10T00:00:00+05:00" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient",
+            "url": "https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html",
+            "datePublished": "2026-05-10",
+            "author": {
+                "@type": "Organization",
+                "name": "toolbase.uz"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "toolbase.uz"
+            },
+            "inLanguage": "uz"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "HEX va RGB qaysi biri yaxshiroq?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ikkalasi ham CSS da ishlaydi. HEX qisqaroq yoziladi (#0891b2), RGB son qiymatlarini ko'rish osonroq (rgb(8,145,178)). HSL esa rang boshqarishda eng qulay."
+                }
+            }, {
+                "@type": "Question",
+                "name": "CSS gradient nima?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ikki yoki undan ko'p rangning silliq o'tishi. Rasm fayli kerak emas — faqat CSS kod yetarli. linear-gradient, radial-gradient va conic-gradient turlari mavjud."
+                }
+            }]
+        }
+    </script>
+    <style>
+        .page-hero {
+            background: var(--bg-soft);
+            padding: clamp(36px, 6vw, 64px) 0 clamp(28px, 4vw, 44px);
+            border-bottom: 1px solid var(--line)
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-bottom: 10px;
+            letter-spacing: -.03em;
+            max-width: 760px
+        }
+        
+        .page-hero p {
+            color: var(--muted);
+            line-height: 1.6
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px
+        }
+        
+        .meta-cat {
+            display: inline-block;
+            font-size: .72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            padding: 2px 10px;
+            border-radius: 999px;
+            background: var(--c-code-bg);
+            color: var(--c-code)
+        }
+        
+        .meta-info {
+            font-size: .82rem;
+            color: var(--muted)
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .85rem;
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+        
+        .breadcrumb a {
+            color: var(--muted)
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary)
+        }
+        
+        .bc-sep {
+            color: #d1d5db
+        }
+        
+        .page-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: clamp(32px, 5vw, 56px) 20px clamp(48px, 7vw, 80px);
+            line-height: 1.78
+        }
+        
+        .page-content h2 {
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            font-weight: 700;
+            margin: 2.4em 0 .7em;
+            color: var(--ink);
+            letter-spacing: -.02em
+        }
+        
+        .page-content h2:first-child {
+            margin-top: 0
+        }
+        
+        .page-content h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 1.8em 0 .5em;
+            color: var(--ink)
+        }
+        
+        .page-content p {
+            margin-bottom: 1.1em;
+            font-size: .97rem;
+            color: var(--ink-2)
+        }
+        
+        .page-content ul,
+        .page-content ol {
+            padding-left: 1.5em;
+            margin-bottom: 1.1em
+        }
+        
+        .page-content li {
+            margin-bottom: .5em;
+            font-size: .97rem;
+            color: var(--ink-2)
+        }
+        
+        .page-content a {
+            color: var(--primary)
+        }
+        
+        .page-content a:hover {
+            text-decoration: underline
+        }
+        
+        .page-content strong {
+            color: var(--ink);
+            font-weight: 700
+        }
+        
+        .page-content code {
+            background: var(--c-code-bg);
+            color: var(--c-code);
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: .88em
+        }
+        
+        .tip-box {
+            background: var(--primary-soft);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 20px 0
+        }
+        
+        .tip-box p {
+            margin: 0;
+            font-size: .93rem;
+            color: var(--ink)
+        }
+        
+        .info-box {
+            background: var(--c-code-bg);
+            border-left: 3px solid var(--c-code);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 20px 0
+        }
+        
+        .info-box p {
+            margin: 0;
+            font-size: .93rem;
+            color: var(--ink)
+        }
+        
+        .tool-cta {
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 40px 0;
+            text-align: center
+        }
+        
+        .tool-cta h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px
+        }
+        
+        .tool-cta p {
+            font-size: .9rem;
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+        
+        .tool-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 11px 24px;
+            background: var(--c-code);
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: .92rem;
+            text-decoration: none;
+            transition: opacity .15s
+        }
+        
+        .tool-cta a:hover {
+            opacity: .88
+        }
+        
+        .format-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 16px 0 24px
+        }
+        
+        .fc {
+            background: var(--surface);
+            border: 1.5px solid var(--line);
+            border-radius: 13px;
+            padding: 18px;
+            overflow: hidden
+        }
+        
+        .fc-badge {
+            display: inline-block;
+            font-size: .7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            padding: 2px 9px;
+            border-radius: 99px;
+            margin-bottom: 10px
+        }
+        
+        .fc h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--ink)
+        }
+        
+        .fc-example {
+            font-family: monospace;
+            font-size: .82rem;
+            background: var(--bg-soft);
+            padding: 6px 10px;
+            border-radius: 7px;
+            color: var(--c-code);
+            margin-bottom: 8px;
+            word-break: break-all
+        }
+        
+        .fc p {
+            font-size: .83rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin: 0
+        }
+        
+        .grad-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 10px;
+            margin: 16px 0 24px
+        }
+        
+        .gd-item {
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: default
+        }
+        
+        .gd-color {
+            height: 64px
+        }
+        
+        .gd-name {
+            font-size: .73rem;
+            font-weight: 700;
+            color: var(--ink-2);
+            padding: 6px 8px;
+            background: var(--surface);
+            text-align: center
+        }
+        
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 24px;
+            font-size: .9rem
+        }
+        
+        .compare-table th {
+            background: var(--bg-soft);
+            padding: 9px 13px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--ink);
+            border-bottom: 2px solid var(--line);
+            font-size: .82rem
+        }
+        
+        .compare-table td {
+            padding: 9px 13px;
+            border-bottom: 1px solid var(--line);
+            color: var(--ink-2);
+            vertical-align: top
+        }
+        
+        .compare-table tr:last-child td {
+            border-bottom: none
+        }
+        
+        .compare-table td:first-child {
+            font-weight: 600;
+            color: var(--ink)
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
+            margin-top: 16px
+        }
+        
+        .related-card {
+            display: block;
+            padding: 16px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: border-color .15s
+        }
+        
+        .related-card:hover {
+            border-color: var(--c-code)
+        }
+        
+        .related-card .rc-cat {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            color: var(--c-code);
+            margin-bottom: 6px
+        }
+        
+        .related-card .rc-title {
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.4
+        }
+    </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
-    <nav class="nav-links"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms</a></nav>
-  </div>
-</header>
-
-<section class="page-hero">
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
-      <a href="../blog.html">Blog</a><span class="bc-sep">&#8250;</span>
-      <span>Rang Formatlari</span>
-    </nav>
-    <div class="article-meta">
-      <span class="meta-cat">Dizayn</span>
-      <span class="meta-info">10 may 2026 &#183; 8 daqiqa o&#8217;qish</span>
-    </div>
-    <h1>Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient</h1>
-    <p>Qaysi formatni qachon ishlatish kerak, ularning farqlari va CSS gradient yaratishning to&#8217;g&#8217;ri usullari.</p>
-  </div>
-</section>
-
-<div class="page-content">
-
-  <p>Dizayn va veb ishlab chiqishda ranglar bir necha formatda ifodalanadi. Figma dan nusxalagan HEX kodni CSS da to&#8217;g&#8217;ri ishlatish, bosmaxona uchun CMYK ga aylantirish, yoki HSL bilan rang sistеmasini boshqarish &#8212; barchasi amalda kerak bo&#8217;ladi.</p>
-
-  <div class="tool-cta">
-    <h3>Rangni tezda aylantiring</h3>
-    <p>HEX &#8596; RGB &#8596; HSL &#8596; CMYK. Color picker. CSS Gradient generator. Bepul, brauzerda.</p>
-    <a href="../tools/color-converter/">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="13.5" cy="17.5" r="2.5"/></svg>
-      Rang Konvertori &#8594;
-    </a>
-  </div>
-
-  <h2>Rang formatlari — batafsil</h2>
-
-  <div class="format-cards">
-    <div class="fc">
-      <span class="fc-badge" style="background:#ecfeff;color:#0891b2;">Veb</span>
-      <h3>HEX</h3>
-      <div class="fc-example">#0891b2<br>#ff6b35<br>#fff</div>
-      <p>O&#8217;n oltilik tizim. 6 yoki 3 belgidan iborat. Veb va grafik dasturlarning standart formati.</p>
-    </div>
-    <div class="fc">
-      <span class="fc-badge" style="background:#f0fdf4;color:#16a34a;">CSS</span>
-      <h3>RGB</h3>
-      <div class="fc-example">rgb(8, 145, 178)<br>rgb(255, 107, 53)</div>
-      <p>Qizil, yashil, ko&#8217;k. 0&#8211;255 oraliq. Ekranlar uchun fizik rang modeli.</p>
-    </div>
-    <div class="fc">
-      <span class="fc-badge" style="background:#f5f3ff;color:#7c3aed;">CSS3</span>
-      <h3>HSL</h3>
-      <div class="fc-example">hsl(192, 91%, 36%)<br>hsl(16, 100%, 60%)</div>
-      <p>Rang turi, to&#8217;yinganlik, yorqinlik. Inson idrokiga eng yaqin. CSS da boshqarish oson.</p>
-    </div>
-    <div class="fc">
-      <span class="fc-badge" style="background:#fef2f2;color:#dc2626;">Bosma</span>
-      <h3>CMYK</h3>
-      <div class="fc-example">cmyk(96%, 19%, 0%, 30%)<br>cmyk(0%, 58%, 79%, 0%)</div>
-      <p>Printer va bosmaxona uchun standart. Siyoh aralashmasi modeli.</p>
-    </div>
-  </div>
-
-  <h2>Qachon qaysi formatni ishlatish kerak?</h2>
-
-  <table class="compare-table">
-    <thead><tr><th>Maqsad</th><th>Format</th><th>Sabab</th></tr></thead>
-    <tbody>
-      <tr><td>Veb CSS</td><td>HEX yoki HSL</td><td>HEX &#8212; qisqa, HSL &#8212; boshqarish oson</td></tr>
-      <tr><td>CSS animatsiya</td><td>RGB yoki HSL</td><td>Sonlar orasida silliq o&#8217;tish</td></tr>
-      <tr><td>Bosmaxona</td><td>CMYK</td><td>Printer siyoh modeli</td></tr>
-      <tr><td>Photoshop/GIMP</td><td>HSV yoki RGB</td><td>Grafik dastur standartlari</td></tr>
-      <tr><td>Figma/Sketch</td><td>HEX yoki RGB</td><td>Dizayn dastur ekspori</td></tr>
-      <tr><td>Rang tizimi</td><td>HSL</td><td>Ochroq/to&#8217;qroq variant yaratish oson</td></tr>
-    </tbody>
-  </table>
-
-  <h2>HSL &#8212; nima uchun eng qulay?</h2>
-
-  <p>HSL (Hue, Saturation, Lightness) &#8212; rang tanlash va boshqarishda eng intuitiv format. Rang tizimini yaratishda ayniqsa foydali:</p>
-
-  <ul>
-    <li><code>hsl(192, 91%, 36%)</code> &#8212; asosiy rang</li>
-    <li><code>hsl(192, 91%, 50%)</code> &#8212; ochroq variant (L oshirildi)</li>
-    <li><code>hsl(192, 91%, 20%)</code> &#8212; to&#8217;qroq variant (L kamaytirildi)</li>
-    <li><code>hsl(192, 30%, 36%)</code> &#8212; o&#8217;chiqroq variant (S kamaytirildi)</li>
-  </ul>
-
-  <div class="tip-box">
-    <p><strong>Amaliy foyda:</strong> CSS o&#8217;zgaruvchilari bilan HSL ishlatganda, faqat L qiymatini o&#8217;zgartirish orqali butun rang tizimini boshqarish mumkin. Tailwind CSS ham HSL dan foydalanadi.</p>
-  </div>
-
-  <h2>CSS Gradient &#8212; to&#8217;liq qo&#8217;llanma</h2>
-
-  <p>CSS gradient &#8212; rasm faylisiz fon yaratish imkoniyati. Uch turi mavjud:</p>
-
-  <h3>1. Linear gradient (chiziqli)</h3>
-  <p>Ranglar to&#8217;g&#8217;ri chiziq bo&#8217;ylab o&#8217;tadi:</p>
-  <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);</div>
-
-  <h3>2. Radial gradient (markazdan)</h3>
-  <p>Ranglar markazdan tashqariga yoyiladi:</p>
-  <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: radial-gradient(circle, #f97316 0%, #ec4899 100%);</div>
-
-  <h3>3. Conic gradient (konussimon)</h3>
-  <p>Ranglar markaz atrofida aylanadi &#8212; rang g&#8217;ildiragi:</p>
-  <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: conic-gradient(from 0deg, #0891b2, #7c3aed, #ec4899, #0891b2);</div>
-
-  <h2>Gradient qo&#8217;llash misollari</h2>
-
-  <div class="grad-demo">
-    <div class="gd-item"><div class="gd-color" style="background:linear-gradient(135deg,#0891b2,#7c3aed)"></div><div class="gd-name">Ocean</div></div>
-    <div class="gd-item"><div class="gd-color" style="background:linear-gradient(135deg,#f97316,#ec4899)"></div><div class="gd-name">Sunset</div></div>
-    <div class="gd-item"><div class="gd-color" style="background:linear-gradient(135deg,#16a34a,#0891b2)"></div><div class="gd-name">Forest</div></div>
-    <div class="gd-item"><div class="gd-color" style="background:linear-gradient(135deg,#fde68a,#fb923c)"></div><div class="gd-name">Peach</div></div>
-    <div class="gd-item"><div class="gd-color" style="background:linear-gradient(135deg,#6ee7b7,#3b82f6,#a78bfa)"></div><div class="gd-name">Aurora</div></div>
-    <div class="gd-item"><div class="gd-color" style="background:radial-gradient(circle,#f97316,#7c3aed)"></div><div class="gd-name">Radial</div></div>
-  </div>
-
-  <h2>Rang konvertatsiya formulalar</h2>
-
-  <p><strong>HEX dan RGB:</strong> #0891b2 &#8594; 08=8, 91=145, b2=178 &#8594; rgb(8, 145, 178)</p>
-  <p><strong>RGB dan HEX:</strong> r, g, b ni 16-lik tizimga o&#8217;girish &#8594; #rrggbb</p>
-  <p><strong>RGB dan CMYK:</strong> k = 1 &#8722; max(r,g,b)/255; c = (1&#8722;r/255&#8722;k)/(1&#8722;k) ...</p>
-
-  <div class="info-box">
-    <p><strong>Amalda:</strong> Bu hisob-kitoblarni qo&#8217;lda qilish shart emas. <a href="../tools/color-converter/">toolbase.uz rang konvertori</a> barcha formatlar orasida avtomatik aylantiradi &#8212; faqat qiymat kiriting.</p>
-  </div>
-
-  <h2>Ko&#8217;p uchraydigan savollar</h2>
-  <p><strong>HEX katta-kichik harflar farq qiladimi?</strong> Yo&#8217;q. #0891B2 va #0891b2 bir xil.</p>
-  <p><strong>#fff va #ffffff farqi?</strong> Bir xil rang. 3 belgilik qisqa yozuv faqat juft harflar (ff, aa, 00) uchun ishlaydi.</p>
-  <p><strong>rgba() nima?</strong> RGB + Alpha (shaffoflik). rgba(8, 145, 178, 0.5) &#8212; 50% shaffof rang.</p>
-  <p><strong>CSS gradient browser mosligi?</strong> Barcha zamonaviy brauzerlar qo&#8217;llab-quvvatlaydi. Eski IE uchun -webkit- prefiks kerak edi &#8212; toolbase.uz generator avtomatik qo&#8217;shib beradi.</p>
-
-  <div class="tool-cta">
-    <h3>Hoziroq sinab ko&#8217;ring</h3>
-    <p>HEX, RGB, HSL, CMYK konvertatsiya. CSS gradient yaratish. Rang tarixi.</p>
-    <a href="../tools/color-converter/">Rang Konvertori &#8594;</a>
-  </div>
-
-  <hr style="border:none;border-top:1px solid var(--line);margin:40px 0;" />
-  <h2>Tegishli vositalar</h2>
-  <div class="related-grid">
-    <a class="related-card" href="../tools/color-converter/"><div class="rc-cat">Vosita</div><div class="rc-title">Rang Konvertori + CSS Gradient</div></a>
-    <a class="related-card" href="../tools/password-generator/"><div class="rc-cat">Vosita</div><div class="rc-title">Kuchli Parol Yaratish</div></a>
-    <a class="related-card" href="../tools/json-formatter/"><div class="rc-cat">Vosita</div><div class="rc-title">JSON Formatlash</div></a>
-    <a class="related-card" href="../tools/qr-generator/"><div class="rc-cat">Vosita</div><div class="rc-title">QR Kod Yaratish</div></a>
-  </div>
-</div>
-
-
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-        <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
-        <div class="footer-social">
-          <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            Telegram
-          </a>
-          <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms</a></nav>
         </div>
-      </div>
+    </header>
 
-      <!-- Vositalar column -->
-      <div class="footer-col">
-        <h4>Vositalar</h4>
-        <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-        <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
-        <a href="/tools/word-counter/">Word Counter</a>
-        <a href="/tools/case-converter/">Case Converter</a>
-        <a href="/tools/color-converter/">Rang Konvertori</a>
-        <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-        <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-        <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-        <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-        <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
-        <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-        <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
-      </div>
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
+                <a href="../blog.html">Blog</a><span class="bc-sep">&#8250;</span>
+                <span>Rang Formatlari</span>
+            </nav>
+            <div class="article-meta">
+                <span class="meta-cat">Dizayn</span>
+                <span class="meta-info">10 may 2026 &#183; 8 daqiqa o&#8217;qish</span>
+            </div>
+            <h1>Rang Formatlari: HEX, RGB, HSL, CMYK va CSS Gradient</h1>
+            <p>Qaysi formatni qachon ishlatish kerak, ularning farqlari va CSS gradient yaratishning to&#8217;g&#8217;ri usullari.</p>
+        </div>
+    </section>
 
-      <!-- PDF & Rasm column -->
-      <div class="footer-col">
-        <h4>PDF &amp; Rasm</h4>
-        <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-        <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
-        <a href="/tools/pdf-editor/">PDF Editor</a>
-        <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
-        <a href="/tools/image-converter/">Rasm Konvertor</a>
-        <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
-        <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-        <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-        <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-        <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-        <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-        <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-        <a href="/tools/qr-generator/">QR Kod</a>
-      </div>
+    <div class="page-content">
 
-      <!-- Loyiha + Huquqiy column -->
-      <div class="footer-col">
-        <h4>Loyiha</h4>
-        <a href="/about.html">Biz haqimizda</a>
-        <a href="/contact.html">Aloqa</a>
-        <a href="/blog.html">Blog</a>
-        <div class="footer-divider"></div>
-        <h4 class="ftr-h4-mt">Huquqiy</h4>
-        <a href="/terms.html">Foydalanish shartlari</a>
-        <a href="/privacy.html">Maxfiylik siyosati</a>
-      </div>
+        <p>Dizayn va veb ishlab chiqishda ranglar bir necha formatda ifodalanadi. Figma dan nusxalagan HEX kodni CSS da to&#8217;g&#8217;ri ishlatish, bosmaxona uchun CMYK ga aylantirish, yoki HSL bilan rang sistеmasini boshqarish &#8212; barchasi amalda
+            kerak bo&#8217;ladi.</p>
 
-    </div><!-- /.footer-grid -->
+        <div class="tool-cta">
+            <h3>Rangni tezda aylantiring</h3>
+            <p>HEX &#8596; RGB &#8596; HSL &#8596; CMYK. Color picker. CSS Gradient generator. Bepul, brauzerda.</p>
+            <a href="../tools/color-converter/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="13.5" cy="17.5" r="2.5"/></svg>                Rang Konvertori &#8594;
+            </a>
+        </div>
 
-    <div class="footer-bottom">
-      <div class="footer-bottom-row">
-        <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-        <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
-      </div>
+        <h2>Rang formatlari — batafsil</h2>
+
+        <div class="format-cards">
+            <div class="fc">
+                <span class="fc-badge" style="background:#ecfeff;color:#0891b2;">Veb</span>
+                <h3>HEX</h3>
+                <div class="fc-example">#0891b2<br>#ff6b35<br>#fff</div>
+                <p>O&#8217;n oltilik tizim. 6 yoki 3 belgidan iborat. Veb va grafik dasturlarning standart formati.</p>
+            </div>
+            <div class="fc">
+                <span class="fc-badge" style="background:#f0fdf4;color:#16a34a;">CSS</span>
+                <h3>RGB</h3>
+                <div class="fc-example">rgb(8, 145, 178)<br>rgb(255, 107, 53)</div>
+                <p>Qizil, yashil, ko&#8217;k. 0&#8211;255 oraliq. Ekranlar uchun fizik rang modeli.</p>
+            </div>
+            <div class="fc">
+                <span class="fc-badge" style="background:#f5f3ff;color:#7c3aed;">CSS3</span>
+                <h3>HSL</h3>
+                <div class="fc-example">hsl(192, 91%, 36%)<br>hsl(16, 100%, 60%)</div>
+                <p>Rang turi, to&#8217;yinganlik, yorqinlik. Inson idrokiga eng yaqin. CSS da boshqarish oson.</p>
+            </div>
+            <div class="fc">
+                <span class="fc-badge" style="background:#fef2f2;color:#dc2626;">Bosma</span>
+                <h3>CMYK</h3>
+                <div class="fc-example">cmyk(96%, 19%, 0%, 30%)<br>cmyk(0%, 58%, 79%, 0%)</div>
+                <p>Printer va bosmaxona uchun standart. Siyoh aralashmasi modeli.</p>
+            </div>
+        </div>
+
+        <h2>Qachon qaysi formatni ishlatish kerak?</h2>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Maqsad</th>
+                    <th>Format</th>
+                    <th>Sabab</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Veb CSS</td>
+                    <td>HEX yoki HSL</td>
+                    <td>HEX &#8212; qisqa, HSL &#8212; boshqarish oson</td>
+                </tr>
+                <tr>
+                    <td>CSS animatsiya</td>
+                    <td>RGB yoki HSL</td>
+                    <td>Sonlar orasida silliq o&#8217;tish</td>
+                </tr>
+                <tr>
+                    <td>Bosmaxona</td>
+                    <td>CMYK</td>
+                    <td>Printer siyoh modeli</td>
+                </tr>
+                <tr>
+                    <td>Photoshop/GIMP</td>
+                    <td>HSV yoki RGB</td>
+                    <td>Grafik dastur standartlari</td>
+                </tr>
+                <tr>
+                    <td>Figma/Sketch</td>
+                    <td>HEX yoki RGB</td>
+                    <td>Dizayn dastur ekspori</td>
+                </tr>
+                <tr>
+                    <td>Rang tizimi</td>
+                    <td>HSL</td>
+                    <td>Ochroq/to&#8217;qroq variant yaratish oson</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>HSL &#8212; nima uchun eng qulay?</h2>
+
+        <p>HSL (Hue, Saturation, Lightness) &#8212; rang tanlash va boshqarishda eng intuitiv format. Rang tizimini yaratishda ayniqsa foydali:</p>
+
+        <ul>
+            <li><code>hsl(192, 91%, 36%)</code> &#8212; asosiy rang</li>
+            <li><code>hsl(192, 91%, 50%)</code> &#8212; ochroq variant (L oshirildi)</li>
+            <li><code>hsl(192, 91%, 20%)</code> &#8212; to&#8217;qroq variant (L kamaytirildi)</li>
+            <li><code>hsl(192, 30%, 36%)</code> &#8212; o&#8217;chiqroq variant (S kamaytirildi)</li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>Amaliy foyda:</strong> CSS o&#8217;zgaruvchilari bilan HSL ishlatganda, faqat L qiymatini o&#8217;zgartirish orqali butun rang tizimini boshqarish mumkin. Tailwind CSS ham HSL dan foydalanadi.</p>
+        </div>
+
+        <h2>CSS Gradient &#8212; to&#8217;liq qo&#8217;llanma</h2>
+
+        <p>CSS gradient &#8212; rasm faylisiz fon yaratish imkoniyati. Uch turi mavjud:</p>
+
+        <h3>1. Linear gradient (chiziqli)</h3>
+        <p>Ranglar to&#8217;g&#8217;ri chiziq bo&#8217;ylab o&#8217;tadi:</p>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);</div>
+
+        <h3>2. Radial gradient (markazdan)</h3>
+        <p>Ranglar markazdan tashqariga yoyiladi:</p>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: radial-gradient(circle, #f97316 0%, #ec4899 100%);</div>
+
+        <h3>3. Conic gradient (konussimon)</h3>
+        <p>Ranglar markaz atrofida aylanadi &#8212; rang g&#8217;ildiragi:</p>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:12px 16px;margin:10px 0 16px;font-family:monospace;font-size:.85rem;color:var(--c-code);word-break:break-all;">background: conic-gradient(from 0deg, #0891b2, #7c3aed, #ec4899, #0891b2);</div>
+
+        <h2>Gradient qo&#8217;llash misollari</h2>
+
+        <div class="grad-demo">
+            <div class="gd-item">
+                <div class="gd-color" style="background:linear-gradient(135deg,#0891b2,#7c3aed)"></div>
+                <div class="gd-name">Ocean</div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-color" style="background:linear-gradient(135deg,#f97316,#ec4899)"></div>
+                <div class="gd-name">Sunset</div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-color" style="background:linear-gradient(135deg,#16a34a,#0891b2)"></div>
+                <div class="gd-name">Forest</div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-color" style="background:linear-gradient(135deg,#fde68a,#fb923c)"></div>
+                <div class="gd-name">Peach</div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-color" style="background:linear-gradient(135deg,#6ee7b7,#3b82f6,#a78bfa)"></div>
+                <div class="gd-name">Aurora</div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-color" style="background:radial-gradient(circle,#f97316,#7c3aed)"></div>
+                <div class="gd-name">Radial</div>
+            </div>
+        </div>
+
+        <h2>Rang konvertatsiya formulalar</h2>
+
+        <p><strong>HEX dan RGB:</strong> #0891b2 &#8594; 08=8, 91=145, b2=178 &#8594; rgb(8, 145, 178)</p>
+        <p><strong>RGB dan HEX:</strong> r, g, b ni 16-lik tizimga o&#8217;girish &#8594; #rrggbb</p>
+        <p><strong>RGB dan CMYK:</strong> k = 1 &#8722; max(r,g,b)/255; c = (1&#8722;r/255&#8722;k)/(1&#8722;k) ...</p>
+
+        <div class="info-box">
+            <p><strong>Amalda:</strong> Bu hisob-kitoblarni qo&#8217;lda qilish shart emas. <a href="../tools/color-converter/">toolbase.uz rang konvertori</a> barcha formatlar orasida avtomatik aylantiradi &#8212; faqat qiymat kiriting.</p>
+        </div>
+
+        <h2>Ko&#8217;p uchraydigan savollar</h2>
+        <p><strong>HEX katta-kichik harflar farq qiladimi?</strong> Yo&#8217;q. #0891B2 va #0891b2 bir xil.</p>
+        <p><strong>#fff va #ffffff farqi?</strong> Bir xil rang. 3 belgilik qisqa yozuv faqat juft harflar (ff, aa, 00) uchun ishlaydi.</p>
+        <p><strong>rgba() nima?</strong> RGB + Alpha (shaffoflik). rgba(8, 145, 178, 0.5) &#8212; 50% shaffof rang.</p>
+        <p><strong>CSS gradient browser mosligi?</strong> Barcha zamonaviy brauzerlar qo&#8217;llab-quvvatlaydi. Eski IE uchun -webkit- prefiks kerak edi &#8212; toolbase.uz generator avtomatik qo&#8217;shib beradi.</p>
+
+        <div class="tool-cta">
+            <h3>Hoziroq sinab ko&#8217;ring</h3>
+            <p>HEX, RGB, HSL, CMYK konvertatsiya. CSS gradient yaratish. Rang tarixi.</p>
+            <a href="../tools/color-converter/">Rang Konvertori &#8594;</a>
+        </div>
+
+        <hr style="border:none;border-top:1px solid var(--line);margin:40px 0;" />
+        <h2>Tegishli vositalar</h2>
+        <div class="related-grid">
+            <a class="related-card" href="../tools/color-converter/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">Rang Konvertori + CSS Gradient</div>
+            </a>
+            <a class="related-card" href="../tools/password-generator/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">Kuchli Parol Yaratish</div>
+            </a>
+            <a class="related-card" href="../tools/json-formatter/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">JSON Formatlash</div>
+            </a>
+            <a class="related-card" href="../tools/qr-generator/">
+                <div class="rc-cat">Vosita</div>
+                <div class="rc-title">QR Kod Yaratish</div>
+            </a>
+        </div>
     </div>
-  </div>
-</footer>
-<script>document.querySelectorAll('.footer-year').forEach(function(e){e.textContent=String(new Date().getFullYear());});</script>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
+                        </a>
+                        <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vositalar column -->
+                <div class="footer-col">
+                    <h4>Vositalar</h4>
+                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/tools/word-counter/">Word Counter</a>
+                    <a href="/tools/case-converter/">Case Converter</a>
+                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                </div>
+
+                <!-- PDF & Rasm column -->
+                <div class="footer-col">
+                    <h4>PDF &amp; Rasm</h4>
+                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+                    <a href="/tools/image-converter/">Rasm Konvertor</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+                    <a href="/tools/qr-generator/">QR Kod</a>
+                </div>
+
+                <!-- Loyiha + Huquqiy column -->
+                <div class="footer-col">
+                    <h4>Loyiha</h4>
+                    <a href="/about.html">Biz haqimizda</a>
+                    <a href="/contact.html">Aloqa</a>
+                    <a href="/blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Huquqiy</h4>
+                    <a href="/terms.html">Foydalanish shartlari</a>
+                    <a href="/privacy.html">Maxfiylik siyosati</a>
+                </div>
+
+            </div>
+            <!-- /.footer-grid -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.footer-year').forEach(function(e) {
+            e.textContent = String(new Date().getFullYear());
+        });
+    </script>
 
 </body>
+
 </html>
