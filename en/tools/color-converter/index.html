@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a6fb5" />
+    <title>Color Converter — HEX RGB HSL | toolbase.uz</title>
+    <meta name="description" content="Convert colors between HEX, RGB, HSL, HSV, CMYK formats. Color picker, color history, CSS gradient generator. Free, in browser." />
+    <meta name="keywords" content="color converter, hex to rgb, rgb to hex, hsl color, color picker, css gradient" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://toolbase.uz/en/tools/color-converter/" />
+    <link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/color-converter/" />
+    <link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/color-converter/" />
+    <link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/color-converter/" />
+    <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/color-converter/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://toolbase.uz/en/tools/color-converter/" />
+    <meta property="og:title" content="Color Converter | toolbase.uz" />
+    <meta property="og:description" content="Convert colors between HEX, RGB, HSL, HSV, CMYK formats. Color picker, color history, CSS gradient generator. Free, in b" />
+    <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="../../../assets/img/favicon.svg" />
+    <link rel="alternate icon" href="../../../favicon.ico" />
+    <link rel="apple-touch-icon" href="../../../assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="../../../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../../tools/color-converter/css/tool.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Color Converter",
+        "url": "https://toolbase.uz/en/tools/color-converter/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "inLanguage": "en"
+    }
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="/en/" class="logo">Toolbase<span class="tld">.uz</span></a>
+            <nav class="nav-links">
+                <a href="/en/about.html">About</a>
+                <a href="/en/contact.html">Contact</a>
+                <a href="/en/privacy.html">Privacy Policy</a>
+                <a href="/en/terms.html">Terms</a>
+            </nav>
+            <div class="language-switcher" aria-label="Choose language">
+                <a href="../../../tools/color-converter/" lang="uz">UZ</a>
+                <a class="active" href="../../../en/tools/color-converter/" lang="en">EN</a>
+                <a href="../../../ru/tools/color-converter/" lang="ru">RU</a>
+            </div>
+        </div>
+    </header>
+
+<main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../../">Bosh sahifa</a>
+                <span class="bc-sep">&#8250;</span>
+                <span>Rang Konvertori</span>
+            </nav>
+        </div>
+
+        <section class="tool-hero container">
+            <div class="tool-hero-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="13.5" cy="17.5" r="2.5"/>
+        <path d="M10.5 8.5L8 10.5M10.5 15.5L8 13.5"/>
+      </svg>
+            </div>
+            <div class="tool-hero-text">
+                <h1>Rang Konvertori</h1>
+                <p><strong>HEX &#8596; RGB &#8596; HSL &#8596; CMYK &#8596; HSV</strong> konvertatsiya. Color picker, rang tarixi, 36 ta nomlangan rang. CSS Gradient generator &#8212; 12 tayyor gradient, o&#8216;z ranglaringizni qo&#8216;shing.</p>
+            </div>
+        </section>
+
+        <section class="tool-workspace container">
+
+            <!-- Section tabs -->
+            <div class="section-tabs">
+                <button class="s-tab active" data-panel="converter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="13.5" cy="17.5" r="2.5"/></svg>
+        Rang Konvertori
+      </button>
+                <button class="s-tab" data-panel="gradient">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891b2"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="3" fill="url(#g1)" stroke="none"/></svg>
+        CSS Gradient
+      </button>
+            </div>
+
+            <!-- ══ PANEL 1: CONVERTER ══ -->
+            <div class="s-panel active" id="panel-converter">
+
+                <!-- Big preview -->
+                <div class="color-preview-big" id="colorPreviewBig">
+                    <div class="cpb-copy-row">
+                        <span class="cpb-hex" id="cpbHex" title="Nusxalash uchun bosing">#0891B2</span>
+                    </div>
+                </div>
+
+                <!-- Native color picker -->
+                <div class="picker-row">
+                    <div class="picker-wrap">
+                        <input type="color" id="colorPicker" value="#0891b2" />
+                    </div>
+                    <div>
+                        <div class="picker-label">Rang tanlash</div>
+                        <div class="picker-sub">Rang tanlovchini bosib istalgan rangni tanlang</div>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="history-row" id="historyRow"></div>
+
+                <div class="conv-layout">
+                    <!-- LEFT: formats -->
+                    <div>
+
+                        <!-- HEX -->
+                        <div class="input-group">
+                            <div class="ig-header">
+                                <span class="ig-label">HEX</span>
+                                <button class="ig-copy" data-copy="hexInput">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Nusxalash
+              </button>
+                            </div>
+                            <div class="ig-body">
+                                <div class="fmt-row">
+                                    <span class="fmt-label">HEX</span>
+                                    <input class="fmt-input" id="hexInput" type="text" value="#0891b2" spellcheck="false" placeholder="#000000" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RGB -->
+                        <div class="input-group">
+                            <div class="ig-header">
+                                <span class="ig-label">RGB</span>
+                                <button class="ig-copy" data-copy="rgbInput">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Nusxalash
+              </button>
+                            </div>
+                            <div class="ig-body">
+                                <div class="fmt-row">
+                                    <span class="fmt-label">R,G,B</span>
+                                    <div class="fmt-mini">
+                                        <input class="fmt-input" id="rInput" type="number" min="0" max="255" value="8" placeholder="R" />
+                                        <input class="fmt-input" id="gInput" type="number" min="0" max="255" value="145" placeholder="G" />
+                                        <input class="fmt-input" id="bInput" type="number" min="0" max="255" value="178" placeholder="B" />
+                                    </div>
+                                </div>
+                                <div class="fmt-row" style="margin-top:8px;">
+                                    <span class="fmt-label" style="width:auto;color:var(--muted);font-size:.76rem;">CSS:</span>
+                                    <input class="fmt-input" id="rgbInput" type="text" readonly style="background:var(--bg-soft);cursor:default;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HSL -->
+                        <div class="input-group">
+                            <div class="ig-header">
+                                <span class="ig-label">HSL</span>
+                                <button class="ig-copy" data-copy="hslInput">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Nusxalash
+              </button>
+                            </div>
+                            <div class="ig-body">
+                                <div class="fmt-row">
+                                    <span class="fmt-label">H,S,L</span>
+                                    <div class="fmt-mini">
+                                        <input class="fmt-input" id="hInput" type="number" min="0" max="360" placeholder="H" />
+                                        <input class="fmt-input" id="sInput" type="number" min="0" max="100" placeholder="S%" />
+                                        <input class="fmt-input" id="lInput" type="number" min="0" max="100" placeholder="L%" />
+                                    </div>
+                                </div>
+                                <div class="fmt-row" style="margin-top:8px;">
+                                    <span class="fmt-label" style="width:auto;color:var(--muted);font-size:.76rem;">CSS:</span>
+                                    <input class="fmt-input" id="hslInput" type="text" readonly style="background:var(--bg-soft);cursor:default;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CMYK + HSV -->
+                        <div class="input-group">
+                            <div class="ig-header"><span class="ig-label">CMYK</span>
+                                <button class="ig-copy" data-copy="cmykInput">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Nusxalash
+              </button>
+                            </div>
+                            <div class="ig-body">
+                                <div class="fmt-row"><span class="fmt-label" style="width:auto;color:var(--muted);font-size:.76rem;">CMYK:</span><input class="fmt-input" id="cmykInput" type="text" readonly style="background:var(--bg-soft);cursor:default;" /></div>
+                            </div>
+                        </div>
+                        <div class="input-group" style="margin-top:0;">
+                            <div class="ig-header"><span class="ig-label">HSV</span>
+                                <button class="ig-copy" data-copy="hsvInput">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Nusxalash
+              </button>
+                            </div>
+                            <div class="ig-body">
+                                <div class="fmt-row"><span class="fmt-label" style="width:auto;color:var(--muted);font-size:.76rem;">HSV:</span><input class="fmt-input" id="hsvInput" type="text" readonly style="background:var(--bg-soft);cursor:default;" /></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /left -->
+
+                    <!-- RIGHT: Named colors -->
+                    <div class="named-section">
+                        <div style="font-size:.73rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px;">Nomlangan ranglar</div>
+                        <input class="named-search" id="namedSearch" type="text" placeholder="Rang nomi yoki #hex..." />
+                        <div class="named-grid" id="namedGrid"></div>
+                    </div>
+
+                </div>
+                <!-- /conv-layout -->
+            </div>
+            <!-- /panel-converter -->
+
+            <!-- ══ PANEL 2: GRADIENT ══ -->
+            <div class="s-panel" id="panel-gradient">
+                <div class="grad-layout">
+
+                    <!-- LEFT: Controls -->
+                    <div>
+                        <!-- Gradient preview -->
+                        <div class="grad-preview" id="gradPreview"></div>
+
+                        <!-- Type -->
+                        <div style="font-size:.73rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px;">Gradient turi</div>
+                        <div class="type-row">
+                            <button class="type-btn active" data-type="linear">Linear</button>
+                            <button class="type-btn" data-type="radial">Radial</button>
+                            <button class="type-btn" data-type="conic">Conic</button>
+                        </div>
+
+                        <!-- Angle -->
+                        <div class="angle-ctrl" id="angleCtrl">
+                            <label>Burchak:</label>
+                            <input type="range" id="gradAngleSlider" min="0" max="360" value="135" step="1" />
+                            <span class="angle-val" id="gradAngleVal">135&#176;</span>
+                        </div>
+
+                        <!-- Color stops -->
+                        <div class="stops-label">Rang nuqtalari</div>
+                        <div class="stops-list" id="stopsList"></div>
+                        <button class="btn-add-stop" id="btnAddStop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Rang qo&#8217;shish
+          </button>
+
+                        <!-- CSS Output -->
+                        <div class="css-output-card">
+                            <div class="css-out-header">
+                                <span class="css-out-label">CSS Kodi</span>
+                                <button class="btn-copy-css" id="btnCopyCss">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Nusxalash
+              </button>
+                            </div>
+                            <div class="css-code" id="cssCode"></div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Presets -->
+                    <div class="grad-sidebar">
+                        <div class="side-mini-card">
+                            <div class="smc-title">Tayyor gradientlar</div>
+                            <div class="grad-presets" id="gradPresets"></div>
+                        </div>
+                        <div class="side-mini-card">
+                            <div class="smc-title">Foydalanish</div>
+                            <div style="font-size:.82rem;color:var(--ink-2);line-height:1.7;">
+                                <div style="margin-bottom:6px;">&#49;. Gradient turini tanlang</div>
+                                <div style="margin-bottom:6px;">&#50;. Burchakni sozlang</div>
+                                <div style="margin-bottom:6px;">&#51;. Rang nuqtalarini qo&#8217;shing/o&#8217;zgartiring</div>
+                                <div style="margin-bottom:6px;">&#52;. CSS kodni nusxalang</div>
+                                <div style="color:var(--muted);font-size:.78rem;margin-top:10px;">Tayyor gradientdan boshlash uchun o&#8217;ngdagi namunalardan birini bosing.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /grad-layout -->
+            </div>
+            <!-- /panel-gradient -->
+
+        </section>
+
+        <!-- INFO -->
+        <section class="tool-info">
+            <article class="info-article">
+                <h2>Rang Konvertori haqida</h2>
+                <p>HEX, RGB, HSL, CMYK, HSV &#8212; beshta format orasida tezda o&#8217;tish. Color picker bilan istalgan rangni tanlang, bir bosishda nusxalang. CSS gradient generator bilan linear, radial va conic gradientlar yarating.</p>
+                <div class="use-grid">
+                    <div class="use-card">
+                        <div class="uc-icon">&#127912;</div>
+                        <h3>Dizaynerlar</h3>
+                        <p>Figma HEX ni CSS HSL ga aylantirish, rang sistеmasini tahlil qilish.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128187;</div>
+                        <h3>Dasturchilar</h3>
+                        <p>CSS uchun to&#8217;g&#8217;ri rang formati tanlash, gradient CSS kodi olish.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#128247;</div>
+                        <h3>Fotograflar</h3>
+                        <p>CMYK &#8212; bosmaxona uchun, RGB &#8212; ekran uchun konvertatsiya.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="uc-icon">&#9881;</div>
+                        <h3>Barcha uchun</h3>
+                        <p>Nomlangan ranglar: o&#8217;zbekcha va inglizcha, rang tarixi.</p>
+                    </div>
+                </div>
+                <h2>Rang formatlari haqida</h2>
+                <p><strong>HEX</strong> &#8212; veb dizaynda eng keng tarqalgan. #rrggbb formatida, r/g/b &#8212; qizil/yashil/ko&#8217;k 00&#8211;ff orasida.</p>
+                <p><strong>RGB</strong> &#8212; qizil, yashil, ko&#8217;k. Har biri 0&#8211;255. Ekranlar va CSS uchun standart.</p>
+                <p><strong>HSL</strong> &#8212; Hue (rang turi), Saturation (to&#8217;yinganlik), Lightness (yorqinlik). Inson idrokiga yaqin, CSS da juda qulay.</p>
+                <p><strong>CMYK</strong> &#8212; Cyan, Magenta, Yellow, Key (qora). Bosmaxona standart formati.</p>
+                <p><strong>HSV</strong> &#8212; Hue, Saturation, Value. Photoshop va boshqa grafik dasturlarda ishlatiladigan format.</p>
+                <div class="faq-list">
+                    <details>
+                        <summary>CSS gradient nima?</summary>
+                        <p>CSS gradient &#8212; ikki yoki undan ko&#8217;p rangning silliq o&#8217;tishi. background: linear-gradient(135deg, #0891b2, #7c3aed) kabi CSS xususiyati orqali belgilanadi. Rasm fayli kerak emas.</p>
+                    </details>
+                    <details>
+                        <summary>HEX va RGB qaysi birini ishlatish kerak?</summary>
+                        <p>Veb uchun ikkisi ham to&#8217;g&#8217;ri. HSL CSS da rang sistеmasini boshqarish uchun qulay &#8212; yorqinlikni osonroq o&#8217;zgartirish mumkin. Bosmaxona uchun CMYK kerak.</p>
+                    </details>
+                    <details>
+                        <summary>Nomlangan ranglar qancha?</summary>
+                        <p>CSS standartida 140+ nomlangan rang bor (red, blue, tomato va boshqalar). Vositada 36 ta eng ko&#8217;p ishlatiladigan rang o&#8217;zbek nomda keltirilgan.</p>
+                    </details>
+                </div>
+            </article>
+        </section>
+    </main>
+
+<footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
+                        </a>
+                        <a href="https://github.com/alproger/toolbaseuz" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vositalar column -->
+                <div class="footer-col">
+                    <h4>Vositalar</h4>
+                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
+                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/tools/word-counter/">Word Counter</a>
+                    <a href="/tools/case-converter/">Case Converter</a>
+                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                </div>
+
+                <!-- PDF & Rasm column -->
+                <div class="footer-col">
+                    <h4>PDF &amp; Rasm</h4>
+                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
+                    <a href="/tools/image-converter/">Rasm Konvertor</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+                    <a href="/tools/qr-generator/">QR Kod</a>
+                </div>
+
+                <!-- Loyiha + Huquqiy column -->
+                <div class="footer-col">
+                    <h4>Loyiha</h4>
+                    <a href="/en/about.html">About</a>
+                    <a href="/en/contact.html">Contact</a>
+                    <a href="/blog.html">Blog</a>
+                    <div class="footer-divider"></div>
+                    <h4 class="ftr-h4-mt">Huquqiy</h4>
+                    <a href="/en/terms.html">Terms</a>
+                    <a href="/en/privacy.html">Privacy Policy</a>
+                </div>
+
+            </div>
+            <!-- /.footer-grid -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="../../../tools/color-converter/js/color-converter.js"></script>
+</body>
+
+</html>

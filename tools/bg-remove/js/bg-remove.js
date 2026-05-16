@@ -102,7 +102,7 @@
         // STABLE CDN IMPORT
         const { removeBackground } = await
         import (
-            "[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/dist/browser.es.js)"
+            "https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/dist/browser.es.js"
         );
 
         const config = {
