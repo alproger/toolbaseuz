@@ -6,7 +6,13 @@
     "category": "Developer",
     "date": "2026-05-11",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/hash-generator-md5-sha256.html"
+    "url": "https://toolbase.uz/blog/hash-generator-md5-sha256.html",
+    "en_title": "Hash Generator: MD5, SHA-256, SHA-512 — What Are They and How Do They Work?",
+    "ru_title": "Генератор хешей: MD5, SHA-256, SHA-512 — что это и как работает?",
+    "en_category": "Developer",
+    "ru_category": "Разработка",
+    "en_url": "https://toolbase.uz/en/blog/hash-generator-md5-sha256.html",
+    "ru_url": "https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html"
   },
   {
     "id": 24,
@@ -15,7 +21,13 @@
     "category": "Rasm",
     "date": "2026-05-10",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/rasmni-siqish-optimize.html"
+    "url": "https://toolbase.uz/blog/rasmni-siqish-optimize.html",
+    "en_title": "Image Compression: Reducing JPG, PNG, WebP File Size",
+    "ru_title": "Сжатие изображений: уменьшение размера JPG, PNG, WebP",
+    "en_category": "Rasm",
+    "ru_category": "Rasm",
+    "en_url": "https://toolbase.uz/en/blog/rasmni-siqish-optimize.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasmni-siqish-optimize.html"
   },
   {
     "id": 25,
@@ -24,7 +36,13 @@
     "category": "Hujjat",
     "date": "2026-05-10",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/word-pdf-aylantirish.html"
+    "url": "https://toolbase.uz/blog/word-pdf-aylantirish.html",
+    "en_title": "Word to PDF Conversion: Convert DOCX, DOC to PDF",
+    "ru_title": "Конвертация Word в PDF: преобразование DOCX, DOC в PDF",
+    "en_category": "Hujjat",
+    "ru_category": "Hujjat",
+    "en_url": "https://toolbase.uz/en/blog/word-pdf-aylantirish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/word-pdf-aylantirish.html"
   },
   {
     "id": 23,
@@ -33,7 +51,13 @@
     "category": "Qo'llanma",
     "date": "2026-05-10",
     "readTime": "7 daqiqa",
-    "url": "https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"
+    "url": "https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html",
+    "en_title": "Unit Conversion: km, mile, kg, lb, °C, °F — Formulas and Examples",
+    "ru_title": "Единицы измерения: км, миля, кг, фунт, °C, °F — формулы и примеры",
+    "en_category": "Guide",
+    "ru_category": "Руководство",
+    "en_url": "https://toolbase.uz/en/blog/olchov-birliklari-konvertatsiya.html",
+    "ru_url": "https://toolbase.uz/ru/blog/olchov-birliklari-konvertatsiya.html"
   },
   {
     "id": 22,
@@ -42,7 +66,13 @@
     "category": "Dizayn",
     "date": "2026-05-10",
     "readTime": "8 daqiqa",
-    "url": "https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"
+    "url": "https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html",
+    "en_title": "Color Formats: HEX, RGB, HSL, CMYK and CSS Gradient",
+    "ru_title": "Форматы цветов: HEX, RGB, HSL, CMYK и CSS-градиент",
+    "en_category": "Design",
+    "ru_category": "Дизайн",
+    "en_url": "https://toolbase.uz/en/blog/rang-formatlari-hex-rgb-hsl.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rang-formatlari-hex-rgb-hsl.html"
   },
   {
     "id": 19,
@@ -51,7 +81,13 @@
     "category": "PDF",
     "date": "2026-05-10",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/pdf-aylantirish-qollanma.html",
+    "en_title": "Rotating PDF Pages: Fixing Sideways Documents",
+    "ru_title": "Поворот страниц PDF: исправление перевёрнутых документов",
+    "en_category": "PDF",
+    "ru_category": "PDF",
+    "en_url": "https://toolbase.uz/en/blog/pdf-aylantirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/pdf-aylantirish-qollanma.html"
   },
   {
     "id": 20,
@@ -60,7 +96,13 @@
     "category": "Rasm",
     "date": "2026-05-10",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html",
+    "en_title": "Rotating Images: Flip, Angle and Mirror Effect",
+    "ru_title": "Поворот изображений: переворот, угол и эффект зеркала",
+    "en_category": "Rasm",
+    "ru_category": "Rasm",
+    "en_url": "https://toolbase.uz/en/blog/rasmni-aylantirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasmni-aylantirish-qollanma.html"
   },
   {
     "id": 21,
@@ -69,7 +111,13 @@
     "category": "Qo'llanma",
     "date": "2026-05-10",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/zip-arxiv-yaratish.html"
+    "url": "https://toolbase.uz/blog/zip-arxiv-yaratish.html",
+    "en_title": "Creating ZIP Archives: Zipping Files and Folders",
+    "ru_title": "Создание ZIP-архивов: архивирование файлов и папок",
+    "en_category": "Guide",
+    "ru_category": "Руководство",
+    "en_url": "https://toolbase.uz/en/blog/zip-arxiv-yaratish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html"
   },
   {
     "id": 18,
@@ -78,7 +126,13 @@
     "category": "Xavfsizlik",
     "date": "2026-05-10",
     "readTime": "7 daqiqa",
-    "url": "https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"
+    "url": "https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html",
+    "en_title": "PDF Password Protection: Security, AES Encryption and Permissions",
+    "ru_title": "Защита PDF паролем: безопасность, шифрование AES и права доступа",
+    "en_category": "Security",
+    "ru_category": "Безопасность",
+    "en_url": "https://toolbase.uz/en/blog/pdf-parol-himoya-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/pdf-parol-himoya-qollanma.html"
   },
   {
     "id": 17,
@@ -87,7 +141,13 @@
     "category": "Qo'llanma",
     "date": "2026-05-10",
     "readTime": "7 daqiqa",
-    "url": "https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"
+    "url": "https://toolbase.uz/blog/rasmni-qirqish-qollanma.html",
+    "en_title": "Image Cropping: Framing, Aspect Ratio, Instagram, Passport",
+    "ru_title": "Обрезка изображений: кадрирование, соотношение сторон, Instagram, паспорт",
+    "en_category": "Guide",
+    "ru_category": "Руководство",
+    "en_url": "https://toolbase.uz/en/blog/rasmni-qirqish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasmni-qirqish-qollanma.html"
   },
   {
     "id": 16,
@@ -96,7 +156,13 @@
     "category": "Qo'llanma",
     "date": "2026-05-09",
     "readTime": "8 daqiqa",
-    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"
+    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish.html",
+    "en_title": "Image Resize: Passport 3×4, Visa, Instagram and More",
+    "ru_title": "Изменение размера изображений: паспорт 3×4, виза, Instagram и другие",
+    "en_category": "Guide",
+    "ru_category": "Руководство",
+    "en_url": "https://toolbase.uz/en/blog/rasm-razmer-ozgartirish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish.html"
   },
   {
     "id": 15,
@@ -106,7 +172,13 @@
     "category": "Rasm",
     "date": "2026-05-09",
     "readTime": "8 daqiqa",
-    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html",
+    "en_title": "Changing Image Dimensions: Passport 3×4, Visa, A4 — Complete Guide",
+    "ru_title": "Изменение размеров изображений: паспорт 3×4, виза, A4 — полное руководство",
+    "en_category": "Rasm",
+    "ru_category": "Rasm",
+    "en_url": "https://toolbase.uz/en/blog/rasm-razmer-ozgartirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish-qollanma.html"
   },
   {
     "id": 14,
@@ -116,7 +188,13 @@
     "category": "O'zbek tili",
     "date": "2026-05-08",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"
+    "url": "https://toolbase.uz/blog/uzbek-imlo-tekshirish.html",
+    "en_title": "Uzbek Spell Check: Apostrophe, Grammar and Punctuation",
+    "ru_title": "Проверка орфографии узбекского: апостроф, грамматика и знаки препинания",
+    "en_category": "O'zbek tili",
+    "ru_category": "O'zbek tili",
+    "en_url": "https://toolbase.uz/en/blog/uzbek-imlo-tekshirish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/uzbek-imlo-tekshirish.html"
   },
   {
     "id": 13,
@@ -126,7 +204,13 @@
     "category": "Rasm",
     "date": "2026-05-08",
     "readTime": "7 daqiqa",
-    "url": "https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html",
+    "en_title": "Image Format Conversion: JPG, PNG, WebP, PDF — Complete Guide",
+    "ru_title": "Конвертация форматов изображений: JPG, PNG, WebP, PDF — полное руководство",
+    "en_category": "Rasm",
+    "ru_category": "Rasm",
+    "en_url": "https://toolbase.uz/en/blog/rasm-format-ozgartirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/rasm-format-ozgartirish-qollanma.html"
   },
   {
     "id": 12,
@@ -136,7 +220,13 @@
     "category": "Texnologiya",
     "date": "2026-05-08",
     "readTime": "8 daqiqa",
-    "url": "https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"
+    "url": "https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html",
+    "en_title": "QR Code Generation: URL, Wi-Fi, vCard — Complete Guide",
+    "ru_title": "Создание QR-кодов: URL, Wi-Fi, vCard — полное руководство",
+    "en_category": "Technology",
+    "ru_category": "Технологии",
+    "en_url": "https://toolbase.uz/en/blog/qr-kod-yaratish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/qr-kod-yaratish-qollanma.html"
   },
   {
     "id": 9,
@@ -146,7 +236,13 @@
     "category": "PDF",
     "date": "2026-05-06",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html",
+    "en_title": "Merging PDF Files: Complete Guide",
+    "ru_title": "Объединение PDF-файлов: полное руководство",
+    "en_category": "PDF",
+    "ru_category": "PDF",
+    "en_url": "https://toolbase.uz/en/blog/pdf-birlashtirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/pdf-birlashtirish-qollanma.html"
   },
   {
     "id": 10,
@@ -156,7 +252,13 @@
     "category": "PDF",
     "date": "2026-05-07",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"
+    "url": "https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html",
+    "en_title": "Deleting PDF Pages: Detailed Guide",
+    "ru_title": "Удаление страниц PDF: подробное руководство",
+    "en_category": "PDF",
+    "ru_category": "PDF",
+    "en_url": "https://toolbase.uz/en/blog/pdf-sahifa-ochirish-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/pdf-sahifa-ochirish-qollanma.html"
   },
   {
     "id": 11,
@@ -166,7 +268,13 @@
     "category": "PDF",
     "date": "2026-05-08",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/pdf-editor-qollanma.html"
+    "url": "https://toolbase.uz/blog/pdf-editor-qollanma.html",
+    "en_title": "PDF Editor: Editing Documents in the Browser",
+    "ru_title": "PDF-редактор: редактирование документов в браузере",
+    "en_category": "PDF",
+    "ru_category": "PDF",
+    "en_url": "https://toolbase.uz/en/blog/pdf-editor-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/pdf-editor-qollanma.html"
   },
   {
     "id": 1,
@@ -176,7 +284,13 @@
     "category": "Asoslar",
     "date": "2026-05-01",
     "readTime": "4 daqiqa",
-    "url": "https://toolbase.uz/blog/json-nima.html"
+    "url": "https://toolbase.uz/blog/json-nima.html",
+    "en_title": "What is JSON and What is It Used For?",
+    "ru_title": "Что такое JSON и для чего он используется?",
+    "en_category": "Asoslar",
+    "ru_category": "Asoslar",
+    "en_url": "https://toolbase.uz/en/blog/json-nima.html",
+    "ru_url": "https://toolbase.uz/ru/blog/json-nima.html"
   },
   {
     "id": 2,
@@ -186,7 +300,13 @@
     "category": "Amaliyot",
     "date": "2026-05-03",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/json-formatlash-amaliyot.html"
+    "url": "https://toolbase.uz/blog/json-formatlash-amaliyot.html",
+    "en_title": "JSON Formatting (Beautify & Minify): Practical Guide and Common Errors",
+    "ru_title": "Форматирование JSON (Beautify & Minify): практическое руководство и частые ошибки",
+    "en_category": "Practice",
+    "ru_category": "Практика",
+    "en_url": "https://toolbase.uz/en/blog/json-formatlash-amaliyot.html",
+    "ru_url": "https://toolbase.uz/ru/blog/json-formatlash-amaliyot.html"
   },
   {
     "id": 3,
@@ -196,7 +316,13 @@
     "category": "Til",
     "date": "2026-04-28",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/uzbek-lotin-krill.html"
+    "url": "https://toolbase.uz/blog/uzbek-lotin-krill.html",
+    "en_title": "Uzbek Script: The History of Latin and Cyrillic Alphabets",
+    "ru_title": "Узбекская письменность: история латиницы и кириллицы",
+    "en_category": "Language",
+    "ru_category": "Язык",
+    "en_url": "https://toolbase.uz/en/blog/uzbek-lotin-krill.html",
+    "ru_url": "https://toolbase.uz/ru/blog/uzbek-lotin-krill.html"
   },
   {
     "id": 4,
@@ -206,7 +332,13 @@
     "category": "Xavfsizlik",
     "date": "2026-04-25",
     "readTime": "6 daqiqa",
-    "url": "https://toolbase.uz/blog/kuchli-parol-yaratish.html"
+    "url": "https://toolbase.uz/blog/kuchli-parol-yaratish.html",
+    "en_title": "Creating Strong Passwords: 7 Essential Rules and Security Basics",
+    "ru_title": "Создание надёжных паролей: 7 важных правил и основы безопасности",
+    "en_category": "Security",
+    "ru_category": "Безопасность",
+    "en_url": "https://toolbase.uz/en/blog/kuchli-parol-yaratish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/kuchli-parol-yaratish.html"
   },
   {
     "id": 5,
@@ -216,7 +348,13 @@
     "category": "Yozish",
     "date": "2026-04-20",
     "readTime": "4 daqiqa",
-    "url": "https://toolbase.uz/blog/word-counter-yozuvchilar.html"
+    "url": "https://toolbase.uz/blog/word-counter-yozuvchilar.html",
+    "en_title": "Word Counter for Writers: How to Track and Improve Your Writing",
+    "ru_title": "Счётчик слов для писателей: как отслеживать и улучшать свой текст",
+    "en_category": "Yozish",
+    "ru_category": "Yozish",
+    "en_url": "https://toolbase.uz/en/blog/word-counter-yozuvchilar.html",
+    "ru_url": "https://toolbase.uz/ru/blog/word-counter-yozuvchilar.html"
   },
   {
     "id": 6,
@@ -226,7 +364,13 @@
     "category": "Dasturlash",
     "date": "2026-04-18",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/case-converter-qollanma.html"
+    "url": "https://toolbase.uz/blog/case-converter-qollanma.html",
+    "en_title": "Case Converter: camelCase, snake_case, kebab-case — Complete Guide",
+    "ru_title": "Конвертер регистра: camelCase, snake_case, kebab-case — полное руководство",
+    "en_category": "Dasturlash",
+    "ru_category": "Dasturlash",
+    "en_url": "https://toolbase.uz/en/blog/case-converter-qollanma.html",
+    "ru_url": "https://toolbase.uz/ru/blog/case-converter-qollanma.html"
   },
   {
     "id": 7,
@@ -236,7 +380,13 @@
     "category": "Amaliyot",
     "date": "2026-04-22",
     "readTime": "5 daqiqa",
-    "url": "https://toolbase.uz/blog/son-soz-konvertor.html"
+    "url": "https://toolbase.uz/blog/son-soz-konvertor.html",
+    "en_title": "Number to Words Converter: Uzbek Currency and Number Writing",
+    "ru_title": "Конвертер числа в слова: написание чисел и валюты на узбекском",
+    "en_category": "Practice",
+    "ru_category": "Практика",
+    "en_url": "https://toolbase.uz/en/blog/son-soz-konvertor.html",
+    "ru_url": "https://toolbase.uz/ru/blog/son-soz-konvertor.html"
   },
   {
     "id": 8,
@@ -246,6 +396,12 @@
     "category": "Texnologiya",
     "date": "2026-04-15",
     "readTime": "4 daqiqa",
-    "url": "https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"
+    "url": "https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html",
+    "en_title": "Browser-based Online Tools: Advantages, Privacy and How to Choose",
+    "ru_title": "Онлайн-инструменты на основе браузера: преимущества, приватность и как выбрать",
+    "en_category": "Technology",
+    "ru_category": "Технологии",
+    "en_url": "https://toolbase.uz/en/blog/onlayn-vositalar-foydalanish.html",
+    "ru_url": "https://toolbase.uz/ru/blog/onlayn-vositalar-foydalanish.html"
   }
 ]

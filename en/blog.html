@@ -524,12 +524,12 @@
                 }
 
                 function renderCard(post, idx) {
-                    var catLabel = translateCategory(post.category || '');
+                    var catLabel = translateCategory((post['en_category'] || post.category) || '');
                     var a = document.createElement('a');
                     a.className = 'post-card';
-                    a.href = post.url || ('/blog/' + post.slug + '.html');
+                    a.href = post['en_url'] || post.url || ('/en/blog/' + post.slug + '.html');
                     a.setAttribute('role', 'listitem');
-                    a.setAttribute('data-cat', (post.category || '').trim());
+                    a.setAttribute('data-cat', ((post['en_category'] || post.category) || '').trim());
 
                     a.innerHTML =
                         '<span class="post-num">' + String(idx + 1).padStart(2, '0') + '</span>' +
@@ -540,7 +540,7 @@
                         '<span class="post-date">' + fmtDate(post.date) + '</span>' +
                         (post.readTime ? '<span class="meta-dot">&middot;</span><span class="post-read">' + post.readTime + '</span>' : '') +
                         '</div>' +
-                        '<p class="post-title">' + post.title + '</p>' +
+                        '<p class="post-title">' + (post['en_title'] || post.title) + '</p>' +
                         (post.excerpt ? '<p class="post-excerpt">' + post.excerpt + '</p>' : '') +
                         '</div>' +
                         '<span class="post-arrow" aria-hidden="true">' +
