@@ -59,21 +59,21 @@
                 "name": "Bir vaqtda nechta rasm konvertatsiya qilinadi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Bir vaqtda 20 tagacha rasmni tanlab, bir bosishda konvertatsiya qilish mumkin. Natijalar ZIP sifatida yuklab olinadi."
+                    "text": "Bir vaqtda up to 20 rasmni tanlab, bir bosishda konvertatsiya qilish mumkin. Resultlar ZIP qualityida yuklab olinadi."
                 }
             },            {
                 "@type": "Question",
-                "name": "Sifat parametri nima uchun kerak?",
+                "name": "Quality parametri nima uchun kerak?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sifat (1-100%) chiqish faylining hajmi va ko'rinishi o'rtasidagi muvozanatni belgilaydi. 85% odatda optimal tanlov."
+                    "text": "Quality (1-100%) chiqish faylining size va ko'rinishi o'rtasidagi muvozanatni belgilaydi. 85% odatda optimal tanlov."
                 }
             },            {
                 "@type": "Question",
-                "name": "PNG dan WebP ga o'tish nima beradi?",
+                "name": "PNG from WebP to o'tish nima beradi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "WebP PNG ga qaraganda o'rtacha 25-35% kichikroq fayl hajmini ta'minlaydi va shaffoflikni saqlab qoladi. Sayt tezligini oshirish uchun juda foydali."
+                    "text": "WebP PNG to qaratonda o'rtacha 25-35% kichikroq fayl sizeni ta'minlaydi va shaffoflikni saqlab qoladi. Sayt tezligini oshirish uchun juda foydali."
                 }
             }]
         }
@@ -101,9 +101,9 @@
 <main>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../../">Bosh sahifa</a>
+                <a href="../../../../">Home</a>
                 <span class="bc-sep">›</span>
-                <span>Rasm Formatini O'zgartirish</span>
+                <span>Rasm Formatini O'ztortirish</span>
             </nav>
         </div>
 
@@ -116,8 +116,8 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasm Formatini O'zgartirish</h1>
-                <p>JPG, PNG, WebP, BMP, GIF, ICO va PDF — 7 format. Bir vaqtda 20 ta rasm. Sifat sozlamalari, fon rangi, o'lcham. Fayllar serverga yuborilmaydi.</p>
+                <h1>Rasm Formatini O'ztortirish</h1>
+                <p>JPG, PNG, WebP, BMP, GIF, ICO va PDF — 7 format. Bir vaqtda 20 ta rasm. Quality sozlamalari, fon colori, o'lcham. Files never sent to server.</p>
             </div>
         </section>
 
@@ -126,7 +126,7 @@
             <div class="limit-strip">
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        20 tagacha rasm
+        up to 20 rasm
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -134,21 +134,21 @@
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Serverga <strong>yuborilmaydi</strong>
+        Serverto <strong>yuborilmaydi</strong>
       </span>
             </div>
 
             <!-- Related -->
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
-                <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;gap:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Birlashtirish →</a>
-                <a href="../../qr-generator/" style="display:inline-flex;align-items:center;gap:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">QR Kod Yaratish →</a>
+            <div style="display:flex;top:8px;flex-wrap:wrap;margin-bottom:16px;">
+                <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Birlashtirish →</a>
+                <a href="../../qr-generator/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">QR Kod Yaratish →</a>
             </div>
 
             <div class="error-box" id="errorBox" role="alert" aria-live="polite"></div>
 
             <!-- Step 1: Choose output format -->
             <div style="margin-bottom:8px;">
-                <label style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">1. Chiqish formatini tanlang</label>
+                <label style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">1. Select output format</label>
             </div>
             <div class="format-grid" id="formatGrid">
                 <button class="fmt-btn" data-fmt="jpg">
@@ -169,12 +169,12 @@
                 <button class="fmt-btn" data-fmt="bmp">
         <span class="fmt-icon">🎨</span>
         <span class="fmt-ext">BMP</span>
-        <span class="fmt-desc">Siqishsiz</span>
+        <span class="fmt-desc">Lossless</span>
       </button>
                 <button class="fmt-btn" data-fmt="gif">
         <span class="fmt-icon">🎞️</span>
         <span class="fmt-ext">GIF</span>
-        <span class="fmt-desc">256 rang</span>
+        <span class="fmt-desc">256 color</span>
       </button>
                 <button class="fmt-btn" data-fmt="ico">
         <span class="fmt-icon">🔲</span>
@@ -191,7 +191,7 @@
             <!-- PDF extra settings -->
             <div class="pdf-settings" id="pdfSettings">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <label>PDF sahifa o'lchami:</label>
+                <label>PDF page size:</label>
                 <select id="pdfPageSize">
         <option value="a4">A4 (210×297 mm)</option>
         <option value="letter">Letter (216×279 mm)</option>
@@ -204,22 +204,22 @@
       </select>
                 <label>Har bir rasm:</label>
                 <select id="pdfImageMode">
-        <option value="separate">Alohida sahifa</option>
+        <option value="separate">Separate page</option>
         <option value="combined">Bitta PDF</option>
       </select>
             </div>
 
             <!-- Settings bar -->
             <div class="conv-settings">
-                <span class="cs-label">Sifat:</span>
+                <span class="cs-label">Quality:</span>
                 <div class="quality-row" id="qualityRow">
                     <div class="cs-slider-wrap">
-                        <input type="range" id="qualitySlider" min="10" max="100" value="92" step="1" />
+                        <input type="colore" id="qualitySlider" min="10" max="100" value="92" step="1" />
                         <span class="cs-val" id="qualityVal">92%</span>
                     </div>
                 </div>
-                <span class="cs-label">Fon rangi:</span>
-                <input type="color" id="bgColorPicker" value="#ffffff" title="PNG→JPG da oq fon o'rniga" style="width:28px;height:28px;border:1.5px solid var(--line);border-radius:7px;cursor:pointer;padding:1px;" />
+                <span class="cs-label">Fon colori:</span>
+                <input type="color" id="bgColorPicker" value="#ffffff" title="PNG→JPG da oq fon o'rnito" style="width:28px;height:28px;border:1.5px solid var(--line);border-radius:7px;cursor:pointer;padding:1px;" />
                 <span style="font-size:.75rem;color:var(--muted)">PNG → siqimli formatda fon</span>
                 <span class="cs-label" style="margin-left:auto;">O'lcham:</span>
                 <select class="cs-select" id="resizeMode">
@@ -235,7 +235,7 @@
 
             <!-- Step 2: Upload files -->
             <div style="margin-bottom:8px;">
-                <label style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">2. Rasmlarni yuklang</label>
+                <label style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">2. Upload images</label>
             </div>
 
             <div class="drop-zone" id="dropZone">
@@ -243,8 +243,8 @@
                 <div class="drop-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                 </div>
-                <div class="drop-title">Rasmlarni shu yerga tashlang</div>
-                <div class="drop-sub">yoki <strong>rasmlarni tanlang</strong> &nbsp;·&nbsp; JPG, PNG, WebP, BMP, GIF, SVG, TIFF &nbsp;·&nbsp; 20 tagacha</div>
+                <div class="drop-title">Drop images here</div>
+                <div class="drop-sub">or <strong>select images</strong> &nbsp;·&nbsp; JPG, PNG, WebP, BMP, GIF, SVG, TIFF &nbsp;·&nbsp; up to 20</div>
             </div>
 
             <!-- File list -->
@@ -276,11 +276,11 @@
             <div class="action-panel" id="actionPanel" style="display:none;">
                 <button class="btn-primary-pdf" id="btnConvert">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        Formatni O'zgartirish
+        Formatni O'ztortirish
       </button>
                 <button class="btn-ghost-pdf" id="btnClearAll">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg>
-        Tozalash
+        Clear
       </button>
             </div>
 
@@ -289,58 +289,58 @@
         <!-- SEO Info -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasm Formatini O'zgartirish haqida</h2>
-                <p>7 ta chiqish formati: JPG, PNG, WebP, BMP, GIF, ICO va PDF. Bir vaqtda 20 ta rasm o'zgartiriladi. Barcha jarayon brauzerda — serverga hech narsa yuborilmaydi.</p>
+                <h2>Rasm Formatini O'ztortirish guide</h2>
+                <p>7 output formats: JPG, PNG, WebP, BMP, GIF, ICO and PDF. Convert up to 20 images at once. Barcha jarayon brauzerda — serverto hech narsa yuborilmaydi.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">🖼️</div>
                         <h3>JPG — Foto</h3>
-                        <p>Fotosuratlar uchun eng mos format. Kichik hajm, sozlanuvchi sifat.</p>
+                        <p>Fotosuratlar uchun eng mos format. Kichik hajm, sozlanuvchi quality.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">🗂️</div>
                         <h3>PNG — Shaffoflik</h3>
-                        <p>Logotip, grafik, shaffof fon kerak bo'lganda. Sifat yo'qolmaydi.</p>
+                        <p>Logotip, grafik, shaffof fon kerak bo'ltonda. Quality yo'qolmaydi.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">⚡</div>
                         <h3>WebP — Web</h3>
-                        <p>Web sahifalar uchun: JPG ga qaraganda 30% kichikroq, PNG ga qaraganda sifatliroq.</p>
+                        <p>Web sahifalar uchun: JPG to qaratonda 30% kichikroq, PNG to qaratonda qualityliroq.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">📄</div>
                         <h3>PDF — Hujjat</h3>
-                        <p>Rasmni PDF ga aylantiring. Bir yoki bir necha rasm bitta PDF da.</p>
+                        <p>Rasmni PDF to aylantiring. Bir or bir necha rasm bitta PDF da.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
-                    <li>Yuqoridan <strong>chiqish formatini</strong> tanlang (JPG, PNG, WebP, PDF...).</li>
-                    <li>Sifat va o'lcham sozlamalarini belgilang.</li>
-                    <li>Rasmlarni yuklang — drag & drop yoki tugma orqali.</li>
-                    <li><strong>"Formatni O'zgartirish"</strong> tugmasini bosing.</li>
-                    <li>Har bir faylni alohida yoki barchasini ZIP sifatida yuklab oling.</li>
+                    <li>Yuqorifrom <strong>chiqish formatini</strong> tanlang (JPG, PNG, WebP, PDF...).</li>
+                    <li>Quality va o'lcham sozlamalarini belgilang.</li>
+                    <li>Rasmlarni yuklang — drag & drop or tugma orqali.</li>
+                    <li><strong>"Formatni O'ztortirish"</strong> tugmasini bosing.</li>
+                    <li>Har bir faylni alohida or barchasini ZIP qualityida yuklab oling.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
                         <summary>PNG → JPG da shaffoflik yo'qoladimi?</summary>
-                        <p>Ha. JPG formati shaffoflikni qo'llab-quvvatlamaydi. Shaffof qismlar "Fon rangi" sozlamasida tanlangan rang (standart: oq) bilan to'ldiriladi.</p>
+                        <p>Ha. JPG formati shaffoflikni qo'llab-quvvatlamaydi. Shaffof qismlar "Fon colori" sozlamasida tanlanton color (standart: oq) bilan to'ldiriladi.</p>
                     </details>
                     <details>
-                        <summary>20 ta rasimni bir vaqtda o'zgartirsa bo'ladimi?</summary>
-                        <p>Ha! Bir vaqtda 20 tagacha rasm yuklanadi va ketma-ket o'zgartiriladi. ZIP sifatida barchasini bitta yuklashda olasiz.</p>
+                        <summary>20 ta rasimni bir vaqtda o'ztortirsa bo'ladimi?</summary>
+                        <p>Ha! Bir vaqtda up to 20 rasm yuklanadi va ketma-ket o'ztortiriladi. ZIP qualityida barchasini bitta yuklashda olasiz.</p>
                     </details>
                     <details>
                         <summary>ICO formati nima uchun kerak?</summary>
                         <p>ICO — Windows dastur ikonkalari va veb sayt favicon (.ico) uchun standart format. 128px o'lcham sozlamasi favicon uchun eng qulay.</p>
                     </details>
                     <details>
-                        <summary>Rasmlarni PDF ga birlashtirsa bo'ladimi?</summary>
-                        <p>Ha! PDF formatini tanlab, "Bitta PDF" rejimini tanlasangiz, barcha rasmlar bitta PDF hujjatiga qo'shiladi.</p>
+                        <summary>Rasmlarni PDF to birlashtirsa bo'ladimi?</summary>
+                        <p>Ha! PDF formatini tanlab, "Bitta PDF" rejimini tanlasangiz, barcha rasmlar bitta PDF hujjatito qo'shiladi.</p>
                     </details>
                     <details>
                         <summary>SVG va TIFF fayllarni ham o'girib bo'ladimi?</summary>
-                        <p>Ha, kirish formati sifatida SVG, TIFF, AVIF, HEIC va boshqa brauzer tomonidan qo'llaniladigan formatlar ham qabul qilinadi.</p>
+                        <p>Ha, kirish formati qualityida SVG, TIFF, AVIF, HEIC va boshqa brauzer tomonifrom qo'llaniladiton formatlar ham qabul qilinadi.</p>
                     </details>
                 </div>
             </article>
@@ -354,7 +354,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -365,19 +365,19 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Tools column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Tools</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Color Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
                     <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
                     <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
                     <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
@@ -417,8 +417,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>
         </div>

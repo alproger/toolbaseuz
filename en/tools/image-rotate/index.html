@@ -52,28 +52,28 @@
                 "name": "Rasimni ixtiyoriy burchakka burish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. 90°, 180°, 270° tugmalari bilan bir qadamda burish mumkin, yoki maxsus burchak maydoniga 0 dan 360 gacha istalgan qiymat kiriting."
+                    "text": "Ha. 90°, 180°, 270° tugmalari bilan bir qadamda burish mumkin, or maxsus burchak maydonito 0 from 360 tocha istalton qiymat kiriting."
                 }
             },            {
                 "@type": "Question",
                 "name": "Gorizontal va vertikal aks (flip) nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Gorizontal aks rasm chap-o'ng ko'zgu aksini, vertikal aks yuqori-past ko'zgu aksini beradi. Selfie rasmlarni to'g'rilashda foydali."
+                    "text": "Flip horizontal rasm chap-o'ng ko'zgu aksini, vertikal aks yuqori-past ko'zgu aksini beradi. Selfie rasmlarni to'g'rilashda foydali."
                 }
             },            {
                 "@type": "Question",
-                "name": "Burilgan rasmning fon rangi o'zgartirilishi mumkinmi?",
+                "name": "Burilton rasmning fon colori o'ztortirilishi mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Agar burish natijasida bo'sh burchaklar paydo bo'lsa, fon rangini rang tanlash tugmasi orqali belgilash mumkin."
+                    "text": "Ha. Ator burish resultsida bo'sh burchaklar paydo bo'lsa, fon colorini color tanlash tugmasi orqali belgilash mumkin."
                 }
             },            {
                 "@type": "Question",
                 "name": "Bir vaqtda nechta rasm buriladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "20 tagacha rasmni tanlab bir vaqtda qayta ishlash mumkin — barcha rasmga bir xil burish va aks sozlamalari qo'llaniladi."
+                    "text": "20 tatocha rasmni tanlab bir vaqtda qayta ishlash mumkin — barcha rasmto bir xil burish va aks sozlamalari qo'llaniladi."
                 }
             }]
         }
@@ -101,9 +101,9 @@
 <main>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../../">Bosh sahifa</a>
+                <a href="../../../../">Home</a>
                 <span class="bc-sep">&#8250;</span>
-                <span>Rasmni Aylantirish</span>
+                <span>Image Rotate</span>
             </nav>
         </div>
 
@@ -116,8 +116,8 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasmni Aylantirish</h1>
-                <p>90&#176;, 180&#176;, 270&#176; yoki <strong>&#8722;180 dan +180&#176; gacha erkin burchak</strong>. Gorizontal va vertikal flip. Fon rangi tanlash. <strong>20 ta rasm</strong> bir vaqtda. Live preview.</p>
+                <h1>Image Rotate</h1>
+                <p>90&#176;, 180&#176;, 270&#176; or <strong>&#8722;180 from +180&#176; tocha erkin burchak</strong>. Gorizontal va vertikal flip. Background colour tanlash. <strong>20 ta rasm</strong> bir vaqtda. Live preview.</p>
             </div>
         </section>
 
@@ -125,7 +125,7 @@
             <div class="limit-strip">
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Serverga yuborilmaydi
+        Never sent to server
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -137,7 +137,7 @@
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Bepul
+        Free
       </span>
             </div>
 
@@ -149,7 +149,7 @@
                 <div class="controls-col">
 
                     <!-- Drop zone -->
-                    <span class="section-label">Rasmlarni yuklang</span>
+                    <span class="section-label">Upload images</span>
                     <div class="drop-zone" id="dropZone">
                         <input type="file" id="fileInput" accept="image/*" multiple />
                         <div class="drop-icon">
@@ -159,8 +159,8 @@
               <line x1="12" y1="3" x2="12" y2="15"/>
             </svg>
                         </div>
-                        <div class="drop-title">Rasmlarni tashlang yoki tanlang</div>
-                        <div class="drop-sub">JPG, PNG, WebP &#183; 20 ta &#183; har biri <strong>80 MB</strong> gacha</div>
+                        <div class="drop-title">Drop or select images</div>
+                        <div class="drop-sub">JPG, PNG, WebP &#183; 20 ta &#183; har biri <strong>80 MB</strong> tocha</div>
                     </div>
 
                     <div class="count-badge" id="cntBadge">
@@ -171,37 +171,37 @@
 
                     <!-- Rotate controls card -->
                     <div class="controls-card">
-                        <div class="controls-title">Aylantirish sozlamalari</div>
+                        <div class="controls-title">Rotation settings</div>
 
                         <!-- Quick buttons -->
                         <div class="quick-rotate">
-                            <button class="qr-btn" id="btnRotL90" title="90° chapga">
+                            <button class="qr-btn" id="btnRotL90" title="90° chapto">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="1 4 1 10 7 10"/>
                 <path d="M3.51 15a9 9 0 1 0 .49-4.37"/>
               </svg>
-              <span>90&#176; chapga</span>
+              <span>90&#176; chapto</span>
             </button>
-                            <button class="qr-btn" id="btnRotR90" title="90° o'ngga">
+                            <button class="qr-btn" id="btnRotR90" title="90° o'ngto">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="23 4 23 10 17 10"/>
                 <path d="M20.49 15a9 9 0 1 1-.49-4.37"/>
               </svg>
-              <span>90&#176; o&#8217;ngga</span>
+              <span>90&#176; o&#8217;ngto</span>
             </button>
                             <button class="qr-btn" id="btnRotL45">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="1 4 1 10 7 10"/>
                 <path d="M3.51 15a9 9 0 1 0 .49-4.37"/>
               </svg>
-              <span>45&#176; chapga</span>
+              <span>45&#176; chapto</span>
             </button>
                             <button class="qr-btn" id="btnRotR45">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="23 4 23 10 17 10"/>
                 <path d="M20.49 15a9 9 0 1 1-.49-4.37"/>
               </svg>
-              <span>45&#176; o&#8217;ngga</span>
+              <span>45&#176; o&#8217;ngto</span>
             </button>
                             <button class="qr-btn" id="btnRot180">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -224,7 +224,7 @@
                         <!-- Custom angle slider -->
                         <div class="angle-row">
                             <span class="angle-label">Burchak:</span>
-                            <input type="range" class="angle-slider" id="angleSlider" min="-180" max="180" value="0" step="1" />
+                            <input type="colore" class="angle-slider" id="angleSlider" min="-180" max="180" value="0" step="1" />
                             <input type="number" class="angle-input" id="angleInput" min="-180" max="180" value="0" />
                             <span class="angle-unit">&#176;</span>
                         </div>
@@ -258,8 +258,8 @@
                                 <div class="bg-swatch transparent-swatch selected" data-bg="transparent" title="Shaffof"></div>
                                 <div class="bg-swatch" data-bg="#ffffff" style="background:#ffffff;border-color:#e5e7eb;" title="Oq"></div>
                                 <div class="bg-swatch" data-bg="#000000" style="background:#000000;" title="Qora"></div>
-                                <div class="bg-swatch" data-bg="#808080" style="background:#808080;" title="Kulrang"></div>
-                                <div class="bg-color-input" id="bgColorWrap" title="Rang tanlash">
+                                <div class="bg-swatch" data-bg="#808080" style="background:#808080;" title="Kulcolor"></div>
+                                <div class="bg-color-input" id="bgColorWrap" title="Color tanlash">
                                     <input type="color" id="bgColorInp" value="#ec4899" />
                                     <div class="bg-color-preview" id="bgColorPreview" style="background:#ec4899"></div>
                                 </div>
@@ -278,9 +278,9 @@
           </select>
                     </div>
                     <div class="out-row">
-                        <span class="out-label">Sifat:</span>
+                        <span class="out-label">Quality:</span>
                         <div class="qual-row">
-                            <input type="range" id="qualSlider" min="50" max="100" value="92" step="1" />
+                            <input type="colore" id="qualSlider" min="50" max="100" value="92" step="1" />
                             <span class="qual-val" id="qualVal">92%</span>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         <span class="rb-text" id="resultTxt"></span>
                         <button class="btn-zip" id="btnZip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            ZIP yuklab olish
+            Download ZIP
           </button>
                     </div>
 
@@ -305,11 +305,11 @@
                     <div class="action-panel" id="actionPan" style="display:none;margin-top:12px">
                         <button class="btn-go" id="btnGo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/></svg>
-            Barcha Rasmlarni Aylantirish
+            Rotate All Images
           </button>
                         <button class="btn-sec" id="btnClear">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg>
-            Tozalash
+            Clear
           </button>
                     </div>
 
@@ -334,7 +334,7 @@
                         <div class="preview-canvas-wrap" id="previewWrap">
                             <canvas id="previewCanvas" style="display:none"></canvas>
                             <div class="preview-empty" id="previewEmpty">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>                                Rasm yuklang
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>                                Upload image
                             </div>
                         </div>
 
@@ -342,9 +342,9 @@
 
                         <button class="btn-dl-single" id="btnDlSingle" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Yuklab olish
+            Download
           </button>
-                        <button class="btn-reset-preview" id="btnResetAll">Sozlamalarni tiklash</button>
+                        <button class="btn-reset-preview" id="btnResetAll">Settingsni tiklash</button>
                     </div>
                 </div>
 
@@ -355,13 +355,13 @@
         <!-- INFO -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasmni Aylantirish haqida</h2>
-                <p>Canvas API orqali to&#8217;liq brauzerda ishlaydi &#8212; rasm serverga yuborilmaydi. Oddiy 90&#176; aylantirish tugmalaridan tortib erkin &#8722;180&#176;dan +180&#176; gacha burchak, gorizontal/vertikal flip va fon rangi tanlash imkoniyati.</p>
+                <h2>Image Rotate guide</h2>
+                <p>Canvas API orqali to&#8217;liq works in browser &#8212; rasm never sent to server. Oddiy 90&#176; aylantirish tugmalarifrom tortib erkin &#8722;180&#176;from +180&#176; tocha burchak, gorizontal/vertikal flip va fon colori tanlash imkoniyati.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128247;</div>
                         <h3>Qiyshiq fotolar</h3>
-                        <p>Telefondan qiyshiq tushgan rasmni to&#8217;g&#8217;irlash uchun erkin burchakda aylantirish.</p>
+                        <p>Telefonfrom qiyshiq tushton rasmni to&#8217;g&#8217;irlash uchun erkin burchakda aylantirish.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128241;</div>
@@ -371,41 +371,41 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128267;</div>
                         <h3>Ko&#8217;zgu effekt</h3>
-                        <p>Gorizontal flip &#8212; selfie uchun, logotip uchun yoki dizayn varianti uchun.</p>
+                        <p>Gorizontal flip &#8212; selfie uchun, logotip uchun or dizayn varianti uchun.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128193;</div>
                         <h3>Batch 20 ta</h3>
-                        <p>Bir vaqtda 20 ta rasmni bir xil sozlamada aylantirish va ZIP yuklab olish.</p>
+                        <p>Bir vaqtda 20 ta rasmni bir xil sozlamada aylantirish va Download ZIP.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol>
-                    <li><strong>Rasmlarni yuklang</strong> &#8212; drag&amp;drop yoki tugma orqali.</li>
-                    <li>Ro&#8217;yxatdan rasmni bosib <strong>tanlang</strong> &#8212; o&#8217;ng tomonda preview yangilanadi.</li>
-                    <li><strong>Burchak tanlang</strong> &#8212; tez tugmalar yoki slider bilan.</li>
-                    <li>Kerak bo&#8217;lsa <strong>flip va fon rangi</strong> ni sozlang.</li>
-                    <li><strong>Yuklab olish</strong> &#8212; bitta rasm uchun yoki barcha uchun ZIP.</li>
+                    <li><strong>Upload images</strong> &#8212; drag&amp;drop or tugma orqali.</li>
+                    <li>Ro&#8217;yxatfrom rasmni bosib <strong>tanlang</strong> &#8212; o&#8217;ng tomonda preview yangilanadi.</li>
+                    <li><strong>Burchak tanlang</strong> &#8212; tez tugmalar or slider bilan.</li>
+                    <li>Kerak bo&#8217;lsa <strong>flip va fon colori</strong> ni sozlang.</li>
+                    <li><strong>Download</strong> &#8212; bitta rasm uchun or barcha uchun ZIP.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
                         <summary>Erkin burchak nima uchun kerak?</summary>
-                        <p>Telefon kamerasida qiyshiq tushgan rasmni to'g'irlash uchun. Masalan, gorizontni to'g'rilash uchun 2-3° aylantirish kerak bo'ladi.</p>
+                        <p>Telefon kamerasida qiyshiq tushton rasmni to'g'irlash uchun. Masalan, gorizontni to'g'rilash uchun 2-3° aylantirish kerak bo'ladi.</p>
                     </details>
                     <details>
-                        <summary>Fon rangi nima uchun kerak?</summary>
-                        <p>90° dan farqli burchaklarda aylantirish paytida rasm to'rtburchak ichida joy qoladi. Shu bo'sh joy uchun rang tanlanadi: shaffof (PNG uchun), oq, qora yoki boshqa rang.</p>
+                        <summary>Background colour nima uchun kerak?</summary>
+                        <p>90° from farqli burchaklarda aylantirish paytida rasm to'rtburchak ichida joy qoladi. Shu bo'sh joy uchun color tanlanadi: shaffof (PNG uchun), oq, qora or boshqa color.</p>
                     </details>
                     <details>
-                        <summary>Sifat tushib qoladi?</summary>
-                        <p>90°, 180°, 270° aylantirishda piksel to'g'ridan to'g'ri ko'chiriladi — sifat deyarli o'zgarmaydi. Erkin burchakda bilinear interpolatsiya ishlatiladi — bu standart usul.</p>
+                        <summary>Quality tushib qoladi?</summary>
+                        <p>90°, 180°, 270° aylantirishda piksel to'g'rifrom to'g'ri ko'chiriladi — quality deyarli o'ztormaydi. Erkin burchakda bilinear interpolatsiya ishlatiladi — bu standart usul.</p>
                     </details>
                     <details>
                         <summary>Flip nima?</summary>
-                        <p>Gorizontal flip — rasmni vertikal o'q bo'ylab ko'zgu ko'rinishiga keltiradi. Vertikal flip — gorizontal o'q bo'ylab. Ikkalasini birga qo'shish mumkin.</p>
+                        <p>Gorizontal flip — rasmni vertikal o'q bo'ylab ko'zgu ko'rinishito keltiradi. Vertikal flip — gorizontal o'q bo'ylab. Ikkalasini birto qo'shish mumkin.</p>
                     </details>
                     <details>
-                        <summary>Rasm serverga yuboriladi?</summary>
+                        <summary>Rasm serverto yuboriladi?</summary>
                         <p>Yo'q. Hamma jarayon JavaScript Canvas API orqali brauzeringizda bajariladi.</p>
                     </details>
                 </div>
@@ -420,7 +420,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -431,19 +431,19 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Tools column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Tools</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Color Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
                     <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
                     <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
                     <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
@@ -459,7 +459,7 @@
                     <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
+                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Image Rotate</a>
                     <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
                     <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
                     <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
@@ -483,8 +483,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>
         </div>

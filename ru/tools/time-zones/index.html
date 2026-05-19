@@ -52,7 +52,7 @@
                 "name": "Vaqt zonalari real vaqtda yangilanadimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Soatlar har soniyada yangilanadi — sahifani yangilash shart emas."
+                    "text": "Ha. Soatlar har soniyada yangilanadi — страницаni yangilash shart emas."
                 }
             },            {
                 "@type": "Question",
@@ -66,7 +66,7 @@
                 "name": "UTC offset nima degani?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "UTC — Koordinatsiyalangan Universal Vaqt. UTC+5:00 degani — UTC vaqtidan 5 soat oldinda, ya'ni Toshkent standart vaqti."
+                    "text": "UTC — Koordinatsiyalangan Universal Vaqt. UTC+5:00 degani — UTC vaqtidan 5 часов вперёдda, ya'ni Toshkent standart vaqti."
                 }
             },            {
                 "@type": "Question",
@@ -101,8 +101,8 @@
 <main>
         <div class="container">
             <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="../../../../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
-                <span>Vaqt Zonalari</span>
+                <a href="../../../../">Главная</a><span class="bc-sep">&#8250;</span>
+                <span>Мировые часовые пояса</span>
             </nav>
         </div>
         <section class="tool-hero container">
@@ -113,7 +113,7 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Vaqt Zonalari — Dunyo Soati</h1>
+                <h1>Мировые часовые пояса — Dunyo Soati</h1>
                 <p><strong>80+ shahar</strong> uchun live soat. O&#8217;rta Osiyo, Yaqin Sharq, Yevropa, Amerika, Boshqalar. UTC offset va sizning vaqtingizdan farq. Sevimlilarni saqlash.</p>
             </div>
         </section>
@@ -121,7 +121,7 @@
 
             <!-- My zone bar -->
             <div class="my-zone-row">
-                <span class="mz-label">&#128205; Sizning vaqtingiz</span>
+                <span class="mz-label">&#128205; Ваше время</span>
                 <span class="mz-clock" id="myTime">--:--:--</span>
                 <div>
                     <div class="mz-info" id="myInfo">Aniqlanmoqda...</div>
@@ -133,7 +133,7 @@
             <div class="controls-bar" style="margin-top:14px">
                 <div class="search-wrap">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <input class="tz-search" id="tzSearch" type="text" placeholder="Shahar yoki mamlakat qidiring..." autocomplete="off" />
+                    <input class="tz-search" id="tzSearch" type="text" placeholder="Shahar или mamlakat qidiring..." autocomplete="off" />
                 </div>
             </div>
 
@@ -165,8 +165,8 @@
 
         <section class="tool-info">
             <article class="info-article">
-                <h2>Dunyo Vaqt Zonalari &#8212; To&#8216;liq Ma&#8216;lumotnoma</h2>
-                <p>Dunyo bo&#8216;yicha <strong>24 asosiy vaqt zonasi</strong> mavjud. O&#8216;zbekiston UTC+5 da joylashgan &#8212; London dan 5 soat, Moskva dan 2 soat, Dubay dan 1 soat oldinda. Onlayn uchrashuvlarni rejalashtirishda, xalqaro hamkorlikda
+                <h2>Dunyo Мировые часовые пояса &#8212; To&#8216;liq Ma&#8216;lumotnoma</h2>
+                <p>Dunyo bo&#8216;yicha <strong>24 asosiy vaqt zonasi</strong> mavjud. O&#8216;zbekiston UTC+5 da joylashgan &#8212; London dan 5 soat, Moskva dan 2 soat, Dubay dan 1 часов вперёдda. Onlayn uchrashuvlarni rejalashtirishda, xalqaro hamkorlikda
                     va sayohatda vaqt farqini bilish muhim.</p>
 
                 <div class="use-grid">
@@ -188,7 +188,7 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128736;&#65039;</div>
                         <h3>Server vaqti</h3>
-                        <p>UTC vaqtini lokal vaqtga aylantirish. Log fayllarni tahlil qilish.</p>
+                        <p>UTC vaqtini lokal vaqtga конвертация. Log файлыni tahlil qilish.</p>
                     </div>
                 </div>
 
@@ -197,22 +197,22 @@
                     &#8212; UTC+4.</p>
 
                 <h2>Kun vaqti belgilari</h2>
-                <p>Har bir shahar kartochkasida rang bo&#8216;limi kun vaqtini ko&#8216;rsatadi: &#127774; <strong>Tun</strong> (00:00&#8211;06:00) &#8212; to&#8216;q ko&#8216;k karta. &#127773; <strong>Tong</strong> (06:00&#8211;09:00) &#8212; tarvuz karta.
+                <p>Har bir shahar kartochkasida цвет bo&#8216;limi kun vaqtini ko&#8216;rsatadi: &#127774; <strong>Tun</strong> (00:00&#8211;06:00) &#8212; to&#8216;q ko&#8216;k karta. &#127773; <strong>Tong</strong> (06:00&#8211;09:00) &#8212; tarvuz karta.
                     &#9728;&#65039; <strong>Kun</strong> (09:00&#8211;18:00) &#8212; oddiy karta. &#127770;
                     <strong;>Kechqurun</strong> (18:00&#8211;21:00) &#8212; binafsha.</p>
 
                 <div class="faq-list">
                     <details>
                         <summary>Vaqt qancha aniq?</summary>
-                        <p>Brauzerning Intl.DateTimeFormat API si kompyuter soatiga asoslanadi. Internet vaqt serveri bilan sinxronlashtirilgan bo&#8216;lsa &#8212; soniyagacha aniq.</p>
+                        <p>Brauzerning Intl.DateTimeФормат API si kompyuter soatiga asoslanadi. Internet vaqt serveri bilan sinxronlashtirilgan bo&#8216;lsa &#8212; soniyaдо aniq.</p>
                     </details>
                     <details>
                         <summary>Yoz vaqti (DST) hisobga olinadimi?</summary>
-                        <p>Ha. Intl.DateTimeFormat API yoz vaqtini avtomatik hisobga oladi. Yevropa va Amerika shaharlari bahor/kuz da soatini o&#8216;zgartiradi &#8212; bu avtomatik ko&#8216;rsatiladi.</p>
+                        <p>Ha. Intl.DateTimeФормат API yoz vaqtini avtomatik hisobga oladi. Yevropa va Amerika shaharlari bahor/kuz da soatini o&#8216;zgartiradi &#8212; bu avtomatik ko&#8216;rsatiladi.</p>
                     </details>
                     <details>
                         <summary>Saralangan shaharlar saqlanadimi?</summary>
-                        <p>Ha. Pinlangan shaharlar brauzerning localStorage da saqlanadi. Sahifani yopib qaytganingizda ham saqlanib qoladi.</p>
+                        <p>Ha. Pinlangan shaharlar brauzerning localStorage da saqlanadi. Страницаni yopib qaytganingizda ham saqlanib qoladi.</p>
                     </details>
                 </div>
             </article>
@@ -226,7 +226,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ бесплатно onlayn vosita. На сервер не отправляется.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -237,19 +237,19 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Инструменты column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Инструменты</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Цвет Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Форматlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Пароль Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Мировые часовые пояса</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
                     <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
@@ -258,7 +258,7 @@
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
                     <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>

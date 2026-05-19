@@ -52,28 +52,28 @@
                 "name": "Faqat bitta sahifani burish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Barcha sahifalarni yoki faqat tanlangan sahifalarni burish mumkin. Har bir sahifa uchun alohida burchak ham belgilanadi."
+                    "text": "Ha. All pagesni or faqat tanlanton sahifalarni burish mumkin. Har bir sahifa uchun alohida burchak ham belgilanadi."
                 }
             },            {
                 "@type": "Question",
-                "name": "Burilgan PDF saqlash formatiga ta'sir qiladimi?",
+                "name": "Burilton PDF saqlash formatito ta'sir qiladimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Chiqish fayli PDF formatida saqlanadi — faqat sahifalar yo'nalishi o'zgaradi."
+                    "text": "Yo'q. Output fayli PDF formatida saqlanadi — faqat sahifalar yo'nalishi o'ztoradi."
                 }
             },            {
                 "@type": "Question",
-                "name": "Skaner qilingan hujjatni to'g'rilash mumkinmi?",
+                "name": "Skaner qilinton hujjatni to'g'rilash mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Teskari yoki yonbosh skanerlanagan sahifalarni 90° yoki 180° burib to'g'ri yo'nalishga keltirish mumkin."
+                    "text": "Ha. Teskari or yonbosh skanerlanaton sahifalarni 90° or 180° burib to'g'ri yo'nalishto keltirish mumkin."
                 }
             },            {
                 "@type": "Question",
-                "name": "Ma'lumotlarim serverga yuboriladi?",
+                "name": "Ma'lumotlarim serverto yuboriladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha PDF qayta ishlash brauzeringizda amalga oshiriladi — hech qanday fayl serverga yuborilmaydi."
+                    "text": "Yo'q. Barcha PDF qayta ishlash brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server."
                 }
             }]
         }
@@ -101,9 +101,9 @@
 <main>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../../">Bosh sahifa</a>
+                <a href="../../../../">Home</a>
                 <span class="bc-sep">&#8250;</span>
-                <span>PDF Aylantirish</span>
+                <span>PDF Rotate</span>
             </nav>
         </div>
 
@@ -117,8 +117,8 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>PDF Sahifalarni Aylantirish</h1>
-                <p>Qiyshiq tushgan PDF sahifalarini to&#8217;g&#8217;irlang. <strong>Barcha sahifalar</strong> yoki <strong>tanlangan sahifalar</strong> &#8212; har birini alohida sozlang. 90&#176;, 180&#176;, 270&#176;. Bepul, brauzerda ishlaydi.</p>
+                <h1>PDF Page Rotate</h1>
+                <p>Qiyshiq tushton PDF sahifalarini to&#8217;g&#8217;irlang. <strong>All pages</strong> or <strong>tanlanton sahifalar</strong> &#8212; har birini alohida sozlang. 90&#176;, 180&#176;, 270&#176;. Free, works in browser.</p>
             </div>
         </section>
 
@@ -126,19 +126,19 @@
             <div class="limit-strip">
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Serverga yuborilmaydi
+        Never sent to server
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        150 MB gacha
+        up to 150 MB
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        Sahifalar preview
+        Page preview
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Bepul
+        Free
       </span>
             </div>
 
@@ -160,8 +160,8 @@
               <line x1="9" y1="15" x2="15" y2="15"/>
             </svg>
                         </div>
-                        <div class="drop-title">PDF faylni shu yerga tashlang</div>
-                        <div class="drop-sub">yoki <strong>tanlash</strong> uchun bosing &nbsp;&#183;&nbsp; 150 MB gacha</div>
+                        <div class="drop-title">Drop PDF file here</div>
+                        <div class="drop-sub">or <strong>to select</strong> uchun bosing &nbsp;&#183;&nbsp; up to 150 MB</div>
                     </div>
 
                     <!-- File info -->
@@ -186,14 +186,14 @@
 
                     <!-- Global rotate bar -->
                     <div class="global-bar" id="globalBar" style="display:none;">
-                        <span class="gb-label">Barcha sahifalar:</span>
+                        <span class="gb-label">All pages:</span>
                         <button class="gb-btn" id="btnGlobalL">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.37"/></svg>
-            90&#176; chapga
+            90&#176; chapto
           </button>
                         <button class="gb-btn" id="btnGlobalR">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/></svg>
-            90&#176; o&#8217;ngga
+            90&#176; o&#8217;ngto
           </button>
                         <button class="gb-btn" id="btnGlobal180">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
@@ -211,11 +211,11 @@
                         <span class="sel-text" id="selText"></span>
                         <button class="sel-btn" id="btnSelL">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.37"/></svg>
-            Chapga
+            Chapto
           </button>
                         <button class="sel-btn" id="btnSelR">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/></svg>
-            O&#8217;ngga
+            O&#8217;ngto
           </button>
                         <button class="sel-btn" id="btnSelReset">Tiklash</button>
                         <button class="sel-btn" id="btnSelClear">&#215; Bekor</button>
@@ -224,9 +224,9 @@
                     <!-- Pages section -->
                     <div id="pagesSec" style="display:none;">
                         <div class="pages-section-label">
-                            Sahifalar
+                            Pages
                             <span class="pages-count" id="pagesCount">0</span>
-                            <span style="font-size:.75rem;color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">&#183; Sahifani bosing &#8594; tanlash</span>
+                            <span style="font-size:.75rem;color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">&#183; Click page &#8594; to select</span>
                         </div>
                         <div class="page-grid" id="pageGrid"></div>
                     </div>
@@ -243,11 +243,11 @@
                         <div class="quick-grid">
                             <button class="q-btn" id="qBtnAllL">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.37"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Barchani chapga</span><span class="q-btn-sub">90&#176; chapga aylantirish</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Rotate all</span><span class="q-btn-sub">90&#176; clockwise</span></div>
             </button>
                             <button class="q-btn" id="qBtnAllR">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Barchani o&#8217;ngga</span><span class="q-btn-sub">90&#176; o&#8217;ngga aylantirish</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Barchani o&#8217;ngto</span><span class="q-btn-sub">90&#176; o&#8217;ngto aylantirish</span></div>
             </button>
                             <button class="q-btn" id="qBtnAll180">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
@@ -255,11 +255,11 @@
             </button>
                             <button class="q-btn" id="qBtnOdd">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Toq sahifalar</span><span class="q-btn-sub">1, 3, 5… &#8594; 90&#176; chapga</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Toq sahifalar</span><span class="q-btn-sub">1, 3, 5… &#8594; 90&#176; chapto</span></div>
             </button>
                             <button class="q-btn" id="qBtnEven">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Juft sahifalar</span><span class="q-btn-sub">2, 4, 6… &#8594; 90&#176; o&#8217;ngga</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Juft sahifalar</span><span class="q-btn-sub">2, 4, 6… &#8594; 90&#176; o&#8217;ngto</span></div>
             </button>
                         </div>
                     </div>
@@ -269,18 +269,18 @@
                         <div class="side-card-title">Ma&#8217;lumot</div>
                         <div class="stats-list">
                             <div class="stat-row"><span class="stat-label">Jami sahifalar</span><span class="stat-val" id="statPages">&#8212;</span></div>
-                            <div class="stat-row"><span class="stat-label">O&#8217;zgartirilgan</span><span class="stat-val" id="statChanged">&#8212;</span></div>
+                            <div class="stat-row"><span class="stat-label">O&#8217;ztortirilton</span><span class="stat-val" id="statChanged">&#8212;</span></div>
                         </div>
                     </div>
 
                     <!-- Save + result -->
                     <div class="side-card">
-                        <div class="side-card-title">Saqlash</div>
+                        <div class="side-card-title">Save</div>
                         <button class="btn-save" id="btnSave" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
-            PDF ni Saqlash
+            PDF ni Save
           </button>
-                        <button class="btn-reset-all" id="btnResetAll">Barcha o&#8217;zgarishlarni tiklash</button>
+                        <button class="btn-reset-all" id="btnResetAll">Barcha o&#8217;ztorishlarni tiklash</button>
 
                         <div class="result-card" id="resultCard">
                             <div class="rc-head">
@@ -305,23 +305,23 @@
         <!-- INFO -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>PDF Sahifalarni Aylantirish haqida</h2>
-                <p>pdf-lib kutubxonasi orqali to&#8217;liq brauzerda ishlaydi &#8212; fayl serverga yuborilmaydi. Har bir sahifani alohida yoki barcha sahifalarni bir vaqtda aylantirish. Sahifalarni preview ko&#8217;rinishida tanlash imkoniyati.</p>
+                <h2>PDF Page Rotate guide</h2>
+                <p>pdf-lib kutubxonasi orqali to&#8217;liq works in browser &#8212; fayl never sent to server. Har bir sahifani alohida or barcha sahifalarni bir vaqtda aylantirish. Pagesni preview ko&#8217;rinishida to select imkoniyati.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128247;</div>
                         <h3>Skaner qiyshiq</h3>
-                        <p>Scanner yoki telefondan qiyshiq tushgan hujjat sahifalarini to&#8217;g&#8217;irlash.</p>
+                        <p>Scanner or telefonfrom qiyshiq tushton hujjat sahifalarini to&#8217;g&#8217;irlash.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128196;</div>
                         <h3>Aralash yo&#8217;nalish</h3>
-                        <p>Ba&#8217;zi sahifalar gorizontal, ba&#8217;zilari vertikal bo&#8217;lgan PDF ni tartibga solish.</p>
+                        <p>Ba&#8217;zi sahifalar gorizontal, ba&#8217;zilari vertikal bo&#8217;lton PDF ni tartibto solish.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128203;</div>
-                        <h3>Tanlangan sahifalar</h3>
-                        <p>Faqat muayyan sahifalarni tanlang &#8212; qolganlarini o&#8217;zgartirilmaydi.</p>
+                        <h3>Tanlanton sahifalar</h3>
+                        <p>Faqat muayyan sahifalarni tanlang &#8212; qoltonlarini o&#8217;ztortirilmaydi.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#9889;</div>
@@ -331,32 +331,32 @@
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol>
-                    <li><strong>PDF faylni yuklang</strong> &#8212; drag&amp;drop yoki tugma.</li>
-                    <li><strong>Sahifalar preview</strong> da ko&#8217;rinadi &#8212; qiyshiq sahifalarni aniqlang.</li>
-                    <li>Sahifani <strong>bosib tanlang</strong> yoki global tugmalardan foydalaning.</li>
+                    <li><strong>PDF faylni yuklang</strong> &#8212; drag&amp;drop or tugma.</li>
+                    <li><strong>Page preview</strong> da ko&#8217;rinadi &#8212; qiyshiq sahifalarni aniqlang.</li>
+                    <li>Sahifani <strong>bosib tanlang</strong> or global tugmalarfrom foydalaning.</li>
                     <li>Har bir sahifadagi <strong>&#8249; &#8250;</strong> tugmalar bilan 90&#176; aylantiring.</li>
-                    <li><strong>PDF ni Saqlash</strong> tugmasini bosib yuklab oling.</li>
+                    <li><strong>PDF ni Save</strong> tugmasini bosib yuklab oling.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
-                        <summary>Sahifalarni ko'rish uchun nima kerak?</summary>
-                        <p>PDF.js kutubxonasi sahifalarni preview sifatida brauzerda render qiladi. Internet aloqasi birinchi yuklashda kerak, keyin offline ishlaydi.</p>
+                        <summary>Pagesni ko'rish uchun nima kerak?</summary>
+                        <p>PDF.js kutubxonasi sahifalarni preview qualityida brauzerda render qiladi. Internet aloqasi birinchi yuklashda kerak, keyin offline ishlaydi.</p>
                     </details>
                     <details>
                         <summary>Faqat ba'zi sahifalarni aylantirish mumkinmi?</summary>
-                        <p>Ha. Sahifani bosib tanlang (qizil chegara paydo bo'ladi), keyin tanlangan sahifalar uchun chapga/o'ngga tugmalarini bosing. Bir vaqtda ko'p sahifa tanlanishi mumkin.</p>
+                        <p>Ha. Sahifani bosib tanlang (qizil chetora paydo bo'ladi), keyin tanlanton sahifalar uchun chapto/o'ngto tugmalarini bosing. Bir vaqtda ko'p sahifa tanlanishi mumkin.</p>
                     </details>
                     <details>
-                        <summary>PDF sifati o'zgaradi?</summary>
-                        <p>Yo'q. pdf-lib PDF metadatadagi rotation qiymatini o'zgartiradi, sahifa kontenti o'zgarmaydi. Fayl sifati va hajmi deyarli bir xil qoladi.</p>
+                        <summary>PDF qualityi o'ztoradi?</summary>
+                        <p>Yo'q. pdf-lib PDF metadatadagi rotation qiymatini o'ztortiradi, sahifa kontenti o'ztormaydi. Fayl qualityi va size deyarli bir xil qoladi.</p>
                     </details>
                     <details>
-                        <summary>Himoyalangan PDF ishlaydi?</summary>
-                        <p>ignoreEncryption opsiyasi bilan himoyalangan PDFlar yuklanadi. Lekin saqlashda ba'zi himoyalar cheklov qo'yishi mumkin.</p>
+                        <summary>Himoyalanton PDF ishlaydi?</summary>
+                        <p>ignoreEncryption opsiyasi bilan himoyalanton PDFlar yuklanadi. Lekin saqlashda ba'zi himoyalar cheklov qo'yishi mumkin.</p>
                     </details>
                     <details>
-                        <summary>Fayl serverga yuboriladi?</summary>
-                        <p>Yo'q. pdf-lib va PDF.js to'liq brauzerda ishlaydi. Fayl hech qachon serverga kelmaydi.</p>
+                        <summary>Fayl serverto yuboriladi?</summary>
+                        <p>Yo'q. pdf-lib va PDF.js to'liq works in browser. Fayl hech qachon serverto kelmaydi.</p>
                     </details>
                 </div>
             </article>
@@ -370,7 +370,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -381,19 +381,19 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Tools column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Tools</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Color Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
                     <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
                     <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
                     <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
@@ -410,7 +410,7 @@
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Rotate</a>
                     <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
                     <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
                     <a href="/tools/qr-generator/">QR Kod</a>
@@ -433,8 +433,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>
         </div>

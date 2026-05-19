@@ -63,17 +63,17 @@
                 }
             },            {
                 "@type": "Question",
-                "name": "Ixtisoslashgan atamalar yoki nomlarda xato ko'rsatiladimi?",
+                "name": "Ixtisoslashgan atamalar или nomlarda xato ko'rsatiladimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Lug'atda bo'lmagan texnik atamalar, xorijiy so'zlar yoki shaxs ismlari noto'g'ri deb belgilanishi mumkin — bu holda xatoni e'tiborsiz qoldiring."
+                    "text": "Lug'atda bo'lmagan texnik atamalar, xorijiy so'zlar или shaxs ismlari noto'g'ri deb belgilanishi mumkin — bu holda xatoni e'tiborsiz qoldiring."
                 }
             },            {
                 "@type": "Question",
-                "name": "Tekshiruv natijasini eksport qilish mumkinmi?",
+                "name": "Tekshiruv результатsini eksport qilish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. To'g'irlangan matnni nusxalash tugmasi orqali buferga olish mumkin."
+                    "text": "Ha. Копировать исправленный текст tugmasi orqali buferga olish mumkin."
                 }
             }]
         }
@@ -101,8 +101,8 @@
 <main>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../../">Bosh sahifa</a><span class="bc-sep">›</span>
-                <span>O'zbek Imlo Tekshirish</span>
+                <a href="../../../../">Главная</a><span class="bc-sep">›</span>
+                <span>O'zbek Imlo Проверить</span>
             </nav>
         </div>
 
@@ -115,7 +115,7 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>O'zbek Imlo Tekshirish</h1>
+                <h1>O'zbek Imlo Проверить</h1>
                 <p>Matnni imlo, grammatika, tinish belgilari va uslub bo'yicha tekshiring. Apostrof xatolari, katta harf, takrorlangan so'zlar, ajralib/birikib yozilish — 9 turdagi xato aniqlanadi.</p>
             </div>
         </section>
@@ -133,7 +133,7 @@
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Serverga yuborilmaydi
+        На сервер не отправляется
       </span>
             </div>
 
@@ -175,7 +175,7 @@
 
                     <!-- Matn kiritish -->
                     <div class="checker-textarea-wrap">
-                        <textarea id="inputText" placeholder="Matnni shu yerga kiriting yoki joylashtiring...&#10;&#10;Misol: Toshkend shahride ogir savollari bor edi. Komputer va telifonlar shunaqa ishlaydi." spellcheck="false" maxlength="15000"></textarea>
+                        <textarea id="inputText" placeholder="Matnni shu yerga введите или joylashtiring...&#10;&#10;Misol: Toshkend shahride ogir savollari bor edi. Komputer va telifonlar shunaqa ishlaydi." spellcheck="false" maxlength="15000"></textarea>
                         <span class="char-count" id="charCount">0 / 15,000</span>
                     </div>
 
@@ -184,9 +184,9 @@
                         <div style="display:flex;gap:8px;flex-wrap:wrap;">
                             <button class="btn-check" id="btnCheck">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Tekshirish
+              Проверить
             </button>
-                            <button class="btn-clear-text" id="btnClear">Tozalash</button>
+                            <button class="btn-clear-text" id="btnClear">Очистить</button>
                         </div>
                         <button class="sample-btn" id="btnSample">Namunaviy matn →</button>
                     </div>
@@ -198,7 +198,7 @@
           </svg> Matn tekshirilmoqda…
                     </div>
 
-                    <!-- Natija: belgilangan matn -->
+                    <!-- Результат: belgilangan matn -->
                     <div class="result-area" id="resultArea">
 
                         <div class="highlighted-text" id="highlightedText"></div>
@@ -287,7 +287,7 @@
                         <div class="stats-title">Xato statistikasi</div>
                         <div id="errStatsList"></div>
                         <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
-                            <span style="font-size:.8rem;color:var(--muted);">Jami xato:</span>
+                            <span style="font-size:.8rem;color:var(--muted);">Всего xato:</span>
                             <span style="font-size:1.1rem;font-weight:800;color:var(--ink);" id="totalErrors">0</span>
                         </div>
                     </div>
@@ -321,7 +321,7 @@
         <!-- SEO info -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>O'zbek Imlo Tekshirish haqida</h2>
+                <h2>O'zbek Imlo Проверить руководство</h2>
                 <p>O'zbek tilida yozilgan matnlarni tekshirish uchun brauzer asosida ishlaydigan imlo va grammatika tekshiruvi. Serverga hech narsa yuborilmaydi.</p>
                 <div class="use-grid">
                     <div class="use-card">
@@ -332,7 +332,7 @@
                     <div class="use-card">
                         <div class="use-card-icon">⚡</div>
                         <h3>Real vaqt</h3>
-                        <p>Tekshirish bir soniyada tugaydi. Xato ustida bosib tezkor tuzatish taklif qilinadi.</p>
+                        <p>Проверить bir soniyada tugaydi. Xato ustida bosib tezkor tuzatish taklif qilinadi.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">📊</div>
@@ -342,12 +342,12 @@
                     <div class="use-card">
                         <div class="use-card-icon">🔒</div>
                         <h3>Maxfiy</h3>
-                        <p>Matningiz serverga hech qachon yuborilmaydi — barcha tekshiruv brauzeringizda.</p>
+                        <p>Matningiz serverga никогда не отправляются — barcha tekshiruv в вашем браузере.</p>
                     </div>
                 </div>
                 <h2>Tekshiriladigan xato turlari</h2>
                 <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.9;">
-                    <li><strong>Apostrof xatolari</strong> — o' va g' harflari noto'g'ri yoki apostrofsiz yozilganda</li>
+                    <li><strong>Apostrof xatolari</strong> — o' va g' harflari noto'g'ri или apostrofsiz yozilganda</li>
                     <li><strong>Imlo xatolari</strong> — noto'g'ri yozilgan so'zlar (hozir vs xozir, mehnat vs mexnat)</li>
                     <li><strong>Grammatik xatolar</strong> — qo'shimchalar noto'g'ri ishlatilganda</li>
                     <li><strong>Tinish belgilari</strong> — vergul/nuqta oldidan bo'sh joy, keyin bo'sh joy yo'q</li>
@@ -364,7 +364,7 @@
                     </details>
                     <details>
                         <summary>Nechta so'z tekshirsa bo'ladi?</summary>
-                        <p>Bir matnda 15,000 belgigacha (taxminan 2,500–3,000 so'z) tekshiriladi. Bu katta maqola yoki referat uchun yetarli.</p>
+                        <p>Bir matnda 15,000 belgiдо (taxminan 2,500–3,000 so'z) tekshiriladi. Bu katta maqola или referat uchun yetarli.</p>
                     </details>
                     <details>
                         <summary>Tekshiruv 100% aniqmi?</summary>
@@ -372,7 +372,7 @@
                     </details>
                     <details>
                         <summary>Matn serverga saqlanadimi?</summary>
-                        <p>Yo'q. Barcha tekshiruv faqat brauzeringizda amalga oshiriladi. Matningiz hech qachon serverga yuborilmaydi.</p>
+                        <p>Yo'q. Barcha tekshiruv faqat в вашем браузере amalga oshiriladi. Matningiz hech qachon на сервер не отправляется.</p>
                     </details>
                 </div>
             </article>
@@ -386,7 +386,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ бесплатно onlayn vosita. На сервер не отправляется.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -397,28 +397,28 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Инструменты column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Инструменты</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Цвет Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Форматlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Пароль Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
                     <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Проверить</a>
                 </div>
 
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
                     <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>

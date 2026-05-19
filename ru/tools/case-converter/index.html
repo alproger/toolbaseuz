@@ -70,10 +70,10 @@
                 }
             },            {
                 "@type": "Question",
-                "name": "Natijalarni nusxalash qanchalik qulay?",
+                "name": "Результатlarni nusxalash qanchalik qulay?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Har bir format yonidagi nusxalash tugmasiga bosib, o'sha formatni buferga olish mumkin. Barcha formatlarni ham bir vaqtda JSON sifatida eksport qilish mumkin."
+                    "text": "Har bir format yonidagi nusxalash tugmasiga bosib, o'sha formatni buferga olish mumkin. Все форматыni ham bir vaqtda JSON качествоida eksport qilish mumkin."
                 }
             }]
         }
@@ -101,7 +101,7 @@
 <main>
         <div class="container">
             <nav class="breadcrumb" aria-label="Yo&#39;l">
-                <a href="../../../../">Bosh sahifa</a>
+                <a href="../../../../">Главная</a>
                 <span class="bc-sep">&rsaquo;</span>
                 <span>Case Converter</span>
             </nav>
@@ -116,11 +116,11 @@
             </div>
         </section>
         <section class="tool-workspace container">
-            <div class="mode-grid" id="modeGrid" role="group" aria-label="Format tanlang"></div>
+            <div class="mode-grid" id="modeGrid" role="group" aria-label="Формат выберите"></div>
             <div class="areas">
                 <div class="area-block">
                     <div class="area-head">
-                        <span class="area-label">Kirish matni</span>
+                        <span class="area-label">Ввод matni</span>
                         <div class="area-actions">
                             <button class="act-btn" id="btnPaste">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
@@ -128,28 +128,28 @@
             </button>
                             <button class="act-btn act-ghost" id="btnClear">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
-              Tozalash
+              Очистить
             </button>
                         </div>
                     </div>
-                    <textarea id="inputText" class="text-area" placeholder="Bu yerga matningizni yozing yoki joylang…" spellcheck="false" autocorrect="off" aria-label="Kirish matni"></textarea>
+                    <textarea id="inputText" class="text-area" placeholder="Bu yerga matningizni yozing или joylang…" spellcheck="false" autocorrect="off" aria-label="Ввод matni"></textarea>
                     <div class="area-footer"><span class="counter" id="inCounter">0 so&#39;z</span></div>
                 </div>
                 <div class="area-block">
                     <div class="area-head">
-                        <span class="area-label" id="outLabel">Natija</span>
+                        <span class="area-label" id="outLabel">Результат</span>
                         <div class="area-actions">
                             <button class="act-btn" id="btnCopy">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Nusxalash
+              Копировать
             </button>
                             <button class="act-btn act-ghost" id="btnDownload">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Yuklab olish
+              Скачать
             </button>
                         </div>
                     </div>
-                    <textarea id="outputText" class="text-area text-area-out" readonly placeholder="Natija bu yerda paydo bo&#39;ladi…" aria-label="Natija" aria-live="polite"></textarea>
+                    <textarea id="outputText" class="text-area text-area-out" readonly placeholder="Результат bu yerda paydo bo&#39;ladi…" aria-label="Результат" aria-live="polite"></textarea>
                     <div class="area-footer"><span class="counter" id="outCounter">0 so&#39;z</span></div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>Case Converter &#8212; Matn Registri O&#8216;zgartirish</h2>
-                <p>Dasturlashda o&#8216;zgaruvchi nomlash konvensiyalari, hujjat sarlavhalarini formatlash, yoki noto&#8216;g&#700;ri kiritilgan matnni tuzatish uchun kerak. O&#8216;zbek tilining maxsus harflari (o&#699;, g&#699;, krill) ham to&#8216;g&#700;ri
+                <p>Dasturlashda o&#8216;zgaruvchi nomlash konvensiyalari, hujjat sarlavhalarini formatlash, или noto&#8216;g&#700;ri kiritilgan matnni tuzatish uchun kerak. O&#8216;zbek tilining maxsus harflari (o&#699;, g&#699;, krill) ham to&#8216;g&#700;ri
                     ishlaydi.</p>
 
                 <div class="use-grid">
@@ -185,7 +185,7 @@
                     </div>
                 </div>
 
-                <h2>Formatlar</h2>
+                <h2>Форматlar</h2>
                 <p><strong>UPPER CASE</strong> &#8212; barcha harflar katta. <strong>lower case</strong> &#8212; barcha kichik. <strong>Title Case</strong> &#8212; har so&#8216;z katta harf. <strong>Sentence case</strong> &#8212; faqat birinchi harf katta.
                     <strong>camelCase</strong> &#8212; dasturlash uchun. <strong>PascalCase</strong> &#8212; sinflar uchun. <strong>snake_case</strong> &#8212; Python, DB. <strong>kebab-case</strong> &#8212; CSS, URL.</p>
 
@@ -214,7 +214,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ бесплатно onlayn vosita. На сервер не отправляется.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -225,17 +225,17 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Инструменты column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Инструменты</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Цвет Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Форматlash</a>
+                    <a href="/tools/password-generator/" class="ftr-hide-mob">Пароль Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
                     <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
@@ -246,7 +246,7 @@
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
                     <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>

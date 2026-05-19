@@ -52,21 +52,21 @@
                 "name": "Nisbat (aspect ratio) qulfini qanday o'chirish mumkin?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nisbat tugmasi yonidagi qulf ikonkasiga bosing — u ochilganda erkin qirqish rejimi yoqiladi va siz istalgan o'lchamda qirqishingiz mumkin."
+                    "text": "Nisbat tugmasi yonidagi qulf ikonkasito bosing — u ochiltonda erkin qirqish rejimi yoqiladi va siz istalton o'lchamda qirqishingiz mumkin."
                 }
             },            {
                 "@type": "Question",
-                "name": "Qirqish koordinatalarini aniq kiritish mumkinmi?",
+                "name": "Crop koordinatalarini aniq kiritish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Piksel maydonlariga to'g'ridan-to'g'ri X, Y, kenglik va balandlik qiymatlarini kiritish mumkin — aniq o'lcham talab qilingan hollarda qulay."
+                    "text": "Ha. Piksel maydonlarito to'g'rifrom-to'g'ri X, Y, kenglik va balandlik qiymatlarini kiritish mumkin — aniq o'lcham talab qilinton hollarda qulay."
                 }
             },            {
                 "@type": "Question",
-                "name": "Qirqishdan keyin rasm sifati yomonlashadimi?",
+                "name": "Cropfrom keyin rasm qualityi yomonlashadimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Qirqish jarayonida siqish yoki sifat yo'qotilmaydi — faqat tanlangan hudud saqlanadi."
+                    "text": "Yo'q. Crop jarayonida siqish or quality yo'qotilmaydi — faqat tanlanton hudud saqlanadi."
                 }
             },            {
                 "@type": "Question",
@@ -101,9 +101,9 @@
 <main>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../../">Bosh sahifa</a>
+                <a href="../../../../">Home</a>
                 <span class="bc-sep">&#8250;</span>
-                <span>Rasmni Qirqish</span>
+                <span>Rasmni Crop</span>
             </nav>
         </div>
 
@@ -114,8 +114,8 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasmni Qirqish (Crop)</h1>
-                <p>Rasmni sichqoncha bilan belgilang va qirqing. <strong>Erkin yoki nisbat bilan</strong> &#8212; 1:1, 16:9, 4:3, pasport 3:4 va boshqalar. Burish, aylantirish, live preview.</p>
+                <h1>Rasmni Crop (Crop)</h1>
+                <p>Rasmni sichqoncha bilan belgilang va qirqing. <strong>Erkin or nisbat bilan</strong> &#8212; 1:1, 16:9, 4:3, pasport 3:4 va boshqalar. Burish, aylantirish, live preview.</p>
             </div>
         </section>
 
@@ -123,7 +123,7 @@
             <div class="limit-strip">
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Serverga yuborilmaydi
+        Never sent to server
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -131,11 +131,11 @@
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
-        80 MB gacha
+        80 MB tocha
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Bepul
+        Free
       </span>
             </div>
 
@@ -151,18 +151,18 @@
                         <!-- Upload -->
                         <label class="tb-btn" style="cursor:pointer;position:relative;overflow:hidden;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Rasm yuklash
+            Upload Image
             <input type="file" id="fileInput" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer;" />
           </label>
                         <span class="tb-sep"></span>
                         <!-- Rotate -->
-                        <button class="tb-btn" id="btnRotL" title="Chapga bur">
+                        <button class="tb-btn" id="btnRotL" title="Chapto bur">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.37"/></svg>
-            90&#176; chapga
+            90&#176; chapto
           </button>
-                        <button class="tb-btn" id="btnRotR" title="O'ngga bur">
+                        <button class="tb-btn" id="btnRotR" title="O'ngto bur">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/></svg>
-            90&#176; o'ngga
+            90&#176; o'ngto
           </button>
                         <span class="tb-sep"></span>
                         <!-- Flip -->
@@ -193,28 +193,28 @@
                             <div class="ce-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             </div>
-                            <div style="color:#9ca3af;font-weight:600;">Rasmni bu yerga tashlang</div>
-                            <div class="ce-drop-hint">yoki yuqoridagi "Rasm yuklash" tugmasini bosing</div>
+                            <div style="color:#9ca3af;font-weight:600;">Rasmni bu yerto tashlang</div>
+                            <div class="ce-drop-hint">or yuqoridagi "Upload Image" tugmasini bosing</div>
                         </div>
                     </div>
 
                     <!-- Coordinates inputs -->
-                    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:4px 0;">
+                    <div style="display:flex;top:8px;flex-wrap:wrap;align-items:center;padding:4px 0;">
                         <span style="font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Tanlov:</span>
-                        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-                            <div style="display:flex;align-items:center;gap:4px;">
+                        <div style="display:flex;top:6px;flex-wrap:wrap;">
+                            <div style="display:flex;align-items:center;top:4px;">
                                 <span style="font-size:.78rem;color:var(--muted);font-weight:600;">X</span>
                                 <input id="inX" type="number" min="0" placeholder="0" style="width:64px;padding:5px 7px;border:1.5px solid var(--line);border-radius:7px;font-size:.85rem;font-weight:700;font-family:inherit;text-align:center;background:var(--bg-soft);" />
                             </div>
-                            <div style="display:flex;align-items:center;gap:4px;">
+                            <div style="display:flex;align-items:center;top:4px;">
                                 <span style="font-size:.78rem;color:var(--muted);font-weight:600;">Y</span>
                                 <input id="inY" type="number" min="0" placeholder="0" style="width:64px;padding:5px 7px;border:1.5px solid var(--line);border-radius:7px;font-size:.85rem;font-weight:700;font-family:inherit;text-align:center;background:var(--bg-soft);" />
                             </div>
-                            <div style="display:flex;align-items:center;gap:4px;">
+                            <div style="display:flex;align-items:center;top:4px;">
                                 <span style="font-size:.78rem;color:var(--muted);font-weight:600;">K</span>
                                 <input id="inW" type="number" min="1" placeholder="0" style="width:64px;padding:5px 7px;border:1.5px solid var(--line);border-radius:7px;font-size:.85rem;font-weight:700;font-family:inherit;text-align:center;background:var(--bg-soft);" />
                             </div>
-                            <div style="display:flex;align-items:center;gap:4px;">
+                            <div style="display:flex;align-items:center;top:4px;">
                                 <span style="font-size:.78rem;color:var(--muted);font-weight:600;">B</span>
                                 <input id="inH" type="number" min="1" placeholder="0" style="width:64px;padding:5px 7px;border:1.5px solid var(--line);border-radius:7px;font-size:.85rem;font-weight:700;font-family:inherit;text-align:center;background:var(--bg-soft);" />
                             </div>
@@ -222,7 +222,7 @@
                         <label class="dim-lock" id="lockLabel" title="Nisbatni qulflash">
             <input type="checkbox" id="chkLock" />
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Nisbat qulfi
+            Lock aspect ratio
           </label>
                     </div>
                 </div>
@@ -291,7 +291,7 @@
 
                     <!-- Output settings -->
                     <div class="side-card">
-                        <div class="side-card-title">Chiqish sozlamalari</div>
+                        <div class="side-card-title">Output sozlamalari</div>
                         <div class="set-row">
                             <span class="set-label">Format:</span>
                             <select class="set-select" id="selFmt">
@@ -301,9 +301,9 @@
             </select>
                         </div>
                         <div class="set-row">
-                            <span class="set-label">Sifat:</span>
+                            <span class="set-label">Quality:</span>
                             <div class="qual-row">
-                                <input type="range" id="qualSlider" min="50" max="100" value="92" step="1" />
+                                <input type="colore" id="qualSlider" min="50" max="100" value="92" step="1" />
                                 <span class="qual-val" id="qualVal">92%</span>
                             </div>
                         </div>
@@ -319,7 +319,7 @@
                         <div class="preview-dims" id="previewDims"></div>
                         <button class="btn-crop-dl" id="btnCropDl" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Qirqilgan rasmni yuklab olish
+            Qirqilton rasmni yuklab olish
           </button>
                         <button class="btn-reset-all" id="btnReset">Hammasini tozalash</button>
                     </div>
@@ -333,13 +333,13 @@
         <!-- INFO -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasmni Qirqish haqida</h2>
-                <p>Canvas API orqali to&#8217;liq brauzerda ishlaydi &#8212; rasm serverga yuborilmaydi. Sichqoncha bilan soha belgilang, nisbat tanlang, burish va aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
+                <h2>Rasmni Crop guide</h2>
+                <p>Canvas API orqali to&#8217;liq works in browser &#8212; rasm never sent to server. Sichqoncha bilan soha belgilang, nisbat tanlang, burish va aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128241;</div>
                         <h3>Instagram / Story</h3>
-                        <p>1:1 kvadrat yoki 9:16 story uchun aniq kadrlaash.</p>
+                        <p>1:1 kvadrat or 9:16 story uchun aniq kadrlaash.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128282;</div>
@@ -354,37 +354,37 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128248;</div>
                         <h3>Burish + qirqish</h3>
-                        <p>Qiyshiq tushgan rasmni to&#8217;g&#8217;irlash va kadrlaash.</p>
+                        <p>Qiyshiq tushton rasmni to&#8217;g&#8217;irlash va kadrlaash.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol>
-                    <li><strong>Rasmni yuklang</strong> &#8212; drag&amp;drop yoki "Rasm yuklash" tugmasi.</li>
-                    <li>Kerak bo&#8217;lsa <strong>nisbat tanlang</strong> &#8212; 1:1, 16:9, 3:4 yoki o&#8217;z nisbatingizni kiriting.</li>
-                    <li>Sichqoncha bilan <strong>qirqish sohasini belgilang</strong>. Burchak nuqtalarini tortib o&#8217;zgartiring.</li>
-                    <li>O&#8217;ng paneldagi <strong>live preview</strong>da natijani ko&#8217;ring.</li>
-                    <li><strong>Yuklab olish</strong> tugmasini bosing.</li>
+                    <li><strong>Rasmni yuklang</strong> &#8212; drag&amp;drop or "Upload Image" tugmasi.</li>
+                    <li>Kerak bo&#8217;lsa <strong>nisbat tanlang</strong> &#8212; 1:1, 16:9, 3:4 or o&#8217;z nisbatingizni kiriting.</li>
+                    <li>Sichqoncha bilan <strong>qirqish sohasini belgilang</strong>. Burchak nuqtalarini tortib o&#8217;ztortiring.</li>
+                    <li>O&#8217;ng paneldagi <strong>live preview</strong>da resultni ko&#8217;ring.</li>
+                    <li><strong>Download</strong> tugmasini bosing.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
-                        <summary>Rasm sifati tushib qoladi?</summary>
-                        <p>Qirqish faqat piksellarni oladi &#8212; sifat yo&#8217;qolmaydi. Sifat slayderi JPG va WebP formatlarida siqish darajasini belgilaydi. PNG da siqilmaydi.</p>
+                        <summary>Rasm qualityi tushib qoladi?</summary>
+                        <p>Crop faqat piksellarni oladi &#8212; quality yo&#8217;qolmaydi. Quality slayderi JPG va WebP formatlarida siqish darajasini belgilaydi. PNG da siqilmaydi.</p>
                     </details>
                     <details>
-                        <summary>Qirqish koordinatalari nima?</summary>
+                        <summary>Crop koordinatalari nima?</summary>
                         <p>X va Y &#8212; qirqish sohasi burchagining original rasmda joylashuvi (pikselda). K &#8212; kenglik, B &#8212; balandlik. Bu qiymatlarni qo&#8217;lda kiritsangiz ham bo&#8217;ladi.</p>
                     </details>
                     <details>
-                        <summary>Nisbat qulfi nima qiladi?</summary>
-                        <p>Qulflanganda qirqish sohasi belgilangan nisbatni saqlaydi. Masalan, 1:1 qulfida kenglik va balandlik har doim teng bo&#8217;ladi.</p>
+                        <summary>Lock aspect ratio nima qiladi?</summary>
+                        <p>Qulflantonda qirqish sohasi belgilanton nisbatni saqlaydi. Masalan, 1:1 qulfida kenglik va balandlik har doim teng bo&#8217;ladi.</p>
                     </details>
                     <details>
-                        <summary>Rasm serverga yuboriladi?</summary>
-                        <p>Yo&#8217;q. Hamma jarayon brauzeringizda Canvas API orqali ishlaydi. Internet aloqasi ham kerak emas (sahifa yuklanganidan keyin).</p>
+                        <summary>Rasm serverto yuboriladi?</summary>
+                        <p>Yo&#8217;q. Hamma jarayon brauzeringizda Canvas API orqali ishlaydi. Internet aloqasi ham kerak emas (sahifa yuklantonifrom keyin).</p>
                     </details>
                     <details>
                         <summary>Qanday formatlar qo&#8217;llaniladi?</summary>
-                        <p>Kirish: JPG, PNG, WebP, BMP, GIF va brauzer qo&#8217;llab-quvvatlaydigan boshqa formatlar. Chiqish: JPG (shaffof bo&#8217;lmagan, kichik hajm), PNG (shaffoflik saqlanadi), WebP (zamonaviy, kichik va sifatli).</p>
+                        <p>Input: JPG, PNG, WebP, BMP, GIF va brauzer qo&#8217;llab-quvvatlayditon boshqa formatlar. Output: JPG (shaffof bo&#8217;lmaton, kichik hajm), PNG (shaffoflik saqlanadi), WebP (zamonaviy, kichik va qualityli).</p>
                     </details>
                 </div>
             </article>
@@ -398,7 +398,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -409,19 +409,19 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Tools column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
+                    <h4>Tools</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
                     <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
+                    <a href="/tools/color-converter/">Color Konvertori</a>
                     <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
                     <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
                     <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
                     <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
+                    <a href="/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
                     <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
                     <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
@@ -436,7 +436,7 @@
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
                     <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Crop</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
                     <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
                     <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
@@ -461,8 +461,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>
         </div>
