@@ -49,10 +49,10 @@
             "url": "https://toolbase.uz/en/tools/color-converter/",
             "mainEntity": [            {
                 "@type": "Question",
-                "name": "HEX, RGB va HSL o'rtasidagi farq nima?",
+                "name": "HEX, RGB and HSL o'rtasidagi farq nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "HEX — veb-dasturlashda keng ishlatiladiton olti xonali kod (masalan #ff5733). RGB — qizil, yashil va ko'k kanal qiymatlari (0-255). HSL — color, to'yintonlik va yorqinlik bilan ishlash uchun qulay format."
+                    "text": "HEX — veb-dasturlashda keng ishlatiladiton olti xonali kod (masalan #ff5733). RGB — qizil, yashil and ko'k kanal qiymatlari (0-255). HSL — color, to'yintonlik and yorqinlik bilan ishlash uchun qulay format."
                 }
             },            {
                 "@type": "Question",
@@ -73,7 +73,7 @@
                 "name": "Colour history qanday ishlaydi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Oxirgi 20 ta tanlanton color tarix panelidagi saqlanton va fonto siz qaytib kelishingiz uchun avtomatik saqlanadi. Saytni yangilasangiz ham tarix saqlanadi."
+                    "text": "Oxirgi 20 ta tanlanton color tarix panelidagi saqlanton and fonto siz qaytib kelishingiz uchun avtomatik saqlanadi. Saytni yangilasangiz ham tarix saqlanadi."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">&#8250;</span>
-                <span>Color Converter</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Color Converter</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -340,7 +342,7 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>Color Converter guide</h2>
-                <p>HEX, RGB, HSL, CMYK, HSV &#8212; beshta format orasida tezda o&#8217;tish. Color picker bilan istalton colorni select, bir bosishda nusxalang. CSS gradient generator bilan linear, radial va conic gradientlar yarating.</p>
+                <p>HEX, RGB, HSL, CMYK, HSV &#8212; beshta format orasida tezda o&#8217;tish. Color picker bilan istalton colorni select, bir bosishda nusxalang. CSS gradient generator bilan linear, radial and conic gradientlar yarating.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#127912;</div>
@@ -355,32 +357,32 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128247;</div>
                         <h3>Fotograflar</h3>
-                        <p>CMYK &#8212; bosmaxona uchun, RGB &#8212; ekran uchun konvertatsiya.</p>
+                        <p>CMYK &#8212; for print, RGB &#8212; for screen conversion.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#9881;</div>
-                        <h3>Barcha uchun</h3>
-                        <p>Nomlanton colorlar: o&#8217;zbekcha va inglizcha, color tarixi.</p>
+                        <h3>All uchun</h3>
+                        <p>Nomlanton colorlar: o&#8217;zbekcha and inglizcha, color tarixi.</p>
                     </div>
                 </div>
                 <h2>Color formatlari guide</h2>
                 <p><strong>HEX</strong> &#8212; veb dizaynda eng keng tarqalton. #rrggbb formatida, r/g/b &#8212; qizil/yashil/ko&#8217;k 00&#8211;ff orasida.</p>
-                <p><strong>RGB</strong> &#8212; qizil, yashil, ko&#8217;k. Har biri 0&#8211;255. Ekranlar va CSS uchun standart.</p>
+                <p><strong>RGB</strong> &#8212; qizil, yashil, ko&#8217;k. Har biri 0&#8211;255. Ekranlar and CSS uchun standart.</p>
                 <p><strong>HSL</strong> &#8212; Hue (color turi), Saturation (to&#8217;yintonlik), Lightness (yorqinlik). Inson idrokito yaqin, CSS da juda qulay.</p>
                 <p><strong>CMYK</strong> &#8212; Cyan, Magenta, Yellow, Key (qora). Bosmaxona standart formati.</p>
-                <p><strong>HSV</strong> &#8212; Hue, Saturation, Value. Photoshop va boshqa grafik dasturlarda ishlatiladiton format.</p>
+                <p><strong>HSV</strong> &#8212; Hue, Saturation, Value. Photoshop and boshqa grafik dasturlarda ishlatiladiton format.</p>
                 <div class="faq-list">
                     <details>
                         <summary>CSS gradient nima?</summary>
                         <p>CSS gradient &#8212; ikki or unfrom ko&#8217;p colorning silliq o&#8217;tishi. background: linear-gradient(135deg, #0891b2, #7c3aed) kabi CSS xususiyati orqali belgilanadi. Rasm fayli kerak emas.</p>
                     </details>
                     <details>
-                        <summary>HEX va RGB qaysi birini ishlatish kerak?</summary>
+                        <summary>HEX and RGB qaysi birini ishlatish kerak?</summary>
                         <p>Veb uchun ikkisi ham to&#8217;g&#8217;ri. HSL CSS da color sistеmasini boshqarish uchun qulay &#8212; yorqinlikni osonroq o&#8217;ztortirish mumkin. Bosmaxona uchun CMYK kerak.</p>
                     </details>
                     <details>
                         <summary>Nomlanton colorlar qancha?</summary>
-                        <p>CSS standartida 140+ nomlanton color bor (red, blue, tomato va boshqalar). Vositada 36 ta eng ko&#8217;p ishlatiladiton color o&#8217;zbek nomda keltirilton.</p>
+                        <p>CSS standartida 140+ nomlanton color bor (red, blue, tomato and boshqalar). Vositada 36 ta eng ko&#8217;p ishlatiladiton color o&#8217;zbek nomda keltirilton.</p>
                     </details>
                 </div>
             </article>
@@ -394,7 +396,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -425,12 +427,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -445,7 +447,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -457,7 +459,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

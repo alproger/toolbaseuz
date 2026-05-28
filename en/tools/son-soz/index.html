@@ -49,31 +49,31 @@
             "url": "https://toolbase.uz/en/tools/son-soz/",
             "mainEntity": [            {
                 "@type": "Question",
-                "name": "Son so'z konvertori qanday ishlaydi?",
+                "name": "How does the number to words converter work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Raqam kiritilganda JavaScript algoritmi uni o'zbek tilining grammatik qoidalariga muvofiq so'zlarga aylantiradi. Millionlar, milliardlar va undan katta sonlar ham qo'llab-quvvatlanadi."
+                    "text": "Raqam kiritilganda JavaScript algoritmi uni o'zbek tilining grammatik qoidalariga muvofiq so'zlarga aylantiradi. Millionlar, milliardlar and undan katta sonlar ham qo'llab-quvvatlanadi."
                 }
             },            {
                 "@type": "Question",
                 "name": "Pul summasi rejimi nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Pul summasi rejimida son so'm va tiyin bilan yoziladi — masalan 12500.50 → 'o'n ikki ming besh yuz so'm, ellik tiyin'. Bank hujjatlari va hisobotlar uchun foydali."
+                    "text": "Pul summasi rejimida son so'm and tiyin bilan yoziladi — masalan 12500.50 → 'o'n ikki ming besh yuz so'm, ellik tiyin'. Bank hujjatlari and hisobotlar uchun foydali."
                 }
             },            {
                 "@type": "Question",
-                "name": "Manfiy sonlar va o'nlik kasrlar qo'llab-quvvatlanadimi?",
+                "name": "Manfiy sonlar and o'nlik kasrlar qo'llab-quvvatlanadimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Manfiy sonlar 'minus' prefiksi bilan, o'nlik kasrlar esa butun va kasr qismga bo'linib yoziladi."
+                    "text": "Ha. Manfiy sonlar 'minus' prefiksi bilan, o'nlik kasrlar esa butun and kasr qismga bo'linib yoziladi."
                 }
             },            {
                 "@type": "Question",
-                "name": "Natijani nusxalash qanchalik oson?",
+                "name": "How easy is it to copy the result?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nusxalash tugmasiga bir marta bosish kifoya — natija avtomatik buferga olinadi va istalgan joyga joylashtirishingiz mumkin."
+                    "text": "Copy tugmasiga bir marta bosish kifoya — natija avtomatik buferga olinadi and istalgan joyga joylashtirishingiz mumkin."
                 }
             }]
         }
@@ -101,11 +101,13 @@
 <main>
 
         <div class="container">
-            <nav class="breadcrumb" aria-label="Yo'l">
-                <a href="../../../../">Bosh sahifa</a>
-                <span class="bc-sep">›</span>
-                <span>Son → So'z</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Number → Words</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -113,8 +115,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3l-2 18"/><path d="M16 3l-2 18"/></svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Son → So'z</h1>
-                <p>Istalgan sonni o'zbekcha so'zga aylantiring — oddiy yoki pul (so'm, tiyin) rejimida. Manfiy sonlar va kasrlar ham ishlaydi.</p>
+                <h1>Number → Words</h1>
+                <p>Convert any number to English words — standard or currency mode (dollars &amp; cents). Negative numbers and decimals supported.</p>
             </div>
         </section>
 
@@ -124,14 +126,14 @@
 
                 <!-- Mode buttons -->
                 <div class="ns-mode">
-                    <button class="ns-mode-btn active" data-mode="oddiy">Oddiy</button>
-                    <button class="ns-mode-btn" data-mode="pul">Pul (so'm)</button>
+                    <button class="ns-mode-btn active" data-mode="oddiy">Standard</button>
+                    <button class="ns-mode-btn" data-mode="pul">Currency ($)</button>
                 </div>
 
                 <!-- Input -->
                 <div class="ns-input-wrap">
-                    <input type="text" id="nsInput" class="ns-input" placeholder="Son kiriting..." inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="16" aria-label="Son kiriting" />
-                    <button class="ns-clear" id="nsClear" aria-label="Tozalash" tabindex="-1">
+                    <input type="text" id="nsInput" class="ns-input" placeholder="Enter a number..." inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="16" aria-label="Enter a number" />
+                    <button class="ns-clear" id="nsClear" aria-label="Clear" tabindex="-1">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
                 </div>
@@ -139,10 +141,10 @@
                 <!-- Result -->
                 <div class="ns-result-wrap">
                     <div class="ns-result-head">
-                        <span class="ns-result-label">Natija</span>
+                        <span class="ns-result-label">Result</span>
                         <button class="act-btn" id="nsCopy" style="display:none">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            Nusxalash
+            Copy
           </button>
                     </div>
                     <div class="ns-result-body">
@@ -155,11 +157,11 @@
                     </div>
                 </div>
 
-                <p class="ns-hint">Max: 999 999 999 999 · Kasrlar: vergul yoki nuqta bilan (3.14 yoki 3,14)</p>
+                <p class="ns-hint">Max: 999,999,999,999 · Decimals: use dot or comma (3.14 or 3,14)</p>
 
                 <!-- Quick examples -->
                 <div class="ns-examples">
-                    <h3>Tez sinab ko'ring</h3>
+                    <h3>Quick examples</h3>
                     <div class="ns-chips">
                         <button class="ns-chip" data-val="1000">1 000</button>
                         <button class="ns-chip" data-val="1000000">1 000 000</button>
@@ -181,49 +183,48 @@
 
         <section class="tool-info">
             <article class="info-article">
-                <h2>Son &#8594; So&#8216;z konvertori haqida</h2>
-                <p>Raqamni so&#8216;z bilan ifodalash &#8212; bank hujjatlari, moliyaviy shartnomalar, chek va to&#8216;lov topshiriqlarida majburiy talab. O&#8216;zbekiston Respublikasining rasmiy hujjatlarida summalar so&#8216;m va tiyin bilan yozilishi
-                    shart.</p>
+                <h2>About the Number &#8594; Words Converter</h2>
+                <p>Writing numbers as words is a standard requirement in banking, contracts and legal documents. This tool covers the full range needed for financial and formal correspondence.</p>
 
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#127981;</div>
-                        <h3>Bank hujjatlari</h3>
-                        <p>To&#8217;lov topshiriqlari va cheklarda summa so&#8216;z bilan yoziladi.</p>
+                        <h3>Banking documents</h3>
+                        <p>Payment orders and cheques require amounts written in full words.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128203;</div>
-                        <h3>Shartnomalar</h3>
-                        <p>Shartnoma summasini huquqiy to&#8216;g&#700;ri shaklda yozish.</p>
+                        <h3>Contracts</h3>
+                        <p>Write contract amounts in the legally required written form.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128176;</div>
-                        <h3>Hisobotlar</h3>
-                        <p>Moliyaviy hisob-kitob hujjatlarida raqamni tasdiqlash.</p>
+                        <h3>Reports</h3>
+                        <p>Confirm figures in financial accounting documents.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128221;</div>
-                        <h3>Arizalar</h3>
-                        <p>Davlat ariza va talabnomalarida miqdorni yozish.</p>
+                        <h3>Applications</h3>
+                        <p>Write amounts in government applications and official requests.</p>
                     </div>
                 </div>
 
-                <h2>Qo&#8216;llab-quvvatlanadigan formatlar</h2>
-                <p><strong>Oddiy son:</strong> butun va kasrli sonlar &#8212; <code>1500</code> &#8594; <em>Bir ming besh yuz</em>. <strong>Pul rejimi:</strong> <code>1500.50</code> &#8594; <em>Bir ming besh yuz so&#8216;m ellik tiyin</em>. Manfiy sonlar
+                <h2>Supported formats</h2>
+                <p><strong>Standard:</strong> integers and decimals &#8212; <code>1500</code> &#8594; <em>One thousand five hundred</em>. <strong>Currency mode:</strong> <code>1500.50</code> &#8594; <em>One thousand five hundred dollars and fifty cents</em>. Negative numbers
                     ham qo&#8216;llab-quvvatlanadi.</p>
 
                 <div class="faq-list">
                     <details>
                         <summary>Maksimal qanday son kiritish mumkin?</summary>
-                        <p>999 999 999 999 (to&#8216;qqiz yuz to&#8216;qson to&#8216;qqiz milliard). Bank hujjatlarida uchraydigan barcha summalar uchun yetarli.</p>
+                        <p>999,999,999,999 (nine hundred ninety-nine billion). Covers all amounts found in financial documents.</p>
                     </details>
                     <details>
                         <summary>Kasrli sonlar qanday yoziladi?</summary>
-                        <p>Vergul (<code>,</code>) yoki nuqta (<code>.</code>) bilan: <code>3.14</code> yoki <code>3,14</code>. Kasrdan keyin ko&#8216;pi bilan 2 ta raqam (tiyin uchun).</p>
+                        <p>Use dot (<code>.</code>) or comma (<code>,</code>): <code>3.14</code> or <code>3,14</code>. Max 2 decimal places.</p>
                     </details>
                     <details>
                         <summary>Is the result ready for use in documents?</summary>
-                        <p>Yes. Clicking Copy puts the result in the clipboard &#8212; to&#8216;g&#700;ridan Word yoki boshqa dasturga joylashtirish mumkin.</p>
+                        <p>Yes. Click Copy and the result goes straight to your clipboard — paste it directly into Word or any other app.</p>
                     </details>
                 </div>
             </article>
@@ -237,7 +238,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>20+ free online tools for text, documents and images. Nothing sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -252,7 +253,7 @@
                 <div class="footer-col">
                     <h4>Vositalar</h4>
                     <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/tools/son-soz/">Number &rarr; Words</a>
                     <a href="/tools/word-counter/">Word Counter</a>
                     <a href="/tools/case-converter/">Case Converter</a>
                     <a href="/tools/color-converter/">Rang Konvertori</a>
@@ -268,12 +269,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -288,7 +289,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -300,14 +301,15 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalangan</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
                 </div>
             </div>
         </div>
     </footer>
 
-<script src="../../../tools/son-soz/js/numword.js"></script>
+<script src="../../../tools/son-soz/js/numword-en.js"></script>
+<script>if(typeof EnNumWord!=="undefined")window.UzNumWord=EnNumWord;</script>
 </body>
 
 </html>

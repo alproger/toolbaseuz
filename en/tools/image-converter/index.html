@@ -52,7 +52,7 @@
                 "name": "Qanday formatlar o'rtasida konvertatsiya qilish mumkin?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "JPG, PNG, WebP va GIF formatlari o'rtasida konvertatsiya qilish mumkin. WebP zamonaviy brauzerlar uchun eng yaxshi nisbat beradi."
+                    "text": "JPG, PNG, WebP and GIF formatlari o'rtasida konvertatsiya qilish mumkin. WebP zamonaviy brauzerlar uchun eng yaxshi nisbat beradi."
                 }
             },            {
                 "@type": "Question",
@@ -66,14 +66,14 @@
                 "name": "Quality parametri nima uchun kerak?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Quality (1-100%) chiqish faylining size va ko'rinishi o'rtasidagi muvozanatni belgilaydi. 85% odatda optimal tanlov."
+                    "text": "Quality (1-100%) chiqish faylining size and ko'rinishi o'rtasidagi muvozanatni belgilaydi. 85% odatda optimal tanlov."
                 }
             },            {
                 "@type": "Question",
                 "name": "PNG from WebP to o'tish nima beradi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "WebP PNG to qaratonda o'rtacha 25-35% kichikroq fayl sizeni ta'minlaydi va shaffoflikni saqlab qoladi. Sayt tezligini oshirish uchun juda foydali."
+                    "text": "WebP PNG to qaratonda o'rtacha 25-35% kichikroq fayl sizeni ta'minlaydi and shaffoflikni saqlab qoladi. Sayt tezligini oshirish uchun juda foydali."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">›</span>
-                <span>Rasm Formatini O'ztortirish</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Image Converter</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -117,7 +119,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>Rasm Formatini O'ztortirish</h1>
-                <p>JPG, PNG, WebP, BMP, GIF, ICO va PDF — 7 format. Bir vaqtda 20 ta rasm. Quality sozlamalari, fon colori, o'lcham. Files never sent to server.</p>
+                <p>JPG, PNG, WebP, BMP, GIF, ICO and PDF — 7 formats. Up to 20 images at once. Quality settings, background colori, o'lcham. Files never sent to server.</p>
             </div>
         </section>
 
@@ -140,7 +142,7 @@
 
             <!-- Related -->
             <div style="display:flex;top:8px;flex-wrap:wrap;margin-bottom:16px;">
-                <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Birlashtirish →</a>
+                <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Merge →</a>
                 <a href="../../qr-generator/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">QR Kod Yaratish →</a>
             </div>
 
@@ -290,7 +292,7 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>Rasm Formatini O'ztortirish guide</h2>
-                <p>7 output formats: JPG, PNG, WebP, BMP, GIF, ICO and PDF. Convert up to 20 images at once. Barcha jarayon brauzerda — serverto hech narsa yuborilmaydi.</p>
+                <p>7 output formats: JPG, PNG, WebP, BMP, GIF, ICO and PDF. Convert up to 20 images at once. All modern browsers supported. — serverto hech narsa yuborilmaydi.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">🖼️</div>
@@ -305,21 +307,21 @@
                     <div class="use-card">
                         <div class="use-card-icon">⚡</div>
                         <h3>WebP — Web</h3>
-                        <p>Web sahifalar uchun: JPG to qaratonda 30% kichikroq, PNG to qaratonda qualityliroq.</p>
+                        <p>For websites: 30% smaller than JPG, better quality than PNG.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">📄</div>
                         <h3>PDF — Hujjat</h3>
-                        <p>Rasmni PDF to aylantiring. Bir or bir necha rasm bitta PDF da.</p>
+                        <p>Convert images to PDF. One or multiple images in a single PDF.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
                     <li>Yuqorifrom <strong>chiqish formatini</strong> tanlang (JPG, PNG, WebP, PDF...).</li>
-                    <li>Quality va o'lcham sozlamalarini belgilang.</li>
-                    <li>Rasmlarni yuklang — drag & drop or tugma orqali.</li>
-                    <li><strong>"Formatni O'ztortirish"</strong> tugmasini bosing.</li>
-                    <li>Har bir faylni alohida or barchasini ZIP qualityida yuklab oling.</li>
+                    <li>Set quality and size options.</li>
+                    <li>Upload images — drag & drop or use the button.</li>
+                    <li><strong>"Formatni O'ztortirish"</strong> click the button.</li>
+                    <li>Download each file separately or all at once as ZIP.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
@@ -328,19 +330,19 @@
                     </details>
                     <details>
                         <summary>20 ta rasimni bir vaqtda o'ztortirsa bo'ladimi?</summary>
-                        <p>Ha! Bir vaqtda up to 20 rasm yuklanadi va ketma-ket o'ztortiriladi. ZIP qualityida barchasini bitta yuklashda olasiz.</p>
+                        <p>Ha! Bir vaqtda up to 20 rasm yuklanadi and ketma-ket o'ztortiriladi. ZIP qualityida barchasini bitta yuklashda olasiz.</p>
                     </details>
                     <details>
                         <summary>ICO formati nima uchun kerak?</summary>
-                        <p>ICO — Windows dastur ikonkalari va veb sayt favicon (.ico) uchun standart format. 128px o'lcham sozlamasi favicon uchun eng qulay.</p>
+                        <p>ICO — Windows dastur ikonkalari and veb sayt favicon (.ico) uchun standart format. 128px o'lcham sozlamasi favicon uchun eng qulay.</p>
                     </details>
                     <details>
-                        <summary>Rasmlarni PDF to birlashtirsa bo'ladimi?</summary>
-                        <p>Ha! PDF formatini tanlab, "Bitta PDF" rejimini tanlasangiz, barcha rasmlar bitta PDF hujjatito qo'shiladi.</p>
+                        <summary>Can I combine images into PDF?</summary>
+                        <p>Yes! Select PDF format and choose "Single PDF" mode — all images go into one PDF documenttito qo'shiladi.</p>
                     </details>
                     <details>
-                        <summary>SVG va TIFF fayllarni ham o'girib bo'ladimi?</summary>
-                        <p>Ha, kirish formati qualityida SVG, TIFF, AVIF, HEIC va boshqa brauzer tomonifrom qo'llaniladiton formatlar ham qabul qilinadi.</p>
+                        <summary>Can I also convert SVG and TIFF files?</summary>
+                        <p>Ha, kirish formati qualityida SVG, TIFF, AVIF, HEIC and boshqa brauzer tomonifrom qo'llaniladiton formatlar ham qabul qilinadi.</p>
                     </details>
                 </div>
             </article>
@@ -354,7 +356,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -385,12 +387,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -405,7 +407,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -417,7 +419,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

@@ -52,14 +52,14 @@
                 "name": "Rasm fonini o'chirish uchun faylni serverto yuborish kerakmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha ishlov berish to'liq brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server. Maxfiyligingiz to'liq himoyalanton."
+                    "text": "Yo'q. All ishlov berish to'liq brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server. Maxfiyligingiz to'liq himoyalanton."
                 }
             },            {
                 "@type": "Question",
                 "name": "Qanday formatlar qo'llab-quvvatlanadi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "PNG, JPG va WebP formatlar qo'llab-quvvatlanadi. Result shaffof fon bilan PNG formatida yuklab olinadi."
+                    "text": "PNG, JPG and WebP formatlar qo'llab-quvvatlanadi. Result shaffof fon bilan PNG formatida yuklab olinadi."
                 }
             },            {
                 "@type": "Question",
@@ -73,7 +73,7 @@
                 "name": "Fon to'liq olinib tashlanmasa nima qilish kerak?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Murakkab or gradyentli fonlarda result to'liq bo'lmasligi mumkin. Rasmingizni qirqib, aniqroq ish ob'ekti bilan qayta sinab ko'ring."
+                    "text": "Murakkab or gradyentli fonlarda result to'liq bo'lmasligi mumkin. Rasmingizni qirqib, aniqroq ish ob'ekti bilan qayta sinab preview."
                 }
             }]
         }
@@ -102,10 +102,10 @@
 
         <!-- BREADCRUMB -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="../../../../">Toolbase</a>
-            <span class="bc-sep">›</span>
-            <a href="../../../../#tools">Tools</a>
-            <span class="bc-sep">›</span>
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
             <span>Background Removal</span>
         </nav>
 
@@ -171,7 +171,7 @@
         </svg>
                 </div>
                 <div class="drop-title">Drop image here</div>
-                <div class="drop-sub">or <strong>faylni tanlash</strong> tugmasini bosing · PNG, JPG, WebP · up to 20 MB</div>
+                <div class="drop-sub">or <strong>faylni tanlash</strong> click the button · PNG, JPG, WebP · up to 20 MB</div>
                 <label class="drop-btn-label" for="fileInput">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         Select File
@@ -265,37 +265,37 @@
             <article>
                 <h2>How to use</h2>
                 <ol>
-                    <li>Rasmni <strong>shu yerto tashlang</strong> or faylni tanlash tugmasini bosing.</li>
+                    <li>Rasmni <strong>here tashlang</strong> or faylni tanlash click the button.</li>
                     <li>AI avtomatik fonni aniqlab, <strong>o'chirib tashlaydi</strong> (10–30 soniya).</li>
-                    <li>Resultni ko'ring — <strong>fon colori</strong> tanlang or shaffof qoldiring.</li>
-                    <li><strong>Download PNG</strong> tugmasini bosing.</li>
+                    <li>Resultni preview — <strong>fon colori</strong> tanlang or shaffof qoldiring.</li>
+                    <li><strong>Download PNG</strong> click the button.</li>
                 </ol>
 
                 <div class="faq-list">
                     <details>
                         <summary>Rasm serverto yuboriladi?</summary>
-                        <p>Yo'q. Hamma narsa to'liq brauzeringizda ishlaydi — WebAssembly va AI model brauzerto yuklanib, mahalliy ishlaydi. Rasmingiz hech qachon internetto chiqmaydi.</p>
+                        <p>Yo'q. Hamma narsa to'liq brauzeringizda ishlaydi — WebAssembly and AI model brauzerto yuklanib, mahalliy ishlaydi. Rasmingiz hech qachon internetto chiqmaydi.</p>
                     </details>
                     <details>
                         <summary>Birinchi marta nima uchun sekin ishlaydi?</summary>
-                        <p>Birinchi marta AI modeli (~9 MB) brauzeringizto yuklanadi va keshlanadi. Keyingi safar bir zumda ishlaydi — qayta yuklanmaydi.</p>
+                        <p>Birinchi marta AI modeli (~9 MB) brauzeringizto yuklanadi and keshlanadi. Keyingi safar bir zumda ishlaydi — qayta yuklanmaydi.</p>
                     </details>
                     <details>
-                        <summary>Qanday rasmlar uchun eng yaxshi ishlaydi?</summary>
-                        <p>Inson, hayvon, mahsulot rasmlari uchun juda yaxshi. Fon bilan ob'ekt o'rtasida aniq chetora bo'lsa result yanada qualityli chiqadi. Juda murakkab teksturali fonlarda ba'zan xato bo'lishi mumkin.</p>
+                        <summary>What types of images work best?</summary>
+                        <p>Works great for people, animals and product photos. Best results when the subject is clearly separated from the backgrounda bo'lsa result yanada qualityli chiqadi. Juda murakkab teksturali fonlarda ba'zan xato bo'lishi mumkin.</p>
                     </details>
                     <details>
                         <summary>Shaffof PNG nima uchun kerak?</summary>
-                        <p>Shaffof PNG — logotiplar, stikkerlar, e-commerce uchun mahsulot rasmlari, taqdimot slaydlari va boshqa dizayn ishlari uchun zarur. Fon colori qo'shish imkoniyati ham mavjud — masalan, oq or colordagi fon bilan JPEG qualityida ham
+                        <p>Transparent PNG — logos, stickers, product images for e-commerce, presentation slidesri and boshqa dizayn ishlari uchun zarur. Fon colori qo'shish imkoniyati ham mavjud — masalan, oq or colordagi fon bilan JPEG qualityida ham
                             saqlash mumkin.</p>
                     </details>
                     <details>
                         <summary>Qaysi formatlar qabul qilinadi?</summary>
-                        <p>Input: PNG, JPG/JPEG, WebP, GIF, BMP va brauzer qo'llab-quvvatlayditon boshqa formatlar. Output har doim PNG — chunki faqat PNG formati shaffoflikni saqlaydi. Fayl size 20 MB tocha.</p>
+                        <p>Input: PNG, JPG/JPEG, WebP, GIF, BMP and brauzer qo'llab-quvvatlayditon boshqa formatlar. Output har doim PNG — chunki faqat PNG formati shaffoflikni saqlaydi. Fayl size 20 MB to.</p>
                     </details>
                     <details>
-                        <summary>Result qualityi past chiqsa nima qilish kerak?</summary>
-                        <p>Yuqori aniqlikdagi rasm yuklang. Ob'ekt fonfrom yaqqol ajralib turton rasmlarda result ancha yaxshi bo'ladi. Juda kichik (~200px from past) or loyqa rasmlarda AI aniq chetora topa olmaydi.</p>
+                        <summary>What if the result quality is poor?</summary>
+                        <p>Upload a high-resolution image. Results are better when the subject clearly stands out from the background. Very detailed kichik (~200px from past) or loyqa rasmlarda AI aniq chetora topa olmaydi.</p>
                     </details>
                 </div>
             </article>
@@ -310,7 +310,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -341,12 +341,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -361,7 +361,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -373,7 +373,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

@@ -51,28 +51,28 @@
                 "name": "JSON formatlash nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "JSON formatlash (beautify) tartibsiz JSON matnini odam o'qiy oladigan, chiroyli ko'rinishga keltiradi. Har bir kalit va qiymat yangi qatorda, to'g'ri indent bilan shown."
+                    "text": "JSON formatlash (beautify) tartibsiz JSON matnini odam o'qiy oladigan, chiroyli ko'rinishga keltiradi. Har bir kalit and qiymat yangi qatorda, to'g'ri indent bilan shown."
                 }
             }, {
                 "@type": "Question",
                 "name": "JSON minify nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Minify JSON matnidan barcha ortiqcha bo'sh joylar va yangi qatorlarni olib, fayl hajmini kamaytiradi. API va server aloqalarida tezlikni oshirish uchun ishlatiladi."
+                    "text": "Minify JSON matnidan barcha ortiqcha bo'sh joylar and yangi qatorlarni olib, fayl hajmini kamaytiradi. API and server aloqalarida tezlikni oshirish uchun ishlatiladi."
                 }
             }, {
                 "@type": "Question",
-                "name": "Ma'lumotlarim serverga yuboriladi?",
+                "name": "Is my data sent to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha JSON qayta ishlash to'liq brauzeringizda amalga oshiriladi. Hech qanday ma'lumot serverga yuborilmaydi."
+                    "text": "Yo'q. All JSON qayta ishlash to'liq brauzeringizda amalga oshiriladi. Hech qanday ma'lumot serverga yuborilmaydi."
                 }
             }, {
                 "@type": "Question",
                 "name": "Qanday xatolarni aniqlay oladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Vosita JSON sintaksis xatolarini aniqlaydi va xato qaysi qator va ustunda joylashganini ko'rsatadi — vergul, qavs yoki tirnoq xatolarini tezda topishga yordam beradi."
+                    "text": "Vosita JSON sintaksis xatolarini aniqlaydi and xato qaysi qator and ustunda joylashganini ko'rsatadi — vergul, qavs yoki tirnoq xatolarini tezda topishga yordam beradi."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 <main>
 
         <div class="container">
-            <nav class="breadcrumb" aria-label="Yo'l">
-                <a href="../../../../">Bosh sahifa</a>
-                <span class="bc-sep">›</span>
-                <span>JSON Formatlash</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>JSON Formatter</span>
+        </nav>
         </div>
 
         <!-- Tool Hero -->
@@ -117,7 +119,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>JSON Formatlash</h1>
-                <p>Format JSON beautifully (beautify), reduce size (minify) or find syntax errors aniqlang — brauzeringizda, hech narsa serverga yuborilmaydi.</p>
+                <p>Format JSON (beautify/minify) or find syntax errors — all in browser.ur browser, nothing sent to server., nothing sent to a server. narsa serverga yuborilmaydi.</p>
             </div>
         </section>
 
@@ -194,7 +196,7 @@
                     <div class="area-head">
                         <span class="area-label">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            Natija
+            Result
           </span>
                         <div class="area-actions">
                             <button class="act-btn" id="btnCopy">
@@ -220,32 +222,32 @@
         <section class="tool-info">
             <article class="info-article">
 
-                <h2>JSON Formatlash haqida</h2>
+                <h2>About JSON Formatter</h2>
                 <p>
-                    <strong>JSON (JavaScript Object Notation)</strong> — ma'lumotlarni saqlash va uzatish uchun eng keng tarqalgan format. API javoblari, konfiguratsiya fayllari, ma'lumotlar bazasi eksporti — barchasi JSON formatida keladi. Lekin bu ma'lumotlar
-                    ko'pincha bir qatorda, siqilgan holda bo'ladi. Bu vosita JSON matnini bir zumda o'qilishi qulay ko'rinishga keltiradi.
+                    <strong>JSON (JavaScript Object Notation)</strong> — ma'lumotlarni saqlash and uzatish uchun eng keng tarqalgan format. API javoblari, konfiguratsiya fayllari, ma'lumotlar bazasi eksporti — barchasi JSON formatida keladi. Lekin bu ma'lumotlar
+                    often arrives on a single compressed line. This tool instantly converts JSON text into a readableinishga keltiradi.
                 </p>
 
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">✨</div>
                         <h3>Formatlash (Beautify)</h3>
-                        <p>Siqilgan JSON matnini to'g'ri indent va bo'sh joylar bilan chiroyli, o'qilishi oson ko'rinishga keltiradi.</p>
+                        <p>Convert compressed JSON text into a beautifully formatted, readable form with proper indentationiradi.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">⚡</div>
                         <h3>Minify (Compress)</h3>
-                        <p>JSON matnidan ortiqcha bo'sh joy va yangi qatorlarni olib, fayl hajmini kamaytiradi. API va produksiya muhiti uchun foydali.</p>
+                        <p>JSON matnidan ortiqcha bo'sh joy and yangi qatorlarni olib, fayl hajmini kamaytiradi. API and produksiya muhiti uchun foydali.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">🔍</div>
                         <h3>Xato aniqlash</h3>
-                        <p>Sintaksis xatolarini aniqlaydi va xato qaysi qator, ustunda ekanini aniq ko'rsatadi.</p>
+                        <p>Sintaksis xatolarini aniqlaydi and xato qaysi qator, ustunda ekanini aniq ko'rsatadi.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">🔒</div>
                         <h3>To'liq maxfiy</h3>
-                        <p>Barcha ishlov berish brauzeringizda amalga oshadi. Ma'lumotlaringiz hech qachon serverga yuborilmaydi.</p>
+                        <p>All processing happens in your browser. Your data is never sent to a serverrilmaydi.</p>
                     </div>
                 </div>
 
@@ -268,27 +270,27 @@
                 <div class="faq-list">
                     <details>
                         <summary>JSON formatlash nima uchun kerak?</summary>
-                        <p>API'dan kelgan yoki log fayllardan olingan JSON ko'pincha siqilgan, bir qatorda bo'ladi. Formatlash uni chiroyli, o'qilishi qulay ko'rinishga keltiradi — xatolarni topish, tuzilmani tushunish va hamkorlar bilan ishlashni osonlashtiradi.</p>
+                        <p>JSON from APIs or log files is often compressed and single-line. Formatting makes it readable and easy to understand.ga keltiradi — xatolarni topish, tuzilmani tushunish and hamkorlar bilan ishlashni osonlashtiradi.</p>
                     </details>
                     <details>
                         <summary>Minify nima uchun ishlatiladi?</summary>
-                        <p>In production environments (APIs, web apps), minifying JSON improves performance va tarmoq xarajatlarini kamaytiradi. Masalan, <code>{ "a": 1 }</code> o'rniga <code>{"a":1}</code> — natija bir xil, lekin kamroq bayt.</p>
+                        <p>In production environments (APIs, web apps), minifying JSON improves performance and reduces network traffic. traffic. Masalan, <code>{ "a": 1 }</code> o'rniga <code>{"a":1}</code> — natija bir xil, lekin kamroq bayt.</p>
                     </details>
                     <details>
                         <summary>Qanday xatolarni aniqlay oladi?</summary>
-                        <p>Vosita barcha JSON sintaksis xatolarini aniqlaydi: yetishmayotgan vergul, noto'g'ri qo'shtirnoq, yopilmagan qavs, noto'g'ri qiymat turi va boshqalar. Xato xabari qaysi qator va ustunda ekanini ham ko'rsatadi.</p>
+                        <p>Vosita barcha JSON sintaksis xatolarini aniqlaydi: yetishmayotgan vergul, noto'g'ri qo'shtirnoq, yopilmagan qavs, noto'g'ri qiymat turi and boshqalar. Xato xabari qaysi qator and ustunda ekanini ham ko'rsatadi.</p>
                     </details>
                     <details>
-                        <summary>Ma'lumotlarim serverga yuboriladi?</summary>
-                        <p>Yo'q. Barcha JSON qayta ishlash to'liq brauzeringizda JavaScript orqali amalga oshiriladi. Hech qanday ma'lumot serverga yuborilmaydi — kodni GitHub'da ko'rishingiz mumkin.</p>
+                        <summary>Is my data sent to a server?</summary>
+                        <p>No. All JSON processing happens entirely in your browser via JavaScript. No data is ever sent to a server.borilmaydi — kodni GitHub'da ko'rishingiz mumkin.</p>
                     </details>
                     <details>
                         <summary>Indent (bo'sh joy) sonini o'zgartirsa bo'ladimi?</summary>
                         <p>Ha. "Indent" menyusidan 2 bo'sh joy (standart), 4 bo'sh joy yoki Tab belgisi tanlashingiz mumkin. Ko'pgina dasturlash standartlari 2 yoki 4 bo'sh joy ishlatadi.</p>
                     </details>
                     <details>
-                        <summary>JSON faylni to'g'ridan-to'g'ri yuklasa bo'ladimi?</summary>
-                        <p>Ha — <code>.json</code> faylni kirish maydoniga tashlang (drag & drop), u avtomatik o'qiladi va formatlanadi.</p>
+                        <summary>Can I upload a JSON file directly?</summary>
+                        <p>Ha — <code>.json</code> faylni kirish maydoniga tashlang (drag & drop), u avtomatik o'qiladi and formatlanadi.</p>
                     </details>
                 </div>
 
@@ -304,7 +306,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -335,12 +337,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -355,7 +357,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -367,7 +369,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalangan</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
                 </div>
             </div>

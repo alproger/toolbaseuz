@@ -100,10 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Главная</a><span class="bc-sep">›</span>
-                <span>O'zbek Imlo Проверить</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/ru/#tools">Инструменты</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Проверка орфографии</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -322,7 +325,7 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>O'zbek Imlo Проверить руководство</h2>
-                <p>O'zbek tilida yozilgan matnlarni tekshirish uchun brauzer asosida ishlaydigan imlo va grammatika tekshiruvi. Serverga hech narsa yuborilmaydi.</p>
+                <p>Браузерный инструмент проверки орфографии для текстов на узбекском языке.uvi. Serverga hech narsa yuborilmaydi.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">✍️</div>
@@ -342,7 +345,7 @@
                     <div class="use-card">
                         <div class="use-card-icon">🔒</div>
                         <h3>Maxfiy</h3>
-                        <p>Matningiz serverga никогда не отправляются — barcha tekshiruv в вашем браузере.</p>
+                        <p>Ваш текст никогда не отправляется на сервер — вся проверка в вашем браузере.</p>
                     </div>
                 </div>
                 <h2>Tekshiriladigan xato turlari</h2>
@@ -368,10 +371,10 @@
                     </details>
                     <details>
                         <summary>Tekshiruv 100% aniqmi?</summary>
-                        <p>Yo'q — hech qanday imlo tekshiruvi 100% aniq emas. Kontekstga qarab ba'zi tavsiyalar mos kelmaydi. Har bir tavsiyani o'zingiz baholab ko'ring.</p>
+                        <p>Yo'q — hech qanday imlo tekshiruvi 100% aniq emas. Kontekstga qarab ba'zi tavsiyalar mos kelmaydi. Har bir tavsiyani o'zingiz baholab предпросмотр.</p>
                     </details>
                     <details>
-                        <summary>Matn serverga saqlanadimi?</summary>
+                        <summary>Текст сохраняется на сервере?</summary>
                         <p>Yo'q. Barcha tekshiruv faqat в вашем браузере amalga oshiriladi. Matningiz hech qachon на сервер не отправляется.</p>
                     </details>
                 </div>
@@ -417,12 +420,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">Объединение PDF</a>
                     <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Сжатие</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -437,7 +440,7 @@
                     <h4>Loyiha</h4>
                     <a href="/ru/about.html">О нас</a>
                     <a href="/ru/contact.html">Контакты</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/ru/terms.html">Условия</a>
@@ -456,7 +459,7 @@
         </div>
     </footer>
 
-<script src="data/uz-dict.js"></script>
+<script src="../../../tools/imlo-tekshirish/data/uz-dict.js"></script>
 <script src="../../../tools/imlo-tekshirish/js/checker.js"></script>
 <script src="../../../tools/imlo-tekshirish/js/ui.js"></script>
 </body>

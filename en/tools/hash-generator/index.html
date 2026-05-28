@@ -49,24 +49,24 @@
             "url": "https://toolbase.uz/en/tools/hash-generator/",
             "mainEntity": [            {
                 "@type": "Question",
-                "name": "MD5 va SHA-256 o'rtasidagi farq nima?",
+                "name": "MD5 and SHA-256 o'rtasidagi farq nima?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "MD5 — 128-bit hash, tez lekin zaif — parol xeshlash uchun tavsiya etilmaydi. SHA-256 — 256-bit, kriptografik jihatfrom ishonchli va xavfsiz. SHA-512 esa eng yuqori darajadagi himoyani ta'minlaydi."
+                    "text": "MD5 — 128-bit hash, tez lekin zaif — parol xeshlash uchun tavsiya etilmaydi. SHA-256 — 256-bit, kriptografik jihatfrom ishonchli and xavfsiz. SHA-512 esa eng yuqori darajadagi himoyani ta'minlaydi."
                 }
             },            {
                 "@type": "Question",
                 "name": "Fayl yaxlitligini tekshirish uchun qanday foydalanish mumkin?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Faylni vositato yuklang, SHA-256 hashini oling va rasmiy saytdagi hash bilan taqqoslang. Har ikki hash bir xil bo'lsa — fayl o'ztortirilmaton."
+                    "text": "Faylni vositato yuklang, SHA-256 hashini oling and rasmiy saytdagi hash bilan taqqoslang. Har ikki hash bir xil bo'lsa — fayl o'ztortirilmaton."
                 }
             },            {
                 "@type": "Question",
                 "name": "Ma'lumotlarim serverto yuboriladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha hisoblash to'liq brauzeringizda amalto oshiriladi — matn or fayl hech qayerto yuborilmaydi."
+                    "text": "Yo'q. All hisoblash to'liq brauzeringizda amalto oshiriladi — matn or fayl hech qayerto yuborilmaydi."
                 }
             },            {
                 "@type": "Question",
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb" aria-label="Yo'l">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">&rsaquo;</span>
-                <span>Hash Generator</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Hash Generator</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -147,7 +149,7 @@
             </div>
 
             <div id="textPanel">
-                <textarea class="hash-textarea" id="hashInput" placeholder="Hash yaratmoqchi bo'lton matnni shu yerto yozing..." autocomplete="off" spellcheck="false"></textarea>
+                <textarea class="hash-textarea" id="hashInput" placeholder="Hash yaratmoqchi bo'lton matnni here yozing..." autocomplete="off" spellcheck="false"></textarea>
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;">
                     <span style="font-size:.78rem;color:var(--muted);" id="charCount">0 belgi</span>
                     <button id="clearTextBtn" style="font-size:.78rem;color:var(--muted);background:none;border:none;cursor:pointer;font-family:inherit;padding:3px 8px;border-radius:6px;">Clear</button>
@@ -191,7 +193,7 @@
             Copy
           </button>
                     </div>
-                    <div class="hash-value empty" id="val-md5">Matn kiriting...</div>
+                    <div class="hash-value empty" id="val-md5">Enter text...</div>
                 </div>
                 <div class="hash-row">
                     <div class="hash-row-header">
@@ -202,7 +204,7 @@
             Copy
           </button>
                     </div>
-                    <div class="hash-value empty" id="val-sha1">Matn kiriting...</div>
+                    <div class="hash-value empty" id="val-sha1">Enter text...</div>
                 </div>
                 <div class="hash-row" style="border-color:var(--c-code);">
                     <div class="hash-row-header">
@@ -213,7 +215,7 @@
             Copy
           </button>
                     </div>
-                    <div class="hash-value empty" id="val-sha256">Matn kiriting...</div>
+                    <div class="hash-value empty" id="val-sha256">Enter text...</div>
                 </div>
                 <div class="hash-row">
                     <div class="hash-row-header">
@@ -224,13 +226,13 @@
             Copy
           </button>
                     </div>
-                    <div class="hash-value empty" id="val-sha512">Matn kiriting...</div>
+                    <div class="hash-value empty" id="val-sha512">Enter text...</div>
                 </div>
             </div>
 
             <div class="compare-wrap">
                 <div class="compare-label">Hash taqqoslash (checksum tekshirish)</div>
-                <input type="text" class="compare-input" id="compareInput" placeholder="Solishtirmoqchi bo'lton hashni shu yerto joylashtiring..." spellcheck="false" autocomplete="off" />
+                <input type="text" class="compare-input" id="compareInput" placeholder="Solishtirmoqchi bo'lton hashni here joylashtiring..." spellcheck="false" autocomplete="off" />
                 <div class="compare-result" id="compareResult"></div>
             </div>
         </section>
@@ -248,12 +250,12 @@
                     <div class="use-card">
                         <div class="use-card-icon">&#128190;</div>
                         <h3>Fayl yaxlitligi</h3>
-                        <p>Yuklab olinton faylning o&rsquo;ztormatonligini tekshirish (checksum).</p>
+                        <p>Verify that a downloaded file has not been tampered with (checksum).</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">&#128273;</div>
                         <h3>API imzolari</h3>
-                        <p>HMAC va kriptografik imzolarda asos.</p>
+                        <p>HMAC and kriptografik imzolarda asos.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">&#128202;</div>
@@ -263,7 +265,7 @@
                 </div>
                 <h2>Algoritmlar</h2>
                 <ul>
-                    <li><strong>MD5</strong> &mdash; 32 hex. Kriptografik jihatfrom zaif, lekin checksum va cache key uchun keng ishlatiladi.</li>
+                    <li><strong>MD5</strong> &mdash; 32 hex. Kriptografik jihatfrom zaif, lekin checksum and cache key uchun keng ishlatiladi.</li>
                     <li><strong>SHA-1</strong> &mdash; 40 hex. Git commit ID larda ishlatiladi. MD5 from mustahkam.</li>
                     <li><strong>SHA-256</strong> &mdash; 64 hex. <em>Tavsiya etilton.</em> Blockchain, TLS, parol hashlash standarti.</li>
                     <li><strong>SHA-512</strong> &mdash; 128 hex. Eng kuchli, 64-bit protsessorlarda tez ishlaydi.</li>
@@ -283,7 +285,7 @@
                     </details>
                     <details>
                         <summary>Fayl hashing nima uchun?</summary>
-                        <p>Yuklab olton faylning asl nusxato mos kelishini tekshirish uchun.</p>
+                        <p>Verify that a downloaded file matches the original.</p>
                     </details>
                 </div>
             </article>
@@ -295,7 +297,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -322,12 +324,12 @@
                 </div>
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -340,7 +342,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -349,7 +351,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

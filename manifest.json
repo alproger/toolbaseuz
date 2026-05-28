@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#fbfaf5",
-  "theme_color": "#0c4a3e",
+  "theme_color": "#1a6fb5",
   "lang": "uz",
   "dir": "ltr",
   "categories": [
@@ -40,7 +40,7 @@
       "name": "Lotin ⇄ Krill",
       "short_name": "Translit",
       "description": "Latin va kirill o'rtasida aylantirish",
-      "url": "/tools/lotin-krill.html",
+      "url": "/tools/lotin-krill/",
       "icons": [
         {
           "src": "/assets/img/icon-192.png",
@@ -52,7 +52,7 @@
       "name": "Son ➞ So'z",
       "short_name": "Son-so'z",
       "description": "Sonni so'zga aylantirish",
-      "url": "/tools/son-soz.html",
+      "url": "/tools/son-soz/",
       "icons": [
         {
           "src": "/assets/img/icon-192.png",
@@ -64,7 +64,7 @@
       "name": "Word Counter",
       "short_name": "WC",
       "description": "So'z va belgi sanash",
-      "url": "/tools/word-counter.html",
+      "url": "/tools/word-counter/",
       "icons": [
         {
           "src": "/assets/img/icon-192.png",

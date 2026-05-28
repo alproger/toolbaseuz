@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Главная</a>
-                <span class="bc-sep">&#8250;</span>
-                <span>Поворот изображения</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/ru/#tools">Инструменты</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Поворот изображений</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -159,7 +161,7 @@
               <line x1="12" y1="3" x2="12" y2="15"/>
             </svg>
                         </div>
-                        <div class="drop-title">Rasmlarni перетащите или выберите</div>
+                        <div class="drop-title">Перетащите или выберите изображения</div>
                         <div class="drop-sub">JPG, PNG, WebP &#183; 20 ta &#183; har biri <strong>80 MB</strong> до</div>
                     </div>
 
@@ -356,17 +358,17 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>Поворот изображения руководство</h2>
-                <p>Canvas API orqali to&#8217;liq работает в браузере &#8212; rasm на сервер не отправляется. Oddiy 90&#176; aylantirish tugmalaridan tortib erkin &#8722;180&#176;dan +180&#176; до burchak, gorizontal/vertikal flip va fon цветi tanlash imkoniyati.</p>
+                <p>Canvas API в браузере &#8212; изображение не отправляется. Поворотрот на 90°рот 90°#176; aylantirish tugmalaridan tortib erkin &#8722;180&#176;dan +180&#176; до burchak, gorizontal/vertikal flip va fon цветi tanlash imkoniyati.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128247;</div>
                         <h3>Qiyshiq fotolar</h3>
-                        <p>Telefondan qiyshiq tushgan rasmni to&#8217;g&#8217;irlash uchun erkin burchakda aylantirish.</p>
+                        <p>Исправление наклонённого фото с телефона произвольным углом поворота.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128241;</div>
                         <h3>Portret &#8596; Landshaft</h3>
-                        <p>90&#176; aylantirish bilan vertikal va gorizontal orasida almashtirish.</p>
+                        <p>Переключение между портретной и альбомной ориентацией поворотом на 90°.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128267;</div>
@@ -376,7 +378,7 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128193;</div>
                         <h3>Batch 20 ta</h3>
-                        <p>Bir vaqtda 20 ta rasmni bir xil sozlamada aylantirish va Скачать ZIP.</p>
+                        <p>Поворот 20 изображений с одинаковыми настройками и скачивание ZIP.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
@@ -390,22 +392,22 @@
                 <div class="faq-list">
                     <details>
                         <summary>Erkin burchak nima uchun kerak?</summary>
-                        <p>Telefon kamerasida qiyshiq tushgan rasmni to'g'irlash uchun. Masalan, gorizontni to'g'rilash uchun 2-3° aylantirish kerak bo'ladi.</p>
+                        <p>Выравнивание наклонённого фото с телефона.irish kerak bo'ladi.</p>
                     </details>
                     <details>
                         <summary>Цвет фона nima uchun kerak?</summary>
-                        <p>90° dan farqli burchaklarda aylantirish paytida rasm to'rtburchak ichida joy qoladi. Shu bo'sh joy uchun цвет tanlanadi: shaffof (PNG uchun), oq, qora или boshqa цвет.</p>
+                        <p>При повороте на нестандартный угол появляются пустые углы. Этот пустой участокchun цвет tanlanadi: shaffof (PNG uchun), oq, qora или boshqa цвет.</p>
                     </details>
                     <details>
                         <summary>Качество tushib qoladi?</summary>
-                        <p>90°, 180°, 270° aylantirishda piksel to'g'ridan to'g'ri ko'chiriladi — качество deyarli o'zgarmaydi. Erkin burchakda bilinear interpolatsiya ishlatiladi — bu standart usul.</p>
+                        <p>При повороте на 90°, 180°, 270° пиксели переносятся точно — качество практически не теряется. Erkin burchakda bilinear interpolatsiya ishlatiladi — bu standart usul.</p>
                     </details>
                     <details>
                         <summary>Flip nima?</summary>
-                        <p>Gorizontal flip — rasmni vertikal o'q bo'ylab ko'zgu ko'rinishiga keltiradi. Vertikal flip — gorizontal o'q bo'ylab. Ikkalasini birga добавить mumkin.</p>
+                        <p>Горизонтальное отражение — зеркалит по вертикальной оси. Вертикальное — по горизонтальной.tal o'q bo'ylab. Ikkalasini birga добавить mumkin.</p>
                     </details>
                     <details>
-                        <summary>Rasm serverga yuboriladi?</summary>
+                        <summary>Изображение отправляется на сервер?</summary>
                         <p>Yo'q. Hamma jarayon JavaScript Canvas API orqali в вашем браузере bajariladi.</p>
                     </details>
                 </div>
@@ -451,12 +453,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">Объединение PDF</a>
                     <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Сжатие</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Поворот изображения</a>
@@ -471,7 +473,7 @@
                     <h4>Loyiha</h4>
                     <a href="/ru/about.html">О нас</a>
                     <a href="/ru/contact.html">Контакты</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/ru/terms.html">Условия</a>

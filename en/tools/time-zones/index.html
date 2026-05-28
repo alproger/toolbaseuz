@@ -52,7 +52,7 @@
                 "name": "Time zonalari real vaqtda yangilanadimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Soatlar har soniyada yangilanadi — sahifani yangilash shart emas."
+                    "text": "Ha. Soatlar har soniyada yangilanadi — pageni yangilash shart emas."
                 }
             },            {
                 "@type": "Question",
@@ -101,9 +101,12 @@
 <main>
         <div class="container">
             <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="../../../../">Home</a><span class="bc-sep">&#8250;</span>
-                <span>World Time Zones</span>
-            </nav>
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>World Time Zones</span>
+        </nav>
         </div>
         <section class="tool-hero container">
             <div class="tool-hero-icon">
@@ -114,7 +117,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>World Time Zones — Dunyo Soati</h1>
-                <p><strong>80+ shahar</strong> uchun live soat. O&#8217;rta Osiyo, Yaqin Sharq, Yevropa, Amerika, Boshqalar. UTC offset va sizning vaqtingizfrom farq. Sevimlilarni saqlash.</p>
+                <p><strong>80+ shahar</strong> uchun live soat. O&#8217;rta Osiyo, Yaqin Sharq, Yevropa, Amerika, Boshqalar. UTC offset and sizning vaqtingizfrom farq. Sevimlilarni saqlash.</p>
             </div>
         </section>
         <section class="tool-workspace container">
@@ -166,8 +169,8 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>Dunyo World Time Zones &#8212; To&#8216;liq Ma&#8216;lumotnoma</h2>
-                <p>Dunyo bo&#8216;yicha <strong>24 asosiy vaqt zonasi</strong> mavjud. O&#8216;zbekiston UTC+5 da joylashton &#8212; London from 5 soat, Moskva from 2 soat, Dubay from 1 hours aheadda. Onlayn uchrashuvlarni rejalashtirishda, xalqaro hamkorlikda
-                    va sayohatda vaqt farqini bilish muhim.</p>
+                <p>Dunyo bo&#8216;yicha <strong>24 asosiy vaqt zonasi</strong> mavjud. O&#8216;zbekiston UTC+5 da joylashton &#8212; London from 5 soat, Moskand from 2 soat, Dubay from 1 hours aheadda. Onlayn uchrashuvlarni rejalashtirishda, xalqaro hamkorlikda
+                    and sayohatda vaqt farqini bilish muhim.</p>
 
                 <div class="use-grid">
                     <div class="use-card">
@@ -183,16 +186,16 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128188;</div>
                         <h3>Biznes</h3>
-                        <p>Xalqaro hamkorlar ish vaqtini tekshirish. Qo&#8216;ng&#8216;iroq qilish mumkinmi?</p>
+                        <p>Check working hours of international partners. Is it a good time to call?</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128736;&#65039;</div>
                         <h3>Server vaqti</h3>
-                        <p>UTC vaqtini lokal vaqtto aylantirish. Log fayllarni tahlil qilish.</p>
+                        <p>Convert UTC time to local time. Analyse log files.</p>
                     </div>
                 </div>
 
-                <h2>O&#8216;zbekiston va qo&#8216;shni mamlakatlari</h2>
+                <h2>O&#8216;zbekiston and qo&#8216;shni mamlakatlari</h2>
                 <p>Toshkent &#8212; <strong>UTC+5</strong>. Qozog&#8216;iston (Almaty) &#8212; UTC+6. Qirg&#8216;iziston &#8212; UTC+6. Tojikiston &#8212; UTC+5. Turkmaniston &#8212; UTC+5. Ozarbayjon &#8212; UTC+4. Rossiya (Moskva) &#8212; UTC+3. BAA (Dubay)
                     &#8212; UTC+4.</p>
 
@@ -204,15 +207,15 @@
                 <div class="faq-list">
                     <details>
                         <summary>Time qancha aniq?</summary>
-                        <p>Brauzerning Intl.DateTimeFormat API si kompyuter soatito asoslanadi. Internet vaqt serveri bilan sinxronlashtirilton bo&#8216;lsa &#8212; soniyatocha aniq.</p>
+                        <p>Brauzerning Intl.DateTimeFormat API si kompyuter soatito asoslanadi. Internet vaqt serveri bilan sinxronlashtirilton bo&#8216;lsa &#8212; soniyato aniq.</p>
                     </details>
                     <details>
                         <summary>Yoz vaqti (DST) hisobto olinadimi?</summary>
-                        <p>Ha. Intl.DateTimeFormat API yoz vaqtini avtomatik hisobto oladi. Yevropa va Amerika shaharlari bahor/kuz da soatini o&#8216;ztortiradi &#8212; bu avtomatik ko&#8216;rsatiladi.</p>
+                        <p>Ha. Intl.DateTimeFormat API yoz vaqtini avtomatik hisobto oladi. Yevropa and Amerika shaharlari bahor/kuz da soatini o&#8216;ztortiradi &#8212; bu avtomatik ko&#8216;rsatiladi.</p>
                     </details>
                     <details>
                         <summary>Saralanton shaharlar saqlanadimi?</summary>
-                        <p>Ha. Pinlanton shaharlar brauzerning localStorage da saqlanadi. Sahifani yopib qayttoningizda ham saqlanib qoladi.</p>
+                        <p>Yes. Pinned cities are stored in browser localStorage. They persist when you close and reopen the pageda ham saqlanib qoladi.</p>
                     </details>
                 </div>
             </article>
@@ -226,7 +229,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -257,12 +260,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -277,7 +280,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -289,7 +292,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

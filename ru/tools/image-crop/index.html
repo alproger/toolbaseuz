@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Главная</a>
-                <span class="bc-sep">&#8250;</span>
-                <span>Rasmni Обрезать</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/ru/#tools">Инструменты</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Обрезка изображений</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -114,7 +116,7 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasmni Обрезать (Crop)</h1>
+                <h1>Обрезка изображения</h1>
                 <p>Rasmni sichqoncha bilan belgilang va qirqing. <strong>Erkin или nisbat bilan</strong> &#8212; 1:1, 16:9, 4:3, паспорт 3:4 и другие. Поворот, отражение, live-предпросмотр.</p>
             </div>
         </section>
@@ -193,7 +195,7 @@
                             <div class="ce-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             </div>
-                            <div style="color:#9ca3af;font-weight:600;">Rasmni bu yerga перетащите</div>
+                            <div style="color:#9ca3af;font-weight:600;">Перетащите изображение сюда</div>
                             <div class="ce-drop-hint">или нажмите кнопку «Загрузить изображение» выше</div>
                         </div>
                     </div>
@@ -291,7 +293,7 @@
 
                     <!-- Output settings -->
                     <div class="side-card">
-                        <div class="side-card-title">Вывод sozlamalari</div>
+                        <div class="side-card-title">Настройки вывода</div>
                         <div class="set-row">
                             <span class="set-label">Формат:</span>
                             <select class="set-select" id="selFmt">
@@ -319,7 +321,7 @@
                         <div class="preview-dims" id="previewDims"></div>
                         <button class="btn-crop-dl" id="btnCropDl" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Qirqilgan rasmni yuklab olish
+            Скачать обрезанное изображение
           </button>
                         <button class="btn-reset-all" id="btnReset">Hammasini tozalash</button>
                     </div>
@@ -333,8 +335,8 @@
         <!-- INFO -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasmni Обрезать руководство</h2>
-                <p>Canvas API обрабатывает всё в браузере &#8212; изображение на сервер не отправляется. Sichqoncha bilan soha belgilang, выберите соотношение, burish va aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
+                <h2>Руководство по обрезке</h2>
+                <p>Canvas API в браузере &#8212; изображение не отправляется на сервер. область.an soha belgilang, выберите соотношение, burish va aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128241;</div>
@@ -354,7 +356,7 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128248;</div>
                         <h3>Поворот + обрезка</h3>
-                        <p>Qiyshiq tushgan rasmni to&#8217;g&#8217;irlash va kadrlaash.</p>
+                        <p>Выравнивание наклонённого изображения и перекадрирование.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
@@ -368,7 +370,7 @@
                 <div class="faq-list">
                     <details>
                         <summary>Rasm качествоi tushib qoladi?</summary>
-                        <p>Обрезка берёт только пиксели &#8212; качество не теряется. Ползунок качества для JPG va WebP formatlarida siqish darajasini belgilaydi. PNG da siqilmaydi.</p>
+                        <p>Обрезка без потери качества. Ползунок качества для JPG и WebP форматов.P.arida siqish darajasini belgilaydi. PNG da siqilmaydi.</p>
                     </details>
                     <details>
                         <summary>Обрезать koordinatalari nima?</summary>
@@ -379,7 +381,7 @@
                         <p>При блокировке область обрезки сохраняет заданное соотношение. Например, при 1:1 ширина и balandlik har doim teng bo&#8217;ladi.</p>
                     </details>
                     <details>
-                        <summary>Rasm serverga yuboriladi?</summary>
+                        <summary>Изображение отправляется на сервер?</summary>
                         <p>Yo&#8217;q. Hamma jarayon в вашем браузере Canvas API orqali ishlaydi. Internet aloqasi ham kerak emas (страница загрузитеanidan keyin).</p>
                     </details>
                     <details>
@@ -429,12 +431,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">Объединение PDF</a>
                     <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Сжатие</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Обрезать</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -449,7 +451,7 @@
                     <h4>Loyiha</h4>
                     <a href="/ru/about.html">О нас</a>
                     <a href="/ru/contact.html">Контакты</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/ru/terms.html">Условия</a>

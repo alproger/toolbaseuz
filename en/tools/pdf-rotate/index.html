@@ -49,31 +49,31 @@
             "url": "https://toolbase.uz/en/tools/pdf-rotate/",
             "mainEntity": [            {
                 "@type": "Question",
-                "name": "Faqat bitta sahifani burish mumkinmi?",
+                "name": "Faqat bitta pageni burish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. All pagesni or faqat tanlanton sahifalarni burish mumkin. Har bir sahifa uchun alohida burchak ham belgilanadi."
+                    "text": "Ha. All pagesni or faqat tanlanton pagelarni burish mumkin. Har bir page uchun alohida burchak ham belgilanadi."
                 }
             },            {
                 "@type": "Question",
                 "name": "Burilton PDF saqlash formatito ta'sir qiladimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Output fayli PDF formatida saqlanadi — faqat sahifalar yo'nalishi o'ztoradi."
+                    "text": "Yo'q. Output fayli PDF formatida saqlanadi — faqat pagelar yo'nalishi o'ztoradi."
                 }
             },            {
                 "@type": "Question",
                 "name": "Skaner qilinton hujjatni to'g'rilash mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Teskari or yonbosh skanerlanaton sahifalarni 90° or 180° burib to'g'ri yo'nalishto keltirish mumkin."
+                    "text": "Ha. Teskari or yonbosh skanerlanaton pagelarni 90° or 180° burib to'g'ri yo'nalishto keltirish mumkin."
                 }
             },            {
                 "@type": "Question",
                 "name": "Ma'lumotlarim serverto yuboriladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha PDF qayta ishlash brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server."
+                    "text": "Yo'q. All PDF qayta ishlash brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">&#8250;</span>
-                <span>PDF Rotate</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>PDF Rotate</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -118,7 +120,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>PDF Page Rotate</h1>
-                <p>Qiyshiq tushton PDF sahifalarini to&#8217;g&#8217;irlang. <strong>All pages</strong> or <strong>tanlanton sahifalar</strong> &#8212; har birini alohida sozlang. 90&#176;, 180&#176;, 270&#176;. Free, works in browser.</p>
+                <p>Qiyshiq tushton PDF pagelarini to&#8217;g&#8217;irlang. <strong>All pages</strong> or <strong>tanlanton pagelar</strong> &#8212; har birini alohida sozlang. 90&#176;, 180&#176;, 270&#176;. Free, works in browser.</p>
             </div>
         </section>
 
@@ -255,11 +257,11 @@
             </button>
                             <button class="q-btn" id="qBtnOdd">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Toq sahifalar</span><span class="q-btn-sub">1, 3, 5… &#8594; 90&#176; chapto</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Toq pagelar</span><span class="q-btn-sub">1, 3, 5… &#8594; 90&#176; chapto</span></div>
             </button>
                             <button class="q-btn" id="qBtnEven">
               <div class="q-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
-              <div class="q-btn-text"><span class="q-btn-label">Juft sahifalar</span><span class="q-btn-sub">2, 4, 6… &#8594; 90&#176; o&#8217;ngto</span></div>
+              <div class="q-btn-text"><span class="q-btn-label">Juft pagelar</span><span class="q-btn-sub">2, 4, 6… &#8594; 90&#176; o&#8217;ngto</span></div>
             </button>
                         </div>
                     </div>
@@ -268,7 +270,7 @@
                     <div class="side-card">
                         <div class="side-card-title">Ma&#8217;lumot</div>
                         <div class="stats-list">
-                            <div class="stat-row"><span class="stat-label">Jami sahifalar</span><span class="stat-val" id="statPages">&#8212;</span></div>
+                            <div class="stat-row"><span class="stat-label">Jami pagelar</span><span class="stat-val" id="statPages">&#8212;</span></div>
                             <div class="stat-row"><span class="stat-label">O&#8217;ztortirilton</span><span class="stat-val" id="statChanged">&#8212;</span></div>
                         </div>
                     </div>
@@ -280,7 +282,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.37"/><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
             PDF ni Save
           </button>
-                        <button class="btn-reset-all" id="btnResetAll">Barcha o&#8217;ztorishlarni tiklash</button>
+                        <button class="btn-reset-all" id="btnResetAll">All o&#8217;ztorishlarni tiklash</button>
 
                         <div class="result-card" id="resultCard">
                             <div class="rc-head">
@@ -306,49 +308,49 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>PDF Page Rotate guide</h2>
-                <p>pdf-lib kutubxonasi orqali to&#8217;liq works in browser &#8212; fayl never sent to server. Har bir sahifani alohida or barcha sahifalarni bir vaqtda aylantirish. Pagesni preview ko&#8217;rinishida to select imkoniyati.</p>
+                <p>pdf-lib in browser &#8212; file never sent to server. Rotate pages individually or all at once. all at once.ally or all at once.rcha pagelarni bir vaqtda aylantirish. Pagesni preview ko&#8217;rinishida to select imkoniyati.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128247;</div>
                         <h3>Skaner qiyshiq</h3>
-                        <p>Scanner or telefonfrom qiyshiq tushton hujjat sahifalarini to&#8217;g&#8217;irlash.</p>
+                        <p>Scanner or telefonfrom qiyshiq tushton hujjat pagelarini to&#8217;g&#8217;irlash.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128196;</div>
                         <h3>Aralash yo&#8217;nalish</h3>
-                        <p>Ba&#8217;zi sahifalar gorizontal, ba&#8217;zilari vertikal bo&#8217;lton PDF ni tartibto solish.</p>
+                        <p>Ba&#8217;zi pagelar gorizontal, ba&#8217;zilari vertikal bo&#8217;lton PDF ni tartibto solish.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128203;</div>
-                        <h3>Tanlanton sahifalar</h3>
-                        <p>Faqat muayyan sahifalarni tanlang &#8212; qoltonlarini o&#8217;ztortirilmaydi.</p>
+                        <h3>Tanlanton pagelar</h3>
+                        <p>Select only certain pages &#8212; the rest are left unchanged.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#9889;</div>
                         <h3>Tez amallar</h3>
-                        <p>Toq/juft sahifalar, barcha sahifalar &#8212; bir bosishda aylantirish.</p>
+                        <p>Odd/even pages, all pages &#8212; rotate with one click.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <ol>
                     <li><strong>PDF faylni yuklang</strong> &#8212; drag&amp;drop or tugma.</li>
-                    <li><strong>Page preview</strong> da ko&#8217;rinadi &#8212; qiyshiq sahifalarni aniqlang.</li>
+                    <li><strong>Page preview</strong> da ko&#8217;rinadi &#8212; qiyshiq pagelarni aniqlang.</li>
                     <li>Sahifani <strong>bosib tanlang</strong> or global tugmalarfrom foydalaning.</li>
-                    <li>Har bir sahifadagi <strong>&#8249; &#8250;</strong> tugmalar bilan 90&#176; aylantiring.</li>
+                    <li>Har bir pagedagi <strong>&#8249; &#8250;</strong> tugmalar bilan 90&#176; aylantiring.</li>
                     <li><strong>PDF ni Save</strong> tugmasini bosib yuklab oling.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
                         <summary>Pagesni ko'rish uchun nima kerak?</summary>
-                        <p>PDF.js kutubxonasi sahifalarni preview qualityida brauzerda render qiladi. Internet aloqasi birinchi yuklashda kerak, keyin offline ishlaydi.</p>
+                        <p>PDF.js renders page previews in the browser. An internet connection is needed for the first load; afterwards it works offline.n offline ishlaydi.</p>
                     </details>
                     <details>
-                        <summary>Faqat ba'zi sahifalarni aylantirish mumkinmi?</summary>
-                        <p>Ha. Sahifani bosib tanlang (qizil chetora paydo bo'ladi), keyin tanlanton sahifalar uchun chapto/o'ngto tugmalarini bosing. Bir vaqtda ko'p sahifa tanlanishi mumkin.</p>
+                        <summary>Can I rotate only specific pages?</summary>
+                        <p>Yes. Click a page to select it (red border appears), then use the counter-clockwise/clockwise buttons for selected pages.. Bir vaqtda ko'p page tanlanishi mumkin.</p>
                     </details>
                     <details>
                         <summary>PDF qualityi o'ztoradi?</summary>
-                        <p>Yo'q. pdf-lib PDF metadatadagi rotation qiymatini o'ztortiradi, sahifa kontenti o'ztormaydi. Fayl qualityi va size deyarli bir xil qoladi.</p>
+                        <p>Yo'q. pdf-lib PDF metadatadagi rotation qiymatini o'ztortiradi, page kontenti o'ztormaydi. Fayl qualityi and size deyarli bir xil qoladi.</p>
                     </details>
                     <details>
                         <summary>Himoyalanton PDF ishlaydi?</summary>
@@ -356,7 +358,7 @@
                     </details>
                     <details>
                         <summary>Fayl serverto yuboriladi?</summary>
-                        <p>Yo'q. pdf-lib va PDF.js to'liq works in browser. Fayl hech qachon serverto kelmaydi.</p>
+                        <p>Yo'q. pdf-lib and PDF.js to'liq works in browser. Fayl hech qachon serverto kelmaydi.</p>
                     </details>
                 </div>
             </article>
@@ -370,7 +372,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -401,12 +403,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -421,7 +423,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -433,7 +435,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

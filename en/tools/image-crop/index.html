@@ -52,14 +52,14 @@
                 "name": "Nisbat (aspect ratio) qulfini qanday o'chirish mumkin?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nisbat tugmasi yonidagi qulf ikonkasito bosing — u ochiltonda erkin qirqish rejimi yoqiladi va siz istalton o'lchamda qirqishingiz mumkin."
+                    "text": "Nisbat tugmasi yonidagi qulf ikonkasito bosing — u ochiltonda erkin qirqish rejimi yoqiladi and siz istalton o'lchamda qirqishingiz mumkin."
                 }
             },            {
                 "@type": "Question",
                 "name": "Crop koordinatalarini aniq kiritish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Piksel maydonlarito to'g'rifrom-to'g'ri X, Y, kenglik va balandlik qiymatlarini kiritish mumkin — aniq o'lcham talab qilinton hollarda qulay."
+                    "text": "Ha. Piksel maydonlarito to'g'rifrom-to'g'ri X, Y, kenglik and balandlik qiymatlarini kiritish mumkin — aniq o'lcham talab qilinton hollarda qulay."
                 }
             },            {
                 "@type": "Question",
@@ -73,7 +73,7 @@
                 "name": "Bir vaqtda bir nechta rasm qirqish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Hozirda bir vaqtda bitta rasm qirqiladi. Har bir rasmni alohida yuklang va qayta ishlang."
+                    "text": "Hozirda bir vaqtda bitta rasm qirqiladi. Har bir rasmni alohida yuklang and qayta ishlang."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">&#8250;</span>
-                <span>Rasmni Crop</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Image Crop</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -114,8 +116,8 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasmni Crop (Crop)</h1>
-                <p>Rasmni sichqoncha bilan belgilang va qirqing. <strong>Erkin or nisbat bilan</strong> &#8212; 1:1, 16:9, 4:3, pasport 3:4 va boshqalar. Burish, aylantirish, live preview.</p>
+                <h1>Image Crop (Crop)</h1>
+                <p>Rasmni sichqoncha bilan belgilang and qirqing. <strong>Erkin or nisbat bilan</strong> &#8212; 1:1, 16:9, 4:3, passport 3:4 and boshqalar. Burish, aylantirish, live preview.</p>
             </div>
         </section>
 
@@ -131,7 +133,7 @@
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
-        80 MB tocha
+        80 MB to
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -193,8 +195,8 @@
                             <div class="ce-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             </div>
-                            <div style="color:#9ca3af;font-weight:600;">Rasmni bu yerto tashlang</div>
-                            <div class="ce-drop-hint">or yuqoridagi "Upload Image" tugmasini bosing</div>
+                            <div style="color:#9ca3af;font-weight:600;">Drop image here</div>
+                            <div class="ce-drop-hint">or click the "Upload Image" button above</div>
                         </div>
                     </div>
 
@@ -291,7 +293,7 @@
 
                     <!-- Output settings -->
                     <div class="side-card">
-                        <div class="side-card-title">Output sozlamalari</div>
+                        <div class="side-card-title">Output settings</div>
                         <div class="set-row">
                             <span class="set-label">Format:</span>
                             <select class="set-select" id="selFmt">
@@ -314,12 +316,12 @@
                         <div class="side-card-title">Ko&#8217;rinish</div>
                         <div class="preview-mini" id="previewMini">
                             <canvas id="previewCanvas" style="display:none;"></canvas>
-                            <div class="preview-empty-mini" id="previewEmptyMini">Rasm yuklang va qirqish sohasini belgilang</div>
+                            <div class="preview-empty-mini" id="previewEmptyMini">Upload image and mark the crop area</div>
                         </div>
                         <div class="preview-dims" id="previewDims"></div>
                         <button class="btn-crop-dl" id="btnCropDl" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Qirqilton rasmni yuklab olish
+            Download cropped image
           </button>
                         <button class="btn-reset-all" id="btnReset">Hammasini tozalash</button>
                     </div>
@@ -333,8 +335,8 @@
         <!-- INFO -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasmni Crop guide</h2>
-                <p>Canvas API orqali to&#8217;liq works in browser &#8212; rasm never sent to server. Sichqoncha bilan soha belgilang, nisbat tanlang, burish va aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
+                <h2>Image Crop guide</h2>
+                <p>Canvas API runs in browser &#8212; image never sent to server. Use your mouse to mark the crop area. to mark the crop area.he area.he area and choose aspect ratio.lang, burish and aylantirish imkoniyati. Piksel aniqligida qirqish.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="uc-icon">&#128241;</div>
@@ -344,17 +346,17 @@
                     <div class="use-card">
                         <div class="uc-icon">&#128282;</div>
                         <h3>Pasport rasm</h3>
-                        <p>3:4 nisbatida yuzni markazlash va aniq qirqish.</p>
+                        <p>Centre a face in 3:4 ratio and crop precisely.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#127775;</div>
                         <h3>Fon olib tashlash</h3>
-                        <p>Kerakli qismni ajratib olish, ortiqchasini qirqish.</p>
+                        <p>Extract the desired area, crop out the rest.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">&#128248;</div>
-                        <h3>Burish + qirqish</h3>
-                        <p>Qiyshiq tushton rasmni to&#8217;g&#8217;irlash va kadrlaash.</p>
+                        <h3>Rotate + Crop</h3>
+                        <p>Straighten a tilted image and reframe it.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
@@ -363,28 +365,28 @@
                     <li>Kerak bo&#8217;lsa <strong>nisbat tanlang</strong> &#8212; 1:1, 16:9, 3:4 or o&#8217;z nisbatingizni kiriting.</li>
                     <li>Sichqoncha bilan <strong>qirqish sohasini belgilang</strong>. Burchak nuqtalarini tortib o&#8217;ztortiring.</li>
                     <li>O&#8217;ng paneldagi <strong>live preview</strong>da resultni ko&#8217;ring.</li>
-                    <li><strong>Download</strong> tugmasini bosing.</li>
+                    <li><strong>Download</strong> click the button.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
                         <summary>Rasm qualityi tushib qoladi?</summary>
-                        <p>Crop faqat piksellarni oladi &#8212; quality yo&#8217;qolmaydi. Quality slayderi JPG va WebP formatlarida siqish darajasini belgilaydi. PNG da siqilmaydi.</p>
+                        <p>Crop only takes pixels &#8212; no quality loss. The quality slider controls compression for JPG and WebP formats.sini belgilaydi. PNG da siqilmaydi.</p>
                     </details>
                     <details>
                         <summary>Crop koordinatalari nima?</summary>
-                        <p>X va Y &#8212; qirqish sohasi burchagining original rasmda joylashuvi (pikselda). K &#8212; kenglik, B &#8212; balandlik. Bu qiymatlarni qo&#8217;lda kiritsangiz ham bo&#8217;ladi.</p>
+                        <p>X and Y &#8212; position of the crop area corner on the original image (pixels). W &#8212; width, H &#8212; height.k. Bu qiymatlarni qo&#8217;lda kiritsangiz ham bo&#8217;ladi.</p>
                     </details>
                     <details>
                         <summary>Lock aspect ratio nima qiladi?</summary>
-                        <p>Qulflantonda qirqish sohasi belgilanton nisbatni saqlaydi. Masalan, 1:1 qulfida kenglik va balandlik har doim teng bo&#8217;ladi.</p>
+                        <p>When locked, the crop area maintains the set aspect ratio. For example, at 1:1 lock width and height are always equal.8217;ladi.</p>
                     </details>
                     <details>
                         <summary>Rasm serverto yuboriladi?</summary>
-                        <p>Yo&#8217;q. Hamma jarayon brauzeringizda Canvas API orqali ishlaydi. Internet aloqasi ham kerak emas (sahifa yuklantonifrom keyin).</p>
+                        <p>Yo&#8217;q. Hamma jarayon brauzeringizda Canvas API orqali ishlaydi. Internet aloqasi ham kerak emas (page yuklantonifrom keyin).</p>
                     </details>
                     <details>
                         <summary>Qanday formatlar qo&#8217;llaniladi?</summary>
-                        <p>Input: JPG, PNG, WebP, BMP, GIF va brauzer qo&#8217;llab-quvvatlayditon boshqa formatlar. Output: JPG (shaffof bo&#8217;lmaton, kichik hajm), PNG (shaffoflik saqlanadi), WebP (zamonaviy, kichik va qualityli).</p>
+                        <p>Input: JPG, PNG, WebP, BMP, GIF and brauzer qo&#8217;llab-quvvatlayditon boshqa formatlar. Output: JPG (shaffof bo&#8217;lmaton, kichik hajm), PNG (shaffoflik saqlanadi), WebP (zamonaviy, kichik and qualityli).</p>
                     </details>
                 </div>
             </article>
@@ -398,7 +400,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -429,14 +431,14 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Crop</a>
+                    <a href="/tools/image-crop/" class="ftr-hide-mob">Image Crop</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
                     <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
                     <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
@@ -449,7 +451,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -461,7 +463,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

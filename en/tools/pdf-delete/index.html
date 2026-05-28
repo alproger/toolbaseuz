@@ -52,28 +52,28 @@
                 "name": "Sahifalarni o'chirishfrom oldin PDF ni saqlashim kerakmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha, ehtiyot qualityida original faylni alohida saqlang. Vosita o'chirilton sahifalar bilan yangi PDF yaratadi — original faylingizto tegmaydi."
+                    "text": "Ha, ehtiyot qualityida original faylni alohida saqlang. Vosita o'chirilton pagelar bilan yangi PDF yaratadi — original faylingizto tegmaydi."
                 }
             },            {
                 "@type": "Question",
-                "name": "Bir vaqtda bir nechta sahifani o'chirish mumkinmi?",
+                "name": "Bir vaqtda bir nechta pageni o'chirish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Sahifalar ro'yxatida bir nechta sahifani tanlab, bir bosishda barchasini o'chirish mumkin. Diapazon tanlash ham qo'llab-quvvatlanadi."
+                    "text": "Ha. Sahifalar ro'yxatida bir nechta pageni tanlab, bir bosishda barchasini o'chirish mumkin. Diapazon tanlash ham qo'llab-quvvatlanadi."
                 }
             },            {
                 "@type": "Question",
-                "name": "O'chirilton sahifalarni qaytarish mumkinmi?",
+                "name": "O'chirilton pagelarni qaytarish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Vositada qaytarish tugmasi yo'q. Xato o'chirsangiz, original faylni qayta yuklang va boshqatfrom tanlang."
+                    "text": "Vositada qaytarish tugmasi yo'q. Xato o'chirsangiz, original faylni qayta yuklang and boshqatfrom tanlang."
                 }
             },            {
                 "@type": "Question",
                 "name": "Ma'lumotlarim serverda saqlanadimi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yo'q. Barcha PDF qayta ishlash brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server."
+                    "text": "Yo'q. All PDF qayta ishlash brauzeringizda amalto oshiriladi — hech qanday fayl never sent to server."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb" aria-label="Yo'l">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">›</span>
-                <span>PDF Page Delete</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>PDF Page Delete</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -118,7 +120,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>PDF Page Delete</h1>
-                <p>PDF from kerakmas sahifalarni o'chiring. Sahifalarni ko'rib bosing or raqam kiritib diapazon belgilang — ilovepdf usulida. Files never sent to server.</p>
+                <p>Remove unwanted pages from PDF. Click pages visually or enter a range of page numbersng — ilovepdf usulida. Files never sent to server.</p>
             </div>
         </section>
 
@@ -142,7 +144,7 @@
             <div style="margin-bottom:16px;">
                 <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;top:6px;font-size:.88rem;color:var(--primary);font-weight:600;padding:7px 14px;border:1.5px solid var(--primary);border-radius:8px;text-decoration:none;transition:background .15s;"
                     onmouseover="this.style.background='var(--primary-soft)'" onmouseout="this.style.background='transparent'">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M8 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/><path d="M16 6h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3"/><line x1="12" y1="2" x2="12" y2="22"/></svg>                    PDF Birlashtirish →
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M8 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/><path d="M16 6h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3"/><line x1="12" y1="2" x2="12" y2="22"/></svg>                    PDF Merge →
                 </a>
             </div>
 
@@ -194,7 +196,7 @@
                 <!-- Colore input panel -->
                 <div class="colore-panel" id="colorePanel" style="display:none">
                     <h3>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="9" y1="15" x2="15" y2="15"/></svg>                        O'chiriladiton sahifa diapazonini kiriting
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="9" y1="15" x2="15" y2="15"/></svg>                        Enter the range of pages to delete
                     </h3>
                     <div class="colore-row">
                         <span class="colore-label">Dan:</span>
@@ -204,16 +206,16 @@
                         <input type="number" class="colore-input" id="coloreTo" min="1" placeholder="5" />
                         <button class="btn-apply-colore" id="btnApplyColore">Select</button>
                     </div>
-                    <p class="colore-hint">Misol: 3 from 7 tocha — 3, 4, 5, 6, 7-sahifalar o'chiriladi. Jami sahifa: <strong id="totalPagesHint">—</strong></p>
+                    <p class="colore-hint">Misol: 3 from 7 to — 3, 4, 5, 6, 7-pages will be deleted. Jami page: <strong id="totalPagesHint">—</strong></p>
                     <div style="margin-top:10px;display:flex;top:8px;flex-wrap:wrap">
                         <button class="btn-small" id="btnColoreSelectAll">Barchasini tanlash</button>
-                        <button class="btn-small fromger" id="btnColoreClear">Selectni bekor qilish</button>
+                        <button class="btn-small fromger" id="btnColoreClear">Deselect all</button>
                     </div>
                 </div>
 
                 <!-- Page grid header -->
                 <div class="page-section-header">
-                    <p id="pageGridHint">Sahifani bosib o'chiring — qizil = o'chiriladi</p>
+                    <p id="pageGridHint">Click a page to delete it — red = will be deleted</p>
                     <div class="page-section-actions">
                         <span id="selectionBar" style="font-size:.85rem;color:var(--c-pdf);font-weight:700;display:none;padding:4px 10px;background:var(--c-pdf-bg);border-radius:7px;">
             <span id="selCount">0</span> ta pages selected
@@ -228,7 +230,7 @@
 
                 <!-- Loading indicator -->
                 <div id="pageLoading" style="text-align:center;padding:32px;color:var(--muted);font-size:.92rem;display:none;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" style="margin:0 auto 10px;display:block;animation:spin 1s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>                    Sahifalar yuklanmoqda…
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" style="margin:0 auto 10px;display:block;animation:spin 1s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>                    Loading pages…
                 </div>
 
                 <style>
@@ -284,62 +286,62 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>PDF Page Delete guide</h2>
-                <p>PDF from kerakmas sahifalarni olib tashlash uchun qulay vosita. Sahifalarni ko'rib bosib tanlash or aniq raqamlar kiritish — ikki usul ham mavjud.</p>
+                <p>Convenient tool for removing unwanted pages from PDF. Click page thumbnails or enter a range aniq raqamlar kiritish — ikki usul ham mavjud.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">🖱️</div>
                         <h3>Visual selection</h3>
-                        <p>Har bir sahifaning miniatyurasini ko'rib, kerakmaton sahifani bosing. Qizil = o'chiriladi.</p>
+                        <p>View thumbnails of each page, click the ones to delete. Red = will be deleted.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">🔢</div>
                         <h3>Raqam bilan tanlash</h3>
-                        <p>ilovepdf usulida: "3 from 10 tocha" kabi diapazon kiriting — sahifalar avtomatik tanlanadi.</p>
+                        <p>Enter a range like "3 to 10" — pages are selected automatically.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">🔒</div>
                         <h3>To'liq Maxfiy</h3>
-                        <p>Barcha amallar brauzeringizda. PDF fayllaringiz serverto hech qachon yuborilmaydi.</p>
+                        <p>All operations run in your browser. Your PDF files are never sent to a server.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">⚡</div>
-                        <h3>Tez va Free</h3>
+                        <h3>Tez and Free</h3>
                         <p>Ro'yxatfrom o'tish shart emas. To'liq free, hech qanday limit yo'q.</p>
                     </div>
                 </div>
                 <h2>Qanday foydalanish?</h2>
                 <p><strong>Visual selection usuli:</strong></p>
                 <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
-                    <li>PDF faylni yuklang — sahifalar miniatyura ko'rinishida namoyon bo'ladi.</li>
-                    <li>O'chirmoqchi bo'lton sahifalarni bosib tanlang (qizil = o'chiriladi).</li>
-                    <li><strong>"Delete selected pages"</strong> tugmasini bosing.</li>
+                    <li>Upload a PDF file — pages appear as thumbnails.</li>
+                    <li>Click the pages you want to delete (red = will be deleted).</li>
+                    <li><strong>"Delete selected pages"</strong> click the button.</li>
                     <li>Resultni yuklab oling.</li>
                 </ol>
                 <p style="margin-top:14px"><strong>Raqam bilan tanlash usuli:</strong></p>
                 <ol style="padding-left:1.5em;color:var(--ink-2);font-size:.97rem;line-height:1.78;">
-                    <li>PDF faylni yuklang.</li>
+                    <li>Upload a PDF file.</li>
                     <li><strong>"Raqam bilan tanlash"</strong> tabini bosing.</li>
-                    <li>"Dan" va "Gacha" maydonlarito sahifa raqamlarini kiriting.</li>
-                    <li><strong>"Select"</strong> tugmasini bosing — sahifalar avtomatik tanlanadi.</li>
-                    <li><strong>"Delete selected pages"</strong> tugmasini bosing.</li>
+                    <li>Enter page numbers in the "From" and "To" fields.</li>
+                    <li><strong>"Select"</strong> click the button — pagelar avtomatik tanlanadi.</li>
+                    <li><strong>"Delete selected pages"</strong> click the button.</li>
                 </ol>
                 <h2>Ko'p so'raladiton savollar</h2>
                 <div class="faq-list">
                     <details>
-                        <summary>Barcha sahifalarni o'chirib bo'ladimi?</summary>
-                        <p>Yo'q. Kamida 1 ta sahifa qolishi kerak. Barcha sahifalarni o'chirishto urinilsa, xato xabari ko'rinadi.</p>
+                        <summary>All pagelarni o'chirib bo'ladimi?</summary>
+                        <p>Yo'q. Kamida 1 ta page qolishi kerak. All pagelarni o'chirishto urinilsa, xato xabari ko'rinadi.</p>
                     </details>
                     <details>
-                        <summary>Nechta sahifa o'chirish mumkin?</summary>
-                        <p>Kamida 1 ta sahifa qolguncha istaltoncha sahifa o'chirish mumkin.</p>
+                        <summary>Nechta page o'chirish mumkin?</summary>
+                        <p>Kamida 1 ta page qolguncha istaltoncha page o'chirish mumkin.</p>
                     </details>
                     <details>
                         <summary>Parolli PDF bilan ishlaydi?</summary>
-                        <p>Yo'q. Parol bilan himoyalanton PDF fayllar ochilmaydi. Avval parolni olib tashlang.</p>
+                        <p>No. Password-protected PDF files cannot be opened directly. Remove the password first.</p>
                     </details>
                     <details>
-                        <summary>Sahifalar preview shown?</summary>
-                        <p>Ha! PDF.js yordamida har bir sahifaning miniatyurasi brauzerda render qilinadi.</p>
+                        <summary>Are page thumbnails shown?</summary>
+                        <p>Yes! PDF.js renders a thumbnail of each page in the browser.</p>
                     </details>
                 </div>
             </article>
@@ -353,7 +355,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -384,12 +386,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -404,7 +406,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -416,7 +418,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>

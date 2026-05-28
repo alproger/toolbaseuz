@@ -101,9 +101,12 @@
 <main>
         <div class="container">
             <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="../../../../">Главная</a><span class="bc-sep">&#8250;</span>
-                <span>Сжатие изображений</span>
-            </nav>
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/ru/#tools">Инструменты</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>Сжатие изображений</span>
+        </nav>
         </div>
         <section class="tool-hero container">
             <div class="tool-hero-icon">
@@ -131,7 +134,7 @@
                     <div class="drop-zone" id="dropZone">
                         <input type="file" id="fileInput" accept="image/*" multiple/>
                         <div class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
-                        <div class="drop-title">Rasmlarni перетащите или выберите</div>
+                        <div class="drop-title">Перетащите или выберите изображения</div>
                         <div class="drop-sub">JPG, PNG, WebP &#183; 20 ta &#183; har biri <strong>80 MB</strong> до</div>
                     </div>
                     <div class="count-badge" id="countBadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><rect x="3" y="3" width="18" height="18" rx="2"/></svg><span id="countText">0 ta</span></div>
@@ -182,7 +185,7 @@
                         <div class="sc-title">Amallar</div>
                         <button class="btn-go" id="btnGo" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Barcha Rasmlarni Сжать
+            Сжать все изображения
           </button>
                         <button class="btn-sec" id="btnClear">Очистить</button>
                         <div class="prog-wrap" id="progWrap">
@@ -228,7 +231,7 @@
                     <div class="use-card">
                         <div class="uc-icon">📧</div>
                         <h3>Email</h3>
-                        <p>Email biriktirganda katta rasmni kichiklashtiring.</p>
+                        <p>Уменьшите большое изображение для вложения в письмо.</p>
                     </div>
                     <div class="use-card">
                         <div class="uc-icon">💾</div>
@@ -241,7 +244,7 @@
                     <li>Rasmlarni <strong>загрузите</strong> &#8212; drag &amp; drop или tugma bilan.</li>
                     <li>Ro&#8217;yxatdan rasmni bosib <strong>выберите</strong> &#8212; o&#8217;ng panelda preview yangilanadi.</li>
                     <li><strong>Качество slayderi</strong> bilan 82% da boshlang &#8212; before/after preview bilan solishtiring.</li>
-                    <li><strong>Barcha Rasmlarni Сжать</strong> tugmasini bosib yuklab oling.</li>
+                    <li><strong>Сжать все изображения</strong> tugmasini bosib yuklab oling.</li>
                 </ol>
                 <div class="faq-list">
                     <details>
@@ -254,10 +257,10 @@
                     </details>
                     <details>
                         <summary>PNG siqiladi?</summary>
-                        <p>PNG lossless format — качество o'zgarmaydi. Lekin WebP ga aylantirish orqali размерni 50–70% kamaytirish mumkin.</p>
+                        <p>PNG — формат без потерь, качество не меняется. Но конвертация в WebP уменьшит размер на 50–70%.rish mumkin.</p>
                     </details>
                     <details>
-                        <summary>Rasmlar serverga yuboriladi?</summary>
+                        <summary>Изображения отправляются на сервер?</summary>
                         <p>Yo'q. Canvas API to'liq в вашем браузере ishlaydi. Hech qanday ma'lumot yuborilmaydi.</p>
                     </details>
                 </div>
@@ -303,7 +306,7 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">Объединение PDF</a>
                     <a href="/tools/pdf-delete/">PDF Страница O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
@@ -323,7 +326,7 @@
                     <h4>Loyiha</h4>
                     <a href="/ru/about.html">О нас</a>
                     <a href="/ru/contact.html">Контакты</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/ru/terms.html">Условия</a>

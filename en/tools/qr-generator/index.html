@@ -52,28 +52,28 @@
                 "name": "QR kod qanday ma'lumot turlarini saqlaydi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "URL, oddiy matn, Wi-Fi paroli (SSID + parol), vCard (kontakt ma'lumoti) va elektron pochta manzillari qo'llab-quvvatlanadi."
+                    "text": "URL, oddiy matn, Wi-Fi paroli (SSID + parol), vCard (kontakt ma'lumoti) and elektron pochta manzillari qo'llab-quvvatlanadi."
                 }
             },            {
                 "@type": "Question",
                 "name": "QR kod colori o'ztortirilishi mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Foreground colour (QR kvadratlari) va fon colorini alohida tanlash mumkin. Lekin yaxshi o'qilishi uchun yuqori kontrast saqlanishi lozim."
+                    "text": "Ha. Foreground colour (QR kvadratlari) and fon colorini alohida tanlash mumkin. Lekin yaxshi o'qilishi uchun yuqori kontrast saqlanishi lozim."
                 }
             },            {
                 "@type": "Question",
                 "name": "QR kodning o'lchami qanday ta'sir qiladi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Kattaroq QR kod uzoqroq masofafrom o'qiladi va ko'proq ma'lumot saqlaydi. Minimal tavsiya etilton o'lcham — 2×2 sm chop etishda."
+                    "text": "Kattaroq QR kod uzoqroq masofafrom o'qiladi and ko'proq ma'lumot saqlaydi. Minimal tavsiya etilton o'lcham — 2×2 sm chop etishda."
                 }
             },            {
                 "@type": "Question",
                 "name": "Yaratilton QR kodning ishlashini tekshirish mumkinmi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ha. Phoneingizning kamerasi or QR o'qish ilovasini QR kod qualityida shownton tasvirto yo'naltiring va tekshiring."
+                    "text": "Ha. Phoneingizning kamerasi or QR o'qish ilovasini QR kod qualityida shownton tasvirto yo'naltiring and tekshiring."
                 }
             }]
         }
@@ -100,11 +100,13 @@
 
 <main>
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../../../../">Home</a>
-                <span class="bc-sep">›</span>
-                <span>QR Kod Yaratish</span>
-            </nav>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="/en/#tools">Tools</a>
+            <span class="bc-sep">&#8250;</span>
+            <span>QR Code Generator</span>
+        </nav>
         </div>
 
         <section class="tool-hero container">
@@ -118,7 +120,7 @@
             </div>
             <div class="tool-hero-text">
                 <h1>QR Kod Yaratish</h1>
-                <p>URL, matn, telefon, email, Wi-Fi, vCard — istalton ma'lumot uchun QR kod yarating. Color, gradient, logo, yozuv qo'shing. PNG va SVG yuklab oling.</p>
+                <p>URL, matn, telefon, email, Wi-Fi, vCard — istalton ma'lumot uchun QR kod yarating. Color, gradient, logo, yozuv qo'shing. PNG and SVG yuklab oling.</p>
             </div>
         </section>
 
@@ -285,7 +287,7 @@
 
                     <!-- ── SETTINGS ── -->
                     <div class="settings-panel">
-                        <div class="settings-title">Dizayn sozlamalari</div>
+                        <div class="settings-title">Design settings</div>
 
                         <!-- QR Color -->
                         <div class="setting-row">
@@ -476,7 +478,7 @@
                         <div class="qr-canvas-wrap" id="canvasWrap">
                             <div class="qr-empty-state" id="emptyState">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3v3"/><path d="M18 21h3"/><path d="M14 3v3h3"/><path d="M3 10h5v4"/></svg>
-                                <span>Ma'lumot kiriting</span>
+                                <span>Enter data</span>
                             </div>
                             <canvas id="qrCanvas" style="display:none;"></canvas>
                         </div>
@@ -506,7 +508,7 @@
         <section class="tool-info">
             <article class="info-article">
                 <h2>QR Code Generatori guide</h2>
-                <p>Toolbase.uz dagi Generate QR Code vositasi 7 xil QR tur, color, gradient, logo va caption imkoniyatlarini taqdim etadi. Barcha jarayon brauzerda sodir bo'ladi — ma'lumotlaringiz never sent to server.</p>
+                <p>toolbase.uz QR Generator supports 7 QR types, colour, gradient, logo and caption..i. All jarayon brauzerda sodir bo'ladi — ma'lumotlaringiz never sent to server.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">🔗</div>
@@ -516,7 +518,7 @@
                     <div class="use-card">
                         <div class="use-card-icon">📶</div>
                         <h3>Wi-Fi</h3>
-                        <p>Mehmonlar uchun Wi-Fi parolini QR kodto aylantiring — scan qilish kifoya, parol yozish shart emas.</p>
+                        <p>Convert your Wi-Fi password into a QR code for guests — just scan, no typing neededrt emas.</p>
                     </div>
                     <div class="use-card">
                         <div class="use-card-icon">👤</div>
@@ -526,28 +528,28 @@
                     <div class="use-card">
                         <div class="use-card-icon">🎨</div>
                         <h3>Color &amp; Gradient</h3>
-                        <p>8 ta tayyor color va 4 ta gradient. Logo va yozuv qo'shib professional QR kod yarating.</p>
+                        <p>8 ta tayyor color and 4 ta gradient. Logo and yozuv qo'shib professional QR kod yarating.</p>
                     </div>
                 </div>
                 <h2>Error correction level nima?</h2>
-                <p>QR kodlarda xato tuzatish mexanizmi mavjud — hatto QR kodni qisman yopib qo'ysa ham skanerlanishi mumkin. Logo qo'shmoqchi bo'lsangiz, <strong>Q (25%)</strong> or <strong>H (30%)</strong> darajasini tanlang — logo tomonifrom yopilton
+                <p>QR codes have error correction — scannable even if partially covered.ng a logodding a logo'shmoqchi bo'lsangiz, <strong>Q (25%)</strong> or <strong>H (30%)</strong> darajasini tanlang — logo tomonifrom yopilton
                     qismlar avtomatik tiklanadi.</p>
                 <div class="faq-list">
                     <details>
                         <summary>QR kodni qayerda ishlatish mumkin?</summary>
-                        <p>Tashrif qog'ozi, reklama banneri, mahsulot qadoqlash, restoran menyu, cheklar, prezentatsiyalar va boshqa ko'p joyda.</p>
+                        <p>Tashrif qog'ozi, reklama banneri, mahsulot qadoqlash, restoran menyu, cheklar, prezentatsiyalar and boshqa ko'p joyda.</p>
                     </details>
                     <details>
                         <summary>Wi-Fi QR kodi qanday ishlaydi?</summary>
-                        <p>Phone kamera bilan QR kodni scan qiltoch, Android va iOS avtomatik Wi-Fi to ulanish taklif qiladi. Passwordni yozish shart emas.</p>
+                        <p>Phone kamera bilan QR kodni scan qiltoch, Android and iOS avtomatik Wi-Fi to ulanish taklif qiladi. Passwordni yozish shart emas.</p>
                     </details>
                     <details>
                         <summary>Logo qo'shtonda QR kod skanerlanadimi?</summary>
                         <p>Ha — <strong>xato tuzatish darajasini Q or H</strong> to qo'ying. Bu holda logo tomonifrom yopilton maydon QR algoritmi tomonifrom tiklanadi.</p>
                     </details>
                     <details>
-                        <summary>PNG va SVG farqi nima?</summary>
-                        <p>PNG — rastroviy format, barcha dastur va qurilmalarda ishlaydi. SVG — vektorli format, chop etish va katta o'lchamda quality yo'qolmaydi. Bosib chiqarish uchun SVG afzalroq.</p>
+                        <summary>PNG and SVG farqi nima?</summary>
+                        <p>PNG — rastroviy format, barcha dastur and qurilmalarda ishlaydi. SVG — vektorli format, chop etish and katta o'lchamda quality yo'qolmaydi. Bosib chiqarish uchun SVG afzalroq.</p>
                     </details>
                 </div>
             </article>
@@ -561,7 +563,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Text, hujjat va rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Text, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -592,12 +594,12 @@
                 <!-- PDF & Rasm column -->
                 <div class="footer-col">
                     <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
+                    <a href="/tools/pdf-merge/">PDF Merge</a>
                     <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
                     <a href="/tools/pdf-editor/">PDF Editor</a>
                     <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
                     <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
+                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
                     <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
                     <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
                     <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
@@ -612,7 +614,7 @@
                     <h4>Loyiha</h4>
                     <a href="/en/about.html">About</a>
                     <a href="/en/contact.html">Contact</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/en/blog.html">Blog</a>
                     <div class="footer-divider"></div>
                     <h4 class="ftr-h4-mt">Huquqiy</h4>
                     <a href="/en/terms.html">Terms</a>
@@ -624,7 +626,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalanton</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; All huquqlar himoyalanton</span>
                     <span class="footer-made">O&#700;zbekiston uchun yaratilton &#127482;&#127487;</span>
                 </div>
             </div>
