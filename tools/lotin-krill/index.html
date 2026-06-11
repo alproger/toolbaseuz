@@ -206,48 +206,6 @@
             </div>
         </section>
 
-        <!-- WORD HUJJAT (.docx) O'GIRISH -->
-        <section class="dx-section" id="docx" aria-labelledby="dxTitle">
-            <div class="dx-card">
-                <div class="dx-head">
-                    <div class="dx-head-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-                    </div>
-                    <div>
-                        <h2 id="dxTitle">Word hujjatni o'girish (.docx)</h2>
-                        <p>Formatlash to'liq saqlanadi — fayl serverga yuborilmaydi</p>
-                    </div>
-                </div>
-
-                <div class="dx-drop" id="dxDrop" role="button" tabindex="0" aria-label="Word fayl tanlash">
-                    <input type="file" id="dxFile" accept=".docx" hidden>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-                    <p><strong>Word faylni tanlang</strong> yoki shu yerga tashlang</p>
-                    <p class="dx-sub">Faqat .docx · Jadval, rasm va shriftlar o'z joyida qoladi</p>
-                </div>
-
-                <div class="dx-panel" id="dxPanel" hidden>
-                    <div class="dx-file-row">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-                        <div class="dx-file-meta">
-                            <b id="dxName"></b>
-                            <small id="dxInfo"></small>
-                        </div>
-                        <button class="dx-x" id="dxReset" title="Boshqa fayl tanlash">✕</button>
-                    </div>
-
-                    <div class="dx-dir-row">
-                        <span>Yo'nalish:</span>
-                        <button class="dir-btn active" id="dxDirLat" aria-pressed="true">Lotin → Krill</button>
-                        <button class="dir-btn" id="dxDirCyr" aria-pressed="false">Krill → Lotin</button>
-                    </div>
-
-                    <button class="dx-go" id="dxGo">O'girish va yuklab olish</button>
-                    <p class="dx-status" id="dxStatus"></p>
-                </div>
-            </div>
-        </section>
-
         <section class="tool-info container">
             <article class="info-article">
                 <h2>Konvertor haqida</h2>
@@ -541,7 +499,6 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
     <script src="js/translit.js"></script>
-    <script src="js/docx-translit.js" defer></script>
     <script>
         (function() {
             'use strict';

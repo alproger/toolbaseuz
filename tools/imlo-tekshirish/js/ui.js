@@ -137,7 +137,7 @@ function renderResult(text, result){
 
   /* Nusxa tugmasi */
   var hasFixable = result.errors.some(function(e){ return e.sug&&e.sev==='error'; });
-  elBtnCopyCorrected.style.display = hasFixable ? 'flex' : 'none';
+  elBtnCopyCor.style.display = hasFixable ? 'flex' : 'none';
 
   /* Highlight ichidagi mark larni bosish */
   elHighlight.querySelectorAll('.err-mark').forEach(function(mark){
@@ -157,6 +157,21 @@ function renderResult(text, result){
 
   /* Scroll to result */
   elResultArea.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+
+/* ── Highlight mark orqali aniq joyni tuzatish ── */
+function applyMarkFix(mark){
+  var sug = mark.dataset.sug;
+  if(!sug) return;
+  var s = parseInt(mark.dataset.s, 10);
+  var e = parseInt(mark.dataset.e, 10);
+  if(isNaN(s) || isNaN(e)) return;
+  var text = elInput.value;
+  var orig = text.slice(s, e);
+  elInput.value = text.slice(0, s) + sug + text.slice(e);
+  runCheck();
+  showToast('"'+orig+'" → "'+sug+'"', 'ok');
 }
 
 /* ── Xato kartalar ── */
@@ -202,13 +217,7 @@ function renderErrors(errors){
     elHighlight.querySelectorAll('.err-mark').forEach(function(mark){
       mark.addEventListener('mouseenter', function(e){ showTooltip(e, mark.dataset.msg); });
       mark.addEventListener('mouseleave', hideTooltip);
-      mark.addEventListener('click', function(){
-        var sug=mark.dataset.sug, orig=mark.textContent;
-        if(!sug) return;
-        elInput.value=elInput.value.replace(orig, sug);
-        runCheck();
-        showToast('"'+orig+'" → "'+sug+'"', 'ok');
-      });
+      mark.addEventListener('click', function(){ applyMarkFix(mark); });
     });
   }
 
@@ -314,7 +323,7 @@ function hideTooltip(){ elTooltip.style.display='none'; }
 document.addEventListener('scroll', hideTooltip);
 
 /* ── Nusxa tugmalari ── */
-elBtnCopyCorrected.addEventListener('click', function(){
+elBtnCopyCor.addEventListener('click', function(){
   if(!correctedText) return;
   navigator.clipboard.writeText(correctedText)
     .then(function(){ showToast('Tuzatilgan matn nusxalandi ✓','ok'); })

@@ -1,5 +1,5 @@
-/* toolbase.uz Service Worker v1.0 */
-const CACHE = 'toolbase-v1';
+/* toolbase.uz Service Worker v2.2-dictionary */
+const CACHE = 'toolbase-v2.2-dict';
 const PRE = ['/', '/assets/css/styles.css', '/assets/img/favicon.svg', '/offline.html'];
 self.addEventListener('install', e => e.waitUntil(
   caches.open(CACHE).then(c => c.addAll(PRE)).then(() => self.skipWaiting())

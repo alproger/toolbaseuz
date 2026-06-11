@@ -56,10 +56,10 @@
                 }
             },            {
                 "@type": "Question",
-                "name": "Bir vaqtda nechta rasm konvertatsiya qilinadi?",
+                "name": "Bir vaqtda nechta image konvertatsiya qilinadi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Bir vaqtda up to 20 rasmni tanlab, bir bosishda konvertatsiya qilish mumkin. Resultlar ZIP qualityida yuklab olinadi."
+                    "text": "Bir vaqtda up to 20 imageni tanlab, bir bosishda konvertatsiya qilish mumkin. Resultlar ZIP qualityida yuklab olinadi."
                 }
             },            {
                 "@type": "Question",
@@ -91,9 +91,9 @@
                 <a href="/en/terms.html">Terms</a>
             </nav>
             <div class="language-switcher" aria-label="Choose language">
-                <a href="../../../tools/image-converter/" lang="uz">UZ</a>
-                <a class="active" href="../../../en/tools/image-converter/" lang="en">EN</a>
-                <a href="../../../ru/tools/image-converter/" lang="ru">RU</a>
+                <a href="/tools/image-converter/" lang="uz">UZ</a>
+                <a class="active" href="/en/tools/image-converter/" lang="en">EN</a>
+                <a href="/ru/tools/image-converter/" lang="ru">RU</a>
             </div>
         </div>
     </header>
@@ -118,7 +118,7 @@
       </svg>
             </div>
             <div class="tool-hero-text">
-                <h1>Rasm Formatini O'ztortirish</h1>
+                <h1>Image Formatini O'ztortirish</h1>
                 <p>JPG, PNG, WebP, BMP, GIF, ICO and PDF — 7 formats. Up to 20 images at once. Quality settings, background colori, o'lcham. Files never sent to server.</p>
             </div>
         </section>
@@ -128,7 +128,7 @@
             <div class="limit-strip">
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        up to 20 rasm
+        up to 20 image
       </span>
                 <span class="limit-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -142,8 +142,8 @@
 
             <!-- Related -->
             <div style="display:flex;top:8px;flex-wrap:wrap;margin-bottom:16px;">
-                <a href="../../pdf-merge/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Merge →</a>
-                <a href="../../qr-generator/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">QR Kod Yaratish →</a>
+                <a href="/en/tools/pdf-merge/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">PDF Merge →</a>
+                <a href="/en/tools/qr-generator/" style="display:inline-flex;align-items:center;top:5px;font-size:.83rem;color:var(--primary);font-weight:600;padding:5px 11px;border:1.5px solid var(--primary);border-radius:7px;text-decoration:none;">QR Kod Yaratish →</a>
             </div>
 
             <div class="error-box" id="errorBox" role="alert" aria-live="polite"></div>
@@ -204,7 +204,7 @@
         <option value="portrait">Vertikal</option>
         <option value="landscape">Gorizontal</option>
       </select>
-                <label>Har bir rasm:</label>
+                <label>Har bir image:</label>
                 <select id="pdfImageMode">
         <option value="separate">Separate page</option>
         <option value="combined">Bitta PDF</option>
@@ -252,7 +252,7 @@
             <!-- File list -->
             <div id="fileCountBadge" style="display:none;" class="file-count-badge">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                <span id="fileCountText">0 ta rasm</span>
+                <span id="fileCountText">0 ta image</span>
             </div>
             <div class="img-file-list" id="imgFileList"></div>
 
@@ -291,8 +291,8 @@
         <!-- SEO Info -->
         <section class="tool-info">
             <article class="info-article">
-                <h2>Rasm Formatini O'ztortirish guide</h2>
-                <p>7 output formats: JPG, PNG, WebP, BMP, GIF, ICO and PDF. Convert up to 20 images at once. All modern browsers supported. — serverto hech narsa yuborilmaydi.</p>
+                <h2>Image Formatini O'ztortirish guide</h2>
+                <p>7 output formats: JPG, PNG, WebP, BMP, GIF, ICO and PDF. Convert up to 20 images at once. All modern browsers supported. — nothing is sent to a server.</p>
                 <div class="use-grid">
                     <div class="use-card">
                         <div class="use-card-icon">🖼️</div>
@@ -326,11 +326,11 @@
                 <div class="faq-list">
                     <details>
                         <summary>PNG → JPG da shaffoflik yo'qoladimi?</summary>
-                        <p>Ha. JPG formati shaffoflikni qo'llab-quvvatlamaydi. Shaffof qismlar "Fon colori" sozlamasida tanlanton color (standart: oq) bilan to'ldiriladi.</p>
+                        <p>Yes. JPG formati shaffoflikni qo'llab-quvvatlamaydi. Shaffof qismlar "Fon colori" sozlamasida selected color (standart: oq) bilan to'ldiriladi.</p>
                     </details>
                     <details>
                         <summary>20 ta rasimni bir vaqtda o'ztortirsa bo'ladimi?</summary>
-                        <p>Ha! Bir vaqtda up to 20 rasm yuklanadi and ketma-ket o'ztortiriladi. ZIP qualityida barchasini bitta yuklashda olasiz.</p>
+                        <p>Ha! Bir vaqtda up to 20 image yuklanadi and ketma-ket o'ztortiriladi. ZIP qualityida barchasini bitta yuklashda olasiz.</p>
                     </details>
                     <details>
                         <summary>ICO formati nima uchun kerak?</summary>
@@ -356,7 +356,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat and rasmlar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
+                    <p>Text, hujjat and imagelar bilan ishlash uchun 20+ free onlayn vosita. Never sent to server.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -370,36 +370,36 @@
                 <!-- Tools column -->
                 <div class="footer-col">
                     <h4>Tools</h4>
-                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
-                    <a href="/tools/word-counter/">Word Counter</a>
-                    <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Color Konvertori</a>
-                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
-                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                    <a href="/en/tools/lotin-krill/">Lotin &#8644; Krill</a>
+                    <a href="/en/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <a href="/en/tools/word-counter/">Word Counter</a>
+                    <a href="/en/tools/case-converter/">Case Converter</a>
+                    <a href="/en/tools/color-converter/">Color Konvertori</a>
+                    <a href="/en/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
+                    <a href="/en/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
+                    <a href="/en/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
+                    <a href="/en/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
+                    <a href="/en/tools/time-zones/" class="ftr-hide-mob">Time Zonalari</a>
+                    <a href="/en/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
+                    <a href="/en/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
                 </div>
 
-                <!-- PDF & Rasm column -->
+                <!-- PDF & Image column -->
                 <div class="footer-col">
-                    <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Merge</a>
-                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
-                    <a href="/tools/pdf-editor/">PDF Editor</a>
-                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
-                    <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Compression</a>
-                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-                    <a href="/tools/qr-generator/">QR Kod</a>
+                    <h4>PDF &amp; Image</h4>
+                    <a href="/en/tools/pdf-merge/">PDF Merge</a>
+                    <a href="/en/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <a href="/en/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/en/tools/word-to-pdf/">Word &#8594; PDF</a>
+                    <a href="/en/tools/image-converter/">Image Konvertor</a>
+                    <a href="/en/tools/image-compress/" class="ftr-hide-mob">Image Compression</a>
+                    <a href="/en/tools/image-resize/" class="ftr-hide-mob">Image O&#700;lchami</a>
+                    <a href="/en/tools/image-crop/" class="ftr-hide-mob">Imageni Qirqish</a>
+                    <a href="/en/tools/image-rotate/" class="ftr-hide-mob">Imageni Aylantirish</a>
+                    <a href="/en/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
+                    <a href="/en/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
+                    <a href="/en/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
+                    <a href="/en/tools/qr-generator/">QR Kod</a>
                 </div>
 
                 <!-- Loyiha + Huquqiy column -->
