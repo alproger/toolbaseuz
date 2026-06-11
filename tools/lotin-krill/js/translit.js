@@ -23,6 +23,7 @@ const UzTranslit = (function () {
   const L2C = [
     // trigraph
     ["sch","щ"],
+    ["s'h","сҳ"],   // Is'hoq → Исҳоқ ("sh" emas)
     // apostrophe-digraphs (apos normalised to ' before lookup)
     ["o'","ў"],["g'","ғ"],
     // digraphs
@@ -56,12 +57,21 @@ const UzTranslit = (function () {
   ];
 
   /* ── Exceptions (loaded from JSON) ─────────────────── */
-  let EX_L2C = {}, EX_C2L = {};
+  // Ichki qo'shimcha istisnolar — sahifa lug'ati bilan birlashtiriladi
+  const BUILTIN_L2C = {
+    "sentabr": "сентябрь", "oktabr": "октябрь",
+    "budjet": "бюджет", "obyekt": "объект", "subyekt": "субъект",
+  };
+  const BUILTIN_C2L = {
+    "бюджет": "budjet",
+  };
+  let EX_L2C = Object.assign({}, BUILTIN_L2C);
+  let EX_C2L = Object.assign({}, BUILTIN_C2L);
 
   function loadExceptions(json) {
     if (!json) return;
-    EX_L2C = json.lat_to_cyr || {};
-    EX_C2L = json.cyr_to_lat || {};
+    EX_L2C = Object.assign({}, BUILTIN_L2C, json.lat_to_cyr || {});
+    EX_C2L = Object.assign({}, BUILTIN_C2L, json.cyr_to_lat || {});
   }
 
   /* ── Helpers ─────────────────────────────────────────── */
@@ -118,9 +128,14 @@ const UzTranslit = (function () {
       // 2. Standalone e → е (Uzbek native) or э (after consonant in isolation)?
       //    Standard 1995: e → е always. э only for some Russian loans (exceptions cover those).
       if (chL === 'e') {
-        // Check: not part of ye/ye digraph (already consumed by 'ye' pair in table)
-        // If prev char is y/Y, this 'e' was consumed. We reach here only standalone 'e'.
-        out += applyCase(ch, 'е');
+        // Qoida: so'z boshida yoki unlidan keyin e → э (erkin→эркин, aeroport→аэропорт),
+        // so'z ichida undoshdan keyin e → е (keldi→келди).
+        // "ye" digrafi jadvalda е ga o'tadi (yer→ер) — bu yerga faqat yakka e keladi.
+        const prev = i > 0 ? src[i - 1] : '';
+        const prevIsLatLetter = /[a-zA-Z]/.test(prev);
+        const prevIsVowel = LAT_VOWELS.has(prev);
+        const isE_cyr = !prevIsLatLetter || prevIsVowel;
+        out += applyCase(ch, isE_cyr ? 'э' : 'е');
         i++; continue;
       }
 
@@ -186,6 +201,35 @@ const UzTranslit = (function () {
         const base = yeContext(text, i) ? 'ye' : 'e';
         out += allCapsInput ? base.toUpperCase() : applyCase(ch, base);
         i++; continue;
+      }
+
+      // 3a. ц — kontekstli: unlidan keyin ts (лицей→litsey, абзац→abzats),
+      //     aks holda s (цирк→sirk)
+      if (chL === 'ц') {
+        const prev = i > 0 ? text[i - 1] : '';
+        const base = (prev && CYR_VOWELS.has(prev)) ? 'ts' : 's';
+        out += allCapsInput ? base.toUpperCase() : applyCase(ch, base);
+        i++; continue;
+      }
+
+      // 3b. ъ + е/ё → ye/yo (объект→obyekt, съёмка→syomka)
+      if (chL === 'ъ' && text[i+1]) {
+        const nL = text[i+1].toLowerCase();
+        if (nL === 'е' || nL === 'ё') {
+          const base = nL === 'е' ? 'ye' : 'yo';
+          out += allCapsInput ? base.toUpperCase() : applyCase(text[i+1], base);
+          i += 2; continue;
+        }
+      }
+
+      // 3c. ь + е/ё/ю/я → ye/yo/yu/ya (премьера→premyera), ь o'zi tushadi
+      if (chL === 'ь' && text[i+1]) {
+        const nL = text[i+1].toLowerCase();
+        const m = { 'е':'ye', 'ё':'yo', 'ю':'yu', 'я':'ya' }[nL];
+        if (m) {
+          out += allCapsInput ? m.toUpperCase() : applyCase(text[i+1], m);
+          i += 2; continue;
+        }
       }
 
       // 4. General table
