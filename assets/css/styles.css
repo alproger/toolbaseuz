@@ -1045,3 +1045,48 @@ button,
 @media (max-width: 559px) {
   .tools-cat-head { margin-top: 34px; }
 }
+
+/* ============================================================
+   DIZAYN SAYQAL v2 — pro / modern (2026)
+   ============================================================ */
+
+/* Hero — aksent harmoniyasi (ochiq ko'k o'rniga brend ko'ki) */
+.hero h1 em { color: var(--primary); }
+.hero-eyebrow {
+  border: 1px solid rgba(21, 101, 192, 0.14);
+  background: linear-gradient(180deg, #f0f6ff, var(--primary-soft));
+}
+
+/* Qidiruv — premium fokus va soya */
+.tool-search input {
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+/* Tool kartalar — yumshoq tinch soya + premium hover ko'tarilishi */
+.tool-card {
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.tool-card:hover {
+  border-color: #d3dae2;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.10), 0 2px 6px rgba(16, 24, 40, 0.05);
+}
+.tool-card.disabled:hover { transform: none; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04); }
+
+/* Ikonka — hover mikro-animatsiya */
+.tool-icon { transition: transform 0.18s ease; }
+.tool-card:hover .tool-icon { transform: scale(1.06) rotate(-1.5deg); }
+
+/* Bo'lim sarlavhalari — havodorroq nafas */
+.tools-cat-head { margin-top: 12px; }
+@media (min-width: 720px) { .tools-cat-head { margin-top: 20px; } }
+
+/* Teglar — biroz yumshoqroq burchak */
+.tag { border-radius: 7px; }
+
+/* Til almashtirgich — toza segment ko'rinishi */
+.language-switcher { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px; padding: 3px; }
+.language-switcher a { padding: 5px 11px; border-radius: 7px; font-weight: 700; transition: all 0.15s; }
+.language-switcher a.active { background: var(--surface); color: var(--primary); box-shadow: 0 1px 3px rgba(16,24,40,0.08); }

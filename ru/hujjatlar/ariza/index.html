@@ -42,10 +42,10 @@
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://toolbase.uz/ru/" }, { "@type": "ListItem", "position": 2, "name": "Документы", "item": "https://toolbase.uz/ru/hujjatlar/" }, { "@type": "ListItem", "position": 3, "name": "Заявление", "item": "https://toolbase.uz/ru/hujjatlar/ariza/" } ] }
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "HowTo", "name": "Как написать заявление", "step": [ { "@type": "HowToStep", "name": "Kimga", "text": "Yuqori o'ng burchakda tashkilot nomi va rahbarning lavozimi hamda F.I.Sh. yoziladi." }, { "@type": "HowToStep", "name": "Kimdan", "text": "Quyiroq yashash manzili va F.I.Sh. ko'rsatiladi — manzil ism oldidan." }, { "@type": "HowToStep", "name": "ARIZA", "text": "O'rtaga katta harflarda ARIZA so'zi yoziladi." }, { "@type": "HowToStep", "name": "Matn", "text": "Iltimos aniq va rasmiy uslubda bayon etiladi." }, { "@type": "HowToStep", "name": "Sana va imzo", "text": "Pastda sana va imzo qoldiriladi." } ] }
+    {"@context": "https://schema.org", "@type": "HowTo", "name": "Как написать заявление", "step": [{"@type": "HowToStep", "name": "Кому", "text": "В правом верхнем углу указываются название организации, должность и Ф.И.О. руководителя."}, {"@type": "HowToStep", "name": "От кого", "text": "Ниже указываются адрес проживания и Ф.И.О. заявителя — адрес перед именем."}, {"@type": "HowToStep", "name": "ЗАЯВЛЕНИЕ", "text": "По центру крупными буквами пишется слово ЗАЯВЛЕНИЕ."}, {"@type": "HowToStep", "name": "Текст", "text": "Просьба излагается чётко и в официальном стиле."}, {"@type": "HowToStep", "name": "Дата и подпись", "text": "Внизу ставятся дата и подпись."}]}
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [ { "@type": "Question", "name": "Ariza qo'lda yozilishi shartmi?", "acceptedAnswer": { "@type": "Answer", "text": "Aksariyat tashkilotlar chop etilgan arizani qabul qiladi, faqat imzo qo'lda qo'yiladi." } }, { "@type": "Question", "name": "Arizani lotinda yoki krillda yozish kerakmi?", "acceptedAnswer": { "@type": "Answer", "text": "Rasmiy ish yuritish lotin yozuvida, lekin ko'p tashkilotlar krillni ham qabul qiladi. Generator ikkala variantni chiqaradi." } }, { "@type": "Question", "name": "Manzil qayerga yoziladi?", "acceptedAnswer": { "@type": "Answer", "text": "Yashash manzili arizachi ismidan oldin, 'shu manzilda yashovchi falonchidan' ko'rinishida yoziladi." } }, { "@type": "Question", "name": "Hujjat serverga yuboriladimi?", "acceptedAnswer": { "@type": "Answer", "text": "Yo'q. Ariza to'liq brauzeringizda yaratiladi — ma'lumotlaringiz hech qayerga yuborilmaydi." } } ] }
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Обязательно ли писать заявление от руки?", "acceptedAnswer": {"@type": "Answer", "text": "Большинство организаций принимают напечатанное заявление, от руки ставится только подпись."}}, {"@type": "Question", "name": "На латинице или кириллице писать заявление?", "acceptedAnswer": {"@type": "Answer", "text": "Официальное делопроизводство ведётся на латинице, но многие организации принимают и кириллицу. Генератор выдаёт оба варианта."}}, {"@type": "Question", "name": "Где указывается адрес?", "acceptedAnswer": {"@type": "Answer", "text": "Адрес проживания указывается перед именем заявителя, в виде «от такого-то, проживающего по адресу»."}}, {"@type": "Question", "name": "Документ отправляется на сервер?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Заявление создаётся полностью в вашем браузере — данные никуда не передаются."}}]}
     </script>
 </head>
 
@@ -60,7 +60,7 @@
                 <a href="../../../ru/privacy.html">Конфиденциальность</a>
                 <a href="../../../ru/terms.html">Условия</a>
             </nav>
-            <div class="language-switcher" aria-label="Til tanlash">
+            <div class="language-switcher" aria-label="Выбор языка">
                 <a href="../../../hujjatlar/ariza/" lang="uz">UZ</a>
                 <a class="active" href="../../../ru/hujjatlar/ariza/" lang="ru">RU</a>
             </div>
@@ -68,7 +68,7 @@
     </header>
 
     <main>
-        <nav class="breadcrumb" aria-label="Yo'l">
+        <nav class="breadcrumb" aria-label="Путь">
             <a href="../../../ru/">Главная</a>
             <span class="bc-sep">›</span>
             <a href="../">Документы</a>
@@ -145,19 +145,14 @@
 
         <!-- РУКОВОДСТВО -->
         <section class="tool-info container">
-            <article class="info-article guide-block">
-                <h2>Как написать заявление</h2>
+            <article class="info-article">
+<h2>Как написать заявление</h2>
                 <p class="lead">Заявление — это официальное письменное обращение физического лица в организацию или к должностному лицу для просьбы о приёме на работу, отпуске, поступлении на учёбу и других вопросах. Правильно составленное заявление всегда имеет одинаковую структуру из пяти частей.</p>
                 <p>В самом верху, в <strong>правом углу</strong> листа, указывается, кому адресовано заявление: полное название организации, затем должность и фамилия руководителя в дательном падеже — например, директору ООО «Toolbase» А. Каримов<strong>у</strong>. Сразу под этим располагается информация о заявителе, и здесь важно соблюдать правило: <strong>адрес проживания указывается перед фамилией</strong> — например, проживающего по адресу: г. Ташкент, Чиланзар, д. 5, <strong>от</strong> Алиева Вали Салимовича. При необходимости ниже добавляется номер телефона.</p>
                 <p>Затем по <strong>центру</strong> листа заглавными буквами пишется вид документа — слово <strong>ЗАЯВЛЕНИЕ</strong>. Под ним следует основная часть: просьба излагается чётко, кратко и в официальном стиле, со словом «прошу». Важные детали — дата, срок, должность — указываются точно: например, «Прошу принять меня на должность программиста с 1 июля 2026 г.».</p>
                 <p>В самом низу ставятся дата составления и подпись. <strong>Без подписи заявление не имеет юридической силы</strong>, поэтому после распечатки обязательно ставится подпись от руки. Самые частые ошибки — указание адреса после фамилии, нечёткое изложение просьбы, отсутствие даты или подписи, а также использование разговорного стиля. Если учесть эти моменты, ваше заявление примут с первого раза.</p>
-            </article>
-        </section>
 
-        <!-- ОБРАЗЕЦ -->
-        <section class="tool-info container">
-            <article class="info-article guide-block">
-                <h2>Готовый образец</h2>
+<h2>Готовый образец</h2>
                 <p>Скачайте образец заявления о приёме на работу в формате Word и отредактируйте под свои данные. Или заполните поля в генераторе выше и получите готовый документ сразу.</p>
                 <div class="namuna-card">
                     <div class="namuna-side">
@@ -181,13 +176,8 @@
                         <div class="np-footer"><span>Алиев В.С.</span><span>(подпись)</span><span>14 июня 2026 г.</span></div>
                     </div>
                 </div>
-            </article>
-        </section>
 
-        <!-- FAQ -->
-        <section class="tool-info container">
-            <article class="info-article guide-block">
-                <h2>Частые вопросы</h2>
+<h2>Частые вопросы</h2>
                 <div class="faq-list">
                     <details><summary>Обязательно ли писать заявление от руки?</summary><p>Большинство организаций принимают распечатанное заявление — от руки ставится только подпись. Но в некоторых госучреждениях могут требовать полностью рукописный вариант, это стоит уточнить заранее.</p></details>
                     <details><summary>Где указывается адрес?</summary><p>Адрес проживания пишется перед фамилией заявителя: «проживающего по адресу: г. Ташкент, Чиланзар, от Алиева В.С.». Это стандартное правило оформления.</p></details>
@@ -213,7 +203,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Matn, hujjat va rasmlar bilan ishlash uchun 20+ bepul onlayn vosita. Не отправляется на сервер.</p>
+                    <p>20+ бесплатных онлайн-инструментов для текста, документов, изображений, файлов и разработчиков. Файлы остаются в браузере.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -224,51 +214,50 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Инструменты column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
-                    <a href="/tools/lotin-krill/">Lotin &#8644; Krill</a>
-                    <a href="/tools/son-soz/">Son &#8594; So&#700;z</a>
-                    <a href="/tools/word-counter/">Word Counter</a>
-                    <a href="/tools/case-converter/">Case Converter</a>
-                    <a href="/tools/color-converter/">Rang Konvertori</a>
-                    <a href="/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-                    <a href="/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
-                    <a href="/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-                    <a href="/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                    <h4>Инструменты</h4>
+                    <a href="/ru/tools/lotin-krill/">Латиница &#8644; Кириллица</a>
+                    <a href="/ru/tools/son-soz/">Число прописью</a>
+                    <a href="/ru/tools/word-counter/">Word Counter</a>
+                    <a href="/ru/tools/case-converter/">Case Converter</a>
+                    <a href="/ru/tools/color-converter/">Конвертер цветов</a>
+                    <a href="/ru/tools/unit-converter/" class="ftr-hide-mob">Конвертер единиц</a>
+                    <a href="/ru/tools/json-formatter/" class="ftr-hide-mob">Форматирование JSON</a>
+                    <a href="/ru/tools/password-generator/" class="ftr-hide-mob">Генератор паролей</a>
+                    <a href="/ru/tools/time-zones/" class="ftr-hide-mob">Часовые пояса</a>
+                    <a href="/ru/tools/zip-creator/" class="ftr-hide-mob">Создать ZIP</a>
+                    <a href="/ru/tools/imlo-tekshirish/" class="ftr-hide-mob">Проверка орфографии</a>
                 </div>
 
-                <!-- PDF & Rasm column -->
+                <!-- PDF & Изображение column -->
                 <div class="footer-col">
-                    <h4>PDF &amp; Rasm</h4>
-                    <a href="/tools/pdf-merge/">PDF Birlashtirish</a>
-                    <a href="/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
-                    <a href="/tools/pdf-editor/">PDF Editor</a>
-                    <a href="/tools/word-to-pdf/">Word &#8594; PDF</a>
-                    <a href="/tools/image-converter/">Rasm Konvertor</a>
-                    <a href="/tools/image-compress/" class="ftr-hide-mob">Rasm Siqish</a>
-                    <a href="/tools/image-resize/" class="ftr-hide-mob">Rasm O&#700;lchami</a>
-                    <a href="/tools/image-crop/" class="ftr-hide-mob">Rasmni Qirqish</a>
-                    <a href="/tools/image-rotate/" class="ftr-hide-mob">Rasmni Aylantirish</a>
-                    <a href="/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-                    <a href="/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-                    <a href="/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-                    <a href="/tools/qr-generator/">QR Kod</a>
+                    <h4>PDF и изображения</h4>
+                    <a href="/ru/tools/pdf-merge/">Объединить PDF</a>
+                    <a href="/ru/tools/pdf-delete/">Удалить страницы PDF</a>
+                    <a href="/ru/tools/pdf-editor/">PDF Editor</a>
+                    <a href="/ru/tools/word-to-pdf/">Word в PDF</a>
+                    <a href="/ru/tools/image-converter/">Конвертер изображений</a>
+                    <a href="/ru/tools/image-compress/" class="ftr-hide-mob">Сжатие изображений</a>
+                    <a href="/ru/tools/image-resize/" class="ftr-hide-mob">Изменить размер изображения</a>
+                    <a href="/ru/tools/image-crop/" class="ftr-hide-mob">Обрезать изображение</a>
+                    <a href="/ru/tools/image-rotate/" class="ftr-hide-mob">Повернуть изображение</a>
+                    <a href="/ru/tools/pdf-rotate/" class="ftr-hide-mob">Повернуть PDF</a>
+                    <a href="/ru/tools/pdf-protect/" class="ftr-hide-mob">Защита PDF</a>
+                    <a href="/ru/tools/bg-remove/" class="ftr-hide-mob">Удаление фона</a>
+                    <a href="/ru/tools/qr-generator/">QR-код</a>
                 </div>
 
-                <!-- Loyiha + Huquqiy column -->
+                <!-- Проект + Юридическое column -->
                 <div class="footer-col">
-                    <h4>Loyiha</h4>
-                    <a href="/about.html">О нас</a>
-                    <a href="/contact.html">Контакты</a>
-                    <a href="/blog.html">Blog</a>
+                    <h4>Проект</h4>
+                    <a href="/ru/about.html">О нас</a>
+                    <a href="/ru/contact.html">Контакты</a>
+                    <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
-                    <h4 class="ftr-h4-mt">Huquqiy</h4>
-                    <a href="/terms.html">Условия использования</a>
-                    <a href="/privacy.html">Конфиденциальность</a>
+                    <h4 class="ftr-h4-mt">Юридическое</h4>
+                    <a href="/ru/terms.html">Условия использования</a>
+                    <a href="/ru/privacy.html">Политика конфиденциальности</a>
                 </div>
 
             </div>
@@ -276,8 +265,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Barcha huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Все права защищены</span>
+                    <span class="footer-made">Создано для Узбекистана</span>
                 </div>
             </div>
         </div>

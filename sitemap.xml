@@ -4,17 +4,6 @@
   <url>
     <loc>https://toolbase.uz/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/"/>
     <lastmod>2026-05-17</lastmod>
@@ -24,7 +13,6 @@
   <url>
     <loc>https://toolbase.uz/ru/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/"/>
     <lastmod>2026-05-17</lastmod>
@@ -34,17 +22,6 @@
   <url>
     <loc>https://toolbase.uz/about.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/about.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/about.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -54,7 +31,6 @@
   <url>
     <loc>https://toolbase.uz/ru/about.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/about.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -64,17 +40,6 @@
   <url>
     <loc>https://toolbase.uz/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/contact.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/contact.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -84,7 +49,6 @@
   <url>
     <loc>https://toolbase.uz/ru/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/contact.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -94,17 +58,6 @@
   <url>
     <loc>https://toolbase.uz/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/privacy.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/privacy.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -114,7 +67,6 @@
   <url>
     <loc>https://toolbase.uz/ru/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/privacy.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -124,17 +76,6 @@
   <url>
     <loc>https://toolbase.uz/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/terms.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/terms.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/terms.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -144,7 +85,6 @@
   <url>
     <loc>https://toolbase.uz/ru/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/terms.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/terms.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -154,17 +94,6 @@
   <url>
     <loc>https://toolbase.uz/blog.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -174,7 +103,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -184,17 +112,6 @@
   <url>
     <loc>https://toolbase.uz/tools/bg-remove/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/bg-remove/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/bg-remove/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/bg-remove/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/bg-remove/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/bg-remove/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/bg-remove/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/bg-remove/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/bg-remove/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/bg-remove/"/>
     <lastmod>2026-05-17</lastmod>
@@ -204,7 +121,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/bg-remove/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/bg-remove/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/bg-remove/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/bg-remove/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/bg-remove/"/>
     <lastmod>2026-05-17</lastmod>
@@ -214,17 +130,6 @@
   <url>
     <loc>https://toolbase.uz/tools/case-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/case-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/case-converter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/case-converter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/case-converter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/case-converter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/case-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/case-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/case-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/case-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -234,7 +139,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/case-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/case-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/case-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/case-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/case-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -244,17 +148,6 @@
   <url>
     <loc>https://toolbase.uz/tools/color-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/color-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/color-converter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/color-converter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/color-converter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/color-converter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/color-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/color-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/color-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/color-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -264,7 +157,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/color-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/color-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/color-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/color-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/color-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -274,17 +166,6 @@
   <url>
     <loc>https://toolbase.uz/tools/hash-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/hash-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/hash-generator/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/hash-generator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/hash-generator/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/hash-generator/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/hash-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/hash-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/hash-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/hash-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -294,7 +175,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/hash-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/hash-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/hash-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/hash-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/hash-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -304,17 +184,6 @@
   <url>
     <loc>https://toolbase.uz/tools/image-compress/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-compress/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-compress/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-compress/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-compress/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/image-compress/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-compress/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-compress/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-compress/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-compress/"/>
     <lastmod>2026-05-17</lastmod>
@@ -324,7 +193,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/image-compress/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-compress/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-compress/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-compress/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-compress/"/>
     <lastmod>2026-05-17</lastmod>
@@ -334,17 +202,6 @@
   <url>
     <loc>https://toolbase.uz/tools/image-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-converter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-converter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-converter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/image-converter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -354,7 +211,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/image-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -364,17 +220,6 @@
   <url>
     <loc>https://toolbase.uz/tools/image-crop/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-crop/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-crop/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-crop/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-crop/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/image-crop/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-crop/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-crop/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-crop/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-crop/"/>
     <lastmod>2026-05-17</lastmod>
@@ -384,7 +229,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/image-crop/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-crop/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-crop/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-crop/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-crop/"/>
     <lastmod>2026-05-17</lastmod>
@@ -394,17 +238,6 @@
   <url>
     <loc>https://toolbase.uz/tools/image-resize/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-resize/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-resize/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-resize/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-resize/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/image-resize/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-resize/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-resize/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-resize/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-resize/"/>
     <lastmod>2026-05-17</lastmod>
@@ -414,7 +247,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/image-resize/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-resize/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-resize/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-resize/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-resize/"/>
     <lastmod>2026-05-17</lastmod>
@@ -424,17 +256,6 @@
   <url>
     <loc>https://toolbase.uz/tools/image-rotate/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-rotate/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/image-rotate/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-rotate/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-rotate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-rotate/"/>
     <lastmod>2026-05-17</lastmod>
@@ -444,7 +265,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/image-rotate/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/image-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/image-rotate/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/image-rotate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/image-rotate/"/>
     <lastmod>2026-05-17</lastmod>
@@ -454,17 +274,6 @@
   <url>
     <loc>https://toolbase.uz/tools/imlo-tekshirish/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/imlo-tekshirish/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/imlo-tekshirish/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/imlo-tekshirish/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/imlo-tekshirish/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/imlo-tekshirish/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
     <lastmod>2026-05-17</lastmod>
@@ -474,7 +283,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/imlo-tekshirish/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/imlo-tekshirish/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/imlo-tekshirish/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/imlo-tekshirish/"/>
     <lastmod>2026-05-17</lastmod>
@@ -484,17 +292,6 @@
   <url>
     <loc>https://toolbase.uz/tools/json-formatter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/json-formatter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/json-formatter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/json-formatter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/json-formatter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/json-formatter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -504,7 +301,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/json-formatter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/json-formatter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/json-formatter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/json-formatter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -514,17 +310,6 @@
   <url>
     <loc>https://toolbase.uz/tools/lotin-krill/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/lotin-krill/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/lotin-krill/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/lotin-krill/"/>
     <lastmod>2026-05-17</lastmod>
@@ -534,7 +319,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/lotin-krill/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/lotin-krill/"/>
     <lastmod>2026-05-17</lastmod>
@@ -544,17 +328,6 @@
   <url>
     <loc>https://toolbase.uz/tools/password-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/password-generator/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/password-generator/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/password-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/password-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/password-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -564,7 +337,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/password-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/password-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/password-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/password-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -574,17 +346,6 @@
   <url>
     <loc>https://toolbase.uz/tools/pdf-delete/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-delete/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-delete/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-delete/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-delete/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/pdf-delete/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-delete/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-delete/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-delete/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-delete/"/>
     <lastmod>2026-05-17</lastmod>
@@ -594,7 +355,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/pdf-delete/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-delete/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-delete/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-delete/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-delete/"/>
     <lastmod>2026-05-17</lastmod>
@@ -604,17 +364,6 @@
   <url>
     <loc>https://toolbase.uz/tools/pdf-editor/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-editor/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-editor/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-editor/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-editor/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/pdf-editor/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-editor/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-editor/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-editor/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-editor/"/>
     <lastmod>2026-05-17</lastmod>
@@ -624,7 +373,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/pdf-editor/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-editor/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-editor/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-editor/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-editor/"/>
     <lastmod>2026-05-17</lastmod>
@@ -634,17 +382,6 @@
   <url>
     <loc>https://toolbase.uz/tools/pdf-merge/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-merge/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-merge/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-merge/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-merge/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/pdf-merge/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-merge/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-merge/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-merge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-merge/"/>
     <lastmod>2026-05-17</lastmod>
@@ -654,7 +391,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/pdf-merge/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-merge/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-merge/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-merge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-merge/"/>
     <lastmod>2026-05-17</lastmod>
@@ -664,17 +400,6 @@
   <url>
     <loc>https://toolbase.uz/tools/pdf-protect/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-protect/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-protect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-protect/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-protect/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/pdf-protect/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-protect/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-protect/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-protect/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-protect/"/>
     <lastmod>2026-05-17</lastmod>
@@ -684,7 +409,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/pdf-protect/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-protect/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-protect/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-protect/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-protect/"/>
     <lastmod>2026-05-17</lastmod>
@@ -694,17 +418,6 @@
   <url>
     <loc>https://toolbase.uz/tools/pdf-rotate/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-rotate/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/pdf-rotate/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-rotate/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-rotate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-rotate/"/>
     <lastmod>2026-05-17</lastmod>
@@ -714,7 +427,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/pdf-rotate/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/pdf-rotate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/pdf-rotate/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/pdf-rotate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/pdf-rotate/"/>
     <lastmod>2026-05-17</lastmod>
@@ -724,17 +436,6 @@
   <url>
     <loc>https://toolbase.uz/tools/qr-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/qr-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/qr-generator/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/qr-generator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/qr-generator/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/qr-generator/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/qr-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/qr-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/qr-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/qr-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -744,7 +445,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/qr-generator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/qr-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/qr-generator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/qr-generator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/qr-generator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -754,17 +454,6 @@
   <url>
     <loc>https://toolbase.uz/tools/son-soz/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/son-soz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/son-soz/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/son-soz/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/son-soz/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/son-soz/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/son-soz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/son-soz/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/son-soz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/son-soz/"/>
     <lastmod>2026-05-17</lastmod>
@@ -774,7 +463,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/son-soz/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/son-soz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/son-soz/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/son-soz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/son-soz/"/>
     <lastmod>2026-05-17</lastmod>
@@ -784,17 +472,6 @@
   <url>
     <loc>https://toolbase.uz/tools/time-zones/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/time-zones/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/time-zones/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/time-zones/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/time-zones/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/time-zones/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/time-zones/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/time-zones/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/time-zones/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/time-zones/"/>
     <lastmod>2026-05-17</lastmod>
@@ -804,7 +481,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/time-zones/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/time-zones/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/time-zones/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/time-zones/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/time-zones/"/>
     <lastmod>2026-05-17</lastmod>
@@ -814,17 +490,6 @@
   <url>
     <loc>https://toolbase.uz/tools/unit-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/unit-converter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/unit-converter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/unit-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -834,7 +499,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/unit-converter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/unit-converter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -844,17 +508,6 @@
   <url>
     <loc>https://toolbase.uz/tools/word-counter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-counter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-counter/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-counter/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-counter/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/word-counter/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-counter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-counter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-counter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-counter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -864,7 +517,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/word-counter/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-counter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-counter/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-counter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-counter/"/>
     <lastmod>2026-05-17</lastmod>
@@ -874,17 +526,6 @@
   <url>
     <loc>https://toolbase.uz/tools/word-to-pdf/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-to-pdf/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-to-pdf/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-to-pdf/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-to-pdf/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/word-to-pdf/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-to-pdf/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-to-pdf/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-to-pdf/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-to-pdf/"/>
     <lastmod>2026-05-17</lastmod>
@@ -894,7 +535,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/word-to-pdf/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/word-to-pdf/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/word-to-pdf/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/word-to-pdf/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/word-to-pdf/"/>
     <lastmod>2026-05-17</lastmod>
@@ -904,17 +544,6 @@
   <url>
     <loc>https://toolbase.uz/tools/zip-creator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/zip-creator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/zip-creator/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/zip-creator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/zip-creator/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/zip-creator/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/zip-creator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/zip-creator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/zip-creator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/zip-creator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -924,7 +553,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/zip-creator/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/zip-creator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/zip-creator/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/zip-creator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/zip-creator/"/>
     <lastmod>2026-05-17</lastmod>
@@ -934,17 +562,6 @@
   <url>
     <loc>https://toolbase.uz/blog/case-converter-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/case-converter-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/case-converter-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/case-converter-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/case-converter-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/case-converter-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -954,7 +571,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/case-converter-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/case-converter-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/case-converter-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/case-converter-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -964,17 +580,6 @@
   <url>
     <loc>https://toolbase.uz/blog/hash-generator-md5-sha256.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/hash-generator-md5-sha256.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -984,7 +589,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/hash-generator-md5-sha256.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/hash-generator-md5-sha256.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/hash-generator-md5-sha256.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -994,17 +598,6 @@
   <url>
     <loc>https://toolbase.uz/blog/json-formatlash-amaliyot.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-formatlash-amaliyot.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-formatlash-amaliyot.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/json-formatlash-amaliyot.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-formatlash-amaliyot.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-formatlash-amaliyot.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1014,7 +607,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/json-formatlash-amaliyot.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-formatlash-amaliyot.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-formatlash-amaliyot.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-formatlash-amaliyot.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1024,17 +616,6 @@
   <url>
     <loc>https://toolbase.uz/blog/json-nima.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-nima.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-nima.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-nima.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-nima.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/json-nima.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-nima.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-nima.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-nima.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-nima.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1044,7 +625,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/json-nima.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/json-nima.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/json-nima.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/json-nima.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/json-nima.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1054,17 +634,6 @@
   <url>
     <loc>https://toolbase.uz/blog/kuchli-parol-yaratish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/kuchli-parol-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/kuchli-parol-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/kuchli-parol-yaratish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/kuchli-parol-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/kuchli-parol-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1074,7 +643,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/kuchli-parol-yaratish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/kuchli-parol-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/kuchli-parol-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/kuchli-parol-yaratish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1084,17 +652,6 @@
   <url>
     <loc>https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/olchov-birliklari-konvertatsiya.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/olchov-birliklari-konvertatsiya.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/olchov-birliklari-konvertatsiya.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/olchov-birliklari-konvertatsiya.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/olchov-birliklari-konvertatsiya.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1104,7 +661,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/olchov-birliklari-konvertatsiya.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/olchov-birliklari-konvertatsiya.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/olchov-birliklari-konvertatsiya.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/olchov-birliklari-konvertatsiya.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1114,17 +670,6 @@
   <url>
     <loc>https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/onlayn-vositalar-foydalanish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/onlayn-vositalar-foydalanish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/onlayn-vositalar-foydalanish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/onlayn-vositalar-foydalanish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/onlayn-vositalar-foydalanish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1134,7 +679,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/onlayn-vositalar-foydalanish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/onlayn-vositalar-foydalanish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/onlayn-vositalar-foydalanish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/onlayn-vositalar-foydalanish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1144,17 +688,6 @@
   <url>
     <loc>https://toolbase.uz/blog/pdf-aylantirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/pdf-aylantirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1164,7 +697,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/pdf-aylantirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-aylantirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1174,17 +706,6 @@
   <url>
     <loc>https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-birlashtirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-birlashtirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/pdf-birlashtirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-birlashtirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-birlashtirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1194,7 +715,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/pdf-birlashtirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-birlashtirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-birlashtirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-birlashtirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1204,17 +724,6 @@
   <url>
     <loc>https://toolbase.uz/blog/pdf-editor-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-editor-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-editor-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/pdf-editor-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-editor-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-editor-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1224,7 +733,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/pdf-editor-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-editor-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-editor-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-editor-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1234,17 +742,6 @@
   <url>
     <loc>https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-parol-himoya-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-parol-himoya-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/pdf-parol-himoya-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-parol-himoya-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-parol-himoya-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1254,7 +751,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/pdf-parol-himoya-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-parol-himoya-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-parol-himoya-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-parol-himoya-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1264,17 +760,6 @@
   <url>
     <loc>https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/pdf-sahifa-ochirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1284,7 +769,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/pdf-sahifa-ochirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/pdf-sahifa-ochirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1294,17 +778,6 @@
   <url>
     <loc>https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/qr-kod-yaratish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/qr-kod-yaratish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/qr-kod-yaratish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/qr-kod-yaratish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/qr-kod-yaratish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1314,7 +787,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/qr-kod-yaratish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/qr-kod-yaratish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/qr-kod-yaratish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/qr-kod-yaratish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1324,17 +796,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rang-formatlari-hex-rgb-hsl.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1344,7 +805,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rang-formatlari-hex-rgb-hsl.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rang-formatlari-hex-rgb-hsl.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1354,17 +814,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasm-format-ozgartirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-format-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-format-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1374,7 +823,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasm-format-ozgartirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-format-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-format-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-format-ozgartirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1384,17 +832,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasm-razmer-ozgartirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1404,7 +841,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1414,17 +850,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasm-razmer-ozgartirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasm-razmer-ozgartirish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1434,7 +859,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasm-razmer-ozgartirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasm-razmer-ozgartirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasm-razmer-ozgartirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1444,17 +868,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasmni-aylantirish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1464,7 +877,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasmni-aylantirish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-aylantirish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-aylantirish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1474,17 +886,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasmni-qirqish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-qirqish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-qirqish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasmni-qirqish-qollanma.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-qirqish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-qirqish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1494,7 +895,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasmni-qirqish-qollanma.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-qirqish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-qirqish-qollanma.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-qirqish-qollanma.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1504,17 +904,6 @@
   <url>
     <loc>https://toolbase.uz/blog/rasmni-siqish-optimize.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-siqish-optimize.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-siqish-optimize.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/rasmni-siqish-optimize.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-siqish-optimize.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-siqish-optimize.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1524,7 +913,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/rasmni-siqish-optimize.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/rasmni-siqish-optimize.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/rasmni-siqish-optimize.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/rasmni-siqish-optimize.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1534,17 +922,6 @@
   <url>
     <loc>https://toolbase.uz/blog/son-soz-konvertor.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/son-soz-konvertor.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/son-soz-konvertor.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/son-soz-konvertor.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/son-soz-konvertor.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/son-soz-konvertor.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1554,7 +931,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/son-soz-konvertor.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/son-soz-konvertor.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/son-soz-konvertor.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/son-soz-konvertor.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1564,17 +940,6 @@
   <url>
     <loc>https://toolbase.uz/blog/uzbek-imlo-tekshirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-imlo-tekshirish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-imlo-tekshirish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/uzbek-imlo-tekshirish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-imlo-tekshirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-imlo-tekshirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1584,7 +949,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/uzbek-imlo-tekshirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-imlo-tekshirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-imlo-tekshirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-imlo-tekshirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1594,17 +958,6 @@
   <url>
     <loc>https://toolbase.uz/blog/uzbek-lotin-krill.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-lotin-krill.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-lotin-krill.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/uzbek-lotin-krill.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-lotin-krill.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-lotin-krill.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1614,7 +967,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/uzbek-lotin-krill.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/uzbek-lotin-krill.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/uzbek-lotin-krill.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/uzbek-lotin-krill.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1624,17 +976,6 @@
   <url>
     <loc>https://toolbase.uz/blog/word-counter-yozuvchilar.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-counter-yozuvchilar.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-counter-yozuvchilar.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/word-counter-yozuvchilar.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-counter-yozuvchilar.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-counter-yozuvchilar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1644,7 +985,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/word-counter-yozuvchilar.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-counter-yozuvchilar.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-counter-yozuvchilar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-counter-yozuvchilar.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1654,17 +994,6 @@
   <url>
     <loc>https://toolbase.uz/blog/word-pdf-aylantirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-pdf-aylantirish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-pdf-aylantirish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/word-pdf-aylantirish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-pdf-aylantirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-pdf-aylantirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1674,7 +1003,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/word-pdf-aylantirish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/word-pdf-aylantirish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/word-pdf-aylantirish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/word-pdf-aylantirish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1684,17 +1012,6 @@
   <url>
     <loc>https://toolbase.uz/blog/zip-arxiv-yaratish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/zip-arxiv-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/blog/zip-arxiv-yaratish.html</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/zip-arxiv-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1704,7 +1021,6 @@
   <url>
     <loc>https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog/zip-arxiv-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html"/>
     <lastmod>2026-05-17</lastmod>
@@ -1714,17 +1030,6 @@
   <url>
     <loc>https://toolbase.uz/tools/doc-lotin-krill/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/doc-lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/doc-lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://toolbase.uz/en/tools/doc-lotin-krill/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/doc-lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/doc-lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
     <lastmod>2026-05-17</lastmod>
@@ -1734,7 +1039,6 @@
   <url>
     <loc>https://toolbase.uz/ru/tools/doc-lotin-krill/</loc>
     <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toolbase.uz/en/tools/doc-lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/tools/doc-lotin-krill/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://toolbase.uz/tools/doc-lotin-krill/"/>
     <lastmod>2026-05-17</lastmod>
@@ -1752,5 +1056,161 @@
     <loc>https://toolbase.uz/ru/hujjatlar/ariza/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/tarjimai-hol/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/tarjimai-hol/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/tarjimai-hol/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/tarjimai-hol/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/obyektivka/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/obyektivka/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/obyektivka/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/obyektivka/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/malumotnoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/malumotnoma/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/malumotnoma/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/malumotnoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/tushuntirish-xati/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/tushuntirish-xati/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/tushuntirish-xati/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/tushuntirish-xati/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/tavsifnoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/tavsifnoma/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/tavsifnoma/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/tavsifnoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/hujjatlar/tavsiyanoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/hujjatlar/tavsiyanoma/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/hujjatlar/tavsiyanoma/"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/hujjatlar/tavsiyanoma/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/ariza-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/ariza-qanday-yoziladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/ariza-qanday-yoziladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/ariza-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/tarjimai-hol-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/tarjimai-hol-qanday-yoziladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/tarjimai-hol-qanday-yoziladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/tarjimai-hol-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/obyektivka-qanday-toldiriladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/obyektivka-qanday-toldiriladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/obyektivka-qanday-toldiriladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/obyektivka-qanday-toldiriladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/malumotnoma-qanday-olinadi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/malumotnoma-qanday-olinadi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/malumotnoma-qanday-olinadi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/malumotnoma-qanday-olinadi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/tushuntirish-xati-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/tushuntirish-xati-qanday-yoziladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/tushuntirish-xati-qanday-yoziladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/tushuntirish-xati-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/tavsifnoma-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/tavsifnoma-qanday-yoziladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/tavsifnoma-qanday-yoziladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/tavsifnoma-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/blog/tavsiyanoma-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog/tavsiyanoma-qanday-yoziladi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog/tavsiyanoma-qanday-yoziladi.html"/>
+  </url>
+  <url>
+    <loc>https://toolbase.uz/ru/blog/tavsiyanoma-qanday-yoziladi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

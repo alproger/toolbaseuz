@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>ZIP Arxiv Yaratish: Fayllar va Papkalarni Ziplash | toolbase.uz</title>
-    <meta name="description" content="Fayllar va papkalarni ZIP arxivga qanday yig'ish kerak. DEFLATE vs STORE, papka tuzilmasi, batch ziplash. Bepul onlayn vosita." />
-    <meta name="keywords" content="zip yaratish, arxiv yaratish, fayllarni ziplash, papkani ziplash, zip online, compress files, zip arxiv" />
+    <title>Создание ZIP-архива: упаковка файлов и папок | toolbase.uz</title>
+    <meta name="description" content="Как собрать файлы и папки в ZIP-архив. DEFLATE vs STORE, papka tuzilmasi, batch ziplash. Bepul onlayn vosita." />
+    <meta name="keywords" content="создать zip, создать архив, упаковать файлы в zip, заархивировать папку, zip online, compress files, zip arxiv" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://toolbase.uz/blog/zip-arxiv-yaratish.html" />
+    <link rel="canonical" href="https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://toolbase.uz/blog/zip-arxiv-yaratish.html" />
-    <meta property="og:title" content="ZIP Arxiv Yaratish: Fayllar va Papkalarni Ziplash" />
-    <meta property="og:description" content="Fayllar va papkalarni ZIP ga yig'ing. DEFLATE siqish, papka tuzilmasi. Bepul, brauzerda." />
+    <meta property="og:url" content="https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html" />
+    <meta property="og:title" content="Создание ZIP-архива: упаковка файлов и папок" />
+    <meta property="og:description" content="Соберите файлы и папки в ZIP. Сжатие DEFLATE, структура папок. Bepul, brauzerda." />
     <meta property="og:image" content="https://toolbase.uz/assets/img/og-image.png" />
-    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:locale" content="ru_RU" />
     <meta property="article:published_time" content="2026-05-10T00:00:00+05:00" />
     <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
     <link rel="manifest" href="../../manifest.json" />
@@ -26,8 +26,8 @@
         {
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "ZIP Arxiv Yaratish: Fayllar va Papkalarni Ziplash",
-            "url": "https://toolbase.uz/blog/zip-arxiv-yaratish.html",
+            "headline": "Создание ZIP-архива: упаковка файлов и папок",
+            "url": "https://toolbase.uz/ru/blog/zip-arxiv-yaratish.html",
             "datePublished": "2026-05-10",
             "author": {
                 "@type": "Organization",
@@ -46,17 +46,17 @@
             "@type": "FAQPage",
             "mainEntity": [{
                 "@type": "Question",
-                "name": "DEFLATE va STORE farqi nima?",
+                "name": "В чём разница между DEFLATE и STORE?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "DEFLATE siqish algoritmi qo'llab, fayl hajmini 30-70% kamaytiradi. STORE faylni siqmasdan saqlaydi — tezroq lekin hajm o'zgarmaydi. Allaqachon siqilgan JPG, MP4, ZIP fayllar uchun STORE afzalroq."
+                    "text": "DEFLATE применяет алгоритм сжатия и уменьшает размер файла на 30–70%. STORE сохраняет файл без сжатия — быстрее, но размер не меняется. Для уже сжатых JPG, MP4 разницы почти нет."
                 }
             }, {
                 "@type": "Question",
-                "name": "Papkani qanday qo'shaman?",
+                "name": "Как добавить папку?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ikki usul: 1) 'Papka tanlash' tugmasi — все brauzerda ishlaydi. 2) Chrome yoki Edge da papkani to'g'ridan drop zonaga tashlash — sub-papkalar bilan to'liq tuzilmani saqlaydi."
+                    "text": "Два способа: 1) кнопка «Выбрать папку» — работает во всех браузерах. 2) в Chrome или Edge перетащить папку прямо в зону drop — загрузится полная структура с подпапками."
                 }
             }]
         }
@@ -381,173 +381,171 @@
     <header class="site-header">
         <div class="container nav">
             <a href="../" class="logo">Toolbase<span class="tld">.uz</span></a>
-            <nav class="nav-links"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms</a></nav>
+            <nav class="nav-links"><a href="/ru/about.html">О нас</a><a href="/ru/contact.html">Контакты</a><a href="/ru/privacy.html">Конфиденциальность</a><a href="/ru/terms.html">Условия</a></nav>
         </div>
     </header>
 
     <section class="page-hero">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../">Bosh sahifa</a><span class="bc-sep">&#8250;</span>
+                <a href="/ru/">Главная</a><span class="bc-sep">&#8250;</span>
                 <a href="../blog.html">Blog</a><span class="bc-sep">&#8250;</span>
-                <span>ZIP Arxiv Yaratish</span>
+                <span>Создание ZIP-архива</span>
             </nav>
             <div class="article-meta">
-                <span class="meta-cat">Utility</span>
-                <span class="meta-info">10 may 2026 &#183; 6 daqiqa o&#8217;qish</span>
+                <span class="meta-cat">Инструменты</span>
+                <span class="meta-info">10 мая 2026 &#183; 6 минут чтения</span>
             </div>
-            <h1>ZIP Arxiv Yaratish: Fayllar va Papkalarni Ziplash</h1>
-            <p>Ko&#8217;p faylni bir joyga yig&#8217;ib yuborish, zaxira olish yoki hajmini kamaytirish &#8212; ZIP arxiv yaratishning to&#8217;g&#8217;ri usullari.</p>
+            <h1>Создание ZIP-архива: упаковка файлов и папок</h1>
+            <p>Собрать много файлов в одном месте для отправки, сделать резервную копию или уменьшить размер — правильные способы создания ZIP-архива.</p>
         </div>
     </section>
 
     <div class="page-content">
 
-        <p>ZIP arxiv &#8212; bir nechta faylni bitta faylga yig&#8217;ib siqadigan universal format. 1989 yildan beri standart bo&#8217;lib, все operatsion tizimlar va qurilmalar qo&#8217;llab-quvvatlaydi. Email ga ko&#8217;p fayl biriktirish, loyihani
-            arxivlash, yoki katta papkani biror joyga yuborish uchun eng keng qo&#8217;llaniladigan usul.</p>
+        <p>ZIP-архив — универсальный формат, упаковывающий несколько файлов в один со сжатием. Стандарт с 1989 года, поддерживается всеми операционными системами и устройствами. Самый распространённый способ прикрепить много файлов к письму, заархивировать проект или отправить большую папку.</p>
 
         <div class="tool-cta">
-            <h3>ZIP arxiv hoziroq yarating</h3>
-            <p>Fayllar va papkalarni drag &amp; drop bilan qo&#8217;shing. Papka tuzilmasi saqlanadi. Bepul, brauzerda.</p>
+            <h3>Создайте ZIP-архив прямо сейчас</h3>
+            <p>Добавляйте файлы и папки перетаскиванием. Структура папок сохраняется. Бесплатно, в браузере.</p>
             <a href="/ru/tools/zip-creator/">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>                ZIP Creator &#8594;
             </a>
         </div>
 
-        <h2>DEFLATE va STORE: qaysi birini tanlash?</h2>
+        <h2>DEFLATE и STORE: что выбрать?</h2>
 
         <table class="compare-table">
             <thead>
                 <tr>
-                    <th>Xususiyat</th>
+                    <th>Характеристика</th>
                     <th>DEFLATE</th>
                     <th>STORE</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Siqish</td>
+                    <td>Сжатие</td>
                     <td><span class="yes">&#10003; Bor</span></td>
                     <td><span class="no">&#10007; Yo&#8217;q</span></td>
                 </tr>
                 <tr>
-                    <td>Hajm kamayishi</td>
+                    <td>Уменьшение размера</td>
                     <td>30&#8211;70% (текст, kod)</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>Tezlik</td>
-                    <td>Sekinroq</td>
+                    <td>Скорость</td>
+                    <td>Медленнее</td>
                     <td><span class="yes">Tezroq</span></td>
                 </tr>
                 <tr>
-                    <td>JPG/MP4/ZIP uchun</td>
-                    <td>Kam foyda</td>
+                    <td>Для JPG/MP4/ZIP</td>
+                    <td>Мало пользы</td>
                     <td><span class="yes">Afzal</span></td>
                 </tr>
                 <tr>
-                    <td>TXT/PDF/DOCX uchun</td>
+                    <td>Для TXT/PDF/DOCX</td>
                     <td><span class="yes">Afzal</span></td>
-                    <td>Kam foyda</td>
+                    <td>Мало пользы</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="tip-box">
-            <p><strong>Qoida:</strong> Текст, kod, hujjatlar &#8212; DEFLATE. Allaqachon siqilgan fayllar (изображениеlar, videolar, arxivlar) &#8212; STORE. Aralash bo&#8217;lsa &#8212; DEFLATE (zararli emas).</p>
+            <p><strong>Правило:</strong> текст, код, документы — DEFLATE. Уже сжатые файлы (изображения, видео, архивы) — STORE. Если смешано — DEFLATE (вреда не будет).</p>
         </div>
 
-        <h2>Papka tuzilmasini saqlash</h2>
+        <h2>Сохранение структуры папок</h2>
 
-        <p>&#171;Papka tuzilmasi&#187; toggle yoqilganda, ZIP ichida papka/pastki_papka/fayl.txt ko&#8217;rinishida saqlanadi. Bu muhim &#8212; ZIP ni ochganda fayllar o&#8217;z papkalarida joylashgan bo&#8217;ladi.</p>
+        <p>Когда включён переключатель «Структура папок», внутри ZIP сохраняется вид папка/подпапка/файл.txt. Это важно — при открытии ZIP файлы будут лежать в своих папках.</p>
 
-        <p>Toggle o&#8217;chirilsa &#8212; все fayllar ZIP ning ildiz papkasida tekis holda joylashadi. Bu ba&#8217;zan qulay &#8212; masalan, bir nechta papkadan birlashtirilgan fayllarni bir joyga yig&#8217;ish kerak bo&#8217;lsa.</p>
+        <p>Если переключатель выключен — все файлы располагаются плоско в корне ZIP. Иногда это удобно — например, когда нужно собрать в одном месте файлы из нескольких папок.</p>
 
-        <h2>Papkani qo&#8217;shish usullari</h2>
+        <h2>Способы добавления папки</h2>
 
-        <h3>1. "Papka tanlash" tugmasi (все brauzer)</h3>
-        <p><code>webkitdirectory</code> atributi bilan fayl tanlash dialogi papkani tanlashga o&#8217;tadi. Ichki papkalar va fayllar bilan to&#8217;liq tuzilma yuklanadi. Chrome, Firefox, Edge, Safari &#8212; hammasi ishlaydi.</p>
+        <h3>1. Кнопка «Выбрать папку» (все браузеры)</h3>
+        <p>С атрибутом <code>webkitdirectory</code> диалог выбора файлов переключается на выбор папки. Загружается полная структура с вложенными папками и файлами. Chrome, Firefox, Edge, Safari — всё работает.</p>
 
         <h3>2. Drag &amp; drop (Chrome, Edge)</h3>
-        <p>Papkani to&#8217;g&#8217;ridan drop zonaga tashlash &#8212; bu usul <code>webkitGetAsEntry()</code> API orqali ishlaydi va sub-papkalarni rekursiv o&#8217;qiydi. <strong>Firefox da papkani tashlash ishlamaydi</strong> &#8212; "Papka tanlash" tugmasini
-            ishlating.</p>
+        <p>Перетаскивание папки прямо в зону drop — этот способ работает через API <code>webkitGetAsEntry()</code> и рекурсивно читает подпапки. <strong>В Firefox перетаскивание папки не работает</strong> — используйте кнопку «Выбрать папку».</p>
 
         <div class="warn-box">
-            <p><strong>Firefox foydalanuvchilari uchun:</strong> Papkani drop orqali qo&#8217;shish Firefox da qo&#8217;llab-quvvatlanmaydi. Har doim &#171;Papka tanlash&#187; tugmasidan foydalaning &#8212; bu все brauzerda ishlaydi.</p>
+            <p><strong>Для пользователей Firefox:</strong> добавление папки перетаскиванием в Firefox не поддерживается. Всегда используйте кнопку «Выбрать папку» — она работает во всех браузерах.</p>
         </div>
 
-        <h2>Foydalanish holatlari</h2>
+        <h2>Случаи использования</h2>
 
         <div class="use-grid">
             <div class="use-card">
                 <div class="uc-icon">&#128228;</div>
-                <h3>Email yuborish</h3>
-                <p>Ko&#8217;p faylni bitta ZIP ga yig&#8217;ib biriktirish. Hajm kamayadi.</p>
+                <h3>Отправка по email</h3>
+                <p>Собрать много файлов в один ZIP и прикрепить. Размер уменьшается.</p>
             </div>
             <div class="use-card">
                 <div class="uc-icon">&#128190;</div>
-                <h3>Zaxira nusxa</h3>
-                <p>Muhim hujjatlar, изображениеlar, kod &#8212; arxiv sifatida saqlash.</p>
+                <h3>Резервная копия</h3>
+                <p>Важные документы, изображения, код — сохранить как архив.</p>
             </div>
             <div class="use-card">
                 <div class="uc-icon">&#128193;</div>
-                <h3>Loyiha arxiv</h3>
-                <p>Dastur loyihasini, veb saytni yoki fayllar to&#8217;plamini yig&#8217;ish.</p>
+                <h3>Архив проекта</h3>
+                <p>Упаковать программный проект, веб-сайт или набор файлов.</p>
             </div>
             <div class="use-card">
                 <div class="uc-icon">&#128260;</div>
                 <h3>Transfer</h3>
-                <p>Messenger, Telegram, Drive orqali ko&#8217;p faylni bitta arxivda yuborish.</p>
+                <p>Отправить много файлов одним архивом через мессенджер, Telegram, Drive.</p>
             </div>
         </div>
 
-        <h2>Siqish koeffisienti: nimani kutish mumkin?</h2>
+        <h2>Коэффициент сжатия: чего ожидать?</h2>
         <ul>
-            <li><strong>Текст fayllari (TXT, CSV, JSON, XML):</strong> 60&#8211;90% siqiladi &#8212; eng yuqori natija</li>
-            <li><strong>Hujjatlar (DOCX, XLSX, PPTX):</strong> 10&#8211;40% &#8212; allaqachon siqilgan format</li>
+            <li><strong>Текстовые файлы (TXT, CSV, JSON, XML):</strong> сжимаются на 60&#8211;90% — наилучший результат</li>
+            <li><strong>Документы (DOCX, XLSX, PPTX):</strong> 10&#8211;40% — уже сжатый формат</li>
             <li><strong>PDF:</strong> 5&#8211;20% &#8212; kontentga bog&#8217;liq</li>
             <li><strong>Kod fayllari (JS, PY, HTML, CSS):</strong> 50&#8211;80%</li>
-            <li><strong>Изображениеlar (JPG, PNG, WebP):</strong> 0&#8211;5% &#8212; allaqachon siqilgan</li>
-            <li><strong>Video (MP4, MKV):</strong> 0&#8211;2% &#8212; foyda yo&#8217;q</li>
+            <li><strong>Изображения (JPG, PNG, WebP):</strong> 0&#8211;5% — уже сжаты</li>
+            <li><strong>Видео (MP4, MKV):</strong> 0&#8211;2% — пользы нет</li>
         </ul>
 
         <div class="info-box">
-            <p><strong>Muhim:</strong> Изображениеlar va videolar uchun ZIP siqishi deyarli foyda bermaydi &#8212; ular allaqachon o&#8217;z formatida siqilgan. Bunday fayllar uchun STORE rejimi tezroq ishlaydi va natija bir xil.</p>
+            <p><strong>Важно:</strong> для изображений и видео сжатие ZIP почти не даёт пользы — они уже сжаты в своём формате. Для таких файлов режим STORE работает быстрее, а результат тот же.</p>
         </div>
 
-        <h2>Qanday foydalanish?</h2>
+        <h2>Как пользоваться?</h2>
         <ol>
-            <li>Drop zonaga <strong>fayllarni tashlang</strong> yoki &#171;Fayl qo&#8217;shish&#187; tugmasini bosing.</li>
-            <li><strong>Papka qo&#8217;shish</strong> uchun &#171;Papka tanlash&#187; tugmasini bosing.</li>
-            <li>Fayl daraxtida tarkibni ko&#8217;rib chiqing &#8212; keraksiz fayllarni o&#8217;chiring.</li>
-            <li>ZIP nomini kiriting, siqish turini tanlang.</li>
-            <li><strong>&#171;ZIP Yaratish&#187;</strong> tugmasini bosib yuklab oling.</li>
+            <li><strong>Перетащите файлы</strong> в зону drop или нажмите кнопку «Добавить файл».</li>
+            <li>Чтобы <strong>добавить папку</strong>, нажмите кнопку «Выбрать папку».</li>
+            <li>Просмотрите содержимое в дереве файлов — удалите ненужные файлы.</li>
+            <li>Введите имя ZIP, выберите тип сжатия.</li>
+            <li>Нажмите <strong>«Создать ZIP»</strong> и скачайте.</li>
         </ol>
 
         <div class="tool-cta">
-            <h3>Hoziroq sinab ko&#8217;ring</h3>
-            <p>Fayllar, papkalar, aralash &#8212; barchasi bitta ZIP da. Bepul, tez, xavfsiz.</p>
+            <h3>Попробуйте прямо сейчас</h3>
+            <p>Файлы, папки, вперемешку — всё в одном ZIP. Бесплатно, быстро, безопасно.</p>
             <a href="/ru/tools/zip-creator/">ZIP Arxiv Yaratish &#8594;</a>
         </div>
 
         <hr style="border:none;border-top:1px solid var(--line);margin:40px 0;" />
-        <h2>Tegishli vositalar</h2>
+        <h2>Связанные инструменты</h2>
         <div class="related-grid">
             <a class="related-card" href="/ru/tools/zip-creator/">
-                <div class="rc-cat">Vosita</div>
-                <div class="rc-title">ZIP Fayl Yaratish</div>
+                <div class="rc-cat">Инструмент</div>
+                <div class="rc-title">Создание ZIP-файла</div>
             </a>
             <a class="related-card" href="/ru/tools/pdf-merge/">
-                <div class="rc-cat">Vosita</div>
-                <div class="rc-title">PDF Birlashtirish</div>
+                <div class="rc-cat">Инструмент</div>
+                <div class="rc-title">Объединение PDF</div>
             </a>
             <a class="related-card" href="/ru/tools/pdf-protect/">
-                <div class="rc-cat">Vosita</div>
-                <div class="rc-title">PDF Himoya &#8212; Parol</div>
+                <div class="rc-cat">Инструмент</div>
+                <div class="rc-title">Защита PDF — пароль</div>
             </a>
             <a class="related-card" href="/ru/tools/password-generator/">
-                <div class="rc-cat">Vosita</div>
-                <div class="rc-title">Kuchli Parol Yaratish</div>
+                <div class="rc-cat">Инструмент</div>
+                <div class="rc-title">Создание надёжного пароля</div>
             </a>
         </div>
     </div>
@@ -561,7 +559,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="/" class="logo">Toolbase<span class="tld">.uz</span></a>
-                    <p>Текст, hujjat va изображениеlar bilan ishlash uchun 20+ bepul onlayn vosita. Serverga yuborilmaydi.</p>
+                    <p>20+ бесплатных онлайн-инструментов для текста, документов, изображений, файлов и разработчиков. Файлы остаются в браузере.</p>
                     <div class="footer-social">
                         <a href="https://t.me/toolbaseuz" target="_blank" rel="noopener" aria-label="Telegram" class="social-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>                            Telegram
@@ -572,51 +570,50 @@
                     </div>
                 </div>
 
-                <!-- Vositalar column -->
+                <!-- Инструменты column -->
                 <div class="footer-col">
-                    <h4>Vositalar</h4>
-                    <a href="/ru/tools/lotin-krill/">Lotin &#8644; Krill</a>
-                    <a href="/ru/tools/son-soz/">Son &#8594; So&#700;z</a>
+                    <h4>Инструменты</h4>
+                    <a href="/ru/tools/lotin-krill/">Латиница &#8644; Кириллица</a>
+                    <a href="/ru/tools/son-soz/">Число прописью</a>
                     <a href="/ru/tools/word-counter/">Word Counter</a>
                     <a href="/ru/tools/case-converter/">Case Converter</a>
-                    <a href="/ru/tools/color-converter/">Rang Konvertori</a>
-                    <a href="/ru/tools/unit-converter/" class="ftr-hide-mob">O&#8216;lchov Konvertori</a>
-                    <a href="/ru/tools/json-formatter/" class="ftr-hide-mob">JSON Formatlash</a>
-                    <a href="/ru/tools/password-generator/" class="ftr-hide-mob">Parol Yaratish</a>
-                    <a href="/ru/tools/hash-generator/" class="ftr-hide-mob">Hash Generator</a>
-                    <a href="/ru/tools/time-zones/" class="ftr-hide-mob">Vaqt Zonalari</a>
-                    <a href="/ru/tools/zip-creator/" class="ftr-hide-mob">ZIP Yaratish</a>
-                    <a href="/ru/tools/imlo-tekshirish/" class="ftr-hide-mob">Imlo Tekshirish</a>
+                    <a href="/ru/tools/color-converter/">Конвертер цветов</a>
+                    <a href="/ru/tools/unit-converter/" class="ftr-hide-mob">Конвертер единиц</a>
+                    <a href="/ru/tools/json-formatter/" class="ftr-hide-mob">Форматирование JSON</a>
+                    <a href="/ru/tools/password-generator/" class="ftr-hide-mob">Генератор паролей</a>
+                    <a href="/ru/tools/time-zones/" class="ftr-hide-mob">Часовые пояса</a>
+                    <a href="/ru/tools/zip-creator/" class="ftr-hide-mob">Создать ZIP</a>
+                    <a href="/ru/tools/imlo-tekshirish/" class="ftr-hide-mob">Проверка орфографии</a>
                 </div>
 
                 <!-- PDF & Изображение column -->
                 <div class="footer-col">
-                    <h4>PDF &amp; Изображение</h4>
-                    <a href="/ru/tools/pdf-merge/">PDF Birlashtirish</a>
-                    <a href="/ru/tools/pdf-delete/">PDF Sahifa O&#700;chirish</a>
+                    <h4>PDF и изображения</h4>
+                    <a href="/ru/tools/pdf-merge/">Объединить PDF</a>
+                    <a href="/ru/tools/pdf-delete/">Удалить страницы PDF</a>
                     <a href="/ru/tools/pdf-editor/">PDF Editor</a>
-                    <a href="/ru/tools/word-to-pdf/">Word &#8594; PDF</a>
-                    <a href="/ru/tools/image-converter/">Изображение Konvertor</a>
-                    <a href="/ru/tools/image-compress/" class="ftr-hide-mob">Изображение Siqish</a>
-                    <a href="/ru/tools/image-resize/" class="ftr-hide-mob">Изображение O&#700;lchami</a>
-                    <a href="/ru/tools/image-crop/" class="ftr-hide-mob">Изображениеni Qirqish</a>
-                    <a href="/ru/tools/image-rotate/" class="ftr-hide-mob">Изображениеni Aylantirish</a>
-                    <a href="/ru/tools/pdf-rotate/" class="ftr-hide-mob">PDF Aylantirish</a>
-                    <a href="/ru/tools/pdf-protect/" class="ftr-hide-mob">PDF Himoya</a>
-                    <a href="/ru/tools/bg-remove/" class="ftr-hide-mob">Fon O&#700;chirish</a>
-                    <a href="/ru/tools/qr-generator/">QR Kod</a>
+                    <a href="/ru/tools/word-to-pdf/">Word в PDF</a>
+                    <a href="/ru/tools/image-converter/">Конвертер изображений</a>
+                    <a href="/ru/tools/image-compress/" class="ftr-hide-mob">Сжатие изображений</a>
+                    <a href="/ru/tools/image-resize/" class="ftr-hide-mob">Изменить размер изображения</a>
+                    <a href="/ru/tools/image-crop/" class="ftr-hide-mob">Обрезать изображение</a>
+                    <a href="/ru/tools/image-rotate/" class="ftr-hide-mob">Повернуть изображение</a>
+                    <a href="/ru/tools/pdf-rotate/" class="ftr-hide-mob">Повернуть PDF</a>
+                    <a href="/ru/tools/pdf-protect/" class="ftr-hide-mob">Защита PDF</a>
+                    <a href="/ru/tools/bg-remove/" class="ftr-hide-mob">Удаление фона</a>
+                    <a href="/ru/tools/qr-generator/">QR-код</a>
                 </div>
 
-                <!-- Loyiha + Huquqiy column -->
+                <!-- Проект + Юридическое column -->
                 <div class="footer-col">
-                    <h4>Loyiha</h4>
-                    <a href="/ru/about.html">Biz haqimizda</a>
-                    <a href="/ru/contact.html">Aloqa</a>
+                    <h4>Проект</h4>
+                    <a href="/ru/about.html">О нас</a>
+                    <a href="/ru/contact.html">Контакты</a>
                     <a href="/ru/blog.html">Blog</a>
                     <div class="footer-divider"></div>
-                    <h4 class="ftr-h4-mt">Huquqiy</h4>
-                    <a href="/ru/terms.html">Foydalanish shartlari</a>
-                    <a href="/ru/privacy.html">Maxfiylik siyosati</a>
+                    <h4 class="ftr-h4-mt">Юридическое</h4>
+                    <a href="/ru/terms.html">Условия использования</a>
+                    <a href="/ru/privacy.html">Политика конфиденциальности</a>
                 </div>
 
             </div>
@@ -624,8 +621,8 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-row">
-                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Все huquqlar himoyalangan</span>
-                    <span class="footer-made">O&#700;zbekiston uchun yaratilgan &#127482;&#127487;</span>
+                    <span>&#169; <span class="footer-year">2025</span> toolbase.uz &#8212; Все права защищены</span>
+                    <span class="footer-made">Создано для Узбекистана</span>
                 </div>
             </div>
         </div>

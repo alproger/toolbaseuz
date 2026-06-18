@@ -1,0 +1,703 @@
+{
+  "sections": [
+    {
+      "id": "hujjat",
+      "uz": {
+        "title": "Rasmiy hujjatlar",
+        "sub": "Ariza, ma'lumotnoma va boshqa hujjatlarni yarating"
+      },
+      "ru": {
+        "title": "Официальные документы",
+        "sub": "Создавайте заявления, справки и другие документы"
+      }
+    },
+    {
+      "id": "matn",
+      "uz": {
+        "title": "Matn vositalar",
+        "sub": "Lotin-krill, hisoblash va matn bilan ishlash"
+      },
+      "ru": {
+        "title": "Текстовые инструменты",
+        "sub": "Латиница-кириллица, подсчёт и обработка текста"
+      }
+    },
+    {
+      "id": "pdf",
+      "uz": {
+        "title": "PDF va Hujjat",
+        "sub": "PDF fayllar va hujjatlar bilan ishlash"
+      },
+      "ru": {
+        "title": "PDF и документы",
+        "sub": "Работа с PDF-файлами и документами"
+      }
+    },
+    {
+      "id": "rasm",
+      "uz": {
+        "title": "Rasm vositalar",
+        "sub": "Rasmlarni o'zgartirish va qayta ishlash"
+      },
+      "ru": {
+        "title": "Изображения",
+        "sub": "Конвертация и обработка изображений"
+      }
+    },
+    {
+      "id": "boshqa",
+      "uz": {
+        "title": "Boshqa vositalar",
+        "sub": "Kod, xavfsizlik va kundalik yordamchilar"
+      },
+      "ru": {
+        "title": "Другие инструменты",
+        "sub": "Код, безопасность и повседневные помощники"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "slug": "ariza",
+      "path": "hujjatlar/ariza/",
+      "section": "hujjat",
+      "color": "file",
+      "icon": "ariza",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "ariza zayavlenie namuna generator ishga qabul tatil ishdan boshash arizasi",
+      "uz": {
+        "name": "Ariza yaratish",
+        "desc": "9 turdagi ariza: namuna, qo'llanma va generator. Word yuklab oling."
+      },
+      "ru": {
+        "name": "Создать заявление",
+        "desc": "9 видов заявлений: образец, руководство и генератор. Скачайте Word."
+      }
+    },
+    {
+      "slug": "tarjimai-hol",
+      "path": "hujjatlar/tarjimai-hol/",
+      "section": "hujjat",
+      "color": "violet",
+      "icon": "tarjimai-hol",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "tarjimai hol avtobiografiya namuna avtobiografiya tarjimai",
+      "uz": {
+        "name": "Tarjimai hol",
+        "desc": "Avtobiografiya: namuna, qo'llanma va generator. Word yuklab oling."
+      },
+      "ru": {
+        "name": "Автобиография",
+        "desc": "Образец, руководство и генератор. Скачайте Word."
+      }
+    },
+    {
+      "slug": "obyektivka",
+      "path": "hujjatlar/obyektivka/",
+      "section": "hujjat",
+      "color": "pdf",
+      "icon": "obyektivka",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "obyektivka объективка rasm bilan kadrlar jadval surat",
+      "uz": {
+        "name": "Obyektivka",
+        "desc": "Rasm bilan jadval ko'rinishidagi ma'lumotnoma. Word yuklab oling."
+      },
+      "ru": {
+        "name": "Объективка",
+        "desc": "Справка в виде таблицы с фото. Скачайте Word."
+      }
+    },
+    {
+      "slug": "malumotnoma",
+      "path": "hujjatlar/malumotnoma/",
+      "section": "hujjat",
+      "color": "code",
+      "icon": "malumotnoma",
+      "tags": [
+        "free"
+      ],
+      "search": "malumotnoma malumotnoma spravka ish joyidan ma'lumotnoma",
+      "uz": {
+        "name": "Ma'lumotnoma",
+        "desc": "Ish yoki o'qish joyidan ma'lumotnoma: namuna va generator."
+      },
+      "ru": {
+        "name": "Справка",
+        "desc": "Справка с места работы или учёбы: образец и генератор."
+      }
+    },
+    {
+      "slug": "tushuntirish-xati",
+      "path": "hujjatlar/tushuntirish-xati/",
+      "section": "hujjat",
+      "color": "amber",
+      "icon": "tushuntirish-xati",
+      "tags": [
+        "free"
+      ],
+      "search": "tushuntirish xati obyasnitelnaya izoh xat kechikish",
+      "uz": {
+        "name": "Tushuntirish xati",
+        "desc": "Voqea yoki kechikish sababini bayon etuvchi xat: namuna va generator."
+      },
+      "ru": {
+        "name": "Объяснительная",
+        "desc": "Объяснение события или опоздания: образец и генератор."
+      }
+    },
+    {
+      "slug": "tavsifnoma",
+      "path": "hujjatlar/tavsifnoma/",
+      "section": "hujjat",
+      "color": "text",
+      "icon": "tavsifnoma",
+      "tags": [
+        "free"
+      ],
+      "search": "tavsifnoma xarakteristika harakteristika ish joyidan tavsif",
+      "uz": {
+        "name": "Tavsifnoma",
+        "desc": "Shaxs sifatlarini baholovchi xarakteristika: namuna va generator."
+      },
+      "ru": {
+        "name": "Характеристика",
+        "desc": "Характеристика качеств человека: образец и генератор."
+      }
+    },
+    {
+      "slug": "tavsiyanoma",
+      "path": "hujjatlar/tavsiyanoma/",
+      "section": "hujjat",
+      "color": "image",
+      "icon": "tavsiyanoma",
+      "tags": [
+        "free"
+      ],
+      "search": "tavsiyanoma rekomendatsiya tavsiya xati rekomendaciya",
+      "uz": {
+        "name": "Tavsiyanoma",
+        "desc": "O'qish yoki ish uchun tavsiya xati: namuna va generator."
+      },
+      "ru": {
+        "name": "Рекомендация",
+        "desc": "Рекомендательное письмо для учёбы или работы: образец и генератор."
+      }
+    },
+    {
+      "slug": "lotin-krill",
+      "path": "tools/lotin-krill/",
+      "section": "matn",
+      "color": "text",
+      "icon": "lotin-krill",
+      "tags": [
+        "free"
+      ],
+      "search": "lotin krill latin cyrillic translit konvertor",
+      "uz": {
+        "name": "Lotin ⇄ Krill",
+        "desc": "O'zbek matnlarini lotin va krill yozuvlarida tez aylantiring."
+      },
+      "ru": {
+        "name": "Латиница ⇄ Кириллица",
+        "desc": "Быстро конвертируйте узбекский текст между латиницей и кириллицей."
+      }
+    },
+    {
+      "slug": "doc-lotin-krill",
+      "path": "tools/doc-lotin-krill/",
+      "section": "matn",
+      "color": "file",
+      "icon": "doc-lotin-krill",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "hujjat lotin krill document word excel powerpoint docx xlsx pptx krilldan lotinga",
+      "uz": {
+        "name": "Hujjat Lotin ⇄ Krill",
+        "desc": "Word, Excel, PowerPoint hujjatlarini formatlashni saqlab o'giring."
+      },
+      "ru": {
+        "name": "Документ: латиница ⇄ кириллица",
+        "desc": "Конвертация Word, Excel и PowerPoint с сохранением форматирования."
+      }
+    },
+    {
+      "slug": "son-soz",
+      "path": "tools/son-soz/",
+      "section": "matn",
+      "color": "number",
+      "icon": "son-soz",
+      "tags": [
+        "free"
+      ],
+      "search": "son soz number words raqam pul",
+      "uz": {
+        "name": "Son → So'z",
+        "desc": "Raqamni o'zbekcha so'zga aylantiring."
+      },
+      "ru": {
+        "name": "Son → So'z",
+        "desc": "Raqamni o'zbekcha so'zga aylantiring."
+      }
+    },
+    {
+      "slug": "word-counter",
+      "path": "tools/word-counter/",
+      "section": "matn",
+      "color": "amber",
+      "icon": "word-counter",
+      "tags": [
+        "free"
+      ],
+      "search": "word counter soz hisoblagich character belgi",
+      "uz": {
+        "name": "Word Counter",
+        "desc": "So'z, belgi, gap, paragraf va o'qish vaqtini hisoblang."
+      },
+      "ru": {
+        "name": "Word Counter",
+        "desc": "So'z, belgi, gap, paragraf va o'qish vaqtini hisoblang."
+      }
+    },
+    {
+      "slug": "case-converter",
+      "path": "tools/case-converter/",
+      "section": "matn",
+      "color": "violet",
+      "icon": "case-converter",
+      "tags": [
+        "free"
+      ],
+      "search": "case converter katta kichik harf uppercase lowercase camelcase snake kebab",
+      "uz": {
+        "name": "Case Converter",
+        "desc": "UPPER, lower, Title, camelCase, snake_case va boshqalar."
+      },
+      "ru": {
+        "name": "Case Converter",
+        "desc": "UPPER, lower, Title, camelCase, snake_case va boshqalar."
+      }
+    },
+    {
+      "slug": "imlo-tekshirish",
+      "path": "tools/imlo-tekshirish/",
+      "section": "matn",
+      "color": "text",
+      "icon": "imlo-tekshirish",
+      "tags": [
+        "free"
+      ],
+      "search": "imlo tekshirish spell checker orfografiya xato ozbek",
+      "uz": {
+        "name": "Imlo Tekshirish",
+        "desc": "O'zbekcha matndagi imlo xatolarini toping va to'g'irlang."
+      },
+      "ru": {
+        "name": "Проверка орфографии",
+        "desc": "Найдите и исправьте ошибки в узбекском тексте."
+      }
+    },
+    {
+      "slug": "pdf-merge",
+      "path": "tools/pdf-merge/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "pdf-merge",
+      "tags": [
+        "free"
+      ],
+      "search": "pdf birlashtirish merge",
+      "uz": {
+        "name": "PDF Birlashtirish",
+        "desc": "20 tagacha PDF faylni bitta hujjatga birlashtiring. Brauzerda ishlaydi, 100 MB gacha."
+      },
+      "ru": {
+        "name": "PDF Birlashtirish",
+        "desc": "20 tagacha PDF faylni bitta hujjatga birlashtiring. Brauzerda ishlaydi, 100 MB gacha."
+      }
+    },
+    {
+      "slug": "pdf-delete",
+      "path": "tools/pdf-delete/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "pdf-delete",
+      "tags": [
+        "free"
+      ],
+      "search": "pdf sahifa ochirish delete remove pages",
+      "uz": {
+        "name": "PDF Sahifa O'chirish",
+        "desc": "PDF sahifalarni tanlang yoki diapazon kiriting va o'chiring. usulida."
+      },
+      "ru": {
+        "name": "PDF Sahifa O'chirish",
+        "desc": "PDF sahifalarni tanlang yoki diapazon kiriting va o'chiring. usulida."
+      }
+    },
+    {
+      "slug": "pdf-editor",
+      "path": "tools/pdf-editor/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "pdf-editor",
+      "tags": [
+        "free"
+      ],
+      "search": "pdf editor tahrirlash matn qo'shish izoh ocr",
+      "uz": {
+        "name": "PDF Editor",
+        "desc": "PDF ga matn, chiziq va belgilar qo'shing. OCR funksiyasi tez kunda qo'shiladi."
+      },
+      "ru": {
+        "name": "PDF Editor",
+        "desc": "PDF ga matn, chiziq va belgilar qo'shing. OCR funksiyasi tez kunda qo'shiladi."
+      }
+    },
+    {
+      "slug": "word-to-pdf",
+      "path": "tools/word-to-pdf/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "word-to-pdf",
+      "tags": [
+        "free"
+      ],
+      "search": "word pdf docx convert aylantirish",
+      "uz": {
+        "name": "Word → PDF",
+        "desc": "DOCX faylni PDF ga aylantiring. Jadval, ro'yxat va formatlash saqlanadi."
+      },
+      "ru": {
+        "name": "Word → PDF",
+        "desc": "DOCX faylni PDF ga aylantiring. Jadval, ro'yxat va formatlash saqlanadi."
+      }
+    },
+    {
+      "slug": "pdf-protect",
+      "path": "tools/pdf-protect/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "pdf-protect",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "pdf parol himoya encrypt decrypt password protect qulflash ochirish xavfsizlik",
+      "uz": {
+        "name": "PDF Himoya — Parol",
+        "desc": "PDF ga parol qo'ying yoki mavjud parolni olib tashlang. AES shifrlash. Chop etish, nusxalash, tahrirlash ruxsatlarini boshqaring."
+      },
+      "ru": {
+        "name": "PDF Himoya — Parol",
+        "desc": "PDF ga parol qo'ying yoki mavjud parolni olib tashlang. AES shifrlash. Chop etish, nusxalash, tahrirlash ruxsatlarini boshqaring."
+      }
+    },
+    {
+      "slug": "pdf-rotate",
+      "path": "tools/pdf-rotate/",
+      "section": "pdf",
+      "color": "pdf",
+      "icon": "pdf-rotate",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "pdf aylantirish pdf rotate pdf sahifa burchak qiyshiq togrilash pdf page rotation",
+      "uz": {
+        "name": "PDF Sahifalarni Aylantirish",
+        "desc": "Qiyshiq PDF sahifalarini to'g'irlang. Barcha yoki tanlangan sahifalar. 90°, 180°, 270°. Preview bilan."
+      },
+      "ru": {
+        "name": "PDF Sahifalarni Aylantirish",
+        "desc": "Qiyshiq PDF sahifalarini to'g'irlang. Barcha yoki tanlangan sahifalar. 90°, 180°, 270°. Preview bilan."
+      }
+    },
+    {
+      "slug": "image-converter",
+      "path": "tools/image-converter/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "image-converter",
+      "tags": [
+        "free"
+      ],
+      "search": "rasm format ozgartirish image converter jpg png webp pdf ico gif bmp",
+      "uz": {
+        "name": "Rasm Formatini O'zgartirish",
+        "desc": "JPG, PNG, WebP, BMP, GIF, ICO va PDF. 20 ta rasm bir vaqtda. ZIP yuklab olish."
+      },
+      "ru": {
+        "name": "Rasm Formatini O'zgartirish",
+        "desc": "JPG, PNG, WebP, BMP, GIF, ICO va PDF. 20 ta rasm bir vaqtda. ZIP yuklab olish."
+      }
+    },
+    {
+      "slug": "image-resize",
+      "path": "tools/image-resize/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "image-resize",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "rasm razmer ozgartirish resize pasport 3x4 photo resize jpg png piksel sm mm",
+      "uz": {
+        "name": "Rasm O'lchamini O'zgartirish",
+        "desc": "Pasport 3×4, hujjat, px, cm, mm. Sifat saqlanib, aniq kesib olinadi. Batch 20 ta."
+      },
+      "ru": {
+        "name": "Rasm O'lchamini O'zgartirish",
+        "desc": "Pasport 3×4, hujjat, px, cm, mm. Sifat saqlanib, aniq kesib olinadi. Batch 20 ta."
+      }
+    },
+    {
+      "slug": "image-crop",
+      "path": "tools/image-crop/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "image-crop",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "rasmni qirqish crop image kadrlaash nisbat aspect ratio",
+      "uz": {
+        "name": "Rasmni Qirqish (Crop)",
+        "desc": "Erkin yoki nisbat bilan kadrlash. 1:1, 16:9, 9:16, 3:4. Burish, aylantirish, live preview. JPG, PNG, WebP."
+      },
+      "ru": {
+        "name": "Rasmni Qirqish (Crop)",
+        "desc": "Erkin yoki nisbat bilan kadrlash. 1:1, 16:9, 9:16, 3:4. Burish, aylantirish, live preview. JPG, PNG, WebP."
+      }
+    },
+    {
+      "slug": "image-rotate",
+      "path": "tools/image-rotate/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "image-rotate",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "rasmni aylantirish rotate image flip gorizontal vertikal burchak 90 180 270",
+      "uz": {
+        "name": "Rasmni Aylantirish",
+        "desc": "90°, 180°, erkin burchak (-180 dan +180°). Gorizontal va vertikal flip. Fon rangi. 20 ta rasm, ZIP."
+      },
+      "ru": {
+        "name": "Rasmni Aylantirish",
+        "desc": "90°, 180°, erkin burchak (-180 dan +180°). Gorizontal va vertikal flip. Fon rangi. 20 ta rasm, ZIP."
+      }
+    },
+    {
+      "slug": "image-compress",
+      "path": "tools/image-compress/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "image-compress",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "rasm siqish image compress jpg png webp hajm kamaytirish optimize",
+      "uz": {
+        "name": "Rasm Siqish",
+        "desc": "JPG, PNG, WebP rasmlarini siqing. Sifat slayderi. Before/after preview. 20 ta rasm, ZIP."
+      },
+      "ru": {
+        "name": "Rasm Siqish",
+        "desc": "JPG, PNG, WebP rasmlarini siqing. Sifat slayderi. Before/after preview. 20 ta rasm, ZIP."
+      }
+    },
+    {
+      "slug": "bg-remove",
+      "path": "tools/bg-remove/",
+      "section": "rasm",
+      "color": "image",
+      "icon": "bg-remove",
+      "tags": [
+        "free"
+      ],
+      "search": "fon ochirish background remove rasm png transparent",
+      "uz": {
+        "name": "Fon O’chirish",
+        "desc": "Rasm fonini avtomatik olib tashlang — bir bosishda."
+      },
+      "ru": {
+        "name": "Удаление фона",
+        "desc": "Автоматическое удаление фона изображения в один клик."
+      }
+    },
+    {
+      "slug": "qr-generator",
+      "path": "tools/qr-generator/",
+      "section": "boshqa",
+      "color": "code",
+      "icon": "qr-generator",
+      "tags": [
+        "free"
+      ],
+      "search": "qr kod yaratish qr code generator url wifi vcard telefon email",
+      "uz": {
+        "name": "QR Kod Yaratish",
+        "desc": "URL, Wi-Fi, vCard, telefon, email — 7 tur. Rang, gradient, logo va yozuv. PNG va SVG yuklab oling."
+      },
+      "ru": {
+        "name": "QR Kod Yaratish",
+        "desc": "URL, Wi-Fi, vCard, telefon, email — 7 tur. Rang, gradient, logo va yozuv. PNG va SVG yuklab oling."
+      }
+    },
+    {
+      "slug": "color-converter",
+      "path": "tools/color-converter/",
+      "section": "boshqa",
+      "color": "code",
+      "icon": "color-converter",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "rang konvertori color converter hex rgb hsl cmyk css gradient color picker",
+      "uz": {
+        "name": "Rang Konvertori",
+        "desc": "HEX &#8596; RGB &#8596; HSL &#8596; CMYK &#8596; HSV. Color picker, rang tarixi, 36 nomlangan rang. CSS Gradient generator — 12 tayyor gradient."
+      },
+      "ru": {
+        "name": "Rang Konvertori",
+        "desc": "HEX &#8596; RGB &#8596; HSL &#8596; CMYK &#8596; HSV. Color picker, rang tarixi, 36 nomlangan rang. CSS Gradient generator — 12 tayyor gradient."
+      }
+    },
+    {
+      "slug": "unit-converter",
+      "path": "tools/unit-converter/",
+      "section": "boshqa",
+      "color": "amber",
+      "icon": "unit-converter",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "olchov konvertori km mil kg lb celsius fahrenheit litr gallon unit converter birlik",
+      "uz": {
+        "name": "O&#8216;lchov Konvertori",
+        "desc": "km&#8596;mil, kg&#8596;lb, &#176;C&#8596;&#176;F, litr&#8596;gallon. 7 kategoriya, 50+ birlik. Formula ko&#8217;rsatiladi."
+      },
+      "ru": {
+        "name": "O&#8216;lchov Konvertori",
+        "desc": "km&#8596;mil, kg&#8596;lb, &#176;C&#8596;&#176;F, litr&#8596;gallon. 7 kategoriya, 50+ birlik. Formula ko&#8217;rsatiladi."
+      }
+    },
+    {
+      "slug": "json-formatter",
+      "path": "tools/json-formatter/",
+      "section": "boshqa",
+      "color": "code",
+      "icon": "json-formatter",
+      "tags": [
+        "free"
+      ],
+      "search": "json formatter beautify minify kod developer",
+      "uz": {
+        "name": "JSON formatlash",
+        "desc": "JSON ma'lumotlarini formatlang, minify qiling yoki xatolarni aniqlang."
+      },
+      "ru": {
+        "name": "JSON formatlash",
+        "desc": "JSON ma'lumotlarini formatlang, minify qiling yoki xatolarni aniqlang."
+      }
+    },
+    {
+      "slug": "password-generator",
+      "path": "tools/password-generator/",
+      "section": "boshqa",
+      "color": "file",
+      "icon": "password-generator",
+      "tags": [
+        "free"
+      ],
+      "search": "password generator parol yaratish xavfsiz kuchli",
+      "uz": {
+        "name": "Parol Yaratish",
+        "desc": "Kriptografik xavfsiz, kuchli parollar yarating."
+      },
+      "ru": {
+        "name": "Parol Yaratish",
+        "desc": "Kriptografik xavfsiz, kuchli parollar yarating."
+      }
+    },
+    {
+      "slug": "hash-generator",
+      "path": "tools/hash-generator/",
+      "section": "boshqa",
+      "color": "code",
+      "icon": "hash-generator",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "hash generator md5 sha256 sha512 sha1 checksum kriptografiya xavfsizlik",
+      "uz": {
+        "name": "Hash Generator",
+        "desc": "MD5, SHA-1, SHA-256, SHA-512 hash yarating. Matn va fayl uchun. Nusxa olish, hash solishtirish."
+      },
+      "ru": {
+        "name": "Hash Generator",
+        "desc": "MD5, SHA-1, SHA-256, SHA-512 hash yarating. Matn va fayl uchun. Nusxa olish, hash solishtirish."
+      }
+    },
+    {
+      "slug": "time-zones",
+      "path": "tools/time-zones/",
+      "section": "boshqa",
+      "color": "violet",
+      "icon": "time-zones",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "vaqt zonalari dunyo soati world clock time zone toshkent moskva dubay london live",
+      "uz": {
+        "name": "Vaqt Zonalari",
+        "desc": "80+ shahar vaqti live. Tun/kun rejimi, sevimlilar, UTC offset, filtrlash."
+      },
+      "ru": {
+        "name": "Vaqt Zonalari",
+        "desc": "80+ shahar vaqti live. Tun/kun rejimi, sevimlilar, UTC offset, filtrlash."
+      }
+    },
+    {
+      "slug": "zip-creator",
+      "path": "tools/zip-creator/",
+      "section": "boshqa",
+      "color": "file",
+      "icon": "zip-creator",
+      "tags": [
+        "free",
+        "new"
+      ],
+      "search": "zip yaratish arxiv fayllarni ziplash papka compress archive",
+      "uz": {
+        "name": "ZIP Fayl Yaratish",
+        "desc": "Fayl va papkalarni bitta ZIP arxivga yig'ing — papka tuzilmasi saqlanadi."
+      },
+      "ru": {
+        "name": "ZIP Fayl Yaratish",
+        "desc": "Соберите файлы и папки в один ZIP-архив — структура папок сохраняется."
+      }
+    }
+  ]
+}

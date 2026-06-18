@@ -1,0 +1,12 @@
+/* Takroriy DOCX yaratish kutubxonasi (namuna fayllar uchun) */
+const JSZip = require('/tmp/node_modules/jszip');
+const fs = require('fs');
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+const NS='xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"';
+function rpr(o){o=o||{};return '<w:rPr>'+(o.b?'<w:b/>':'')+(o.gray?'<w:color w:val="9CA3AF"/><w:sz w:val="18"/>':'<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:sz w:val="28"/>')+'</w:rPr>';}
+function para(t,o){o=o||{};var jc=o.jc?'<w:jc w:val="'+o.jc+'"/>':'';var ind=o.indent?'<w:ind w:left="'+o.indent+'"/>':'';var run=t?'<w:r>'+rpr(o)+'<w:t xml:space="preserve">'+esc(t)+'</w:t></w:r>':'';return '<w:p><w:pPr>'+jc+ind+'<w:spacing w:after="'+(o.after!=null?o.after:120)+'"/></w:pPr>'+run+'</w:p>';}
+function footer(left, center, right){var tabs='<w:tabs><w:tab w:val="center" w:pos="4677"/><w:tab w:val="right" w:pos="9355"/></w:tabs>';var r=t=>'<w:r>'+rpr()+'<w:t xml:space="preserve">'+esc(t)+'</w:t></w:r>';return '<w:p><w:pPr>'+tabs+'<w:spacing w:before="360"/></w:pPr>'+r(left)+'<w:r>'+rpr()+'<w:tab/></w:r>'+r(center)+'<w:r>'+rpr()+'<w:tab/></w:r>'+r(right)+'</w:p>';}
+function wrap(body){return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document '+NS+'><w:body>'+body+'<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="850" w:bottom="1134" w:left="1701"/></w:sectPr></w:body></w:document>';}
+function save(body, name){const z=new JSZip();z.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');z.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');z.file('word/document.xml',wrap(body));return z.generateAsync({type:'nodebuffer'}).then(b=>{fs.writeFileSync(name,b);return name;});}
+const SHAPKA_INDENT = 4900;
+module.exports = { para, footer, save, SHAPKA_INDENT };

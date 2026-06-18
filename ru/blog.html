@@ -13,7 +13,6 @@
 
     <link rel="canonical" href="https://toolbase.uz/ru/blog.html" />
     <link rel="alternate" hreflang="uz" href="https://toolbase.uz/blog.html" />
-    <link rel="alternate" hreflang="en" href="https://toolbase.uz/en/blog.html" />
     <link rel="alternate" hreflang="ru" href="https://toolbase.uz/ru/blog.html" />
     <link rel="alternate" hreflang="x-default" href="https://toolbase.uz/blog.html" />
 
@@ -422,7 +421,6 @@
             </nav>
             <div class="language-switcher" aria-label="Выбор языка">
                 <a href="../" lang="uz">UZ</a>
-                <a href="../en/blog.html" lang="en">EN</a>
                 <a class="active" href="./" lang="ru">RU</a>
             </div>
         </div>
@@ -538,10 +536,10 @@
                         '<span class="post-cat">' + catLabel + '</span>' +
                         '<span class="meta-dot">&middot;</span>' +
                         '<span class="post-date">' + fmtDate(post.date) + '</span>' +
-                        (post.readTime ? '<span class="meta-dot">&middot;</span><span class="post-read">' + post.readTime + '</span>' : '') +
+                        ((post['ru_readTime'] || post.readTime) ? '<span class="meta-dot">&middot;</span><span class="post-read">' + (post['ru_readTime'] || post.readTime) + '</span>' : '') +
                         '</div>' +
                         '<p class="post-title">' + (post['ru_title'] || post.title) + '</p>' +
-                        (post.excerpt ? '<p class="post-excerpt">' + post.excerpt + '</p>' : '') +
+                        ((post['ru_excerpt'] || post.excerpt) ? '<p class="post-excerpt">' + (post['ru_excerpt'] || post.excerpt) + '</p>' : '') +
                         '</div>' +
                         '<span class="post-arrow" aria-hidden="true">' +
                         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +

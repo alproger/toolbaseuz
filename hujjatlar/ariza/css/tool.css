@@ -3,6 +3,23 @@
    Ilhom: resume.io, Typeform — ko'p oq joy, yirik tipografika,
    haqiqiy qog'oz ko'rinishi, kam chiziq, katta tugmalar
    ================================================================ */
+/* ── Asosiy layout (barcha tool sahifalar uchun) ── */
+.breadcrumb { display: flex; align-items: center; gap: 6px; padding: 14px var(--pad) 0; max-width: 1140px; margin: 0 auto; font-size: 0.85rem; color: var(--muted); }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--primary); }
+.bc-sep { color: var(--line-strong, #c5d0db); }
+.tool-hero { display: flex; align-items: flex-start; gap: 18px; padding: 24px var(--pad) 20px; max-width: 1140px; margin-left: auto; margin-right: auto; }
+@media (max-width: 559px) { .tool-hero { flex-direction: column; gap: 12px; } }
+.tool-hero-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 15px; display: grid; place-items: center; background: var(--c-amber-bg); color: var(--c-amber); }
+.tool-hero-icon svg { width: 27px; height: 27px; stroke-width: 2; }
+.tool-hero-text h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 7px; letter-spacing: -0.025em; line-height: 1.18; }
+.tool-hero-text p { color: var(--muted); font-size: clamp(0.95rem, 2vw, 1.02rem); line-height: 1.6; max-width: 680px; }
+.tool-workspace { padding: 8px var(--pad) 12px; max-width: 1140px; margin-left: auto; margin-right: auto; }
+.tool-info { padding: 0 var(--pad); max-width: 1140px; margin: 0 auto; }
+.tool-info:first-of-type { padding-top: clamp(36px, 5vw, 52px); }
+.info-article { max-width: 760px; }
+.info-article h2 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-bottom: 16px; letter-spacing: -0.02em; }
+
 .tool-hero-icon.icon-doc { background: var(--c-amber-bg); color: var(--c-amber); }
 
 /* ── Ishonch belgilari ── */
@@ -151,10 +168,11 @@ textarea.fld:focus { box-shadow: 0 0 0 3px var(--c-amber-bg); }
 /* ================================================================
    O'RGATUVCHI KONTENT — oddiy paragraf uslubida (kam sarlavha)
    ================================================================ */
-.guide-block { max-width: 720px; }
-.guide-block p { font-size: 1rem; line-height: 1.75; color: #3a4a5a; margin-bottom: 16px; }
-.guide-block p strong { color: var(--ink); font-weight: 700; }
-.guide-block .lead { font-size: 1.08rem; color: var(--ink); }
+.info-article p { color: var(--ink-2, #4a5057); line-height: 1.7; margin-bottom: 12px; font-size: 0.97rem; }
+.info-article p strong { color: var(--ink); font-weight: 700; }
+.info-article h2 { margin: 34px 0 12px; }
+.info-article h2:first-child { margin-top: 0; }
+.info-article h3 { font-size: 1.02rem; margin: 0 0 4px; color: var(--ink); }
 
 /* ── Namuna kartasi — yangidan, chiroyli ── */
 .namuna-card {
@@ -192,16 +210,7 @@ textarea.fld:focus { box-shadow: 0 0 0 3px var(--c-amber-bg); }
 .namuna-preview .np-footer { display: flex; justify-content: space-between; gap: 8px; margin-top: 18px; font-size: 0.84rem; }
 .namuna-preview .np-footer span:nth-child(2) { color: #999; }
 
-/* FAQ — yengilroq */
-.faq-list details {
-  border-bottom: 1px solid var(--line); padding: 16px 2px; margin: 0;
-  background: none; border-radius: 0;
-}
-.faq-list summary { font-weight: 600; font-size: 0.96rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-.faq-list summary::-webkit-details-marker { display: none; }
-.faq-list summary::after { content: "+"; font-size: 1.3rem; font-weight: 400; color: var(--muted); transition: transform 0.2s; }
-.faq-list details[open] summary::after { transform: rotate(45deg); }
-.faq-list details p { margin-top: 10px; font-size: 0.92rem; line-height: 1.65; color: #4a5a6a; }
+
 
 /* Boshqa hujjatlar */
 .doc-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
@@ -283,3 +292,13 @@ textarea.fld:focus { box-shadow: 0 0 0 3px var(--c-amber-bg); }
   .preview-sheet .pv-shapka { width: 100%; margin-left: 0; }
   .preview-sheet .pv-footer { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
+
+/* FAQ — lotin-krill uslubida */
+.faq-list { margin-top: 12px; }
+.faq-list details { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 8px; overflow: hidden; background: var(--surface); }
+.faq-list details[open] { border-color: var(--c-amber); }
+.faq-list summary { padding: 14px 18px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; min-height: 52px; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: var(--muted); flex-shrink: 0; margin-left: 12px; }
+.faq-list details[open] summary::after { content: '\2212'; color: var(--c-amber); }
+.faq-list details p { padding: 0 18px 16px; color: var(--ink-2, #4a5057); font-size: 0.92rem; line-height: 1.65; margin: 0; }
